@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>David Campbell Music</title>
-    <link href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
-                      <!-- Header/Navigation Section -->
-    <header>
-      <div class="title">
-      </div>
-      <div class="tabs-section">
+
+<head>
+  <meta charset="utf-8">
+  <title>David Campbell Music</title>
+  <link href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Header/Navigation Section -->
+  <header>
+    <div class="title">
+    </div>
+    <div class="tabs-section">
       <h3>Home</h3>
       <h3 class="divider">|</h3>
       <h3>Music for Media</h3>
@@ -24,44 +27,104 @@
       <h3 class="divider">|</h3>
       <h3>Contact</h3>
     </div>
-    </header>
-                            <!-- Home Section -->
-    <section class="home">
-       <!-- Main Carousel -->
-   <h1 class="spotlight-text">Spotlight</h1>
+  </header>
+  <!-- Home Section -->
+  <section class="home">
+    <!-- Main Carousel -->
+    <h2 class="spotlight-text">Spotlight</h2>
     <div class="carousel one">
       <div class="manual-navigation">
-          <img class="navigate backward hidden" src="images/slideshow/backPanel.svg" alt="">
-          <div class="pane-ticker">
-          </div>
-          <img class="navigate forward hidden" src="images/slideshow/forwardPanel.svg" alt="">
-          <img class="pause hidden" src="images/slideshow/pause.svg" alt="">
+        <img class="navigate backward hidden" src="images/slideshow/backPanel.svg" alt="">
+        <div class="pane-ticker">
+        </div>
+        <img class="navigate forward hidden" src="images/slideshow/forwardPanel.svg" alt="">
+        <img class="pause hidden" src="images/slideshow/pause.svg" alt="">
       </div>
       <!-- Add pane images here. First one needs to have active-panel class -->
       <div class="pane-container">
-          <img class="main-images pane active-panel slide-in" src="" alt="">
-          <img class="main-images pane invisible-panel" src="" alt="">
-          <img class="main-images pane invisible-panel" src="" alt="">
+        <img class="main-images pane active-panel slide-in" src="" alt="">
+        <img class="main-images pane invisible-panel" src="" alt="">
+        <img class="main-images pane invisible-panel" src="" alt="">
       </div>
       <!-- Add slide text here. First one needs to have an animation class -->
       <div class="text-container">
-          <p class="slide-text center-long" style="font-size: 3rem;">Opera con Moderna</p>
-          <p class="slide-text invisible-text " style="font-size: 3rem;">Song Cycle Mandi Barrus</p>
-          <p class="slide-text invisible-text " style="font-size: 3rem;">New Blog Post</p>
+        <p class="slide-text center-long" style="font-size: 3rem;">Opera con Moderna</p>
+        <p class="slide-text invisible-text " style="font-size: 3rem;">Song Cycle Mandi Barrus</p>
+        <p class="slide-text invisible-text " style="font-size: 3rem;">New Blog Post</p>
       </div>
-  </div>
+    </div>
 
-  <div class="about-me">
-   <h2 class="about-me-title">Bio</h2>
-   <div class="about-me-text"> Some text about my style, influences, experience etc.</div>
+    <div class="about-me">
+      <h2 class="about-me-title">Bio</h2>
+      <div class="about-me-text"> Some text about my style, influences, experience etc.</div>
 
-  </div>
-    </section>
-                          <!-- Media Music Section -->
-    <section class="media-music">
-     <h1 class="media-music-title">Music for Media</h1>
-    </section>
+    </div>
+  </section>
 
-<script src="index.js"></script>
-  </body>
+  <!-- Media Music Section -->
+  
+  <section class="media-music">
+    <h2 class="media-music-title">Music for Media</h2>
+    <div class="row-one">
+
+
+      <div class='audio-player one'>
+
+        <div class="audio-lower-row">
+          <div class="audio-area">
+            <p class="audio-player-title"> <strong class="audio-strong">Turning Point </strong> <small class="audio-small">|</small> David Campbell</p>
+            <div class="audio-player-row">
+              <audio class="audio-file" src="audio/Turning Point.wav"></audio>
+              <img src="images/audio-player/playbutton.svg" class="audio-buttons"></img>
+              <progress class="audio-progress" max="100" value="0"></progress>
+              <img class="audio-volume" src="images/audio-player/volumeIcon.svg"></img>
+              <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
+              <div class="audio-progress-button"></div>
+            </div>
+            <div class="audio-timers-row">
+              <div class="audio-current-position">
+                <p>0:00</p>
+              </div>
+              <div class="audio-time-remaining">
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <img src="images/audio-player/turningpoint.jpg" class="audio-album-cover">
+
+        </div>
+      </div>
+
+      <div class='audio-player two'>
+
+        <div class="audio-lower-row">
+          <div class="audio-area">
+            <p class="audio-player-title"> <strong class="audio-strong">Music for a Love Story </strong> <small class="audio-small">|</small> David Campbell</p>
+            <div class="audio-player-row">
+              <audio class="audio-file" src="audio/Music for a Love Story.wav"></audio>
+              <img src="images/audio-player/playbutton.svg" class="audio-buttons"></img>
+              <progress class="audio-progress" max="100" value="0"></progress>
+              <img class="audio-volume" src="images/audio-player/volumeIcon.svg"></img>
+              <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
+              <div class="audio-progress-button"></div>
+            </div>
+            <div class="audio-timers-row">
+              <div class="audio-current-position">
+                <p>0:00</p>
+              </div>
+              <div class="audio-time-remaining">
+                <p></p>
+              </div>
+            </div>
+          </div>
+          <img src="images/audio-player/Forgiveness.jpg" class="audio-album-cover">
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+
 </html>
