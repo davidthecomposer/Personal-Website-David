@@ -1,8 +1,4 @@
-// Make Slideshow Element - use custom slideshow to generate basic idea
-// Need to fix slideShow to produce correct CSS data.
-// About Section
-
-    /* jshint esversion: 6 */
+ /* jshint esversion: 6 */
 
     class SlideShow {
         constructor(showNumber) {
@@ -28,7 +24,7 @@
         createFirstTick() {
             let newFirstTick = document.createElement('img');
             newFirstTick.className = 'pane-tick';
-            newFirstTick.src = 'images/activePane.svg';
+            newFirstTick.src = 'images/slideshow/activePane.svg';
             this.paneTicker.appendChild(newFirstTick);
         }
     
@@ -36,7 +32,7 @@
         createTick() {
             let newTick = document.createElement('img');
             newTick.classList.add('pane-tick');
-            newTick.src = 'images/inactivePane.svg';
+            newTick.src = 'images/slideshow/inactivePane.svg';
             this.paneTicker.appendChild(newTick);
         }
     
@@ -72,8 +68,8 @@
                 this.slideText[lastIndex].classList.add('invisible-text');
                 this.slideText[0].classList.remove('invisible-text');
                 this.slideText[0].classList.add(this.textAnimations[0]);
-                paneTick[lastIndex].setAttribute('src', "images/inactivePane.svg");
-                paneTick[0].setAttribute('src', "images/activePane.svg");
+                paneTick[lastIndex].setAttribute('src', "images/slideshow/inactivePane.svg");
+                paneTick[0].setAttribute('src', "images/slideshow/activePane.svg");
                 this.mainImages[lastIndex].classList.remove(this.slideAnimations[lastIndex]);
                 this.mainImages[lastIndex].classList.add('invisible-panel');
                 this.mainImages[0].classList.remove('invisible-panel');
@@ -89,8 +85,8 @@
                 this.slideText[activeIndex].classList.remove(this.textAnimations[activeIndex]);
                 this.slideText[activeIndex + 1].classList.remove('invisible-text');
                 this.slideText[activeIndex + 1].classList.add(this.textAnimations[activeIndex + 1]);
-                paneTick[activeIndex].setAttribute('src', "images/inactivePane.svg");
-                paneTick[activeIndex + 1].setAttribute('src', "images/activePane.svg");
+                paneTick[activeIndex].setAttribute('src', "images/slideshow/inactivePane.svg");
+                paneTick[activeIndex + 1].setAttribute('src', "images/slideshow/activePane.svg");
                 this.mainImages[activeIndex].classList.remove(this.slideAnimations[activeIndex]);
                 this.mainImages[activeIndex].classList.add('invisible-panel');
                 this.mainImages[activeIndex + 1].classList.remove('invisible-panel');
@@ -115,8 +111,8 @@
                 this.panes[lastIndex].classList.add('active-panel');
                 this.slideText[lastIndex].classList.remove('invisible-text');
                 this.slideText[lastIndex].classList.add(this.textAnimations[lastIndex]);
-                paneTick[0].setAttribute('src', "images/inactivePane.svg");
-                paneTick[lastIndex].setAttribute('src', "images/activePane.svg");
+                paneTick[0].setAttribute('src', "images/slideshow/inactivePane.svg");
+                paneTick[lastIndex].setAttribute('src', "images/slideshow/activePane.svg");
                 this.mainImages[0].classList.remove(this.slideAnimations[0]);
                 this.mainImages[0].classList.add('invisible-panel');
                 this.mainImages[lastIndex].classList.remove('invisible-panel');
@@ -131,8 +127,8 @@
                 this.slideText[activeIndex].classList.add('invisible-text');
                 this.slideText[activeIndex - 1].classList.remove('invisible-text');
                 this.slideText[activeIndex - 1].classList.add(this.textAnimations[activeIndex - 1]);
-                paneTick[activeIndex].setAttribute('src', "images/inactivePane.svg");
-                paneTick[activeIndex - 1].setAttribute('src', "images/activePane.svg");
+                paneTick[activeIndex].setAttribute('src', "images/slideshow/inactivePane.svg");
+                paneTick[activeIndex - 1].setAttribute('src', "images/slideshow/activePane.svg");
                 this.mainImages[activeIndex].classList.remove(this.slideAnimations[activeIndex]);
                 this.mainImages[activeIndex].classList.add('invisible-panel');
                 this.mainImages[activeIndex - 1].classList.remove('invisible-panel');
@@ -145,13 +141,13 @@
             if (event === undefined) {
               this.timerOn = setInterval(() => {this.nextPane();}, Number(10000));
               console.log('this option');
-            } else if (event.target.getAttribute('src') === 'images/pause.svg') {
+            } else if (event.target.getAttribute('src') === 'images/slideshow/pause.svg') {
                 clearInterval(this.timerOn);
-                event.target.setAttribute('src', 'images/play.svg');
+                event.target.setAttribute('src', 'images/slideshow/play.svg');
                 console.log('stopped');
             } else {
                 this.timerOn = setInterval(() => {this.nextPane();}, Number(10000));
-                event.target.setAttribute('src', 'images/pause.svg');
+                event.target.setAttribute('src', 'images/slideshow/pause.svg');
             }
     
         }
