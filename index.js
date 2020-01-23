@@ -17,8 +17,8 @@
             this.paneContainer = this.slideShow.querySelector('.pane-container');
             this.textContainer = this.slideShow.querySelector('.text-container');
             this.pauseActive = this.slideShow.querySelector('.pause');
-            this.slideAnimations = ['slide-in','fade-in','oval-shrink','crazy'];
-            this.textAnimations = ['center-long','top-right','center-short','top-left'];
+            this.slideAnimations = ['fade-in','fade-in','fade-in'];
+            this.textAnimations = ['center-long','top-right','center-short'];
             this.panes = document.querySelectorAll('.pane');
             this.timerOn;
             
@@ -143,14 +143,14 @@
     
         autoPlayControl(event) {
             if (event === undefined) {
-              this.timerOn = setInterval(() => {this.nextPane()}, Number(5000));
+              this.timerOn = setInterval(() => {this.nextPane();}, Number(10000));
               console.log('this option');
             } else if (event.target.getAttribute('src') === 'images/pause.svg') {
                 clearInterval(this.timerOn);
                 event.target.setAttribute('src', 'images/play.svg');
-                console.log('stopped')
+                console.log('stopped');
             } else {
-                this.timerOn = setInterval(() => {this.nextPane()}, Number(5000));
+                this.timerOn = setInterval(() => {this.nextPane();}, Number(10000));
                 event.target.setAttribute('src', 'images/pause.svg');
             }
     
