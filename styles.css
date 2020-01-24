@@ -175,25 +175,7 @@ background-image: url(images/main/DavidName.svg);
   background-color: rgba(59, 59, 59, 0.047);
 }
 
-/* Music for Media section */
-.media-music {
-    position: relative;
- display: flex;
- flex-direction: column;
- align-items: center;
- width: 100%;
- /* background-image: url(images/background.svg);
- background-size: cover; */
- color: white;
-  }
 
-.media-music .row-one {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-
-}
 
 /* carousel related */
 
@@ -565,6 +547,27 @@ background-image: url(images/main/DavidName.svg);
 
 /* Audio PLayer section */
 
+/* Music for Media section */
+.media-music {
+ position: relative;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ width: 100%;
+ /* background-image: url(images/background.svg);
+ background-size: cover; */
+ color: white;
+  }
+
+.audio-row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    margin: .5rem 0;
+}
+
 .audio-file {
     width: 100%;
     align-self: center;
@@ -588,12 +591,12 @@ background-image: url(images/main/DavidName.svg);
 }
 
 .audio-player {
-    width: 500px;
+    width: 32.5%;
     height: 140px;
-    border: solid rgb(187, 187, 187) .5px;
+    
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(rgba(212, 208, 208, 0.342), rgba(252, 243, 243, 0.479));
+    background-image: linear-gradient( to right, rgba(3, 3, 3, 0.342), rgba(255, 251, 251, 0.966));
     z-index: 0;
 
 }
@@ -653,7 +656,7 @@ background-image: url(images/main/DavidName.svg);
     height: 8px;
     width: 8px;
     border-radius: 100%;
-    border: blue .25px solid;
+    border: none;
     position: absolute;
     background: radial-gradient(white, purple, black);
     margin-left: -68px;
@@ -711,3 +714,8 @@ background-image: url(images/main/DavidName.svg);
     border-radius: 100%;
 }
 
+/* Concert Music section */
+
+.concert-music-title {
+    color: white;
+}

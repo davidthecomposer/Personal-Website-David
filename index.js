@@ -167,7 +167,7 @@
     }
     
     const audioPlayers = document.querySelectorAll('.audio-player');
-    const playerNumbers = [...audioPlayers].map((player) => player.classList[1]);
+    const playerNames = [...audioPlayers].map((player) => player.classList[1]);
     
     class AudioPlayer {
       constructor(playerNumber) {
@@ -272,18 +272,42 @@
     
     
     
-
-
-
+    playerNames.forEach((name) => {
+        let player = `player${playerNames.indexOf(name) + 1}`;
+        this[player] = new AudioPlayer(name);
+        this[player].initEventHandlers();
+    });
+    
 
     let firstShow = new SlideShow('one');
     firstShow.initHandlers();    
   
-    let player1 = new AudioPlayer('one');
-    player1.initEventHandlers();
+    // let player1 = new AudioPlayer('turning-point');
+    // player1.initEventHandlers();
     
-    let player2 = new AudioPlayer('two');
-    player2.initEventHandlers();
+    // let player2 = new AudioPlayer('love-story');
+    // player2.initEventHandlers();
+
+    // let player3 = new AudioPlayer('redemption');
+    // player3.initEventHandlers();
+
+    // let player4 = new AudioPlayer('flatline');
+    // player4.initEventHandlers();
+    
+    // let player5 = new AudioPlayer('force-of-nature');
+    // player5.initEventHandlers();
+
+    // let player6 = new AudioPlayer('pa-rock-intro');
+    // player6.initEventHandlers();
+
+    // let player7 = new AudioPlayer('rescue');
+    // player7.initEventHandlers();
+    
+    // let player8 = new AudioPlayer('starlight-starflight');
+    // player8.initEventHandlers();
+
+    // let player9 = new AudioPlayer('starflight-starbright');
+    // player9.initEventHandlers();
 
 
     //go through and update all names in audio-player to make sure there will be no cross contamination of classes etc.
