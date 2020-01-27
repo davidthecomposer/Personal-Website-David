@@ -282,32 +282,11 @@
     let firstShow = new SlideShow('one');
     firstShow.initHandlers();    
   
-    // let player1 = new AudioPlayer('turning-point');
-    // player1.initEventHandlers();
     
-    // let player2 = new AudioPlayer('love-story');
-    // player2.initEventHandlers();
-
-    // let player3 = new AudioPlayer('redemption');
-    // player3.initEventHandlers();
-
-    // let player4 = new AudioPlayer('flatline');
-    // player4.initEventHandlers();
-    
-    // let player5 = new AudioPlayer('force-of-nature');
-    // player5.initEventHandlers();
-
-    // let player6 = new AudioPlayer('pa-rock-intro');
-    // player6.initEventHandlers();
-
-    // let player7 = new AudioPlayer('rescue');
-    // player7.initEventHandlers();
-    
-    // let player8 = new AudioPlayer('starlight-starflight');
-    // player8.initEventHandlers();
-
-    // let player9 = new AudioPlayer('starflight-starbright');
-    // player9.initEventHandlers();
-
-
     //go through and update all names in audio-player to make sure there will be no cross contamination of classes etc.
+    //slideshow no way to easily change generated text attributes in CSS.
+    // Make outline and a few examples of pieces that I have for concert music 
+    // Look up news sections of composer things online
+    // Blog - Create a blog post section.
+    // contact info, questions, etc. 
+    
