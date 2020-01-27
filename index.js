@@ -283,10 +283,8 @@
     firstShow.initHandlers();    
   
     
-    //go through and update all names in audio-player to make sure there will be no cross contamination of classes etc.
-    //slideshow no way to easily change generated text attributes in CSS.
+    
     // Make outline and a few examples of pieces that I have for concert music 
     // Look up news sections of composer things online
     // Blog - Create a blog post section.
     // contact info, questions, etc. 
-    

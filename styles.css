@@ -190,36 +190,40 @@ background-image: url(images/main/DavidName.svg);
 
 
 .pane-1 {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        font-size: 2rem;
-        color: #ffffff;
-    }
+    position: absolute;
+    height: 100%;
+    width: 100%;
+        
+}
+
+.text-1 {
+    font-size: 3rem;
+    color: white;
+}
 
 .pane-2 {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        font-size: 3rem;
-        color: #000000;
-    }
+    position: absolute;
+    height: 100%;
+    width: 100%;
+        
+}
+
+.text-2 {
+    font-size: 3rem;
+    color: #000000;
+}
 
 .pane-3 {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        font-size: 3rem;
-        color: #000000;
-    }
+    position: absolute;
+    height: 100%;
+    width: 100%;
+        
+}
 
-.pane-4 {
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        font-size: 3rem;
-        color: #000000;
-    }
+.text-3 {
+    font-size: 3rem;
+    color: #000000;
+}
 
 .main-images {
     width: 100%;
