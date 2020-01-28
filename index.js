@@ -271,7 +271,39 @@
     }
     
     
+    class Musicsections {
+         constructor() {
+           this.allBtns = document.querySelectorAll('.music-tab-button');
+           this.musicSections = document.querySelectorAll('.music-sections')
+         }
+
+         handleSwitch(event) {
+           let sectionFilter = [...this.musicSections].filter((section) => {
+             return section.classList[0] !== event.target.innerHTML;
+           });
+           let pressedButton = [...this.musicSections].filter((section) => {
+            return section.classList[0] === event.target.innerHTML;
+          });
+           sectionFilter.forEach((section) => {
+             section.classList.add('invisible');
+             console.log(section.visibility);
+           });
+           pressedButton[0].classList.remove('invisible');
+         }
+
+         assignHandlers() {
+            this.allBtns.forEach((btn) => {
+              btn.onclick = () => this.handleSwitch(event);
+            });
+          
+         }
+    }
+
+
     
+    
+
+
     playerNames.forEach((name) => {
         let player = `player${playerNames.indexOf(name) + 1}`;
         this[player] = new AudioPlayer(name);
@@ -282,7 +314,8 @@
     let firstShow = new SlideShow('one');
     firstShow.initHandlers();    
   
-    
+    let musicSections = new Musicsections();
+    musicSections.assignHandlers();
     
     // Make outline and a few examples of pieces that I have for concert music 
     // Look up news sections of composer things online

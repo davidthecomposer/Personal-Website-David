@@ -552,9 +552,54 @@ background-image: url(images/main/DavidName.svg);
 
 /* Audio PLayer section */
 
+.music-container {
+    height: 800px;;
+}
+.music-header {
+    background-image: linear-gradient( rgb(49, 44, 48), rgb(49, 38, 46), rgb(56, 39, 54),  rgb(49, 38, 46), rgb(49, 44, 48));
+    outline: none;
+    border: none;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.music-title {
+    background-image: url(images/main/music-title.svg);
+    background-repeat: no-repeat;
+    height: 4rem;
+    width: 9rem;
+    margin-top: 1rem;
+    
+}
+
+.music-tabs-section {
+    font-family: 'Advent Pro', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.959);
+    width: 100%;
+    height: 3rem;
+  }
+
+.music-tab-button {
+    cursor: pointer;
+}
+  /* Music sections */
+
+  .music-sections {
+      position: absolute;
+  }
+
+  .invisible {
+      display: none;
+  }
 /* Music for Media section */
 .media-music {
- position: relative;
  display: flex;
  flex-direction: column;
  align-items: center;
@@ -721,6 +766,6 @@ background-image: url(images/main/DavidName.svg);
 
 /* Concert Music section */
 
-.concert-music-title {
+.music-sectinos-title {
     color: white;
 }
