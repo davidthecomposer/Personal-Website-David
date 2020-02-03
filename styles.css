@@ -105,6 +105,12 @@ header {
   
 }
 
+.comp-info strong {
+    font-weight: bold;
+    color: rgb(96, 96, 96);
+    margin-right: .5rem;
+}
+
 header h3 {
   cursor: pointer;
 }
@@ -555,6 +561,10 @@ background-image: url(images/main/DavidName.svg);
 .music-container {
     height: 800px;;
 }
+
+.audio-strong {
+    color: white;
+}
 .music-header {
     background-image: linear-gradient( rgb(49, 44, 48), rgb(49, 38, 46), rgb(56, 39, 54),  rgb(49, 38, 46), rgb(49, 44, 48));
     outline: none;
@@ -766,6 +776,173 @@ background-image: url(images/main/DavidName.svg);
 
 /* Concert Music section */
 
-.music-sectinos-title {
+.music-sections-title {
+    margin: 1rem;
     color: white;
+    font-size: 2rem;
+    text-align: center;
+    
+}
+
+.music-sections {
+    color: white;
+    width: 100%;
+}
+
+.comp-info {
+    font-family: 'Advent Pro', sans-serif;
+    display: inline-flex;
+    flex-direction: column;
+    height: 15rem;
+    justify-content: space-around;
+    align-items: center;
+    width: 33%;
+    margin: 1rem 0;
+}
+
+.card-title {
+    
+    font-size: 1.5rem;
+}
+
+.fa-file-pdf {
+    color:  purple;
+    cursor: pointer;
+}
+/* The CSS For the smaller version of the Audio player */
+.small-audio {
+    height: 1rem;
+    width: 200px;
+    font-size: .5rem;
+    
+}
+.small-audio-area {
+        width: 100%;
+        height: 100%;
+    
+}
+
+.small-player {
+    position: relative;
+    width: 200px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient( to right, rgba(52, 3, 54, 0.342), rgba(160, 6, 140, 0.966));
+    z-index: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: .5rem;
+    border-radius: 3%
+}
+
+.small-button {
+    height: 20px;
+    width: 20px;
+}
+
+.small-progress {
+    -webkit-appearance: none;
+    height: 3px;
+    position: relative;
+    width: 100px;
+    cursor: pointer;
+}
+
+.small-progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 6px;
+    width: 6px;
+    border: solid 1px rgb(46, 55, 221);
+    background-color: rgb(46, 55, 221);
+    border-radius: 100%;
+}
+
+.audio-sample-row {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.small-player-row {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+.small-atrow {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: fit-content;
+
+    
+}
+
+.small-acp {
+    font-size: .5rem;
+    margin: 0 0 0 10px;
+}
+
+.small-atr {
+    font-size: .5rem;
+    margin: 0 -2px 0 0;
+}
+
+
+.small-volume-pair {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-items: flex-end;
+    height: 30px;
+    width: 8px;
+    
+}
+
+.volumeBar-small {
+    -webkit-appearance: none;
+    position: absolute;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.555), rgba(255, 255, 255, 0));
+    height: 4px;
+    width: 20px;
+    margin-left: -8px;
+    margin-top: 0;
+    transform: rotate(-90deg);
+    visibility: hidden;
+    cursor: pointer;
+}
+
+.small-volume {
+    position: relative;
+    width: 8px;
+    height: 8px;
+    margin-top: 10px;
+    
+}
+
+.small-progress-button {
+    height: 8px;
+    width: 8px;
+    border-radius: 100%;
+    border: none;
+    position: absolute;
+    background: radial-gradient(white, rgb(0, 11, 128), black);
+    margin-left: -128px;
+    top: 11px;
+}
+
+.volumeBar-small::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 6px;
+    width: 6px;
+    border: solid 1px rgb(243, 243, 243)(233, 226, 226);
+    background-color: rgb(211, 211, 211);
+    border-radius: 100%;
 }
