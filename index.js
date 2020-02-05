@@ -170,7 +170,8 @@
     
     class AudioPlayer {
       constructor(playerNumber) {
-        this.player = document.querySelector(`.audio-player.${playerNumber}`);
+        this.playerColumn = document.querySelector('.player-column');
+        this.player = this.playerColumn.querySelector(`.${playerNumber}`);
         this.buttons = this.player.querySelector('.audio-buttons');
         this.progressButton = this.player.querySelector('.audio-progress-button');
         this.progressBar = this.player.querySelector('.audio-progress');
@@ -187,6 +188,8 @@
         this.timeRemaining.innerHTML = Math.floor(time / 60) + ":" + (time < 10 ? `0${time}` : time % 60 < 10 ? `0${time % 60}` : time % 60 ? time % 60 : '00');
         if (this.audio.duration - this.audio.currentTime === 0) {
           this.buttons.src = 'images/audio-player/playbutton.svg';
+          this.audio.currentTime = 0;
+          this.audio.pause();
         }
       }
     
@@ -197,13 +200,13 @@
         this.currentPosition.innerHTML = Math.floor(this.audio.currentTime.toFixed(0) / 60) + ":" + (this.audio.currentTime.toFixed(0) < 10 ? `0${this.audio.currentTime.toFixed(0)}` : this.audio.currentTime.toFixed(0) % 60 < 10 ? `0${this.audio.currentTime.toFixed(0) % 60}` : this.audio.currentTime.toFixed(0) % 60 ? this.audio.currentTime.toFixed(0) % 60 : '00');
         this.getDuration();
         this.progressBar.value = (this.audio.currentTime / this.audio.duration) * 100;
-        this.progressButton.style.marginLeft = `${(this.progressBar.value * 2) - 68}px`;
+        this.progressButton.style.marginLeft = `${(this.progressBar.value * 2) - 110}px`;
       }
     
       /* When user clicks mouse on progress bar, this skips music and object positions to event location*/
       changeLocation(event) {
         let percent = event.offsetX / event.target.offsetWidth;
-        this.progressButton.style.marginLeft = `${(percent * 200) - 68}px`;
+        this.progressButton.style.marginLeft = `${(percent * 200) - 110}px`;
         event.target.value = percent * 100;
         this.audio.currentTime = this.audio.duration * percent;
       }
@@ -236,36 +239,23 @@
       }
     
       /* makes the volume bar visible*/
-      volumeBarInit() {
-        this.volumeBar.style.visibility = 'visible';
-      }
     
       /* handles the logic to change the volume when moving slider*/
       volumeChange(event) {
         this.audio.volume = event.target.value;
       }
-    
+  
       /* hides the volume bar when leaving the slider area or after 3 seconds */
-      volumeBarHide(event) {
-        if (event.target === this.volume) {
-          setTimeout(() => {
-            this.volumeBar.style.visibility = 'hidden';
-          }, 3000);
-        } else {
-          this.volumeBar.style.visibility = 'hidden';
-        }
-      }
+  
       initEventHandlers() {
         this.buttons.onclick = () => this.buttonClickHandle(event);
         this.audio.ontimeupdate = () =>  this.getTime(event);
         this.audio.ondurationchange = () => this.getDuration(event);
         this.progressBar.onclick = () => this.changeLocation(event);
         this.volume.onclick = () => this.muteVolume(event);
-        this.volume.onmouseover = () => this.volumeBarInit(event);
         this.volumeBar.oninput = () => this.volumeChange(event);
-        this.volume.onmouseleave = () => this.volumeBarHide(event);
-        this.volumeBar.onmouseleave = () => this.volumeBarHide(event);
-        this.volumeBar.onmouseover = () => this.volumeBarInit(event);
+       
+       
       }
     }
     
@@ -373,7 +363,7 @@
     class Musicsections {
          constructor() {
            this.allBtns = document.querySelectorAll('.music-tab-button');
-           this.musicSections = document.querySelectorAll('.music-sections')
+           this.musicSections = document.querySelectorAll('.music-sections');
          }
 
          handleSwitch(event) {
@@ -385,24 +375,23 @@
           });
            sectionFilter.forEach((section) => {
              section.classList.add('invisible');
-             console.log(section.visibility);
+             
            });
-           pressedButton[0].classList.remove('invisible');
-         }
 
+           pressedButton[0].classList.remove('invisible');
+          [...this.allBtns].forEach((btn) => {
+           btn.style.color = 'white';
+
+          });
+          event.target.style.color = '#00a5a5';
+         }
+          
          assignHandlers() {
             this.allBtns.forEach((btn) => {
               btn.onclick = () => this.handleSwitch(event);
             });
           
          }
-    }
-
-
-    class Musiccards {
-      constructor() {
-        
-      }
     }
     
     const audioPlayers = document.querySelectorAll('.audio-player');

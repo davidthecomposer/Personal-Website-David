@@ -88,8 +88,9 @@ video {
 }
 
 body {
-    background-image: url(images/main/background.svg);
-    background-size: cover;  
+    background-color: rgb(17, 17, 17);
+    
+    width: 100%;
 }
 
 header {
@@ -102,7 +103,7 @@ header {
   height: 6rem;
   width: 100%;
   z-index: 3;
-  
+
 }
 
 .comp-info strong {
@@ -150,6 +151,7 @@ background-image: url(images/main/DavidName.svg);
  flex-direction: column;
  align-items: center;
  width: 100%;
+ padding: 2rem;
  /* background-image: url(images/background.svg);
  background-size: cover; */
 }
@@ -556,17 +558,18 @@ background-image: url(images/main/DavidName.svg);
     }
 }
 
-/* Audio PLayer section */
+/* Music Sections and Audio Players */
 
 .music-container {
-    height: 800px;;
+  position: relative;
+  background-color: rgb(17, 17, 17);
+  
+  
 }
 
-.audio-strong {
-    color: white;
-}
+
 .music-header {
-    background-image: linear-gradient( rgb(49, 44, 48), rgb(49, 38, 46), rgb(56, 39, 54),  rgb(49, 38, 46), rgb(49, 44, 48));
+    
     outline: none;
     border: none;
     display: flex;
@@ -574,14 +577,14 @@ background-image: url(images/main/DavidName.svg);
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background-color: rgb(25, 25, 24);
 }
 
 .music-title {
-    background-image: url(images/main/music-title.svg);
-    background-repeat: no-repeat;
-    height: 4rem;
-    width: 9rem;
-    margin-top: 1rem;
+    font-size: 3rem;
+    font-family: 'Hammersmith One', sans-serif;
+    color: white;
+    padding: 1rem 0 0 0;
     
 }
 
@@ -591,7 +594,7 @@ background-image: url(images/main/DavidName.svg);
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    color: rgba(255, 255, 255, 0.959);
+    color: #fffffff6;
     width: 100%;
     height: 3rem;
   }
@@ -599,23 +602,25 @@ background-image: url(images/main/DavidName.svg);
 .music-tab-button {
     cursor: pointer;
 }
-  /* Music sections */
 
   .music-sections {
-      position: absolute;
+      position: relative;
+      padding: 0 0 1rem 0;
   }
 
   .invisible {
       display: none;
   }
+
 /* Music for Media section */
+
 .media-music {
  display: flex;
  flex-direction: column;
  align-items: center;
  width: 100%;
- /* background-image: url(images/background.svg);
- background-size: cover; */
+ background-image: url(images/background.svg);
+ background-size: cover;
  color: white;
   }
 
@@ -624,9 +629,33 @@ background-image: url(images/main/DavidName.svg);
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: space-between;
+    align-items: center;
     margin: .5rem 0;
+   
 }
+
+.display-window {
+    position: relative;
+    height: 450px;
+    border: rgba(147, 38, 155, 0.068) solid 8px;
+    width: 50%;
+    margin: 0 0 0 12.5%;
+}
+
+.player-column {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 370px;
+    
+}
+
+.player-column::-webkit-scrollbar {
+width: 8px;
+color: white;
+}
+
 
 .audio-file {
     width: 100%;
@@ -645,20 +674,21 @@ background-image: url(images/main/DavidName.svg);
     cursor: pointer;
 }
 
-.audio-strong {
-    font-weight: bold;
-    font-size: 1.2rem;
-}
-
 .audio-player {
-    width: 32.5%;
-    height: 140px;
-    
+    width: 360px;
+    height: 50px;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient( to right, rgba(3, 3, 3, 0.342), rgba(255, 251, 251, 0.966));
+    background-image: linear-gradient( to right, rgba(5, 5, 5, 0.342), rgba(59, 59, 59, 0.966));
     z-index: 0;
+    margin: .05rem 0;
 
+}
+
+.audio-strong {
+    color: white;
+    font-size: .8rem;
+    font-weight: 300;
 }
 
 .audio-lower-row {
@@ -671,11 +701,12 @@ background-image: url(images/main/DavidName.svg);
 }
 
 .audio-area {
-    width: 70%;
+    position: relative;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    
 }
 
 .audio-player-row {
@@ -684,15 +715,8 @@ background-image: url(images/main/DavidName.svg);
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    position: relative;
-}
-
-.audio-album-cover {
-    width: 30%;
     height: 100%;
-    /* background-image: url('images/turningpoint.jpg');
-    background-size: cover;
-    background-position-x: -27px; */
+    position: absolute;
 }
 
 .audio-timers-row {
@@ -703,13 +727,13 @@ background-image: url(images/main/DavidName.svg);
 }
 
 .audio-current-position {
-    margin: -30px 0 0 25px;
-    font-size: .75rem;
+    margin: 30px 0 0 -20px;
+    font-size: .6rem;
 }
 
 .audio-time-remaining {
-    margin: -30px -35px 0 0;
-    font-size: .75rem;
+    margin: 30px 5px 0 0;
+    font-size: .6rem;
 }
 
 .audio-progress-button {
@@ -719,12 +743,12 @@ background-image: url(images/main/DavidName.svg);
     border: none;
     position: absolute;
     background: radial-gradient(white, purple, black);
-    margin-left: -68px;
+    margin-left: -110px;
 }
 
 .audio-buttons {
-    width: 75px;
-    height: 75px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
 }
 
@@ -735,58 +759,61 @@ background-image: url(images/main/DavidName.svg);
 }
 
 .audio-player-title {
-    font-family: 'Cormorant Garamond', serif;
+    position: absolute;
+    font-family: 'Advent Pro', sans-serif;
     font-size: 1rem;
     align-self: center;
-    justify-self: center;
+    
     
 }
-
+.volume-span {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+     justify-content: flex-end;
+}
 .audio-volumeBar {
     -webkit-appearance: none;
-    position: absolute;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.555), rgba(255, 255, 255, 0));
+    background: linear-gradient(to left, rgb(0, 165, 165), rgba(0, 0, 0, 0));
     height: 6px;
     width: 30px;
-    transform: rotate(-90deg);
-    margin-left: 155px;
-    margin-top: -30px;
-    visibility: hidden;
+    /* visibility: hidden; */
     cursor: pointer;
+    outline: none;
 }
 
 .audio-progress::-webkit-progress-bar {
-
     background-color: rgb(139, 139, 139);
     z-index: 3;
 }
 
 .audio-progress::-webkit-progress-value {
-    background-image: linear-gradient(to right, grey, rgb(202, 202, 202), blue);
+    background-image: linear-gradient(to right, grey, rgb(202, 202, 202), rgb(0, 165, 165));
 }
 
 .audio-volumeBar::-webkit-slider-thumb {
     -webkit-appearance: none;
-    height: 6px;
-    width: 6px;
-    border: solid 1px red;
-    background-color: crimson;
+    height: 8px;
+    width: 8px;
+    border: none;
+    background: radial-gradient(white, purple, black);
     border-radius: 100%;
 }
 
-/* Concert Music section */
+/*  Music sections related */
 
 .music-sections-title {
-    margin: 1rem;
+    padding: 2rem 0 0 0;
     color: white;
     font-size: 2rem;
     text-align: center;
-    
+    font-family: 'Hammersmith One', sans-serif;
 }
 
 .music-sections {
     color: white;
     width: 100%;
+    
 }
 
 .comp-info {
@@ -798,10 +825,11 @@ background-image: url(images/main/DavidName.svg);
     align-items: center;
     width: 33%;
     margin: 1rem 0;
+    background-color: rgba(3, 3, 3, 0.342);
+    border-radius: 10%;
 }
 
-.card-title {
-    
+.card-title {   
     font-size: 1.5rem;
 }
 
@@ -809,17 +837,17 @@ background-image: url(images/main/DavidName.svg);
     color:  purple;
     cursor: pointer;
 }
-/* The CSS For the smaller version of the Audio player */
+
+/* Small Audio Player CSS */
+
 .small-audio {
     height: 1rem;
     width: 200px;
-    font-size: .5rem;
-    
+    font-size: .5rem;  
 }
 .small-audio-area {
         width: 100%;
         height: 100%;
-    
 }
 
 .small-player {
@@ -828,7 +856,7 @@ background-image: url(images/main/DavidName.svg);
     height: 30px;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient( to right, rgba(52, 3, 54, 0.342), rgba(160, 6, 140, 0.966));
+    background-image: linear-gradient( to right, rgba(52, 3, 54, 0.342), rgba(160, 6, 139, 0.66));
     z-index: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: .5rem;
@@ -852,8 +880,8 @@ background-image: url(images/main/DavidName.svg);
     -webkit-appearance: none;
     height: 6px;
     width: 6px;
-    border: solid 1px rgb(46, 55, 221);
-    background-color: rgb(46, 55, 221);
+    border: solid 1px rgb(0, 165, 165);
+    background-color: rgb(0, 165, 165);
     border-radius: 100%;
 }
 
@@ -870,8 +898,7 @@ background-image: url(images/main/DavidName.svg);
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
-    
+    width: 100%; 
 }
 
 .small-atrow {
@@ -880,8 +907,6 @@ background-image: url(images/main/DavidName.svg);
     flex-direction: row;
     justify-content: space-around;
     height: fit-content;
-
-    
 }
 
 .small-acp {
@@ -903,7 +928,6 @@ background-image: url(images/main/DavidName.svg);
     justify-items: flex-end;
     height: 30px;
     width: 8px;
-    
 }
 
 .volumeBar-small {
@@ -923,8 +947,7 @@ background-image: url(images/main/DavidName.svg);
     position: relative;
     width: 8px;
     height: 8px;
-    margin-top: 10px;
-    
+    margin-top: 10px; 
 }
 
 .small-progress-button {
@@ -933,7 +956,7 @@ background-image: url(images/main/DavidName.svg);
     border-radius: 100%;
     border: none;
     position: absolute;
-    background: radial-gradient(white, rgb(0, 11, 128), black);
+    background: radial-gradient(white, rgb(0, 165, 165), black);
     margin-left: -128px;
     top: 11px;
 }
@@ -946,3 +969,47 @@ background-image: url(images/main/DavidName.svg);
     background-color: rgb(211, 211, 211);
     border-radius: 100%;
 }
+
+/* News Section */
+.news {
+    background-color: rgb(25, 24, 24);
+   
+}
+
+.news-title {
+    font-size: 3rem;
+    padding: 2rem 0;
+    color: white;
+    font-family: 'Hammersmith One', sans-serif;
+    text-align: center;
+
+}
+.news-slot {
+   border: none;
+
+}
+.news-item {
+    background-color: rgba(112, 89, 121, 0.796);
+    margin: .5rem 0;
+    border: none;
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+}
+
+.news-item-title {
+    font-family: 'Advent Pro', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: rgb(236, 236, 236);
+}
+
+.news-text {
+ color: rgb(191, 191, 191);
+ font-family: Georgia, 'Times New Roman', Times, serif;
+ font-size: 1rem;
+ padding: .5rem;
+}
+/* Blog Section */
+
+/* Footer/Contact section */
