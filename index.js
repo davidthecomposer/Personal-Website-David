@@ -387,6 +387,7 @@
          }
           
          assignHandlers() {
+            this.allBtns[0].style.color = '#00a5a5';
             this.allBtns.forEach((btn) => {
               btn.onclick = () => this.handleSwitch(event);
             });

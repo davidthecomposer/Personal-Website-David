@@ -89,20 +89,20 @@ video {
 
 body {
     background-color: rgb(17, 17, 17);
-    
+
     width: 100%;
 }
 
 header {
-  position: fixed;
-  background-color: rgba(0, 0, 0, 0.802);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  height: 6rem;
-  width: 100%;
-  z-index: 3;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.802);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    width: 100%;
+    z-index: 3;
 
 }
 
@@ -113,74 +113,70 @@ header {
 }
 
 header h3 {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .title {
-background-image: url(images/main/DavidName.svg);
-  height: 60%;
-  width:  30%;
-  background-repeat: no-repeat;
-  margin-left: 4%;
-  
+    background-image: url(images/main/DavidName.svg);
+    height: 60%;
+    width: 30%;
+    background-repeat: no-repeat;
+    margin-left: 4%;
+
 
 }
 
 .tabs-section {
-  font-family: 'Advent Pro', sans-serif;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  color: rgba(255, 255, 255, 0.959);
-  width: 70%;
-  height: 1rem;
-  margin-right: 2%;
-  font-size: 80%;
+    font-family: 'Advent Pro', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.959);
+    width: 70%;
+    height: 1rem;
+    margin-right: 2%;
+    font-size: 80%;
 }
 
 .divider {
-  margin: 0 2%;
-  color: #b297ae;
+    margin: 0 2%;
+    color: #b297ae;
 }
 
 /* Home Section */
 .home {
- position: relative;
- display: flex;
- flex-direction: column;
- align-items: center;
- width: 100%;
- padding: 2rem;
- /* background-image: url(images/background.svg);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    /* background-image: url(images/background.svg);
  background-size: cover; */
 }
 
 
 .spotlight-text {
-  position: relative;
-  color: white;
-  margin-top: 10rem;
+    position: relative;
+    color: white;
+    margin-top: 10rem;
 }
 
 
 .about-me {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: white;
-  width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 80%;
 }
 
-.about-me-title {
-  
-  
-}
+.about-me-title {}
 
 .about-me-text {
-  height: 300px;
-  width: 100%;
-  background-color: rgba(59, 59, 59, 0.047);
+    height: 300px;
+    width: 100%;
+    background-color: rgba(59, 59, 59, 0.047);
 }
 
 
@@ -191,7 +187,7 @@ background-image: url(images/main/DavidName.svg);
     position: relative;
     width: 800px;
     height: 400px;
-    border: solid 1px rgba(0, 0, 0, 0.178);
+    border: none;
     overflow: hidden;
     background-image: linear-gradient(white, rgb(219, 219, 219), rgb(238, 222, 222));
 }
@@ -201,7 +197,7 @@ background-image: url(images/main/DavidName.svg);
     position: absolute;
     height: 100%;
     width: 100%;
-        
+
 }
 
 .text-1 {
@@ -213,7 +209,7 @@ background-image: url(images/main/DavidName.svg);
     position: absolute;
     height: 100%;
     width: 100%;
-        
+
 }
 
 .text-2 {
@@ -225,7 +221,7 @@ background-image: url(images/main/DavidName.svg);
     position: absolute;
     height: 100%;
     width: 100%;
-        
+
 }
 
 .text-3 {
@@ -266,22 +262,23 @@ background-image: url(images/main/DavidName.svg);
 
 .pause-active {
     z-index: 2;
-    opacity: 0;  
+    opacity: 0;
 }
 
 .pane-ticker {
-   
+
     height: 2rem;
     display: flex;
     flex-direction: row;
     align-content: center;
     justify-content: center;
     z-index: 5;
-    
+
 }
 
 .pane-tick {
-    height:  1rem;;
+    height: 1rem;
+    ;
     width: 8%;
     border: none;
     padding: .5rem 0;
@@ -294,13 +291,14 @@ background-image: url(images/main/DavidName.svg);
 .invisible-text {
     opacity: 0;
 }
+
 .active-panel {
     opacity: 1;
 }
 
 .manual-navigation {
     position: absolute;
-   width: 20%;
+    width: 20%;
     height: 1rem;
     display: flex;
     flex-direction: row;
@@ -391,12 +389,12 @@ background-image: url(images/main/DavidName.svg);
     }
 
     to {
-      
-       width: 80%;
-       height: 80%;
-       border-radius: 50%;
-       left: 10%;
-       top: 10%;
+
+        width: 80%;
+        height: 80%;
+        border-radius: 50%;
+        left: 10%;
+        top: 10%;
     }
 }
 
@@ -407,18 +405,15 @@ background-image: url(images/main/DavidName.svg);
         border-top: 0%;
         border-bottom: 0%;
     }
-    20% {
 
-    }
-    40% {
+    20% {}
 
-    }
-    60%{
+    40% {}
 
-    }
-    80% {
+    60% {}
 
-    }
+    80% {}
+
     100% {
         border-right: 40%;
         border-left: 40%;
@@ -561,15 +556,15 @@ background-image: url(images/main/DavidName.svg);
 /* Music Sections and Audio Players */
 
 .music-container {
-  position: relative;
-  background-color: rgb(17, 17, 17);
-  
-  
+    position: relative;
+    background-color: rgb(17, 17, 17);
+
+
 }
 
 
 .music-header {
-    
+
     outline: none;
     border: none;
     display: flex;
@@ -577,7 +572,7 @@ background-image: url(images/main/DavidName.svg);
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(25, 25, 24);
+    background: rgb(22, 22, 22);
 }
 
 .music-title {
@@ -585,7 +580,7 @@ background-image: url(images/main/DavidName.svg);
     font-family: 'Hammersmith One', sans-serif;
     color: white;
     padding: 1rem 0 0 0;
-    
+
 }
 
 .music-tabs-section {
@@ -597,32 +592,33 @@ background-image: url(images/main/DavidName.svg);
     color: #fffffff6;
     width: 100%;
     height: 3rem;
-  }
+    background-image: linear-gradient(to bottom, rgb(25, 25, 24), rgb(14, 14, 13));
+}
 
 .music-tab-button {
     cursor: pointer;
 }
 
-  .music-sections {
-      position: relative;
-      padding: 0 0 1rem 0;
-  }
+.music-sections {
+    position: relative;
+    padding: 0 0 1rem 0;
+}
 
-  .invisible {
-      display: none;
-  }
+.invisible {
+    display: none;
+}
 
 /* Music for Media section */
 
 .media-music {
- display: flex;
- flex-direction: column;
- align-items: center;
- width: 100%;
- background-image: url(images/background.svg);
- background-size: cover;
- color: white;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-image: url(images/background.svg);
+    background-size: cover;
+    color: white;
+}
 
 .audio-row {
     position: relative;
@@ -631,7 +627,7 @@ background-image: url(images/main/DavidName.svg);
     width: 100%;
     align-items: center;
     margin: .5rem 0;
-   
+
 }
 
 .display-window {
@@ -648,14 +644,32 @@ background-image: url(images/main/DavidName.svg);
     overflow-y: scroll;
     overflow-x: hidden;
     width: 370px;
-    
+    height: 464px;
+
 }
 
 .player-column::-webkit-scrollbar {
-width: 8px;
-color: white;
+    width: 4px;
+    background-color: #00a5a5;
 }
 
+.player-column::-webkit-scrollbar-thumb {
+
+    background-color: rgb(71, 20, 71);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background-color: rgb(71, 20, 71);
+    border: none;
+
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+    background-color: #00a5a5;
+}
 
 .audio-file {
     width: 100%;
@@ -668,7 +682,7 @@ color: white;
 
 .audio-progress {
     -webkit-appearance: none;
-    height: 4px;
+    height: 2px;
     position: relative;
     width: 200px;
     cursor: pointer;
@@ -679,7 +693,7 @@ color: white;
     height: 50px;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient( to right, rgba(5, 5, 5, 0.342), rgba(59, 59, 59, 0.966));
+    background-image: linear-gradient(to right, rgba(5, 5, 5, 0.342), rgba(59, 59, 59, 0.966));
     z-index: 0;
     margin: .05rem 0;
 
@@ -706,7 +720,7 @@ color: white;
     height: 100%;
     display: flex;
     flex-direction: column;
-    
+
 }
 
 .audio-player-row {
@@ -763,15 +777,17 @@ color: white;
     font-family: 'Advent Pro', sans-serif;
     font-size: 1rem;
     align-self: center;
-    
-    
+
+
 }
+
 .volume-span {
     display: flex;
     flex-direction: row;
     align-items: center;
-     justify-content: flex-end;
+    justify-content: flex-end;
 }
+
 .audio-volumeBar {
     -webkit-appearance: none;
     background: linear-gradient(to left, rgb(0, 165, 165), rgba(0, 0, 0, 0));
@@ -813,7 +829,7 @@ color: white;
 .music-sections {
     color: white;
     width: 100%;
-    
+
 }
 
 .comp-info {
@@ -829,12 +845,12 @@ color: white;
     border-radius: 10%;
 }
 
-.card-title {   
+.card-title {
     font-size: 1.5rem;
 }
 
 .fa-file-pdf {
-    color:  purple;
+    color: purple;
     cursor: pointer;
 }
 
@@ -843,11 +859,12 @@ color: white;
 .small-audio {
     height: 1rem;
     width: 200px;
-    font-size: .5rem;  
+    font-size: .5rem;
 }
+
 .small-audio-area {
-        width: 100%;
-        height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .small-player {
@@ -856,7 +873,7 @@ color: white;
     height: 30px;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient( to right, rgba(52, 3, 54, 0.342), rgba(160, 6, 139, 0.66));
+    background-image: linear-gradient(to right, rgba(52, 3, 54, 0.342), rgba(160, 6, 139, 0.66));
     z-index: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: .5rem;
@@ -898,7 +915,7 @@ color: white;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    width: 100%; 
+    width: 100%;
 }
 
 .small-atrow {
@@ -947,7 +964,7 @@ color: white;
     position: relative;
     width: 8px;
     height: 8px;
-    margin-top: 10px; 
+    margin-top: 10px;
 }
 
 .small-progress-button {
@@ -973,7 +990,7 @@ color: white;
 /* News Section */
 .news {
     background-color: rgb(25, 24, 24);
-   
+
 }
 
 .news-title {
@@ -984,10 +1001,12 @@ color: white;
     text-align: center;
 
 }
+
 .news-slot {
-   border: none;
+    border: none;
 
 }
+
 .news-item {
     background-color: rgba(112, 89, 121, 0.796);
     margin: .5rem 0;
@@ -1005,11 +1024,113 @@ color: white;
 }
 
 .news-text {
- color: rgb(191, 191, 191);
- font-family: Georgia, 'Times New Roman', Times, serif;
- font-size: 1rem;
- padding: .5rem;
+    color: rgb(191, 191, 191);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
+    padding: .5rem;
 }
-/* Blog Section */
 
+/* Blog Section */
+.blog {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-title {
+    background-color: rgb(25, 24, 24);
+    font-size: 3rem;
+    padding: 2rem 0;
+    color: white;
+    font-family: 'Hammersmith One', sans-serif;
+    text-align: center;
+}
+.blog-items-container {
+    padding: 2rem 0;
+}
+
+.blog-row-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem 0 1rem;
+}
+
+.main-story {
+    outline: oldlace 1px solid;
+    width: 60%;
+    height: 400px;
+}
+
+.last-five-posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+   
+    width: 30%;
+    height: 400px;
+    color: white;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 1.5rem;
+}
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blog-list p {
+    font-size: .8rem;
+}
+
+.blog-row-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.other-story {
+    outline: oldlace 1px solid;
+    width: 20%;
+    height: 250px;
+}
 /* Footer/Contact section */
+.contact-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    padding: 2rem;
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: rgb(25, 24, 24);
+    border: none;
+    
+}
+.contact-body p {
+position: relative;
+ margin: 1rem 0 2rem 0;
+ text-align: center;
+ color: white;
+ 
+}
+
+.contact-body {
+    font-family: 'Advent Pro', sans-serif;
+}
+
+.form-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.message-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
