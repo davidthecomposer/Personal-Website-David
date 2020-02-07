@@ -419,7 +419,23 @@
     let musicSections = new Musicsections();
     musicSections.assignHandlers();
     
-    // Make outline and a few examples of pieces that I have for concert music 
-    // Look up news sections of composer things online
-    // Blog - Create a blog post section.
-    // contact info, questions, etc. 
+    /*
+    Add media music pane logic to objects/JS
+    Add animations to buttons and navigations
+    sync up naviagation
+    handle the hovering header logic
+    Add music and players to composition cards
+    update Image, blog, news content.
+    research and fill in footer content as needed
+    Create blog pages and blog page architecture
+    General Design issues
+
+
+    create front end project page
+
+    
+    
+    
+    
+    
+    */
