@@ -161,7 +161,7 @@ header h3 {
     color: white;
     margin-top: 8rem;
     font-family: 'Shadows Into Light', cursive;
-
+   width: 70%;
     font-size: 2rem;
 
 }
@@ -668,6 +668,9 @@ header h3 {
     border: rgba(147, 38, 155, 0.068) solid 8px;
     width: 50%;
     margin: 0 0 0 12.5%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-image: url(images/media-music-display/turning-point.svg);
 }
 
 .player-column {
@@ -1193,3 +1196,5 @@ footer {
    outline: none;
    margin: 0 1rem 0;
 }
+
+

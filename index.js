@@ -1,5 +1,27 @@
  /* jshint esversion: 6 */
+const audioPlayers = document.querySelectorAll('.audio-player');
+    const playerNames = [...audioPlayers].map((player) => player.classList[1]);
+    const smallAudioPlayers = document.querySelectorAll('.small-player');
+    const smallPlayerNames = [...smallAudioPlayers].map((player) => player.classList[1]);
+    const playerColumn = document.querySelector('.player-column');
+    
+    // for creating the variable commanding the class/object player
+    const nextTrack = (pl) => {
+      this[pl].play();
+    };
 
+    const stopOtherAudio = (event) => {
+      const allButtons = playerColumn.querySelectorAll('.audio-buttons');
+      let pause ='images/audio-player/pausebutton.svg';
+      let playing = [...allButtons].filter((btn) => {return btn.src.includes(pause);});
+      
+      if (playing.length > 0) {
+        playing[0].click();
+        
+      
+      }
+      
+    }
     class SlideShow {
         constructor(showNumber) {
             this.slideShow = document.querySelector("."+ showNumber);
@@ -140,11 +162,11 @@
         autoPlayControl(event) {
             if (event === undefined) {
               this.timerOn = setInterval(() => {this.nextPane();}, Number(10000));
-              console.log('this option');
+              
             } else if (event.target.getAttribute('src') === 'images/slideshow/pause.svg') {
                 clearInterval(this.timerOn);
                 event.target.setAttribute('src', 'images/slideshow/play.svg');
-                console.log('stopped');
+               
             } else {
                 this.timerOn = setInterval(() => {this.nextPane();}, Number(10000));
                 event.target.setAttribute('src', 'images/slideshow/pause.svg');
@@ -171,6 +193,8 @@
     class AudioPlayer {
       constructor(playerNumber) {
         this.playerColumn = document.querySelector('.player-column');
+        this.infoDisplay = document.querySelector('.display-window');
+        this.allPlayers = this.playerColumn.querySelectorAll('.audio-player');
         this.player = this.playerColumn.querySelector(`.${playerNumber}`);
         this.buttons = this.player.querySelector('.audio-buttons');
         this.progressButton = this.player.querySelector('.audio-progress-button');
@@ -180,6 +204,8 @@
         this.timeRemaining = this.player.querySelector('.audio-time-remaining p');
         this.volume = this.player.querySelector('.audio-volume');
         this.volumeBar = this.player.querySelector('.audio-volumeBar');
+        this.mediaTitle = this.player.classList[1];
+        
       }
     
       /* Gets time info from audio object and translates it to timeRemaining text*/
@@ -192,7 +218,7 @@
           this.audio.pause();
         }
       }
-    
+     
     
       /* Gets time info from audio object, calls getDuration to continuously update, 
       and updates progress bar value and progress button position*/
@@ -201,6 +227,7 @@
         this.getDuration();
         this.progressBar.value = (this.audio.currentTime / this.audio.duration) * 100;
         this.progressButton.style.marginLeft = `${(this.progressBar.value * 2) - 110}px`;
+        
       }
     
       /* When user clicks mouse on progress bar, this skips music and object positions to event location*/
@@ -215,20 +242,28 @@
       buttonClickHandle(event) {
         let play = 'images/audio-player/playbutton.svg';
         let pause = 'images/audio-player/pausebutton.svg';
+        event.target.parentElement.parentElement.parentElement.parentElement.classList[1];
+        
+        
         if (event.target.src.includes(play)) {
+          stopOtherAudio(event);
           event.target.src = pause;
           this.audio.play();
+          this.infoDisplay.setAttribute('style', `background-image: url('images/media-music-display/${this.mediaTitle}.svg');` );
+          
         } else {
           event.target.src = play;
           this.audio.pause();
         }
+
+        
       }
     
       /* handles the volume icons and controls*/
       muteVolume(event) {
         let mute = 'images/audio-player/volumeMute.svg';
         let volumeIcon = 'images/audio-player/volumeIcon.svg';
-    
+        
         if (event.target.src.includes(volumeIcon)) {
           event.target.src = mute;
           this.audio.muted = true;
@@ -246,7 +281,30 @@
       }
   
       /* hides the volume bar when leaving the slider area or after 3 seconds */
-  
+      
+      handleInfoDisplay(event) {
+        
+        
+        this.infoDisplay.setAttribute('style', `background-image: url('images/media-music-display/${this.mediaTitle}.svg');` );
+        
+      }
+     nextPlayer(event) {
+      let player = `player${playerNames.indexOf(this.player.classList[1]) + 2}`;
+      console.log(playerNames[playerNames.length - 1]);
+      if(this.player.classList[1] === playerNames[playerNames.length - 1] ) {
+        player1.play();
+      } else {
+        nextTrack(player);
+      }
+     }
+
+     play() {
+       this.buttons.click();
+       this.infoDisplay.setAttribute('style', `background-image: url('images/media-music-display/${this.mediaTitle}.svg');` );
+     }
+
+
+
       initEventHandlers() {
         this.buttons.onclick = () => this.buttonClickHandle(event);
         this.audio.ontimeupdate = () =>  this.getTime(event);
@@ -254,11 +312,12 @@
         this.progressBar.onclick = () => this.changeLocation(event);
         this.volume.onclick = () => this.muteVolume(event);
         this.volumeBar.oninput = () => this.volumeChange(event);
-       
-       
+        this.player.onmouseenter = () => this.handleInfoDisplay(event);
+        this.audio.onended = () => this.nextPlayer(event);
       }
     }
     
+    /*                   SMALL AUDIO PLAYER                         */
     class SmallAudioPlayer {
       constructor(playerNumber) {
         this.player = document.querySelector(`.small-player.${playerNumber}`);
@@ -395,10 +454,8 @@
          }
     }
     
-    const audioPlayers = document.querySelectorAll('.audio-player');
-    const playerNames = [...audioPlayers].map((player) => player.classList[1]);
-    const smallAudioPlayers = document.querySelectorAll('.small-player');
-    const smallPlayerNames = [...smallAudioPlayers].map((player) => player.classList[1]);
+  
+    
 
     playerNames.forEach((name) => {
         let player = `player${playerNames.indexOf(name) + 1}`;
@@ -407,7 +464,7 @@
     });
 
     smallPlayerNames.forEach((name) => {
-      let player = `player${smallPlayerNames.indexOf(name) + 1}`;
+      let player = `smallPlayer${smallPlayerNames.indexOf(name) + 1}`;
       this[player] = new SmallAudioPlayer(name);
       this[player].initEventHandlers();
   });
@@ -420,7 +477,9 @@
     musicSections.assignHandlers();
     
     /*
-    Add media music pane logic to objects/JS
+    Add all sound and pdf files and update code
+    update small player code to stop playing when other audio is played
+    update large audio so that any small player audio will stop playback.
     Add animations to buttons and navigations
     sync up naviagation
     handle the hovering header logic
@@ -428,7 +487,7 @@
     update Image, blog, news content.
     research and fill in footer content as needed
     Create blog pages and blog page architecture
-    General Design issues
+    General Design issues - style buttons, animations etc. 
 
 
     create front end project page
