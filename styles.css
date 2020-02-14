@@ -140,7 +140,7 @@ header h3 {
 }
 
 .divider {
-    margin: 0 2%;
+    margin: 0;
     color: #b297ae;
 }
 
@@ -629,11 +629,18 @@ header h3 {
 
 .music-tab-button {
     cursor: pointer;
+    width: 19%;
+    text-align: center;
 }
 
 .music-sections {
     position: relative;
-    padding: 2rem 0 2rem 0;
+    padding: 0 0 2rem 0;
+}
+
+.contact-text {
+    font-family: 'Advent Pro', sans-serif;
+    text-align: center;
 }
 
 .invisible {
@@ -1198,3 +1205,7 @@ footer {
 }
 
 
+.advent {
+    font-family: 'Advent Pro', sans-serif;
+    color: white;
+}

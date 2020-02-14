@@ -10,18 +10,20 @@ const audioPlayers = document.querySelectorAll('.audio-player');
       this[pl].play();
     };
 
+    // To stop other audio that might be playing when clicking play
     const stopOtherAudio = (event) => {
       const allButtons = playerColumn.querySelectorAll('.audio-buttons');
+      const smallButtons = document.querySelectorAll('.small-button');
       let pause ='images/audio-player/pausebutton.svg';
       let playing = [...allButtons].filter((btn) => {return btn.src.includes(pause);});
-      
+      let smallPlaying = [...smallButtons].filter((btn) => {return btn.src.includes(pause);});
       if (playing.length > 0) {
         playing[0].click();
-        
-      
       }
-      
-    }
+      if (smallPlaying.length > 0) {
+        smallPlaying[0].click();
+      }
+    };
     class SlideShow {
         constructor(showNumber) {
             this.slideShow = document.querySelector("."+ showNumber);
@@ -363,6 +365,7 @@ const audioPlayers = document.querySelectorAll('.audio-player');
         let play = 'images/audio-player/playbutton.svg';
         let pause = 'images/audio-player/pausebutton.svg';
         if (event.target.src.includes(play)) {
+          stopOtherAudio(event);
           event.target.src = pause;
           this.audio.play();
         } else {
