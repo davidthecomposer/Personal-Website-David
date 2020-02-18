@@ -102,19 +102,37 @@ header {
     align-items: center;
     height: 6rem;
     width: 100%;
-    z-index: 3;
+    z-index: 1;
     
 }
 
+.anchor {
+    padding-top: 6rem;
+}
 .comp-info strong {
     font-weight: bold;
     color: rgb(96, 96, 96);
     margin-right: .5rem;
 }
 
-header h3 {
+.header-tab {
     cursor: pointer;
+    margin: 0 .5rem;
+    color: rgba(255, 255, 255, 0.959);
+    font-family: 'Advent Pro', sans-serif;
+    text-decoration: none;
+    
+    
 }
+.header-tab:hover {
+    background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+    background-size: 0%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8%;
+    animation: slideout .15s 1 forwards linear;
+}
+
 
 .title {
     background-image: url(images/main/DavidName.svg);
@@ -155,7 +173,6 @@ header h3 {
  background-size: cover; */
 }
 
-
 .spotlight-text {
     position: relative;
     color: white;
@@ -181,7 +198,7 @@ header h3 {
     flex-direction: column;
     align-items: center;
     color: white;
-   
+    user-select: none;
 }
 
 .about-me-title {
@@ -214,6 +231,7 @@ header h3 {
 /* carousel related */
 
 .carousel {
+    user-select: none;
     position: relative;
     width: 800px;
     height: 400px;
@@ -376,6 +394,13 @@ header h3 {
     animation: fadeIn .5s linear 1 forwards;
 }
 
+.fade-in-one {
+    animation: fadeIn .25s linear 1 forwards;
+}
+.fade-out {
+    animation: fadeOut .25s linear 1 forwards;
+}
+
 .oval-shrink {
     animation: oval-shrink 1.5s linear 1 forwards;
 }
@@ -405,6 +430,16 @@ header h3 {
 
     to {
         opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
     }
 }
 
@@ -589,6 +624,7 @@ header h3 {
     position: relative;
     background-color: rgb(17, 17, 17);
     margin: 8rem 0 0 0;
+    user-select: none;
 
 }
 
@@ -604,6 +640,8 @@ header h3 {
     align-items: center;
     background: rgb(19, 19, 19);
     margin: 0 0 2rem 0;
+   
+    
 }
 
 .music-title {
@@ -611,8 +649,6 @@ header h3 {
     font-family: 'Hammersmith One', sans-serif;
     color: white;
     padding: 1rem 0 0 0;
-   
-
 }
 
 .music-tabs-section {
@@ -631,6 +667,72 @@ header h3 {
     cursor: pointer;
     width: 19%;
     text-align: center;
+    
+}
+
+.music-tab-button:hover {
+     background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+    background-size: 0%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8%;
+    animation: slideout1 .15s 1 forwards linear;
+}
+
+
+.slideout {
+    
+}
+.retract {
+    background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+    background-size: 0%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8%;
+    animation: retract .15s 1 forwards linear;
+}
+
+.retract1 {
+    background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+    background-size: 0%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8%;
+    animation: retract1 .15s 1 forwards linear;
+}
+
+@keyframes slideout {
+   
+    100% {    
+        background-size: 100%;
+    }
+}
+
+@keyframes slideout1 {
+   
+    100% {    
+        background-size: 50%;
+    }
+}
+
+@keyframes retract {
+    0% {
+        background-size: 100%;
+    }
+    100% {    
+        background-size: 0;
+    }
+
+}
+
+@keyframes retract1 {
+    0% {
+        background-size: 50%;
+    }
+    100% {    
+        background-size: 0;
+    }
+
 }
 
 .music-sections {
@@ -673,9 +775,9 @@ header h3 {
     position: relative;
     height: 450px;
     border: rgba(147, 38, 155, 0.068) solid 8px;
-    width: 50%;
+    width: 750px;
     margin: 0 0 0 12.5%;
-    background-size: 100%;
+    background-size: contain;
     background-repeat: no-repeat;
     background-image: url(images/media-music-display/turning-point.svg);
 }
@@ -1031,8 +1133,8 @@ header h3 {
 
 /* News Section */
 .news {
-    
-
+    padding-bottom: 2rem;
+    user-select: none;
 }
 
 .news-title {
@@ -1042,7 +1144,7 @@ header h3 {
     font-family: 'Hammersmith One', sans-serif;
     text-align: center;
     background-color: rgb(25, 24, 24);
-    margin: 8rem 0 4rem 0;
+    margin: 0 0 2rem 0;
 
 }
 
@@ -1078,6 +1180,7 @@ header h3 {
 .blog {
     display: flex;
     flex-direction: column;
+    user-select: none;
 }
 
 .blog-title {
@@ -1087,7 +1190,7 @@ header h3 {
     color: white;
     font-family: 'Hammersmith One', sans-serif;
     text-align: center;
-    margin: 8rem 0 2rem 0;
+    margin: 0 0 2rem 0;
 }
 .blog-items-container {
 
@@ -1143,6 +1246,10 @@ header h3 {
     height: 250px;
 }
 /* Footer/Contact section */
+
+.contact {
+    user-select: none;
+}
 .contact-form {
     position: relative;
     display: flex;
@@ -1195,6 +1302,7 @@ footer {
     width: 99%;
     z-index: 3;
     margin: 8rem auto 4rem;
+    user-select: none;
 }
 
 .footer-icons {
@@ -1202,6 +1310,7 @@ footer {
    border: none;
    outline: none;
    margin: 0 1rem 0;
+   cursor: pointer;
 }
 
 
@@ -1209,3 +1318,23 @@ footer {
     font-family: 'Advent Pro', sans-serif;
     color: white;
 }
+
+.signature {
+    height: 3rem;
+    
+  }
+  .by-me {
+    position: absolute;
+    display: flex;
+    right: 85%;
+    font-family: 'Advent Pro', sans-serif;
+    
+  }
+  
+  .by-me p {
+    padding-right: .8rem;
+    padding-left: .8rem;
+    align-self: center;
+    color: white;
+    
+  }

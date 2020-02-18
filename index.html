@@ -17,20 +17,20 @@
   <header>
     <div class="title">
     </div>
-    <div class="tabs-section">
-      <h3>Home</h3>
+    <nav class="tabs-section">
+      <a class="header-tab" href="#home" >Home</a>
       <h3 class="divider">|</h3>
-      <h3>Music </h3>
+      <a class="header-tab" href="#music-container">Music </a>
       <h3 class="divider">|</h3>
-      <h3>News</h3>
+      <a class="header-tab" href="#news">News</a>
       <h3 class="divider">|</h3>
-      <h3>Blog</h3>
+      <a class="header-tab" href="#blog">Blog</a>
       <h3 class="divider">|</h3>
-      <h3>Contact</h3>
-    </div>
+      <a class="header-tab"href="#contact">Contact</a>
+    </nav>
   </header>
   <!-- Home Section -->
-  <section class="home">
+  <section class="home anchor" id="home">
     <!-- Main Carousel -->
     <h2 class="spotlight-text">“The key to the mystery of a great artist is that for reasons unknown, he will give away his energies and his life just to make sure that one note follows another…and leaves us with the feeling that something is right in the world.”</h2>
     <h2 class="author-name">-Leonard Bernstein</h2>
@@ -67,7 +67,7 @@
     </div>
   </section>
   <!-- Music Section -->
-  <section class="music-container">
+  <section class="music-container anchor" id="music-container">
     <section class="music-header">
       <div class="music-title"> Music </div>
       <div class="music-tabs-section">
@@ -511,6 +511,28 @@
         <p><strong>Text:</strong> Traditional Texts</p>
         <p><strong>Score Sample:</strong> <i class="far fa-file-pdf"></i> </p>
         <p><strong>Audio Sample:</strong> </p>
+        <div class='small-player three-christmas-carols'>
+          <div class="audio-area small-audio-area">
+            <div class="audio-player-row small-player-row">
+              <audio class="audio-file" src="audio/concert-music/VocalChoral/David Campbell - O Come O Come Emanuel.wav"></audio>
+              <img src="images/audio-player/playbutton.svg" class="audio-buttons small-button"></img>
+              <progress class="audio-progress small-progress" max="100" value="0"></progress>
+              <div class="small-volume-pair">
+                <input class="volumeBar-small" type="range" min="0" max="1" step="0.01" value="1">
+                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg"></img>
+                <div class="small-progress-button"></div>
+              </div>
+            </div>
+            <div class="audio-timers-row">
+              <div class="audio-current-position small-acp">
+                <p>0:00</p>
+              </div>
+              <div class="audio-time-remaining small-atr">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!--I WONDER AS I WANDER -->
       <div class="comp-info wonder-wander">
@@ -533,6 +555,7 @@
         <p><strong>Text:</strong> Tristesses de la Lune - Charles Baudelaire</p>
         <p><strong>Score Sample:</strong> <i class="far fa-file-pdf"></i> </p>
         <p><strong>Audio Sample:</strong> </p>
+        
       </div>
       <!-- HABIT -->
       <div class="comp-info habit">
@@ -544,6 +567,28 @@
         <p><strong>Text:</strong> Habit - Jennifer Campbell</p>
         <p><strong>Score Sample:</strong> <i class="far fa-file-pdf"></i> </p>
         <p><strong>Audio Sample:</strong> </p>
+        <div class='small-player habit'>
+          <div class="audio-area small-audio-area">
+            <div class="audio-player-row small-player-row">
+              <audio class="audio-file" src="audio/concert-music/VocalChoral/Habit - 1. Aftermath.wav"></audio>
+              <img src="images/audio-player/playbutton.svg" class="audio-buttons small-button"></img>
+              <progress class="audio-progress small-progress" max="100" value="0"></progress>
+              <div class="small-volume-pair">
+                <input class="volumeBar-small" type="range" min="0" max="1" step="0.01" value="1">
+                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg"></img>
+                <div class="small-progress-button"></div>
+              </div>
+            </div>
+            <div class="audio-timers-row">
+              <div class="audio-current-position small-acp">
+                <p>0:00</p>
+              </div>
+              <div class="audio-time-remaining small-atr">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <!--SILENT NIGHT -->
       <div class="comp-info silent-night">
@@ -630,7 +675,7 @@
           <div class='small-player copernicus-etudes'>
             <div class="audio-area small-audio-area">
               <div class="audio-player-row small-player-row">
-                <audio class="audio-file" src="audio/concert-music/David Campbell - 3 Pieces for Clarinet.wav"></audio>
+                <audio class="audio-file" src=""></audio>
                 <img src="images/audio-player/playbutton.svg" class="audio-buttons small-button"></img>
                 <progress class="audio-progress small-progress" max="100" value="0"></progress>
                 <div class="small-volume-pair">
@@ -665,7 +710,7 @@
           <div class='small-player three-pieces-clarinet'>
             <div class="audio-area small-audio-area">
               <div class="audio-player-row small-player-row">
-                <audio class="audio-file" src="audio/concert-music/David Campbell - 3 Pieces for Clarinet.wav"></audio>
+                <audio class="audio-file" src="audio/concert-music/Solo/David Campbell - 3 Pieces for Clarinet.wav"></audio>
                 <img src="images/audio-player/playbutton.svg" class="audio-buttons small-button"></img>
                 <progress class="audio-progress small-progress" max="100" value="0"></progress>
                 <div class="small-volume-pair">
@@ -688,7 +733,7 @@
       </div>
     </section>
   </section>
-  <section class="news">
+  <section class="news anchor" id="news" >
     <h2 class="news-title"> News </h2>
     <div class='news-items-container'>
       <!-- News Item 1 -->
@@ -717,6 +762,13 @@
             project progresses.</p>
         </div>
       </div>
+      <!-- News Item 3 -->
+      <div class="news-item">
+        <div class="news-slot">
+          <h2 class="news-item-title"> Opera Contempo Composer-in-Residence</h2>
+          <p class="news-text"> I have accepted the invitiation to be the first composer-in-residence for Opera ConTempo. I look forward to helping to grow this imprtant new outlet for modern voices and stories</p>
+        </div>
+      </div>
       <div class="news-slot"> </div>
       <div class="news-slot"></div>
 
@@ -724,7 +776,7 @@
     </div>
 
   </section>
-  <section class="blog">
+  <section class="blog anchor" id="blog">
     <h2 class="blog-title"> Blog </h2>
     <div class="blog-items-container">
       <div class="blog-row-one">
@@ -763,7 +815,7 @@
     </div>
 
   </section>
-  <section class="contact">
+  <section class="contact anchor" id="contact">
 
 
 
@@ -794,6 +846,11 @@
     </div>
   </section>
   <footer>
+    <div class="by-me">
+      <p>A</p>
+      <img  class="signature" src="images/main/Picture2.png" alt="">
+      <p>Website</p>
+  </div>
     <h3 class="advent">Follow Me:</h2>
     <img src="images/main/twitter.svg" alt="twitter link" class="footer-icons" >
     <img src="images/main/instagram.svg" alt="instagram link" class="footer-icons" >
