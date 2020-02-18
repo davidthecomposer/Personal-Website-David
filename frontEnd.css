@@ -1,0 +1,164 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+    background-color: rgb(17, 17, 17);
+   
+    
+   
+}
+
+header {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.802);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 6rem;
+    width: 100%;
+    z-index: 1;
+    
+}
+
+.anchor {
+    padding-top: 6rem;
+}
+.comp-info strong {
+    font-weight: bold;
+    color: rgb(96, 96, 96);
+    margin-right: .5rem;
+}
+
+.header-tab {
+    cursor: pointer;
+    margin: 0 .5rem;
+    color: rgba(255, 255, 255, 0.959);
+    font-family: 'Advent Pro', sans-serif;
+    text-decoration: none;
+    
+    
+}
+.header-tab:hover {
+    background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+    background-size: 0%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8%;
+    animation: slideout .15s 1 forwards linear;
+}
+
+
+.title {
+    background-image: url(images/main/DavidNameDev.svg);
+    height: 60%;
+    width: 30%;
+    background-repeat: no-repeat;
+    margin-left: 4%;
+
+
+}
+
+.tabs-section {
+    font-family: 'Advent Pro', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.959);
+    width: 70%;
+    height: 1rem;
+    margin-right: 2%;
+    font-size: 80%;
+}
+
+.divider {
+    margin: 0;
+    color: #b297ae;
+}
