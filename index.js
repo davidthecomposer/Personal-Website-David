@@ -477,6 +477,7 @@
 
 const handleTabLeave = (e) => {
   e.target.classList.add('retract');
+  
 };
 
 

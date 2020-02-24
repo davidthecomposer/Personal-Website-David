@@ -111,7 +111,10 @@ header {
     padding-top: 6rem;
 }
 
-
+.header-group {
+    display: flex;
+    flex-direction: column;
+}
 .header-tab {
     cursor: pointer;
     margin: 0 .5rem;
@@ -121,7 +124,10 @@ header {
     
     
 }
-.header-tab:hover {
+.underline {
+height: .1rem;
+}
+.header-tab:hover + .underline {
     background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
     background-size: 0%;
     background-repeat: no-repeat;
@@ -130,6 +136,33 @@ header {
     animation: slideout .15s 1 forwards linear;
 }
 
+
+
+.retract {
+    background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+    background-size: 0%;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 8%;
+    animation: retract .15s 1 forwards linear;
+}
+
+@keyframes slideout {
+   
+    100% {    
+        background-size: 70%;
+    }
+}
+
+@keyframes retract {
+    0% {
+        background-size: 70%;
+    }
+    100% {    
+        background-size: 0;
+    }
+
+}
 
 .title {
     background-image: url(images/main/DavidNameDev.svg);
@@ -224,7 +257,7 @@ header {
     justify-content: space-between;
     font-family: 'Advent Pro', sans-serif;
     background-color: white;
-    
+    cursor: grab;
     border: none;
     outline: none;
 
@@ -232,17 +265,18 @@ header {
 
 .front {
    justify-content: space-evenly;
+   background-image: url(images/front-end/card-front.svg);
   }
   
 .back {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    
     transform: rotateY( 180deg );
+    background-image: url(images/front-end/card-back.svg);
   }
   .is-flipped {
     transform: rotateY(180deg);
   }
+
 
 .panel-title {
     position: relative;
@@ -250,6 +284,11 @@ header {
     font-size: 2rem;
     align-self: center;   
 }
+.back .panel-title {
+      margin-top: 2rem;
+      color: white;
+}
+
 
 .panel-picture {
     align-self: center;
@@ -290,6 +329,8 @@ header {
     color: white;
     height: 1.5rem;
     margin-bottom: 1rem;
+    z-index: 3;
+    cursor: pointer;
 }
 
 .panel-description {
@@ -297,3 +338,194 @@ header {
     align-self: center;
     margin-top: 2rem;
 }
+
+.back .panel-description {
+    position: absolute;
+    margin-top: 8rem;
+}
+/* Feedback Section */
+
+.feedback-title {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    height: 6rem;
+    line-height: 6rem;
+    background-color: rgb(12, 12, 12);
+    color: white;
+}
+
+.feedback-placeholder {
+    color: white;
+    font-family: 'Advent Pro', sans-serif;
+    padding: 3rem;
+    text-align: center;
+}
+
+/* Blog Section */
+
+/* Blog Section */
+.blog {
+    display: flex;
+    flex-direction: column;
+    user-select: none;
+}
+
+.blog-title {
+    font-family: 'Hammersmith One', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    height: 6rem;
+    line-height: 6rem;
+    background-color: rgb(12, 12, 12);
+    color: white;
+}
+.blog-items-container {
+
+    padding: 2rem 0;
+    
+}
+
+.blog-row-one {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 1rem 0 1rem;
+    width: 98%;
+}
+
+.main-story {
+    outline: oldlace 1px solid;
+    width: 60%;
+    height: 400px;
+}
+
+.last-five-posts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+   
+    width: 30%;
+    height: 400px;
+    color: white;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 1.5rem;
+}
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.blog-list p {
+    font-size: .8rem;
+}
+
+.blog-row-two {
+    margin: 2rem 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 98%;
+}
+.other-story {
+    outline: oldlace 1px solid;
+    width: 20%;
+    height: 250px;
+}
+/* Footer/Contact section */
+
+.contact {
+    user-select: none;
+}
+.contact-form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    padding: 2rem;
+    width: 600px;
+    height: 300px;
+    margin: 0 auto;
+    background-color: rgb(25, 24, 24);
+    border: none;
+    
+}
+.contact-body p {
+position: relative;
+ margin: 1rem 0 2rem 0;
+ text-align: center;
+ color: white;
+ 
+}
+
+.contact-body {
+    font-family: 'Advent Pro', sans-serif;
+}
+
+.email-content {
+    padding: 0 1rem;
+}
+.form-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.message-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.694);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 6rem;
+    width: 99%;
+    z-index: 3;
+    margin: 8rem auto 4rem;
+    user-select: none;
+}
+
+.footer-icons {
+   height: 30px;
+   border: none;
+   outline: none;
+   margin: 0 1rem 0;
+   cursor: pointer;
+}
+
+
+.advent {
+    font-family: 'Advent Pro', sans-serif;
+    color: white;
+}
+
+.signature {
+    height: 3rem;
+    
+  }
+  .by-me {
+    position: absolute;
+    display: flex;
+    right: 85%;
+    font-family: 'Advent Pro', sans-serif;
+    
+  }
+  
+  .by-me p {
+    padding-right: .8rem;
+    padding-left: .8rem;
+    align-self: center;
+    color: white;
+    
+  }

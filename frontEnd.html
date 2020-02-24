@@ -19,18 +19,30 @@
         <div class="title">
         </div>
         <nav class="tabs-section">
-            <a class="header-tab" href="#home">Home</a>
+            <div class="header-group">
+                <a class="header-tab" href="#home">Home</a>
+                <div class="underline"></div>
+            </div>
             <h3 class="divider">|</h3>
-            <a class="header-tab" href="#feedback">Feedback </a>
+            <div class="header-group">
+                <a class="header-tab" href="#feedback">Feedback </a>
+                <div class="underline"></div>
+            </div>
             <h3 class="divider">|</h3>
-            <a class="header-tab" href="#contact">Contact</a>
+            <div class="header-group">
+                <a class="header-tab" href="#blog">Blog</a>
+                <div class="underline"></div>
+            </div>
             <h3 class="divider">|</h3>
-            <a class="header-tab" href="#blog">Blog</a>
-            <h3 class="divider">|</h3>
-
+            <div class="header-group">
+                <a class="header-tab" href="#contact">Contact</a>
+                <div class="underline"></div>
+            </div>
         </nav>
+
     </header>
-    <div class="intro"> Welcome to a collection of snapshots from my front-end development journey. Below are all
+    <div class="intro anchor" id="home"> Welcome to a collection of snapshots from my front-end development journey.
+        Below are all
         the apps and projects that I have built on my own (with copious amounts of googling at times). Some are
         simple, some are complex, and some are better than others, but they are all my creations and I love them.
         Click anywhere other than the button on each card to read the details on the back. Click on the button to
@@ -38,7 +50,7 @@
         interfaces.
         Keep coming back for new updates! </div>
     <section class="apps">
-       <!-- APP ROW 1 START -->
+        <!-- APP ROW 1 START -->
         <div class="app-row">
             <!-- COLOR SELECTOR -->
             <div class="scene color-selector">
@@ -47,87 +59,91 @@
                         <h1 class="panel-title">Color Selector</h1>
                         <div class="panel-picture"></div>
                         <div class="lower-card">
-                        <div class="panel-stats">
-                            <div class="stat">
-                                <h3>Languages:</h3>
-                                <h3>Year Created: </h3>
+                            <div class="panel-stats">
+                                <div class="stat">
+                                    <h3>Languages:</h3>
+                                    <h3>Year Created: </h3>
 
+                                </div>
+                                <div class="stat">
+                                    <p> HTML, CSS, JavaScript</p>
+                                    <p> 2019</p>
+                                </div>
                             </div>
-                            <div class="stat">
-                                <p> HTML, CSS, JavaScript</p>
-                                <p> 2019</p>
-                            </div>
+                            <button class="navigate" data-url="Color-Selector/index.html">Go To App</button>
                         </div>
-                        <button class="navigate">Go To App</button>
-                    </div>
                     </div>
                     <div class="panel-container back">
                         <h1 class="panel-title">Color Selector</h1>
 
                         <div class="panel-description">
-                            <p> This ap allows the user to select a color or group of colors in various ways. All the different values are updated in real-time no matter which method is used for selection. The user can save the colors onto the color swatches on the right side.</p>
-                            <p> At the bottom right, there is a filterable list that shows several common value types for each color. </p>
+                            <p> This ap allows the user to select a color or group of colors in various ways. All the
+                                different values are updated in real-time no matter which method is used for selection.
+                                The user can save the colors onto the color swatches on the right side.</p>
+                            <p> At the bottom right, there is a filterable list that shows several common value types
+                                for each color. </p>
                         </div>
                     </div>
                 </div>
             </div>
-             <!-- AUDIO PLAYER 1 -->
-            <div class="scene audio-player-1">
+            <!-- MUSIC WEBSITE-->
+            <div class="scene music-website">
                 <div class="card">
                     <div class="panel-container front">
-                        <h1 class="panel-title">Audio Player 1</h1>
+                        <h1 class="panel-title">Music Website</h1>
                         <div class="panel-picture"></div>
                         <div class="lower-card">
-                        <div class="panel-stats">
-                            <div class="stat">
-                                <h3>Languages:</h3>
-                                <h3>Year Created: </h3>
+                            <div class="panel-stats">
+                                <div class="stat">
+                                    <h3>Languages:</h3>
+                                    <h3>Year Created: </h3>
 
+                                </div>
+                                <div class="stat">
+                                    <p> HTML, CSS, JavaScript</p>
+                                    <p> 2019</p>
+                                </div>
                             </div>
-                            <div class="stat">
-                                <p> HTML, CSS, JavaScript</p>
-                                <p> 2019</p>
-                            </div>
+                            <button class="navigate" data-url="index.html">Go To App </button>
                         </div>
-                        <button class="navigate">Go To App</button>
-                    </div>
                     </div>
                     <div class="panel-container back">
-                        <h1 class="panel-title">Audio Player</h1>
+                        <h1 class="panel-title">Music Website</h1>
 
                         <div class="panel-description">
-                            <p> This is the description of all the stuff that this app is about</p>
+                            <p> This is my personal music website. The main feature here is an expanded "Music" section that includes sortable music genre lists of my works, a playlist of media music, and score downloads</p>
+                            <p>There is a blog, News, and contact section as well. At the top of the page I used a version of the slideshow app to make a marquee</p>
                         </div>
                     </div>
                 </div>
             </div>
-             <!-- VIDEO PLAYER 1 -->
-            <div class="scene video-player-1">
+            <!-- SLIDE SHOW CREATOR -->
+            <div class="scene slide-show-creator">
                 <div class="card">
                     <div class="panel-container front">
-                        <h1 class="panel-title">Video Player 1</h1>
+                        <h1 class="panel-title">Slideshow Creator</h1>
                         <div class="panel-picture"></div>
                         <div class="lower-card">
-                        <div class="panel-stats">
-                            <div class="stat">
-                                <h3>Languages:</h3>
-                                <h3>Year Created: </h3>
+                            <div class="panel-stats">
+                                <div class="stat">
+                                    <h3>Languages:</h3>
+                                    <h3>Year Created: </h3>
 
+                                </div>
+                                <div class="stat">
+                                    <p> HTML, CSS, JavaScript</p>
+                                    <p> 2019</p>
+                                </div>
                             </div>
-                            <div class="stat">
-                                <p> HTML, CSS, JavaScript</p>
-                                <p> 2019</p>
-                            </div>
+                            <button class="navigate">Go To App</button>
                         </div>
-                        <button class="navigate">Go To App</button>
-                    </div>
                     </div>
                     <div class="panel-container back">
-                        <h1 class="panel-title">Video Player</h1>
+                        <h1 class="panel-title">Slideshow Creator</h1>
 
                         <div class="panel-description">
-                            <p> This video player has a bunch of custom features including: 4-speed control, skip forward and back, user-controllable progress bar and button, restart, pause, play, time remaining and time elapsed, full-screen mode, attachable control panel, and "lights-off" dark mode.</p>
-                            <p> It was designed using OOP principles so it could theoretically be used in a modular fashion multiple times on the same page</p>
+                            <p> With this App a user can load their own pictures into the interface, edit the text content, size, transition styles and many other options and then print out the HTML, CSS, and JS code to make a streamlined version of the slideshow that they have created.</p>
+                            <p> The output uses OOP principles so that in theory multiple slideshows can be used on the same page.</p>
                         </div>
                     </div>
                 </div>
@@ -135,195 +151,102 @@
         </div>
         <!-- APP ROW 2 START -->
         <div class="app-row">
-            <!-- calculator -->
-            <div class="scene calculator">
+            <!-- AUDIO PLAYER 1 -->
+            <div class="scene audio-player-1">
                 <div class="card">
                     <div class="panel-container front">
-                        <h1 class="panel-title">Calculator</h1>
+                        <h1 class="panel-title">Audio Player 1</h1>
                         <div class="panel-picture"></div>
                         <div class="lower-card">
-                        <div class="panel-stats">
-                            <div class="stat">
-                                <h3>Languages:</h3>
-                                <h3>Year Created: </h3>
+                            <div class="panel-stats">
+                                <div class="stat">
+                                    <h3>Languages:</h3>
+                                    <h3>Year Created: </h3>
 
+                                </div>
+                                <div class="stat">
+                                    <p> HTML, CSS, JavaScript</p>
+                                    <p> 2019</p>
+                                </div>
                             </div>
-                            <div class="stat">
-                                <p> HTML, CSS, JavaScript</p>
-                                <p> 2019</p>
-                            </div>
+                            <button class="navigate">Go To App</button>
                         </div>
-                        <button class="navigate">Go To App</button>
-                    </div>
                     </div>
                     <div class="panel-container back">
-                        <h1 class="panel-title">Calculator</h1>
+                        <h1 class="panel-title">Audio Player</h1>
 
                         <div class="panel-description">
-                            <p> This ap allows the user to select a color or group of colors in various ways. All the different values are updated in real-time no matter which method is used for selection. The user can save the colors onto the color swatches on the right side.</p>
-                            <p> At the bottom right, there is a filterable list that shows several common value types for each color. </p>
+                            <p> The custom audio player has basic features. Play and pause buttons, a user-controllable progress bar, time updates, and a spot to add a cover. When the user hovers over the volume icon a volums slider appears. It will stay on the screen for 3 seconds after the mouse exits or when it is moved</p>
                         </div>
                     </div>
                 </div>
             </div>
-             <!-- COMMISION FORM -->
-            <div class="scene commision-form">
+            <!-- VIDEO PLAYER 1 -->
+            <div class="scene video-player-1">
                 <div class="card">
                     <div class="panel-container front">
-                        <h1 class="panel-title">Commision Form</h1>
+                        <h1 class="panel-title">Video Player 1</h1>
                         <div class="panel-picture"></div>
                         <div class="lower-card">
-                        <div class="panel-stats">
-                            <div class="stat">
-                                <h3>Languages:</h3>
-                                <h3>Year Created: </h3>
-
+                            <div class="panel-stats">
+                                <div class="stat">
+                                    <h3>Languages:</h3>
+                                    <h3>Year Created: </h3>
+                                </div>
+                                <div class="stat">
+                                    <p> HTML, CSS, JavaScript</p>
+                                    <p> 2019</p>
+                                </div>
                             </div>
-                            <div class="stat">
-                                <p> HTML, CSS, JavaScript</p>
-                                <p> 2019</p>
-                            </div>
+                            <button class="navigate">Go To App</button>
                         </div>
-                        <button class="navigate">Go To App</button>
-                    </div>
                     </div>
                     <div class="panel-container back">
-                        <h1 class="panel-title">Commision Form</h1>
+                        <h1 class="panel-title">Video Player</h1>
+
+                        <div class="panel-description">
+                            <p> This video player has a bunch of custom features including: 4-speed control, skip
+                                forward and back, user-controllable progress bar and button, restart, pause, play, time
+                                remaining and time elapsed, full-screen mode, attachable control panel, and "lights-off"
+                                dark mode.</p>
+                            <p> It was designed using OOP principles so it could theoretically be used in a modular
+                                fashion multiple times on the same page</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- TO DO LIST -->
+            <div class="scene to-do-list">
+                <div class="card">
+                    <div class="panel-container front">
+                        <h1 class="panel-title">To-Do List</h1>
+                        <div class="panel-picture"></div>
+                        <div class="lower-card">
+                            <div class="panel-stats">
+                                <div class="stat">
+                                    <h3>Languages:</h3>
+                                    <h3>Year Created: </h3>
+
+                                </div>
+                                <div class="stat">
+                                    <p> HTML, CSS, JavaScript</p>
+                                    <p> 2019</p>
+                                </div>
+                            </div>
+                            <button class="navigate">Go To App</button>
+                        </div>
+                    </div>
+                    <div class="panel-container back">
+                        <h1 class="panel-title">To-Do List</h1>
 
                         <div class="panel-description">
                             <p> This is the description of all the stuff that this app is about</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             <!-- DIGITAL CLOCK -->
-            <div class="scene digital-clock">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">Digital Clock</h1>
-                        <div class="panel-picture"></div>
-                        <div class="lower-card">
-                        <div class="panel-stats">
-                            <div class="stat">
-                                <h3>Languages:</h3>
-                                <h3>Year Created: </h3>
-
-                            </div>
-                            <div class="stat">
-                                <p> HTML, CSS, JavaScript</p>
-                                <p> 2019</p>
-                            </div>
-                        </div>
-                        <button class="navigate">Go To App</button>
-                    </div>
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">Digital Clock</h1>
-
-                        <div class="panel-description">
-                            <p> This video player has a bunch of custom features including: 4-speed control, skip forward and back, user-controllable progress bar and button, restart, pause, play, time remaining and time elapsed, full-screen mode, attachable control panel, and "lights-off" dark mode.</p>
-                            <p> It was designed using OOP principles so it could theoretically be used in a modular fashion multiple times on the same page</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!-- APP ROW 3 START -->
-        <div class="app-row">
-            <!-- COLOR SELECTOR -->
-            <div class="scene drum-kit">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">Drum Kit</h1>
-                        <div class="panel-picture"></div>
-                        <div class="lower-card">
-                        <div class="panel-stats">
-                            <div class="stat">
-                                <h3>Languages:</h3>
-                                <h3>Year Created: </h3>
-
-                            </div>
-                            <div class="stat">
-                                <p> HTML, CSS, JavaScript</p>
-                                <p> 2019</p>
-                            </div>
-                        </div>
-                        <button class="navigate">Go To App</button>
-                    </div>
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">Drum Kit</h1>
-
-                        <div class="panel-description">
-                            <p> This ap allows the user to select a color or group of colors in various ways. All the different values are updated in real-time no matter which method is used for selection. The user can save the colors onto the color swatches on the right side.</p>
-                            <p> At the bottom right, there is a filterable list that shows several common value types for each color. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             <!-- MUSIC WEBSITE-->
-            <div class="scene music-website">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">Music Website</h1>
-                        <div class="panel-picture"></div>
-                        <div class="lower-card">
-                        <div class="panel-stats">
-                            <div class="stat">
-                                <h3>Languages:</h3>
-                                <h3>Year Created: </h3>
-
-                            </div>
-                            <div class="stat">
-                                <p> HTML, CSS, JavaScript</p>
-                                <p> 2019</p>
-                            </div>
-                        </div>
-                        <button class="navigate">Go To App</button>
-                    </div>
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">Music Website</h1>
-
-                        <div class="panel-description">
-                            <p> This is the description of all the stuff that this app is about</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-             <!-- SIMON GAME -->
-            <div class="scene simon-game">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">Simon Game</h1>
-                        <div class="panel-picture"></div>
-                        <div class="lower-card">
-                        <div class="panel-stats">
-                            <div class="stat">
-                                <h3>Languages:</h3>
-                                <h3>Year Created: </h3>
-
-                            </div>
-                            <div class="stat">
-                                <p> HTML, CSS, JavaScript</p>
-                                <p> 2019</p>
-                            </div>
-                        </div>
-                        <button class="navigate">Go To App</button>
-                    </div>
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">Simon Game</h1>
-
-                        <div class="panel-description">
-                            <p> This video player has a bunch of custom features including: 4-speed control, skip forward and back, user-controllable progress bar and button, restart, pause, play, time remaining and time elapsed, full-screen mode, attachable control panel, and "lights-off" dark mode.</p>
-                            <p> It was designed using OOP principles so it could theoretically be used in a modular fashion multiple times on the same page</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- APP ROW 4 -->
         <div class="app-row">
             <!-- TIP CALCULATOR -->
             <div class="scene tip-calculator">
@@ -332,53 +255,56 @@
                         <h1 class="panel-title">Tip Calculator</h1>
                         <div class="panel-picture"></div>
                         <div class="lower-card">
-                        <div class="panel-stats">
-                            <div class="stat">
-                                <h3>Languages:</h3>
-                                <h3>Year Created: </h3>
+                            <div class="panel-stats">
+                                <div class="stat">
+                                    <h3>Languages:</h3>
+                                    <h3>Year Created: </h3>
 
+                                </div>
+                                <div class="stat">
+                                    <p> HTML, CSS, JavaScript</p>
+                                    <p> 2019</p>
+                                </div>
                             </div>
-                            <div class="stat">
-                                <p> HTML, CSS, JavaScript</p>
-                                <p> 2019</p>
-                            </div>
+                            <button class="navigate">Go To App</button>
                         </div>
-                        <button class="navigate">Go To App</button>
-                    </div>
                     </div>
                     <div class="panel-container back">
                         <h1 class="panel-title">Tip Calculator</h1>
 
                         <div class="panel-description">
-                            <p> This ap allows the user to select a color or group of colors in various ways. All the different values are updated in real-time no matter which method is used for selection. The user can save the colors onto the color swatches on the right side.</p>
-                            <p> At the bottom right, there is a filterable list that shows several common value types for each color. </p>
+                            <p> This ap allows the user to select a color or group of colors in various ways. All the
+                                different values are updated in real-time no matter which method is used for selection.
+                                The user can save the colors onto the color swatches on the right side.</p>
+                            <p> At the bottom right, there is a filterable list that shows several common value types
+                                for each color. </p>
                         </div>
                     </div>
                 </div>
             </div>
-             <!-- TO DO LIST -->
-            <div class="scene to-do-list">
+            <!-- COMMISION FORM -->
+            <div class="scene commision-form">
                 <div class="card">
                     <div class="panel-container front">
-                        <h1 class="panel-title">To-Do List</h1>
+                        <h1 class="panel-title">Commission Form</h1>
                         <div class="panel-picture"></div>
                         <div class="lower-card">
-                        <div class="panel-stats">
-                            <div class="stat">
-                                <h3>Languages:</h3>
-                                <h3>Year Created: </h3>
+                            <div class="panel-stats">
+                                <div class="stat">
+                                    <h3>Languages:</h3>
+                                    <h3>Year Created: </h3>
 
+                                </div>
+                                <div class="stat">
+                                    <p> HTML, CSS, JavaScript</p>
+                                    <p> 2019</p>
+                                </div>
                             </div>
-                            <div class="stat">
-                                <p> HTML, CSS, JavaScript</p>
-                                <p> 2019</p>
-                            </div>
+                            <button class="navigate">Go To App</button>
                         </div>
-                        <button class="navigate">Go To App</button>
-                    </div>
                     </div>
                     <div class="panel-container back">
-                        <h1 class="panel-title">To-Do List</h1>
+                        <h1 class="panel-title">Commission Form</h1>
 
                         <div class="panel-description">
                             <p> This is the description of all the stuff that this app is about</p>
@@ -386,41 +312,237 @@
                     </div>
                 </div>
             </div>
-             <!-- SLIDE SHOW CREATOR -->
-            <div class="scene slide-show-creator">
+            <!-- DIGITAL CLOCK -->
+            <div class="scene digital-clock">
                 <div class="card">
                     <div class="panel-container front">
-                        <h1 class="panel-title">Slideshow Creator</h1>
+                        <h1 class="panel-title">Digital Clock</h1>
                         <div class="panel-picture"></div>
                         <div class="lower-card">
-                        <div class="panel-stats">
-                            <div class="stat">
-                                <h3>Languages:</h3>
-                                <h3>Year Created: </h3>
+                            <div class="panel-stats">
+                                <div class="stat">
+                                    <h3>Languages:</h3>
+                                    <h3>Year Created: </h3>
 
+                                </div>
+                                <div class="stat">
+                                    <p> HTML, CSS, JavaScript</p>
+                                    <p> 2019</p>
+                                </div>
                             </div>
-                            <div class="stat">
-                                <p> HTML, CSS, JavaScript</p>
-                                <p> 2019</p>
-                            </div>
+                            <button class="navigate">Go To App</button>
                         </div>
-                        <button class="navigate">Go To App</button>
-                    </div>
                     </div>
                     <div class="panel-container back">
-                        <h1 class="panel-title">Slideshow Creator</h1>
+                        <h1 class="panel-title">Digital Clock</h1>
 
                         <div class="panel-description">
-                            <p> This video player has a bunch of custom features including: 4-speed control, skip forward and back, user-controllable progress bar and button, restart, pause, play, time remaining and time elapsed, full-screen mode, attachable control panel, and "lights-off" dark mode.</p>
-                            <p> It was designed using OOP principles so it could theoretically be used in a modular fashion multiple times on the same page</p>
+                            <p> This video player has a bunch of custom features including: 4-speed control, skip
+                                forward and back, user-controllable progress bar and button, restart, pause, play, time
+                                remaining and time elapsed, full-screen mode, attachable control panel, and "lights-off"
+                                dark mode.</p>
+                            <p> It was designed using OOP principles so it could theoretically be used in a modular
+                                fashion multiple times on the same page</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-       
+        <!-- APP ROW 4 -->
+        <div class="app-row">
+            <!-- DRUM KIT -->
+            <div class="scene drum-kit">
+                <div class="card">
+                    <div class="panel-container front">
+                        <h1 class="panel-title">Drum Kit</h1>
+                        <div class="panel-picture"></div>
+                        <div class="lower-card">
+                            <div class="panel-stats">
+                                <div class="stat">
+                                    <h3>Languages:</h3>
+                                    <h3>Year Created: </h3>
+
+                                </div>
+                                <div class="stat">
+                                    <p> HTML, CSS, JavaScript</p>
+                                    <p> 2019</p>
+                                </div>
+                            </div>
+                            <button class="navigate">Go To App</button>
+                        </div>
+                    </div>
+                    <div class="panel-container back">
+                        <h1 class="panel-title">Drum Kit</h1>
+
+                        <div class="panel-description">
+                            <p> This ap allows the user to select a color or group of colors in various ways. All the
+                                different values are updated in real-time no matter which method is used for selection.
+                                The user can save the colors onto the color swatches on the right side.</p>
+                            <p> At the bottom right, there is a filterable list that shows several common value types
+                                for each color. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SIMON GAME -->
+            <div class="scene simon-game">
+                <div class="card">
+                    <div class="panel-container front">
+                        <h1 class="panel-title">Simon Game</h1>
+                        <div class="panel-picture"></div>
+                        <div class="lower-card">
+                            <div class="panel-stats">
+                                <div class="stat">
+                                    <h3>Languages:</h3>
+                                    <h3>Year Created: </h3>
+
+                                </div>
+                                <div class="stat">
+                                    <p> HTML, CSS, JavaScript</p>
+                                    <p> 2019</p>
+                                </div>
+                            </div>
+                            <button class="navigate">Go To App</button>
+                        </div>
+                    </div>
+                    <div class="panel-container back">
+                        <h1 class="panel-title">Simon Game</h1>
+
+                        <div class="panel-description">
+                            <p> This video player has a bunch of custom features including: 4-speed control, skip
+                                forward and back, user-controllable progress bar and button, restart, pause, play, time
+                                remaining and time elapsed, full-screen mode, attachable control panel, and "lights-off"
+                                dark mode.</p>
+                            <p> It was designed using OOP principles so it could theoretically be used in a modular
+                                fashion multiple times on the same page</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- CALCULATOR -->
+            <div class="scene calculator">
+                <div class="card">
+                    <div class="panel-container front">
+                        <h1 class="panel-title">Calculator</h1>
+                        <div class="panel-picture"></div>
+                        <div class="lower-card">
+                            <div class="panel-stats">
+                                <div class="stat">
+                                    <h3>Languages:</h3>
+                                    <h3>Year Created: </h3>
+
+                                </div>
+                                <div class="stat">
+                                    <p> HTML, CSS, JavaScript</p>
+                                    <p> 2019</p>
+                                </div>
+                            </div>
+                            <button class="navigate">Go To App</button>
+                        </div>
+                    </div>
+                    <div class="panel-container back">
+                        <h1 class="panel-title">Calculator</h1>
+
+                        <div class="panel-description">
+                            <p> This ap allows the user to select a color or group of colors in various ways. All the
+                                different values are updated in real-time no matter which method is used for selection.
+                                The user can save the colors onto the color swatches on the right side.</p>
+                            <p> At the bottom right, there is a filterable list that shows several common value types
+                                for each color. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </section>
+
+    <section class="feedback anchor" id="feedback">
+        <h1 class="feedback-title"> Feedback </h1>
+        <div class="feedback-placeholder">
+            <h1> This Section is still under construction until I learn more backend JS! Stay Tuned...</h1>
+        </div>
+    </section>
+    <section class="blog anchor" id="blog">
+        <h2 class="blog-title"> Blog </h2>
+        <div class="blog-items-container">
+            <div class="blog-row-one">
+                <div class="main-story">
+                </div>
+                <div class="last-five-posts">
+                    <div class="blog-list">
+                        <h3>Story 2</h3>
+                        <p> Quick description about Story</p>
+                    </div>
+                    <div class="blog-list">
+                        <h3>Story 3</h3>
+                        <p> Quick description about Story</p>
+                    </div>
+                    <div class="blog-list">
+                        <h3>Story 4</h3>
+                        <p> Quick description about Story</p>
+                    </div>
+                    <div class="blog-list">
+                        <h3>Story 5</h3>
+                        <p> Quick description about Story</p>
+                    </div>
+                    <div class="blog-list">
+                        <h3>Story 6</h3>
+                        <p> Quick description about Story</p>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-row-two">
+                <div class="other-story"></div>
+                <div class="other-story"></div>
+                <div class="other-story"></div>
+                <div class="other-story"></div>
+            </div>
+
+        </div>
+
+    </section>
+    <section class="contact anchor" id="contact">
+
+
+
+
+
+
+        <h2 class="blog-title"> Contact </h2>
+        <div class="contact-body">
+            <p> Send me an email with any questions or requests using the form below. </p>
+            <form action="mail.php" class="contact-form">
+                <div class="form-row">
+                    <div>
+                        <label for="user-name"> Name: </label>
+                        <input type="text" name="user-name" id="user-name">
+                    </div>
+                    <div>
+                        <label for="user-email"> E-mail: </label>
+                        <input type="text" name="user-email" id="user-email" size="30">
+                    </div>
+                </div>
+                <div class="message-col">
+                    <label for="email-content"> Message: </label>
+                    <textarea name="email-content" id="email-content" rows="10" cols="80"></textarea>
+                </div>
+                <input type="submit">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="by-me">
+            <p>A</p>
+            <img class="signature" src="images/main/Picture2.png" alt="">
+            <p>Website</p>
+        </div>
+        <h3 class="advent">Follow Me:</h2>
+            <img src="images/main/twitter.svg" alt="twitter link" class="footer-icons">
+            <img src="images/main/instagram.svg" alt="instagram link" class="footer-icons">
+            <img src="images/main/facebook.svg" alt="facebook link" class="footer-icons">
+    </footer>
     <script src="frontEnd.js"></script>
 </body>
 

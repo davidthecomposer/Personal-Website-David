@@ -1,19 +1,31 @@
 /* jshint esversion: 6 */
 const scenes = document.querySelectorAll('.scene');
 const cardNames = [...scenes].map((scene) => scene.classList[1]);
+const nav = document.querySelector('nav');
+const pageNav = nav.querySelectorAll('.header-tab');
 class Card {
     constructor(cardName) {
         this.cardName = cardName;
         this.scene = document.querySelector(`.${cardName}`);
         this.card = this.scene.querySelector('.card');
         this.panelPicture = this.scene.querySelector('.panel-picture');
+        this.navigate = this.scene.querySelector('.navigate');;
     }
+
     flipCard(event) {
-        this.card.classList.toggle('is-flipped');
+        if (event.target !== this.navigate) {
+            this.card.classList.toggle('is-flipped');
+        }
     }
+
+    handleNav(event) {
+      window.location.assign(`${this.navigate.getAttribute('data-url')}`);
+    }
+
     initEventHandlers() {
         this.panelPicture.setAttribute('style', `background-image: url("images/front-end/${this.cardName}.png")`);
         this.card.onclick = () => this.flipCard(event);
+        this.navigate.onclick = () => this.handleNav(event);
     }
 }
 
@@ -25,16 +37,22 @@ cardNames.forEach((name) => {
     this[card].initEventHandlers();
 });
 
+const handleTabLeave = (e) => {
+    e.target.nextElementSibling.classList.add('retract');
+};
 
+
+pageNav.forEach((btn) => {
+    btn.addEventListener('mouseout', handleTabLeave);
+});
 
 
 
 /* 
-make logic for cards as Class
+
 add all info
 make link pages and connect
 make navigation sidebar? Or some bavigation system between pages amd apps.
-Websites and Apps? 
-
+responsive design fixes for main sites
 
 */
