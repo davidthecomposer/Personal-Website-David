@@ -505,20 +505,27 @@ pageNav.forEach((btn) => {
  musicSections.assignHandlers();
 
  /*
-              Add all sound and pdf files and update code
+              
  
  
  
- handle the hovering header logic
- Add music and players to composition cards
- update Image, blog, news content.
- research and fill in footer content as needed
+ 
+ Rotating list of composer/other quotes. (SQL?)
+ Head shot of myself for Artist statement section
+ Update Artist's statement
+ Add all sound and pdf files and add player code
+ News section updates and restyle?
  Create blog pages and blog page architecture
- General Design issues - style buttons, animations etc. 
+ create at least one or two blog posts
  Security for contact form.
+ research and fill in footer content as needed - add links! 
+ 
+ General Design issues - style buttons, animations etc. 
+ RESPONSIVE DESIGN
+ STYLE ISSUES FOR DIFFERENT BROWSERS
 
 
- create front end project page
+ create front end project pages
 
  
  
