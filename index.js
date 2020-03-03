@@ -1,5 +1,5 @@
  /* jshint esversion: 6 */
-import {composerQuotes} from './modules/composer-quotes';
+import {composerQuotes} from './composer-quotes.js';
 
  const audioPlayers = document.querySelectorAll('.audio-player');
  const playerNames = [...audioPlayers].map((player) => player.classList[1]);
@@ -506,7 +506,7 @@ pageNav.forEach((btn) => {
  let musicSections = new Musicsections();
  musicSections.assignHandlers();
 
- console.log(composerQuotes.entries())
+ console.log(composerQuotes)
  /*
               
  
