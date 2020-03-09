@@ -179,8 +179,9 @@ header {
     color: white;
     margin-top: 8rem;
     font-family: 'Shadows Into Light', cursive;
-   width: 70%;
+   width: 80%;
     font-size: 2rem;
+    text-align: center;
 
 }
 
@@ -221,9 +222,16 @@ header {
     font-family: 'Advent Pro', sans-serif;
     font-size: 1.2rem;
     width: 70%;
-
+ 
 }
 
+.my-image {
+    height: 200px;
+    width: 150px;
+    float: left;
+    margin: 0.5rem 1rem 0 1rem;
+    border: none;
+}
 .about-me-text p {
     line-height: 1.5;
     text-indent: 50px;
@@ -1148,19 +1156,64 @@ header {
     margin: 0 0 2rem 0;
 
 }
-
-.news-slot {
-    border: none;
-
+.news-items-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    align-items: center;
 }
 
-.news-item {
-    background-color: rgba(112, 89, 121, 0.796);
-    margin: .5rem 0;
-    border: none;
-    width: 70%;
+.news-row {
+    position: relative;
     display: flex;
+    margin: .5rem 0;
     flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 240px;
+    background: rgba(39, 39, 41, 0.442);
+    border: none;
+    
+}
+.news-expand {
+cursor: pointer;
+color: #00a5a5;
+}
+
+
+.liz-c {
+    display: none;
+}
+
+
+
+.news-slot-main { 
+    background-color: rgba(112, 89, 121, 0.796);
+    position: relative;
+    border: none;
+    width: 48%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 .5rem;
+}
+
+.news-slot-one {
+    width: 48%;
+    height: 200px;
+    
+}
+
+.news-slot-one a {
+    text-decoration: none;
+    color: #00a5a5;
+    
+}
+.news-slot-two {
+    width: 22%;
+    border: purple 1px solid;
 }
 
 .news-item-title {
@@ -1172,11 +1225,39 @@ header {
 
 .news-text {
     color: rgb(191, 191, 191);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* font-family: Georgia, 'Times New Roman', Times, serif; */
+    font-family: 'Advent Pro', sans-serif;
     font-size: 1rem;
-    padding: .5rem;
+    line-height: 1.4rem;
+    
 }
 
+.news-text-1 {
+    color: rgb(191, 191, 191);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: .88rem;
+    line-height: 1.2rem;
+    
+}
+.news-image {
+    height: 150px;
+    width: 187px;
+    float: left;
+    margin: 0 1rem 0 0;
+}
+
+.news-image-1 {
+    height: 150px;
+    width: 120px;
+    float: left;
+    margin: 0 1rem 0 0;
+}
+
+.square {
+    height: 150px;
+    width: 150px;
+}
 /* Blog Section */
 .blog {
     display: flex;
@@ -1243,7 +1324,7 @@ header {
 }
 .other-story {
     outline: oldlace 1px solid;
-    width: 20%;
+    width: 23%;
     height: 250px;
 }
 /* Footer/Contact section */

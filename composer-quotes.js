@@ -1,4 +1,4 @@
- /* jshint esversion: 6 */
+ // jshint esversion: 6 
  export const composerQuotes = {
     'Claude Debussy': `"Works of art make rules; rules do not make works of art."`,
     'Leonard Bernstein': '"To achieve great things',
