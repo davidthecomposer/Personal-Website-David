@@ -90,8 +90,10 @@ video {
 body {
     display: flex;
     background-color: rgb(238, 238, 238);
-    flex-direction: row;
+    flex-direction: column;
+    /* background: url('/David Campbell Website/images/blog/content-bg.svg'); */
 }
+
 
 .header {
     /* background-image: url('/David Campbell Website/images/blog/header-bg.svg'); */
@@ -99,6 +101,18 @@ body {
     position: relative;
     border: none;
 
+}
+
+.signature {
+    height: 4rem;
+
+}
+
+.sub-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
@@ -111,33 +125,36 @@ body {
     border: none;
     background-size: 100%;
     background-repeat: no-repeat;
-
-
-
 }
 
 .sub-title {
     font-family: 'Spartan', sans-serif;
     font-size: 1.5rem;
     text-align: center;
+    margin: 0 .5rem;
 
 }
 
-.opus {}
+.home-button {
+    height: 4rem;
+    width: 1.8rem;
+    position: absolute;
+    left: 20%;
 
-.date {}
+}
+
 
 .issue {
     margin: 4rem 0 2rem 2rem;
     font-size: .8rem;
+    font-weight: 900;
 
 
 }
 
 .blog-area {
-    width: 80%;
-    overflow-y: scroll;
-    background: url('/David Campbell Website/images/blog/content-bg.svg');
+    position: relative;
+    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
     font-family: 'Spartan', sans-serif;
@@ -146,53 +163,56 @@ body {
 .content {
 
     background-size: 100%;
-    height: 3000px;
-    border: .25px solid rgba(0, 0, 0, 0.489);
-    width: 96%;
+
+
+    width: 90%;
     margin: 2rem auto;
 
 }
 
 .article-list {
-    width: 20%;
-    position: fixed;
-    height: 100%;
+    margin: 4rem 0;
+    width: 100%;
+    position: relative;
+
     border: none;
-    border-top: none;
-    right: 0;
-    overflow-y: scroll;
-    display: relative;
-    background: url('/David Campbell Website/images/blog/artocle-list-bg.svg');
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: nowrap;
 }
 
 .article-title {
-    font-size: 3rem;
+    font-size: 4rem;
     margin: 4rem 0 4rem;
     text-align: center;
 
 }
 
 .article-text {
-    direction: ltr;
+
     margin: 0 2rem;
 }
 
 /* Scrollbar Stuff */
 
 ::-webkit-scrollbar {
-    
+
     width: 4px;
     background-color: #00a5a5;
 }
 
 ::-webkit-scrollbar-thumb {
-    
+
     background-color: rgb(71, 20, 71);
 
 }
 
 .article-list::-webkit-scrollbar {
-    width: 4px;
+
+    height: 4px;
     background-color: #00a5a5;
 }
 
@@ -204,31 +224,37 @@ body {
 }
 
 
+.article-card {}
 
-.article-card {
-    width: 90%;
-    height: 12rem;
-    margin: 2rem auto;
+
+.nav-link {
+    flex: 0 0 auto;
+    text-decoration: none;
+    width: 20rem;
     text-decoration: none;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background: rgb(233, 233, 233);
-    border-radius: 12%;
-}
-
-
-.nav-link {
-    text-decoration: none;
+    margin: 0 .25rem;
 }
 
 .nav-title {
     font-size: 1.5rem;
     font-family: 'Spartan', sans-serif;
+    background-color: rgba(255, 255, 255, 0.408);
+    width: 100%;
+    height: 6rem;
+    line-height: 2rem;
+    text-align: center;
+    color: black;
+
 }
 
 .nav-image {
-    height: 60%;
-    width: 80%;
+    height: 10rem;
+    width: 20rem;
+
 }
+
+.home {}

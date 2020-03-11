@@ -1,5 +1,5 @@
  // jshint esversion: 6 
- export const composerQuotes = {
+ const composerQuotes = {
     'Claude Debussy': `"Works of art make rules; rules do not make works of art."`,
     'Leonard Bernstein': '"To achieve great things',
     'Bela Bartok': '"Competitions are for horses"',
@@ -29,3 +29,4 @@
 
 };
 
+export {composerQuotes};
