@@ -1,9 +1,11 @@
  /* jshint esversion: 6 */
 
  export const nextTrack = (player) => {
-    let nextPlayer = {};
-    nextPlayer[player].play();
+  
+    let newSpace = {};
+    newSpace[player].play();
   };
+  
 
   export const stopOtherAudio = (event) => {
     const playerColumn = document.querySelector('.player-column');  
@@ -22,4 +24,8 @@
     if (smallPlaying.length > 0) {
       smallPlaying[0].click();
     }
+  };
+
+  export const allPlayersArray = {
+    playersArray: [],
   };

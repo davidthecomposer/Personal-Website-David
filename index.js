@@ -11,15 +11,17 @@
  import {SmallAudioPlayer} from './modules/small-audio-player.js';
  import {Musicsections} from './modules/music-section.js';
  import {NewsRow} from './modules/news-row.js';
- 
+ import{allPlayersArray} from './modules/audio-helpers.js';
 
 
  //  ---------------- HELPER FUNCTIONS  ------------------------  //
 
+
+
  const createAudioPlayers = () => {
 
    // Large Audio Players
-
+   
    const audioPlayers = document.querySelectorAll('.audio-player');
    const playerNames = [...audioPlayers].map((player) => player.classList[1]);
 
@@ -28,6 +30,7 @@
      let player = `player${playerNames.indexOf(name) + 1}`;
      playerSpace[player] = new AudioPlayer(name);
      playerSpace[player].initEventHandlers();
+     allPlayersArray.playersArray.push(playerSpace[player]);
    });
 
    //Small Audio players
@@ -41,7 +44,7 @@
      playerSpace[player] = new SmallAudioPlayer(name);
      playerSpace[player].initEventHandlers();
    });
-
+    
  };
 
 
@@ -101,7 +104,7 @@
    musicSections.assignHandlers();
  };
 
- 
+
  const composerQuoteChange = () => {
    const composerQuote = document.querySelector('.spotlight-text');
    const composerName = document.querySelector('.author-name');
@@ -127,32 +130,78 @@
 
 
 
+const isScrolled = (event) => {
+  const body = document.querySelector('body');
+const header = document.querySelector('header');
+ let scrollPosition = body.getBoundingClientRect().top;
+
+  if (scrollPosition !== 0) {
+    header.classList.remove('header-full');
+    header.classList.add('header-thin');
+  } else {
+    // header.classList.remove('header-thin');
+    header.classList.add('header-full');
+  }
+};
+
+window.addEventListener('scroll', isScrolled);
+
+
+
+//  ----------------------- EXPORTS -------------------------------  //
+export {allPlayersArray};
+
 
 
 
 
  /* -------------------------- To-Do ---------------------------- //
-              
+        
+ Header-
+    Animation to transition to thin header on mousewheel
+      -scroll-top ? 
 
- Head shot of myself for Artist statement section
- Update Artist's statement
+ Spotlight Section - 
+    Fix Slides 
+    Add links? 
+    Logic for making links automatically.
+
+Artist's Statement: 
+ Better Head SHot
+ Update Artist's statement -
+
+ Music Sections -
  Add all sound and pdf files and add player code
+ Decide on which pieces to try to render or parts
+ create score samples from full .pdfs
+ players not showing time remaining on init
 
- Create blog pages and blog page architecture
- create at least one or two blog posts
+
+ News Section -
+ Automate process by making News Objects like blog objects
+
+
+ Blog -
+ Update blog posts
+
+ -Contact
  Security for contact form.
- research and fill in footer content as needed - add links! 
+ Use HTML options for verification
+ Make sure email hookup is correct.
+
  
  General Design issues - style buttons, animations etc. 
  RESPONSIVE DESIGN
  STYLE ISSUES FOR DIFFERENT BROWSERS
 
 
- create front end project pages
+ Front End - 
 
- fix auto play feature issue {namespace?}
+ Set up Front end in own subfolder
+
  
- players not showing time remaining on init
+ 
+ 
  
  
  */

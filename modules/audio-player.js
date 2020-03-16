@@ -1,6 +1,11 @@
  /* jshint esversion: 6 */
 
-import {nextTrack, stopOtherAudio} from './audio-helpers.js';
+import {stopOtherAudio} from './audio-helpers.js';
+import {allPlayersArray} from '../index.js';
+
+     
+
+
 
 export class AudioPlayer {
     constructor(playerNumber) {
@@ -8,7 +13,7 @@ export class AudioPlayer {
       this.infoDisplay = document.querySelector('.display-window');
       this.allPlayers = this.playerColumn.querySelectorAll('.audio-player');
       this.player = this.playerColumn.querySelector(`.${playerNumber}`);
-      
+      this.playerNumber = playerNumber;
       
       this.buttons = this.player.querySelector('.audio-buttons');
       this.progressButton = this.player.querySelector('.audio-progress-button');
@@ -56,9 +61,7 @@ export class AudioPlayer {
     buttonClickHandle(event) {
       let play = 'images/audio-player/playbutton.svg';
       let pause = 'images/audio-player/pausebutton.svg';
-      event.target.parentElement.parentElement.parentElement.parentElement.classList[1];
- 
- 
+      
       if (event.target.src.includes(play)) {
         stopOtherAudio(event);
         event.target.src = pause;
@@ -69,8 +72,6 @@ export class AudioPlayer {
         event.target.src = play;
         this.audio.pause();
       }
- 
- 
     }
  
     /* handles the volume icons and controls*/
@@ -103,15 +104,18 @@ export class AudioPlayer {
  
     }
     nextPlayer(event) {
+      const audioPlayers = document.querySelectorAll('.audio-player');
+      const playerNames = [...audioPlayers].map((player) => player.classList[1]);
       let player = `player${playerNames.indexOf(this.player.classList[1]) + 2}`;
+      let nextIndex = playerNames.indexOf(this.playerNumber) + 1;
       //need a next player variable that increments by 1
       if (this.player.classList[1] === playerNames[playerNames.length - 1]) {
-        player1.play();
+        allPlayersArray.playersArray[0].play();
       } else {
-        nextTrack(player);
+       allPlayersArray.playersArray[nextIndex].play();
       }
+      
     }
- 
     play() {
       this.buttons.click();
       this.infoDisplay.setAttribute('style', `background-image: url('images/media-music-display/${this.mediaTitle}.svg');`);
@@ -120,6 +124,7 @@ export class AudioPlayer {
  
  
     initEventHandlers() {
+     
       this.buttons.onclick = () => this.buttonClickHandle(event);
       this.audio.ontimeupdate = () => this.getTime(event);
       this.audio.ondurationchange = () => this.getDuration(event);
