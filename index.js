@@ -115,6 +115,24 @@
    composerName.innerHTML = `- ${allQuotes[randomNumber][0]}`;
  };
 
+ const morphHeaderInit = () => {
+  const isScrolled = (event) => {
+    const body = document.querySelector('body');
+  const header = document.querySelector('header');
+   let scrollPosition = body.getBoundingClientRect().top;
+  
+    if (scrollPosition !== 0) {
+      header.classList.remove('header-full');
+      header.classList.add('header-thin');
+    } else {
+      // header.classList.remove('header-thin');
+      header.classList.add('header-full');
+    }
+  };
+  
+  window.addEventListener('scroll', isScrolled);
+  
+  };
 
  //--------------------  ACTIVE FUNCTIONS ---------------------- //
 
@@ -126,25 +144,8 @@
  createNavRules();
  createNewsRows();
  createBlogs();
+ morphHeaderInit();
 
-
-
-
-const isScrolled = (event) => {
-  const body = document.querySelector('body');
-const header = document.querySelector('header');
- let scrollPosition = body.getBoundingClientRect().top;
-
-  if (scrollPosition !== 0) {
-    header.classList.remove('header-full');
-    header.classList.add('header-thin');
-  } else {
-    // header.classList.remove('header-thin');
-    header.classList.add('header-full');
-  }
-};
-
-window.addEventListener('scroll', isScrolled);
 
 
 

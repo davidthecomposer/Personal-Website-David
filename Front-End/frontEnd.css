@@ -99,12 +99,51 @@ header {
     background-color: rgba(0, 0, 0, 0.802);
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
     height: 6rem;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
+    background-image: url(../images/main/DavidNameDev.svg);
+    background-repeat: no-repeat;
+
+
+}
+
+
+
+
+.header-thin {
+    animation: shrink .25s ease-in 1 forwards;
+}
+
+.header-full {
+    animation: grow .15s linear 1 forwards;
+}
+
+
+@keyframes shrink {
+    0% {
+        height: 6rem;
+    }
+
+    100% {
+        height: 3rem;
+        background-image: url(images/main/DavidNameThin.svg);
+    }
+}
+
+@keyframes grow {
+    0% {
+        height: 3rem;
+        background-image: url(images/main/DavidNameThin.svg);
+    }
     
+    100% {
+        height: 6rem;
+        background-image: url(images/main/DavidName.svg);
+
+    }
 }
 
 .anchor {
@@ -165,7 +204,7 @@ height: .1rem;
 }
 
 .title {
-    background-image: url(images/main/DavidNameDev.svg);
+    background-image: url(../images/main/DavidNameDev.svg);
     height: 60%;
     width: 30%;
     background-repeat: no-repeat;
@@ -239,7 +278,7 @@ height: .1rem;
 
 
 .card {
-    width: 300px;
+    width: 400px;
     height: 400px;
     position: relative;
     transition: transform 1s;
@@ -265,13 +304,14 @@ height: .1rem;
 
 .front {
    justify-content: space-evenly;
-   background-image: url(images/front-end/card-front.svg);
+   background-image: url(../images/front-end/card-front.svg);
   }
   
 .back {
-    
+    background-image: url(../images/front-end/card-back.svg);
     transform: rotateY( 180deg );
-    background-image: url(images/front-end/card-back.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
   }
   .is-flipped {
     transform: rotateY(180deg);
@@ -372,17 +412,17 @@ height: .1rem;
 }
 
 .blog-title {
-    font-family: 'Hammersmith One', sans-serif;
+    background-color: rgb(16, 15, 15);
     font-size: 3rem;
-    text-align: center;
-    height: 6rem;
-    line-height: 6rem;
-    background-color: rgb(12, 12, 12);
+    padding: 1rem 0;
     color: white;
+    font-family: 'Hammersmith One', sans-serif;
+    text-align: center;
+    margin: 0 0 1rem 0;
 }
 .blog-items-container {
 
-    padding: 2rem 0;
+    padding: 1rem 0;
     
 }
 
@@ -390,47 +430,78 @@ height: .1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 1rem 0 1rem;
+    margin: 0 0 1rem;
     width: 98%;
 }
 
-.main-story {
-    outline: oldlace 1px solid;
-    width: 60%;
-    height: 400px;
+.preview-title {
+    font-size: 3rem;
+    margin-bottom: 4rem;
 }
 
-.last-five-posts {
+.blog-preview-window {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: flex-start;
     align-items: center;
-   
     width: 30%;
-    height: 400px;
+    height: 300px;
     color: white;
     font-family: 'Advent Pro', sans-serif;
     font-size: 1.5rem;
 }
-.blog-list {
+
+
+.other-story.main-story {
+    position: relative;
+    width: 600px;
+    height: 300px;
+    flex: 0 0 auto;
+    
+    
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
 }
-.blog-list p {
-    font-size: .8rem;
+
+.nav-link {
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+   
 }
 
+.nav-title {
+    font-size: 1.5rem;
+    font-family: 'Advent Pro', sans-serif;
+    text-decoration: none;
+    width: 100%;
+    height: 10%;
+    line-height: 2rem;
+    text-align: center;
+    color: rgb(255, 255, 255);
+
+}
+
+.nav-image {
+    height: 90%;
+    width: 100%;
+
+}
+
+
+
 .blog-row-two {
-    margin: 2rem 0 0 0;
+    margin: 0 0 0 0;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     width: 98%;
 }
 .other-story {
-    outline: oldlace 1px solid;
-    width: 20%;
+  
+    width: 23%;
     height: 250px;
 }
 /* Footer/Contact section */
