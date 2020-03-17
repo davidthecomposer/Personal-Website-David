@@ -3,7 +3,7 @@
 
 //  ----------------------- IMPORTS ------------------------- //
 
- import {composerQuotes} from './composer-quotes.js';
+ import {composerQuotes} from './modules/composer-quotes.js';
  import {blogTitleNames, blogPreviews} from './blog-pages/blog-titles.js';
  import {NavLinkMain} from './blog-pages/blogLink.js';
  import {SlideShow} from './modules/slideshow.js';
@@ -173,7 +173,7 @@ Artist's Statement:
  create score samples from full .pdfs
  Add all sound and pdf files and add player code
 
- players not showing time remaining on init
+
 
 
  News Section -
@@ -184,8 +184,7 @@ Artist's Statement:
  Update blog posts
 
  -Contact
- Security for contact form.
- Use HTML options for verification
+ 
  Make sure email hookup is correct.
 
  
