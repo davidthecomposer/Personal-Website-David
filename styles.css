@@ -103,9 +103,10 @@ header {
     align-items: center;
     height: 6rem;
     width: 100%;
-    z-index: 1;
+    z-index: 3;
     background-image: url(images/main/DavidName.svg);
     background-repeat: no-repeat;
+
 
 }
 
@@ -149,6 +150,7 @@ header {
 .anchor {
     padding-top: 3rem;
 }
+
 .comp-info strong {
     font-weight: bold;
     color: rgb(96, 96, 96);
@@ -226,6 +228,7 @@ header {
 
 
 .about-me {
+    margin: 8rem 0 4rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -234,7 +237,7 @@ header {
 }
 
 .about-me-title {
-    margin: 8rem 0 4rem 0;
+    margin: 0  0 4rem 0;
     font-size: 3rem;
     font-family: 'Hammersmith One', sans-serif;
     color: white;
@@ -284,19 +287,21 @@ header {
     position: absolute;
     height: 100%;
     width: 100%;
+    border: none;
 
 }
 
 .text-1 {
     font-size: 3rem;
     color: white;
+    border: none;
 }
 
 .pane-2 {
     position: absolute;
     height: 100%;
     width: 100%;
-
+    border: none;
 }
 
 .text-2 {
@@ -373,6 +378,7 @@ header {
 
 .invisible-panel {
     opacity: 0;
+    z-index: 0;
 }
 
 .invisible-text {
@@ -381,6 +387,7 @@ header {
 
 .active-panel {
     opacity: 1;
+    z-index: 2;
 }
 
 .manual-navigation {
@@ -1441,7 +1448,7 @@ footer {
     height: 6rem;
     width: 99%;
     z-index: 3;
-    margin: 8rem auto 4rem;
+    margin: 4rem auto 4rem;
     user-select: none;
 }
 

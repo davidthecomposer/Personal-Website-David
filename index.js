@@ -157,23 +157,22 @@ export {allPlayersArray};
 
  /* -------------------------- To-Do ---------------------------- //
         
- Header-
-    Animation to transition to thin header on mousewheel
-      -scroll-top ? 
+
 
  Spotlight Section - 
-    Fix Slides 
+    
     Add links? 
     Logic for making links automatically.
 
 Artist's Statement: 
  Better Head SHot
- Update Artist's statement -
+ Update About Me -
 
  Music Sections -
- Add all sound and pdf files and add player code
  Decide on which pieces to try to render or parts
  create score samples from full .pdfs
+ Add all sound and pdf files and add player code
+
  players not showing time remaining on init
 
 

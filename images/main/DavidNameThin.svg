@@ -14,5 +14,5 @@
   <text style="fill: url(#gradient-1); font-family: &quot;Hammersmith One&quot;; font-size: 45px; stroke: rgb(224, 224, 224); stroke-width: 0px; white-space: pre;" x="96.319" y="224.365">DAVID</text>
   <text style="fill: url(#gradient-0); font-family: &quot;Hammersmith One&quot;; font-size: 45px; stroke: rgb(235, 235, 235); stroke-width: 0px; white-space: pre;" x="236.878" y="224.535">CAMPBELL</text>
   <text style="fill: rgb(255, 206, 248); font-family: &quot;Hammersmith One&quot;; font-size: 18px; stroke: rgba(0, 0, 0, 0.67); white-space: pre;" x="446.51" y="215.907">COMPOSER</text>
-  <text style="fill: rgb(255, 206, 248); font-family: &quot;Hammersmith One&quot;; font-size: 18px; stroke: rgba(0, 0, 0, 0.67); white-space: pre;" x="432.367" y="215.901">-</text>
+  <text style="fill: rgb(255, 206, 248); font-family: &quot;Hammersmith One&quot;; font-size: 18px; stroke: rgba(0, 0, 0, 0.67); white-space: pre;" x="433.367" y="215.901" transform="matrix(0.366412, 0, 0, 1.195021, 277.571381, -39.937111)" bx:origin="0.514 0.5">|</text>
 </svg>
