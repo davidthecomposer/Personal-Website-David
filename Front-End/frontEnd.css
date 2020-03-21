@@ -1,84 +1,7 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,
+code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,
+form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,
+footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -87,31 +10,33 @@ video {
     vertical-align: baseline;
 }
 
+
 body {
-    background-color: rgb(17, 17, 17);
-   
+    position: relative;
+    background-color: rgb(17, 17, 17);  
     
-   
 }
 
+
+/* ---------------------------- HEADER SECTION ---------------------------- */
 header {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.802);
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    height: 6rem;
     width: 100%;
     z-index: 3;
-    background-image: url(../images/main/DavidNameDev.svg);
+    /* background-image: url(../images/main/DavidNameDev.svg); */
     background-repeat: no-repeat;
-
-
+    flex-wrap: wrap;
 }
 
-
-
+.header-title {
+    height: 6rem;
+     width: 40rem;
+}
 
 .header-thin {
     animation: shrink .25s ease-in 1 forwards;
@@ -121,51 +46,53 @@ header {
     animation: grow .15s linear 1 forwards;
 }
 
-
 @keyframes shrink {
     0% {
         height: 6rem;
+        content:url("../images/main/DavidNameDev.svg");
     }
 
     100% {
         height: 3rem;
-        background-image: url(images/main/DavidNameThin.svg);
+        content:url("../images/main/DavidNameDevThin.svg");
     }
 }
 
 @keyframes grow {
     0% {
         height: 3rem;
-        background-image: url(images/main/DavidNameThin.svg);
+        content:url("../images/main/DavidNameDevThin.svg");
     }
     
     100% {
         height: 6rem;
-        background-image: url(images/main/DavidName.svg);
+        content:url("../images/main/DavidNameDev.svg");
 
     }
 }
 
 .anchor {
-    padding-top: 6rem;
+    padding-top: 3rem;
 }
 
 .header-group {
     display: flex;
     flex-direction: column;
+    
 }
+
 .header-tab {
     cursor: pointer;
     margin: 0 .5rem;
     color: rgba(255, 255, 255, 0.959);
     font-family: 'Advent Pro', sans-serif;
-    text-decoration: none;
-    
-    
+    text-decoration: none; 
 }
+
 .underline {
 height: .1rem;
 }
+
 .header-tab:hover + .underline {
     background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
     background-size: 0%;
@@ -174,8 +101,6 @@ height: .1rem;
     border-radius: 8%;
     animation: slideout .15s 1 forwards linear;
 }
-
-
 
 .retract {
     background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
@@ -200,17 +125,6 @@ height: .1rem;
     100% {    
         background-size: 0;
     }
-
-}
-
-.title {
-    background-image: url(../images/main/DavidNameDev.svg);
-    height: 60%;
-    width: 30%;
-    background-repeat: no-repeat;
-    margin-left: 4%;
-
-
 }
 
 .tabs-section {
@@ -220,7 +134,7 @@ height: .1rem;
     justify-content: flex-end;
     align-items: center;
     color: rgba(255, 255, 255, 0.959);
-    width: 70%;
+    width: fit-content;
     height: 1rem;
     margin-right: 2%;
     font-size: 80%;
@@ -230,20 +144,28 @@ height: .1rem;
     margin: 0;
     color: #b297ae;
 }
+
+/* ---------------------------- INTRO SECTION ---------------------------- */
 .intro {
     font-family: 'Advent Pro', sans-serif;
     color: white;
     font-size: 1.5rem;
-    padding: 10rem 2rem 4rem;
+    padding: 10rem .5rem 4rem;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
 }
+
+
+/* ---------------------------- APPS SECTION ---------------------------- */
 
 .apps {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
-
+    width: 100%;
 }
 
 .app-row {
@@ -252,92 +174,68 @@ height: .1rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    margin: 0 0 4rem 0;
-
-}
-
-.app-row:nth-child(even) {
-    width: 85%;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0 0 4rem 0;
-   align-self: flex-start;
-
-}
-
-
-
-.scene {
+    margin: 0 auto;
+    flex-wrap: wrap;
     
-    width: 300px;
-    height: 400px;
-    perspective: 600px;
+}
+
+/* ---------------------------- APP INSTANCE ---------------------------- */
+.scene { 
+    width: 32rem;
+    height: 25rem;
+    perspective: 37.5rem;
+    margin: 1rem 1rem;
 }
 
 
 .card {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 100%;
     position: relative;
     transition: transform 1s;
     transform-style: preserve-3d;
 }
-/* PANEL RELATED CODE */
 
 .panel-container {
-    position: absolute;
+  position: absolute;
   height: 100%;
   width: 100%;
-  backface-visibility: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-family: 'Advent Pro', sans-serif;
-    background-color: white;
-    cursor: grab;
-    border: none;
-    outline: none;
-
+  backface-visibility: visible;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Advent Pro', sans-serif;
+  background-color: white;
+  cursor: grab;
+  border: none;
+  outline: none;
 }
 
+.is-flipped {
+    transform: rotateY(180deg);
+  }
+
+/* ---------------------------- CARD FRONT ---------------------------- */
 .front {
    justify-content: space-evenly;
    background-image: url(../images/front-end/card-front.svg);
   }
   
-.back {
-    background-image: url(../images/front-end/card-back.svg);
-    transform: rotateY( 180deg );
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-  .is-flipped {
-    transform: rotateY(180deg);
-  }
-
-
 .panel-title {
     position: relative;
     font-family: 'Hammersmith One', sans-serif;
     font-size: 2rem;
     align-self: center;   
 }
-.back .panel-title {
-      margin-top: 2rem;
-      color: white;
-}
-
 
 .panel-picture {
     align-self: center;
     width: 90%;
-    height: 200px;
+    height: 12.5rem;
    background-size: 100% 100%;
    background-repeat: no-repeat;
-   border: solid 1px black;
 }
+
 .lower-card {
     position: relative;
     display: flex;
@@ -379,11 +277,27 @@ height: .1rem;
     margin-top: 2rem;
 }
 
+/*---------------------------- CARD BACK ---------------------------- */
+
+.back {
+    transform: rotateY( 180deg );
+    background-image: url(../images/front-end/card-back.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.back .panel-title {
+      margin-top: 2rem;
+      color: white;
+}
+
 .back .panel-description {
     position: absolute;
     margin-top: 8rem;
 }
-/* Feedback Section */
+
+
+/* ---------------------------- FEEDBACK SECTION ---------------------------- */
 
 .feedback-title {
     font-family: 'Hammersmith One', sans-serif;
@@ -402,9 +316,8 @@ height: .1rem;
     text-align: center;
 }
 
-/* Blog Section */
+/* ---------------------------- BLOG SECTION ---------------------------- */
 
-/* Blog Section */
 .blog {
     display: flex;
     flex-direction: column;
@@ -420,18 +333,32 @@ height: .1rem;
     text-align: center;
     margin: 0 0 1rem 0;
 }
-.blog-items-container {
 
-    padding: 1rem 0;
-    
+.blog-items-container {
+    padding: 1rem 0; 
+}
+
+
+.other-story.main-story {
+    position: relative;
+    width: 50%;
+    height: 30rem;
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 
 .blog-row-one {
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     margin: 0 0 1rem;
     width: 98%;
+    height: fit-content;
 }
 
 .preview-title {
@@ -444,32 +371,21 @@ height: .1rem;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 30%;
-    height: 300px;
+    width: 46%;
+    height: 18.75rem;
     color: white;
     font-family: 'Advent Pro', sans-serif;
     font-size: 1.5rem;
 }
 
 
-.other-story.main-story {
-    position: relative;
-    width: 600px;
-    height: 300px;
-    flex: 0 0 auto;
-    
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-}
 
 .nav-link {
     height: 100%;
     width: 100%;
     text-decoration: none;
-   
+    
+    
 }
 
 .nav-title {
@@ -481,13 +397,6 @@ height: .1rem;
     line-height: 2rem;
     text-align: center;
     color: rgb(255, 255, 255);
-
-}
-
-.nav-image {
-    height: 90%;
-    width: 100%;
-
 }
 
 
@@ -498,17 +407,22 @@ height: .1rem;
     flex-direction: row;
     justify-content: space-around;
     width: 98%;
+    flex-wrap: wrap;
 }
+
 .other-story {
-  
-    width: 23%;
-    height: 250px;
+    width: 32%;
+    height: 16rem;
 }
-/* Footer/Contact section */
+
+
+/* ---------------------------- CONTACT SECTION ---------------------------- */
 
 .contact {
     user-select: none;
+    margin-top: 4rem;
 }
+
 .contact-form {
     position: relative;
     display: flex;
@@ -517,33 +431,57 @@ height: .1rem;
     justify-content: space-around;
     color: white;
     padding: 2rem;
-    width: 600px;
-    height: 300px;
+    width: 50%;
     margin: 0 auto;
     background-color: rgb(25, 24, 24);
     border: none;
     
 }
+
 .contact-body p {
 position: relative;
- margin: 1rem 0 2rem 0;
+ margin: 1rem 0 4rem 0;
  text-align: center;
  color: white;
- 
+ font-size: 1.5rem;
 }
 
 .contact-body {
     font-family: 'Advent Pro', sans-serif;
 }
 
-.email-content {
-    padding: 0 1rem;
+#email-content {
+    
+    width: 90%;
 }
+
+.user-name {
+    width: 50%;
+}
+
+.user-email {
+    width: 50%;
+}
+
+#user-name {
+    width: 75%;
+}
+
+#user-email {
+    width: 75%;
+}
+
+.form-labels{
+    
+    margin: 0 0 .5rem 0;
+}
+
 .form-row {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin:  0 0 2rem 0;
 }
 
 .message-col {
@@ -551,14 +489,19 @@ position: relative;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
+    margin: 0 0 2rem 0;
 }
+
+
+/* ---------------------------- FOOTER SECTION ---------------------------- */
 
 footer {
     position: relative;
     background-color: rgba(0, 0, 0, 0.694);
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     height: 6rem;
     width: 99%;
@@ -568,13 +511,12 @@ footer {
 }
 
 .footer-icons {
-   height: 30px;
+   height: 2rem;
    border: none;
    outline: none;
    margin: 0 1rem 0;
    cursor: pointer;
 }
-
 
 .advent {
     font-family: 'Advent Pro', sans-serif;
@@ -583,20 +525,191 @@ footer {
 
 .signature {
     height: 3rem;
-    
   }
-  .by-me {
-    position: absolute;
-    display: flex;
-    right: 85%;
-    font-family: 'Advent Pro', sans-serif;
+
+.by-me {
     
+    display: flex;
+    
+    font-family: 'Advent Pro', sans-serif;
+    width: fit-content;
   }
   
-  .by-me p {
+.by-me p {
     padding-right: .8rem;
     padding-left: .8rem;
     align-self: center;
     color: white;
+  }
+.nav-icons-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: fit-content;
+}
+
+/* ---------------------------- SCROLLBAR SECTION ---------------------------- */
+
+::-webkit-scrollbar-thumb {
+    background-color: rgb(71, 20, 71);
+    border: none;
+}
+
+::-webkit-scrollbar {
+    width: .25rem;
+    background-color: #00a5a5;
+}
+
+
+
+/* ---------------------------- RESPONSIVE DESIGN ---------------------------- */
+
+
+@media (max-width: 900px) {
+
+    .form-row {
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        margin: 0 0 2rem 0;
+        width: 100%;
+    }
+
+
+    .email-content {
+        margin: 1rem 0 1rem 0;
+        width: 100%;
+    }
     
+    .user-name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0 2rem 0;
+        width: 100%;
+    }
+    
+    .user-email {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0 1rem 0;
+        width: 100%;
+    }
+    #user-name {
+        width: 90%;
+    }
+    .user-name {
+        width: 90%;
+    }
+
+    .intro {
+        font-size: 1.2rem;
+    }
+
+    .contact-body p {
+        font-size: 1.2rem;
+    }
+
+    .contact-form {
+        width: 80%;
+    }
+   
+    
+}
+
+@media (max-width: 850px) {
+
+    .header-title{ 
+        width: 25rem;
+        height: 3rem;
+    }
+    .blog-preview-window {
+        height: 0;
+        display: none;
+       
+    }
+
+    .blog-row-two {
+        margin: 0 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 98%;
+        height: fit-content;
+        
+    }
+    .other-story {
+        width: 66%;
+        height: fit-content;
+        margin-bottom: 6rem;
+        
+    }
+
+    .other-story.main-story {
+        width: 80%;
+        height: fit-content;
+    }
+
+     
+
+  }
+
+
+  @media (max-width: 700px) {
+
+    header {
+        justify-content: center;
+
+    }
+
+    .header-title{ 
+        width: fit-content;
+        height: 2rem;
+        text-align: center;
+    }
+    .other-story {
+        width: 66%;
+        
+        margin-bottom: 1rem;
+        
+    }
+    
+  }
+
+  @media (max-width: 600px) {
+
+    .footer-icons {
+        height: 1.8rem;
+        margin: 0 .5rem 0;
+    }
+
+    .signature {
+        height: 2rem;
+      }
+    
+      
+    .by-me p {
+        padding-right: .7rem;
+        padding-left: .7rem;
+        align-self: center;
+        color: white;
+      }
+      .intro {
+        font-size: 1rem;
+    }
+    
+    .contact-body p {
+        font-size: 1rem;
+    }
+    
+    .tabs-section{
+        padding: 0 0 .5rem 0;
+        margin-top: -.5rem;
+    }
   }

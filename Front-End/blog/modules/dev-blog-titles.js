@@ -6,17 +6,17 @@
  const blogTitles = {
 
 
-    'version02': 'version 0.2 -  Dev Article 3',
-    'version01': 'version 0.1 - Dev Article 2',
-    'version00': 'version 0.0 - My Development Journey',
+    'version02': 'Version 0.2 -  Validation and Security',
+    'version01': 'Version 0.1 - JS - Gobal this and namespaces',
+    'version00': 'Version 0.0 - My Development Journey',
     
 };
 
 
 const blogPreviews = [
-    'Stuff about Article 3',
-    'Stuff about Article 2',
-    'Stuff about Article 1',
+    'What I\'ve learned about form validation and security',
+    'An interesting problem that I encountered using this and how I was able to resolve it',
+    'Why I\'m learning development, why waste my time writing about it at this point?, and what I have been up to so far',
 
 ];
 

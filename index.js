@@ -175,12 +175,6 @@ Artist's Statement:
  Add all sound and pdf files and add player code
 
 
-
-
- News Section -
- Automate process by making News Objects like blog objects
-
-
  Blog -
  Update blog posts
 
@@ -194,9 +188,7 @@ Artist's Statement:
  STYLE ISSUES FOR DIFFERENT BROWSERS
 
 
- Front End - 
 
- Set up Front end in own subfolder
 
  
  
