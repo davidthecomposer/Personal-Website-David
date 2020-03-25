@@ -102,67 +102,44 @@ body {
     margin: 0 auto 0;
     position: relative;
     border: none;
-    background-color: rgb(95, 158, 160);
     outline: none;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .navigation-row {
     position: relative;
     height: 2rem;
-    width: 100%;
+    width: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding: 1rem 0 0 0;
-    margin-bottom: -.62rem;
+    margin: .25rem 0 0 0;
+    
+    
 }
 
 .navigation {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: black;
     font-family: 'Spartan', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin: 0 .5rem;
+    cursor: pointer;
 }
 
-.signature {
-    height: 3rem;
-}
 
-.sub-row {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: -1rem;
-    color: white;
-}
 
 .big-title {
-    width: 98%;
+   position: relative;
+   z-index: -1;
+  
 }
 
-.title {
-    font-family: 'Spartan', sans-serif;
-    width: 100%;
-    font-size: 5rem;
-    text-align: center;
-    /* background-image: url('/David Campbell Website/images/dev-blog/dev-journey.svg'); */
-    border: none;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-
-.sub-title {
-    font-family: 'Spartan', sans-serif;
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 0 .5rem;
-
+.all-content {
+    margin-top: 4rem;
 }
 
 .issue {
@@ -221,7 +198,7 @@ body {
 }
 
 .article-title {
-    font-size: 4rem;
+    font-size: 5rem;
     width: fit-content;
     margin: 4rem auto 4rem;
     text-align: center;
@@ -290,4 +267,33 @@ body {
 
 .more-articles {
     width: 25%;
+}
+
+
+/* -------------------- RESONSIVE DESIGN ----------------------------- */
+@media (max-width: 1200px) {
+   
+    
+    .article-title {
+        font-size: 4rem;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .navigation {
+        font-size: 1.3rem;
+    }
+    .article-title {
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .navigation {
+        font-size: 1.1rem;
+    }
+    .article-title {
+        font-size: 3rem;
+    }
 }

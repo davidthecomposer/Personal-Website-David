@@ -116,25 +116,27 @@
  };
 
  const morphHeaderInit = () => {
-  const isScrolled = (event) => {
-    const body = document.querySelector('body');
-  const header = document.querySelector('header');
-   let scrollPosition = body.getBoundingClientRect().top;
-  
-    if (scrollPosition !== 0) {
-      header.classList.remove('header-full');
-      header.classList.add('header-thin');
-    } else {
-      // header.classList.remove('header-thin');
-      header.classList.add('header-full');
-    }
-  };
-  
-  window.addEventListener('scroll', isScrolled);
-  
-  };
+   const isScrolled = (event) => {
+     const body = document.querySelector('body');
+     const headerTitle = document.querySelector('.header-title');
+     let scrollPosition = body.getBoundingClientRect().top;
 
- //--------------------  ACTIVE FUNCTIONS ---------------------- //
+     if (scrollPosition !== 0) {
+       headerTitle.classList.remove('header-full');
+       headerTitle.classList.add('header-thin');
+     } else {
+       // header.classList.remove('header-thin');
+       headerTitle.classList.add('header-full');
+     }
+   };
+
+   window.addEventListener('scroll', isScrolled);
+
+ };
+
+
+
+//--------------------  ACTIVE FUNCTIONS ---------------------- //
 
 
  composerQuoteChange();
@@ -145,7 +147,7 @@
  createNewsRows();
  createBlogs();
  morphHeaderInit();
-
+ 
 
 
 

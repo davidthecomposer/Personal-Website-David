@@ -16,6 +16,7 @@
   <!-------------------    HEADER    --------------------->
 
   <header>
+    <img src="./images/main/DavidName.svg" alt="" class="header-title">
     <nav class="tabs-section">
       <a class="header-tab" href="#home">Home</a>
       <h3 class="divider">|</h3>
@@ -52,13 +53,13 @@
       <div class="pane-container">
         <!-- Slide #1 -->
         <a href="#news" class="main-images pane active-panel fade-in pane-1"><img src="images/slideshow/song-cycle.svg"
-            alt=""></a>
+            alt="" class="pane-image"></a>
         <!-- Slide #2 -->
         <a href="#news" class="main-images pane invisible-panel pane-2"> <img src="images/slideshow/OperaConTempo.svg"
-            alt=""></a>
+            alt="" class="pane-image"></a>
         <!-- Slide #3 -->
         <a href="#blog" class="main-images pane invisible-panel pane-3"> <img src="images/slideshow/new-blog.svg"
-            alt=""></a>
+            alt="" class="pane-image"></a>
       </div>
       <!-- Add slide text here. First one needs to have an animation class -->
       <div class="text-container">
@@ -377,12 +378,14 @@
           </div>
           <!-- end Audio players -->
         </div>
-        <div class="display-window"></div>
+        <div class="display-window">
+          <img src="images/media-music-display/turning-point.svg" alt="" class="display-image">
+        </div>
       </div>
 
     </section>
 
-    <!-- CHAMBER MUSIC SECTION -->
+    <!---------------------------- CHAMBER MUSIC SECTION ------------------------------------------->
     <section class="Chamber music-sections invisible">
       <h3 class="contact-text">If you would like to use or perform one of the following scores, please use the <a
           href="#contact">contact</a> section form below</h3>
@@ -702,7 +705,7 @@
         <p><strong>Duration:</strong> 40' </p>
         <p><strong>Score Sample:</strong> <i class="far fa-file-pdf"></i> </p>
         <!-- Audio Sample Row -->
-        <div class="audio-sample-row">
+       
           <p><strong>Audio Sample:</strong></p>
           <div class='small-player copernicus-etudes'>
             <div class="audio-area small-audio-area">
@@ -726,7 +729,6 @@
               </div>
             </div>
           </div>
-        </div>
       </div>
       <!-- THREE PIECES FOR CLARINET AND PIANO -->
       <div class="comp-info three-pieces-clarinet">
@@ -738,7 +740,7 @@
         <p><strong>Score Sample:</strong> <a href="scores/Solo/Clarinet.pdf" target="_blank"><i
               class="far fa-file-pdf"></i></a> </p>
         <!-- Audio Sample Row -->
-        <div class="audio-sample-row">
+        
           <p><strong>Audio Sample:</strong></p>
           <div class='small-player three-pieces-clarinet'>
             <div class="audio-area small-audio-area">
@@ -763,7 +765,7 @@
               </div>
             </div>
           </div>
-        </div>
+       
       </div>
     </section>
   </section>
@@ -784,7 +786,7 @@
             recital scheduled for the fall that will feature the premiere of this and a few other works.
             Stay tuned for more info about performance dates and venues.</p>
         </div>
-        <div class="news-slot-one news-text-1 mandi-b">
+        <div class="news-slot-one mandi-b">
           <img src="images/main/Mandi-Barrus.jpg" class="news-image-1"></img>
           <div class="news-text-1"> Mezzo-soprano <a href="http://mandibarrus.com">Mandi Barrus</a> is a musician
             originally from Seattle, Washington. With her <a
@@ -801,7 +803,7 @@
               href="http://www.barrusbellavoce.com/">private voice teacher</a>, and by presenting opera outreach
             programs in elementary schools throughout Utah, where she lives with her three children.</div>
         </div>
-        <div class="news-slot-one news-text liz-c">
+        <div class="news-slot-one liz-c">
           <img src="images/main/Liz-Christensen_HS02.jpg" class="news-image"></img>
           <div class="news-text"> <a href="http://www.lizzylizzyliz.com">Liz Christensen</a> is the producer and host of
             both the entertainment podcast <a href="https://inthetellingpodcast.buzzsprout.com/">"In the Telling"</a>
@@ -827,12 +829,12 @@
             year progresses!</p>
 
         </div>
-        <div class="news-slot-one news-text">
+        <div class="news-slot-one">
           <img src="images/main/jennyHead.JPG" class="news-image square"></img>
-          <div> Jennifer Campbell is a writer with a background in history, journalism and video. Her articles have
+          <div > <p class="news-text"> Jennifer Campbell is a writer with a background in history, journalism and video. Her articles have
             appeared on Faithcounts.org and in Utah Stories Magazine. She is currently working on a fantasy novel set in
             alt-world ancient Persia. When not writing she's busy getting called "noob" by her 11-year-old son, escaping
-            to the Uintas and ripping it up on the flag football field.</div>
+            to the Uintas and ripping it up on the flag football field.</p> </div>
         </div>
 
       </div>
@@ -920,12 +922,12 @@
         below.</p>
       <form action="mail.php" class="contact-form">
         <div class="form-row">
-          <div>
-            <label for="user-name"> Name: </label>
+          <div class="user-name">
+            <label for="user-name" class="form-labels"> Name: </label>
             <input type="text" name="user-name" id="user-name" required>
           </div>
-          <div>
-            <label for="user-email"> E-mail: </label>
+          <div class="user-email">
+            <label for="user-email" class="form-labels"> E-mail: </label>
             <input type="email" name="user-email" id="user-email" size="30" required>
           </div>
         </div>
@@ -943,14 +945,16 @@
   <footer>
     <div class="by-me">
       <p>A</p>
-      <img class="signature" src="images/music-blog/david-sig-white-shadow.svg" alt="">
+      <img class="signature" src="images/main/david-sig-white.svg" alt="">
       <p>Website</p>
-    </div>
-    <h3 class="advent">Follow Me:</h2>
-      <img src="images/main/twitter.svg" alt="twitter link" class="footer-icons">
-      <img src="images/main/instagram.svg" alt="instagram link" class="footer-icons">
+  </div>
+  <div class="nav-icons-footer">
+  
+      <img src="images/main/github.svg" alt="github link" class="footer-icons">
       <img src="images/main/facebook.svg" alt="facebook link" class="footer-icons">
-  </footer>
+      <img src="images/main/instagram.svg" alt="instagram link" class="footer-icons">
+      <img src="images/main/twitter.svg" alt="twitter link" class="footer-icons">
+  </div></footer>
 
   <script type="module" src="index.js "></script>
 

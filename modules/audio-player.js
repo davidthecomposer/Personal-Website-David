@@ -10,7 +10,7 @@ import {allPlayersArray} from '../index.js';
 export class AudioPlayer {
     constructor(playerNumber) {
       this.playerColumn = document.querySelector('.player-column');
-      this.infoDisplay = document.querySelector('.display-window');
+      this.infoDisplay = document.querySelector('.display-image');
       this.allPlayers = this.playerColumn.querySelectorAll('.audio-player');
       this.player = this.playerColumn.querySelector(`.${playerNumber}`);
       this.playerNumber = playerNumber;
@@ -64,7 +64,7 @@ export class AudioPlayer {
         stopOtherAudio(event);
         event.target.src = pause;
         this.audio.play();
-        this.infoDisplay.setAttribute('style', `background-image: url('images/media-music-display/${this.mediaTitle}.svg');`);
+        this.infoDisplay.setAttribute('src', `images/media-music-display/${this.mediaTitle}.svg`);
  
       } else {
         event.target.src = play;
@@ -98,7 +98,7 @@ export class AudioPlayer {
     handleInfoDisplay(event) {
  
  
-      this.infoDisplay.setAttribute('style', `background-image: url('images/media-music-display/${this.mediaTitle}.svg');`);
+      this.infoDisplay.setAttribute('src', `images/media-music-display/${this.mediaTitle}.svg`);
  
     }
     nextPlayer(event) {
@@ -115,7 +115,7 @@ export class AudioPlayer {
     }
     play() {
       this.buttons.click();
-      this.infoDisplay.setAttribute('style', `background-image: url('images/media-music-display/${this.mediaTitle}.svg');`);
+      this.infoDisplay.setAttribute('src', `images/media-music-display/${this.mediaTitle}.svg`);
     }
  
  

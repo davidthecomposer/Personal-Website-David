@@ -113,7 +113,7 @@ body {
 .navigation-row {
     position: relative;
     height: 2rem;
-    width: 100%;
+    width: fit-content;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -128,7 +128,7 @@ body {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-family: 'Spartan', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     margin: 0 .5rem;
 }
 
@@ -143,8 +143,9 @@ body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-top: -1rem;
+    
     color: white;
+    padding: 0 0 .5rem 0;
     
 }
 
@@ -175,7 +176,7 @@ body {
     margin: 6rem 0 1rem 2rem;
     font-size: .9rem;
     font-weight: 900;
-    border-bottom: 6px solid black;
+    border-bottom: .25px solid black;
     width: fit-content;
     padding-bottom: .25rem;
     display: flex;
@@ -314,4 +315,50 @@ body {
 .more-articles {
     width: 25%;
     
+}
+
+@media (max-width: 1200px) {
+    .navigation {
+        font-size: 1.1rem;
+    }
+    
+    .article-title {
+        font-size: 4rem;
+    }
+}
+
+
+@media (max-width: 900px) {
+    .navigation {
+        font-size: 1rem;
+    }
+    .article-title {
+        font-size: 3.5rem;
+    }
+    .signature {
+        height: 2.5rem;
+       
+    }
+}
+
+@media (max-width: 600px) {
+    .navigation {
+        font-size: .8rem;
+    }
+    .article-title {
+        font-size: 3rem;
+    }
+    .sub-title {
+        font-size: .8rem;
+        
+    }
+
+    .signature {
+        height: 2rem;
+       
+    }
+    .article-text {
+        font-size: 1rem;
+       
+    }
 }

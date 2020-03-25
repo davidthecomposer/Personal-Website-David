@@ -1,84 +1,7 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,
+code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,
+form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,
+footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -88,28 +11,30 @@ video {
 }
 
 body {
-    background-color: rgb(17, 17, 17);
-   
     
-   
+    background-color: rgb(17, 17, 17);
 }
-
+/* ---------------------------- HEADER SECTION ---------------------------- */
 header {
     position: fixed;
     background-color: rgba(0, 0, 0, 0.802);
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-    height: 6rem;
+    
     width: 100%;
     z-index: 3;
-    background-image: url(images/main/DavidName.svg);
+    
     background-repeat: no-repeat;
-
+    flex-wrap: wrap;
 
 }
 
+.header-title {
+    height: 6rem;
+    width: 40rem;
+}
 
 
 
@@ -125,23 +50,24 @@ header {
 @keyframes shrink {
     0% {
         height: 6rem;
+        content:url('./images/main/DavidName.svg');
     }
 
     100% {
         height: 3rem;
-        background-image: url(images/main/DavidNameThin.svg);
+        content:url('./images/main/DavidNameThin.svg');
     }
 }
 
 @keyframes grow {
     0% {
         height: 3rem;
-        background-image: url(images/main/DavidNameThin.svg);
+        content:url('./images/main/DavidNameThin.svg');
     }
     
     100% {
         height: 6rem;
-        background-image: url(images/main/DavidName.svg);
+        content:url('./images/main/DavidName.svg');
 
     }
 }
@@ -151,21 +77,17 @@ header {
     padding-top: 3rem;
 }
 
-.comp-info strong {
-    font-weight: bold;
-    color: rgb(96, 96, 96);
-    margin-right: .5rem;
-}
+
 
 .header-tab {
     cursor: pointer;
     margin: 0 .5rem;
     color: rgba(255, 255, 255, 0.959);
     font-family: 'Advent Pro', sans-serif;
-    text-decoration: none;
-   
-    
+    text-decoration: none; 
 }
+
+
 .header-tab:hover {
     background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
     background-size: 0%;
@@ -195,7 +117,7 @@ header {
     color: #b297ae;
 }
 
-/* Home Section */
+/* ---------------- Home Section ---------------- */
 .home {
     position: relative;
     display: flex;
@@ -270,13 +192,13 @@ header {
     text-indent: 50px;
 }
 
-/* carousel related */
+/* --------------- SLIDESHOW SECTION --------------- */
 
 .carousel {
     user-select: none;
     position: relative;
-    width: 800px;
-    height: 400px;
+    width: 60rem;
+    height: 30rem;
     border: none;
     overflow: hidden;
     background-image: linear-gradient(white, rgb(219, 219, 219), rgb(238, 222, 222));
@@ -337,6 +259,11 @@ header {
     opacity: .5;
 }
 
+.pane-image {
+    width: 100%;
+    height: 100%;
+}
+
 .pane {
     position: absolute;
     width: 100%;
@@ -344,7 +271,7 @@ header {
 }
 
 .pause {
-    height: 2rem;
+    height: 100%;
     z-index: 2;
     bottom: 0%;
     right: 0%;
@@ -358,22 +285,21 @@ header {
 }
 
 .pane-ticker {
-
-    height: 2rem;
+    height: 1.2rem;
+    width: fit-content;
     display: flex;
     flex-direction: row;
     align-content: center;
-    justify-content: center;
+    justify-items: center;
     z-index: 5;
-
+    
 }
 
 .pane-tick {
-    height: 1rem;
-    ;
-    width: 8%;
+    margin: 0;
+    height: 100%;
     border: none;
-    padding: .5rem 0;
+    padding-right: .25rem;
 }
 
 .invisible-panel {
@@ -393,13 +319,14 @@ header {
 .manual-navigation {
     position: absolute;
     width: 20%;
-    height: 1rem;
+    height: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     z-index: 3;
-    bottom: 5%;
-    right: 5%;
+    bottom: 2%;
+    right: 2%;
 }
 
 .forward {
@@ -426,7 +353,7 @@ header {
 }
 
 .navigate {
-    height: 2rem;
+    height: 100%;
 }
 
 
@@ -792,7 +719,7 @@ header {
     display: none;
 }
 
-/* Music for Media section */
+/* --------------- MEDIA MUSIC SECTION --------------- */
 
 .media-music {
     display: flex;
@@ -808,35 +735,47 @@ header {
     position: relative;
     display: flex;
     flex-direction: row;
+    
     width: 100%;
-    align-items: center;
+    
     margin: .5rem 0;
 
 }
 
 .display-window {
     position: relative;
-    height: 450px;
+   
     border: rgba(147, 38, 155, 0.068) solid 8px;
-    width: 750px;
-    margin: 0 0 0 12.5%;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-image: url(images/media-music-display/turning-point.svg);
+    height: 30rem;
+  width: 50rem;
+    margin: 0 0 0 10%; 
 }
 
+.display-image {
+ width: 100%;
+ height: 100%;
+  
+}
 .player-column {
     display: flex;
     flex-direction: column;
     overflow-y: scroll;
     overflow-x: hidden;
-    width: 370px;
-    height: 464px;
+    width: 23rem;
+    height: 30rem;
 
 }
+.contact-text a {
+        text-decoration: none;
+        cursor: pointer;
+        color: #00a5a5;
+        
+        
+}
+/* -------------------- SCROLLBAR RELATED --------------------- */
 
 .player-column::-webkit-scrollbar {
-    width: 4px;
+    width: .25rem;
     background-color: #00a5a5;
 }
 
@@ -857,6 +796,53 @@ header {
     width: 4px;
     background-color: #00a5a5;
 }
+
+/* ---------------  MUSIC SECTION --------------- */
+
+.music-sections-title {
+    padding: 2rem 0 0 0;
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Hammersmith One', sans-serif;
+}
+
+.music-sections {
+    color: white;
+    width: 100%;
+
+}
+
+.comp-info {
+    font-family: 'Advent Pro', sans-serif;
+    display: inline-flex;
+    flex-direction: column;
+    height: 15rem;
+    justify-content: space-around;
+    align-items: center;
+    width: 33%;
+    margin: 1rem 0;
+    background-color: rgba(3, 3, 3, 0.342);
+    border-radius: 10%;
+}
+
+.card-title {
+    font-size: 1.5rem;
+}
+
+.fa-file-pdf {
+    color: purple;
+    cursor: pointer;
+}
+
+.comp-info strong {
+    font-weight: bold;
+    color: rgb(96, 96, 96);
+    margin-right: .5rem;
+}
+
+
+/* --------------------- AUDIO PLAYER -------------------------- */
 
 .audio-file {
     width: 100%;
@@ -1003,45 +989,7 @@ header {
     border-radius: 100%;
 }
 
-/*  Music sections related */
-
-.music-sections-title {
-    padding: 2rem 0 0 0;
-    color: white;
-    font-size: 2rem;
-    text-align: center;
-    font-family: 'Hammersmith One', sans-serif;
-}
-
-.music-sections {
-    color: white;
-    width: 100%;
-
-}
-
-.comp-info {
-    font-family: 'Advent Pro', sans-serif;
-    display: inline-flex;
-    flex-direction: column;
-    height: 15rem;
-    justify-content: space-around;
-    align-items: center;
-    width: 33%;
-    margin: 1rem 0;
-    background-color: rgba(3, 3, 3, 0.342);
-    border-radius: 10%;
-}
-
-.card-title {
-    font-size: 1.5rem;
-}
-
-.fa-file-pdf {
-    color: purple;
-    cursor: pointer;
-}
-
-/* Small Audio Player CSS */
+/* ---------------- SMALL AUDIO PLAYER --------------- */
 
 .small-audio {
     height: 1rem;
@@ -1174,7 +1122,9 @@ header {
     border-radius: 100%;
 }
 
-/* News Section */
+
+
+/* -------------------- News Section -------------------- */
 .news {
     padding-bottom: 2rem;
     user-select: none;
@@ -1194,23 +1144,20 @@ header {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 100%;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 .news-row {
-    position: relative;
     display: flex;
     margin: .5rem 0;
+    padding: .5rem;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    height: 240px;
     background: rgba(39, 39, 41, 0.442);
-    border: none;
-    
+    border: none; 
 }
+
 .news-expand {
 cursor: pointer;
 color: #00a5a5;
@@ -1224,27 +1171,26 @@ color: #00a5a5;
 
 
 .news-slot-main { 
-    background-color: rgba(112, 89, 121, 0.796);
-    position: relative;
-    border: none;
+
+    background: rgba(112, 89, 121, 0.796);
+    top: 0;
+    bottom: 0;
     width: 48%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    padding: 0 .5rem;
+    padding: 0 .5rem;   
+    
 }
 
 .news-slot-one {
     width: 48%;
-    height: 200px;
     
+    padding: 0 .5rem
 }
 
 .news-slot-one a {
     text-decoration: none;
-    color: #00a5a5;
-    
+    color: #00a5a5; 
 }
+
 .news-slot-two {
     width: 22%;
     border: purple 1px solid;
@@ -1263,7 +1209,6 @@ color: #00a5a5;
     font-family: 'Advent Pro', sans-serif;
     font-size: 1rem;
     line-height: 1.4rem;
-    
 }
 
 .news-text-1 {
@@ -1271,9 +1216,9 @@ color: #00a5a5;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-family: 'Advent Pro', sans-serif;
     font-size: 1rem;
-    line-height: 1.2rem;
-    
+    line-height: 1.2rem; 
 }
+
 .news-image {
     height: 150px;
     width: 187px;
@@ -1288,11 +1233,16 @@ color: #00a5a5;
     margin: 0 1rem 0 0;
 }
 
+.news-image-full {
+    width: 100%;
+    
+}
+
 .square {
     height: 150px;
     width: 150px;
 }
-/* Blog Section */
+/* -------------------- BLOG SECTION -------------------- */
 .blog {
     display: flex;
     flex-direction: column;
@@ -1320,6 +1270,7 @@ color: #00a5a5;
     justify-content: space-around;
     margin: 0 0 1rem;
     width: 98%;
+    height: fit-content;
 }
 
 .preview-title {
@@ -1332,8 +1283,8 @@ color: #00a5a5;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    width: 30%;
-    height: 300px;
+    width: 46%;
+    height: 18.75rem;
     color: white;
     font-family: 'Advent Pro', sans-serif;
     font-size: 1.5rem;
@@ -1342,8 +1293,8 @@ color: #00a5a5;
 
 .other-story.main-story {
     position: relative;
-    width: 600px;
-    height: 300px;
+    width: 50%;
+    height: 30rem;
     flex: 0 0 auto;
     
     
@@ -1351,6 +1302,7 @@ color: #00a5a5;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 2rem;
 }
 
 .nav-link {
@@ -1386,16 +1338,19 @@ color: #00a5a5;
     flex-direction: row;
     justify-content: space-around;
     width: 98%;
+    flex-wrap: wrap;
 }
 .other-story {
   
-    width: 23%;
-    height: 250px;
+    width: 32%;
+    height: 16rem;
 }
-/* Footer/Contact section */
+
+/* -------------------- CONTACT -------------------- */
 
 .contact {
     user-select: none;
+    margin-top: 4rem;
 }
 .contact-form {
     position: relative;
@@ -1405,8 +1360,7 @@ color: #00a5a5;
     justify-content: space-around;
     color: white;
     padding: 2rem;
-    width: 600px;
-    height: 300px;
+    width: 50%;
     margin: 0 auto;
     background-color: rgb(25, 24, 24);
     border: none;
@@ -1414,14 +1368,39 @@ color: #00a5a5;
 }
 .contact-body p {
 position: relative;
- margin: 1rem 0 2rem 0;
+ margin: 1rem 0 4rem 0;
  text-align: center;
  color: white;
- 
+ font-size: 1.5rem;
 }
 
 .contact-body {
     font-family: 'Advent Pro', sans-serif;
+}
+#email-content {
+    
+    width: 90%;
+}
+
+.user-name {
+    width: 50%;
+}
+
+.user-email {
+    width: 50%;
+}
+
+#user-name {
+    width: 75%;
+}
+
+#user-email {
+    width: 75%;
+}
+
+.form-labels{
+    
+    margin: 0 0 .5rem 0;
 }
 
 .form-row {
@@ -1429,6 +1408,7 @@ position: relative;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    margin:  0 0 2rem 0;
 }
 
 .message-col {
@@ -1436,24 +1416,29 @@ position: relative;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    width: 100%;
+    margin: 0 0 2rem 0;
 }
 
+
+
+/* -------------------- FOOTER -------------------- */
 footer {
     position: relative;
     background-color: rgba(0, 0, 0, 0.694);
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
     height: 6rem;
     width: 99%;
     z-index: 3;
-    margin: 4rem auto 4rem;
+    margin: 8rem auto 4rem;
     user-select: none;
 }
 
 .footer-icons {
-   height: 30px;
+   height: 2rem;
    border: none;
    outline: none;
    margin: 0 1rem 0;
@@ -1471,9 +1456,9 @@ footer {
     
   }
   .by-me {
-    position: absolute;
+    
     display: flex;
-    right: 85%;
+    width: fit-content;
     font-family: 'Advent Pro', sans-serif;
     
   }
@@ -1485,3 +1470,257 @@ footer {
     color: white;
     
   }
+  .nav-icons-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: fit-content;
+}
+
+
+  /* ---------------------------- RESPONSIVE DESIGN ---------------------------- */
+ 
+  @media (max-width: 1350px) {
+  
+    .display-window {
+        height: 24rem;
+        width: 40rem;
+        margin-left: 4rem;
+    }
+
+    .comp-info {
+        width: 48%;
+    }
+}
+
+@media (max-width: 1150px) {
+  
+    .display-window {
+        height: 21.6rem;
+        width: 36rem;
+        margin-left: 2rem;
+    }
+}
+
+  @media (max-width: 1000px) {
+
+    .form-row {
+
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        margin: 0 0 2rem 0;
+        width: 100%;
+    }
+
+
+    .email-content {
+        margin: 1rem 0 1rem 0;
+        width: 100%;
+    }
+    
+    .user-name {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 1rem 0 2rem 0;
+        width: 100%;
+    }
+    
+    .user-email {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 0 1rem 0;
+        width: 100%;
+    }
+    #user-name {
+        width: 90%;
+    }
+    .user-name {
+        width: 90%;
+    }
+
+    .intro {
+        font-size: 1.2rem;
+    }
+
+    .contact-body p {
+        font-size: 1.2rem;
+    }
+
+    .contact-form {
+        width: 80%;
+    }
+   .audio-row {
+       flex-direction: column;
+   }
+   .player-column {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    height: 20rem;
+    flex-wrap: wrap;
+
+}
+.display-window {
+    margin: 2rem auto;
+
+}
+
+
+    
+}
+
+@media (max-width: 950px) {
+
+    .header-title{ 
+        width: 25rem;
+        height: 3rem;
+    }
+    .blog-preview-window {
+        height: 0;
+        display: none;
+       
+    }
+
+    .blog-row-two {
+        margin: 0 0 0 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 98%;
+        height: fit-content;
+        
+    }
+    .other-story {
+        width: 66%;
+        height: fit-content;
+        margin-bottom: 6rem;
+        
+    }
+
+    .other-story.main-story {
+        width: 80%;
+        height: fit-content;
+    }
+
+     .carousel {
+        height: 22rem;
+        width: 44rem;
+     }
+
+  }
+
+
+  @media (max-width: 700px) {
+
+    header {
+        justify-content: center;
+
+    }
+
+    .header-title{ 
+        width: fit-content;
+        height: 2rem;
+        text-align: center;
+    }
+    .other-story {
+        width: 66%;
+        
+        margin-bottom: 1rem;
+        
+    }
+    .news-row {
+        flex-direction: column;
+        width: 80%;
+       
+    }
+    .news-slot-main, .news-slot-one {
+        width: 98%;
+        padding: .5rem;
+    }
+    .carousel {
+        height: 18rem;
+        width: 36rem;
+     }
+     .manual-navigation {
+       
+        height: 1.5rem;
+        bottom: 2%;
+        right: 2%;
+    }
+    .pane-ticker {
+        height: 1rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+
+      .footer-icons {
+          height: 1.8rem;
+          margin: 0 .5rem 0;
+      }
+
+      .signature {
+          height: 2rem;
+      }
+
+
+      .by-me p {
+          padding-right: .7rem;
+          padding-left: .7rem;
+          align-self: center;
+          color: white;
+      }
+
+      .intro {
+          font-size: 1rem;
+      }
+
+      .contact-body p {
+          font-size: 1rem;
+      }
+
+      .tabs-section {
+          padding: 0 0 .5rem 0;
+          margin-top: -.5rem;
+      }
+      .carousel {
+        height: 14rem;
+        width: 28rem;
+     }
+
+     .spotlight-text {
+         font-size: 1.5rem;
+     }
+     .display-window {
+        height: 15.6rem;
+        width: 26rem;
+        
+    }
+    .comp-info {
+        font-size: .8rem;
+        margin: 1rem 0;
+        background-color: rgba(3, 3, 3, 0.342);
+        border-radius: 10%;
+    }
+
+    .card-title {
+        font-size: 1rem;
+    }
+    .manual-navigation {
+       
+        height: 1rem;
+        bottom: 2%;
+        right: 2%;
+    }
+    .pane-ticker {
+        height: .7rem;
+    }
+  } 
