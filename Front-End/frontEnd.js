@@ -6,7 +6,7 @@ import {createBlogs} from './blog/modules/createDevBlogs.js';
 
 
 const morphHeaderInit = () => {
-    const isScrolled = (event) => {
+    const isScrolled = () => {
       const body = document.querySelector('body');
     const headerTitle = document.querySelector('.header-title');
      let scrollPosition = body.getBoundingClientRect().top;
@@ -39,7 +39,7 @@ Edit card info and correct spelling or other errors
 connect all links
 RESPONSIVE DESIGN
  STYLE ISSUES FOR DIFFERENT BROWSERS
-Write out all 3 blog posts.
+W
 
  
  Stretch: 

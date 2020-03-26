@@ -1,84 +1,7 @@
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,
+code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,
+form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,
+footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -88,10 +11,12 @@ video {
 }
 
 body {
+    scrollbar-width: 4rem;
+    scrollbar-color: #00a5a5 rgb(71, 20, 71);
     display: flex;
     background-color: rgb(238, 238, 238);
     flex-direction: column;
-    position: relative;
+    
     /* background: url('/David Campbell Website/images/blog/content-bg.svg'); */
 }
 
@@ -153,16 +78,7 @@ body {
     width: 98%;
 }
 
-.title {
-    font-family: 'Spartan', sans-serif;
-    width: 100%;
-    font-size: 5rem;
-    text-align: center;
-    background-image: url('/David Campbell Website/images/music-blog/title-bg.svg');
-    border: none;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
+
 
 .sub-title {
     font-family: 'Spartan', sans-serif;
@@ -177,7 +93,7 @@ body {
     font-size: .9rem;
     font-weight: 900;
     border-bottom: .25px solid black;
-    width: fit-content;
+    width: 6rem;
     padding-bottom: .25rem;
     display: flex;
     flex-direction: column;
@@ -195,7 +111,7 @@ body {
 }
 
 .content {
-
+    position: relative;
     background-size: 100%;
 
 
@@ -248,13 +164,16 @@ body {
 
 /* Scrollbar Stuff */
 
-::-webkit-scrollbar {
+
+
+
+body::-webkit-scrollbar {
 
     width: 4px;
     background-color: #00a5a5;
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
 
     background-color: rgb(71, 20, 71);
 
@@ -274,8 +193,7 @@ body {
 }
 
 
-.article-card {}
-
+/* NAVIGATION SECTION */
 
 .nav-link {
     flex: 0 0 auto;
@@ -316,6 +234,8 @@ body {
     width: 25%;
     
 }
+
+/*  */
 
 @media (max-width: 1200px) {
     .navigation {

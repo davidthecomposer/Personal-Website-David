@@ -138,9 +138,9 @@
 
 //--------------------  ACTIVE FUNCTIONS ---------------------- //
 
-
+createSlideShow();
  composerQuoteChange();
- createSlideShow();
+ 
  createMusicSections();
  createAudioPlayers();
  createNavRules();
@@ -189,12 +189,30 @@ Artist's Statement:
  RESPONSIVE DESIGN
  STYLE ISSUES FOR DIFFERENT BROWSERS
 
+Go through each webpage set and look for inconsistencies. then write them down and fix them one by one:
+First slide doesn't load fast enough
+
+index.html
+Fix header shrink thing. 
+custom slider audio buttons not lined up correctly in Firefox or Edge (but small one works)
+scrollbar styling not applying in firefox or Edge
+music tab letters are black in Edge when loading
 
 
+forntend.html
+submit button is different and should be uniform for all 3
+header shrink not working in Edge.
 
+musicblog.html
+
+Edge Font of Title is nt working - change to PNG?
+All images that embed fonts are not working well in Edge.
+sidewas scroll color/custom not working in edge. (should I change to vertical scroll?
  
  
- 
+ devblog.html
+ scrollbars not showing custom in edge and firefox
+ Embedded fonts in pictures not working in Edge.
  
  
  */

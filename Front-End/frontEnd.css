@@ -28,14 +28,17 @@ header {
     align-items: center;
     width: 100%;
     z-index: 3;
-    /* background-image: url(../images/main/DavidNameDev.svg); */
-    background-repeat: no-repeat;
+    
     flex-wrap: wrap;
 }
 
 .header-title {
-    height: 6rem;
-     width: 40rem;
+    
+    height: 7rem;
+     width: 45rem;
+    background-image: url("../images/main/DavidNameDev.png");
+    background-size: cover;
+    background-repeat: no-repeat; 
 }
 
 .header-thin {
@@ -48,25 +51,27 @@ header {
 
 @keyframes shrink {
     0% {
-        height: 6rem;
-        content:url("../images/main/DavidNameDev.svg");
+        height: 7rem;
+        background-image: url("../images/main/DavidNameDev.png");
+        
     }
 
     100% {
         height: 3rem;
-        content:url("../images/main/DavidNameDevThin.svg");
+        background-image: url("../images/main/DavidNameDevThin.png");
     }
 }
 
 @keyframes grow {
     0% {
+        background-image: url("../images/main/DavidNameDevThin.png");
         height: 3rem;
-        content:url("../images/main/DavidNameDevThin.svg");
+        
     }
     
     100% {
-        height: 6rem;
-        content:url("../images/main/DavidNameDev.svg");
+        height: 7rem;
+        background-image: url("../images/main/DavidNameDev.png");
 
     }
 }
@@ -192,15 +197,17 @@ height: .1rem;
     width: 100%;
     height: 100%;
     position: relative;
-    transition: transform 1s;
+    transition: transform .75s;
     transform-style: preserve-3d;
 }
+
+
 
 .panel-container {
   position: absolute;
   height: 100%;
   width: 100%;
-  backface-visibility: visible;
+  backface-visibility: hidden;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -212,13 +219,34 @@ height: .1rem;
 }
 
 .is-flipped {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
+    
   }
+/*---------------------------- CARD BACK ---------------------------- */
+
+.back {
+    
+    background-image: url('../images/front-end/card-back.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: rotateY( 180deg );
+  }
+
+.back .panel-title {
+      margin-top: 3rem;
+      color: white;
+}
+
+.back .panel-description {
+    position: absolute;
+    margin-top: 10rem;
+}
 
 /* ---------------------------- CARD FRONT ---------------------------- */
 .front {
+    
    justify-content: space-evenly;
-   background-image: url(../images/front-end/card-front.svg);
+   background-image: url('../images/front-end/card-front.svg');
   }
   
 .panel-title {
@@ -267,7 +295,6 @@ height: .1rem;
     color: white;
     height: 1.5rem;
     margin-bottom: 1rem;
-    z-index: 3;
     cursor: pointer;
 }
 
@@ -277,24 +304,6 @@ height: .1rem;
     margin-top: 2rem;
 }
 
-/*---------------------------- CARD BACK ---------------------------- */
-
-.back {
-    transform: rotateY( 180deg );
-    background-image: url(../images/front-end/card-back.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
-
-.back .panel-title {
-      margin-top: 2rem;
-      color: white;
-}
-
-.back .panel-description {
-    position: absolute;
-    margin-top: 8rem;
-}
 
 
 /* ---------------------------- FEEDBACK SECTION ---------------------------- */

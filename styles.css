@@ -378,9 +378,9 @@ header {
     animation: oval-shrink 1.5s linear 1 forwards;
 }
 
-.crazy {
+/* .crazy {
     animation: crazy 1.5s linear 1 forwards;
-}
+} */
 
 /* Slide Animations */
 
@@ -436,12 +436,12 @@ header {
     }
 }
 
-@keyframes crazy {
+/* @keyframes crazy {
     0% {
-        border-right: 0%;
-        border-left: 0%;
-        border-top: 0%;
-        border-bottom: 0%;
+        border-right: 0;
+        border-left: 0;
+        border-top: 0;
+        border-bottom: 0;
     }
 
     20% {}
@@ -459,7 +459,7 @@ header {
         border-bottom: 40%;
 
     }
-}
+} */
 
 
 /* Text animations */
@@ -641,6 +641,9 @@ header {
     width: 19%;
     text-align: center;
     border-radius: 20%;
+    color: white;
+    height: 2rem;
+    line-height: 2rem;
 }
 
 .music-tab-button:hover {
@@ -933,6 +936,8 @@ header {
     margin-left: -110px;
 }
 
+
+
 .audio-buttons {
     width: 30px;
     height: 30px;
@@ -981,6 +986,15 @@ header {
 }
 
 .audio-volumeBar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 8px;
+    width: 8px;
+    border: none;
+    background: radial-gradient(white, purple, black);
+    border-radius: 100%;
+}
+
+.audio-volumeBar::-moz-slider-thumb {
     -webkit-appearance: none;
     height: 8px;
     width: 8px;
@@ -1117,7 +1131,7 @@ header {
     -webkit-appearance: none;
     height: 6px;
     width: 6px;
-    border: solid 1px rgb(243, 243, 243)(233, 226, 226);
+    border: solid 1px rgb(243, 243, 243);
     background-color: rgb(211, 211, 211);
     border-radius: 100%;
 }
