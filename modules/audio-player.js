@@ -64,7 +64,7 @@ export class AudioPlayer {
         stopOtherAudio(event);
         event.target.src = pause;
         this.audio.play();
-        this.infoDisplay.setAttribute('src', `images/media-music-display/${this.mediaTitle}.svg`);
+        this.infoDisplay.setAttribute('src', `images/media-music-display/${this.mediaTitle}.png`);
  
       } else {
         event.target.src = play;
@@ -98,7 +98,7 @@ export class AudioPlayer {
     handleInfoDisplay(event) {
  
  
-      this.infoDisplay.setAttribute('src', `images/media-music-display/${this.mediaTitle}.svg`);
+      this.infoDisplay.setAttribute('src', `images/media-music-display/${this.mediaTitle}.png`);
  
     }
     nextPlayer(event) {
@@ -115,7 +115,7 @@ export class AudioPlayer {
     }
     play() {
       this.buttons.click();
-      this.infoDisplay.setAttribute('src', `images/media-music-display/${this.mediaTitle}.svg`);
+      this.infoDisplay.setAttribute('src', `images/media-music-display/${this.mediaTitle}.png`);
     }
  
  

@@ -116,23 +116,25 @@
  };
 
  const morphHeaderInit = () => {
-   const isScrolled = (event) => {
-     const body = document.querySelector('body');
-     const headerTitle = document.querySelector('.header-title');
-     let scrollPosition = body.getBoundingClientRect().top;
+  const isScrolled = () => {
+    const body = document.querySelector('body');
+  const headerTitle = document.querySelector('.header-title');
+   let scrollPosition = body.getBoundingClientRect().top;
+  
+    if (scrollPosition !== 0) {
+      headerTitle.classList.remove('header-full');
+      headerTitle.classList.add('header-thin');
 
-     if (scrollPosition !== 0) {
-       headerTitle.classList.remove('header-full');
-       headerTitle.classList.add('header-thin');
-     } else {
-       // header.classList.remove('header-thin');
-       headerTitle.classList.add('header-full');
-     }
-   };
-
-   window.addEventListener('scroll', isScrolled);
-
- };
+    } else {
+      // header.classList.remove('header-thin');
+      headerTitle.classList.add('header-full');
+     
+    }
+  };
+  
+  window.addEventListener('scroll', isScrolled);
+  
+  };
 
 
 
@@ -193,13 +195,16 @@ Go through each webpage set and look for inconsistencies. then write them down a
 First slide doesn't load fast enough
 
 index.html
-Fix header shrink thing. 
-custom slider audio buttons not lined up correctly in Firefox or Edge (but small one works)
-scrollbar styling not applying in firefox or Edge
-music tab letters are black in Edge when loading
+
+custom slider audio buttons not lined up correctly in Firefox or Edge (but small one works):
+re-code using 
+var bodyRect = document.body.getBoundingClientRect(),
+get the position of the progressBar and make the starting position the same as that
 
 
-forntend.html
+
+
+frontend.html
 submit button is different and should be uniform for all 3
 header shrink not working in Edge.
 

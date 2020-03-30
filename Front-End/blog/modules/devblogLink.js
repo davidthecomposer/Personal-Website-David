@@ -13,7 +13,7 @@ export class NavLink {
        blogLink.setAttribute('href', `/David Campbell Website/Front-End/blog/dev-html-pages/${this.name}.html`);
        blogLink.innerHTML = 
        `<div class="article-card home">
-       <img class="nav-image" src="/David Campbell Website/images/dev-blog/${this.name}.svg" alt="">
+       <img class="nav-image" src="/David Campbell Website/images/dev-blog/${this.name}.png" alt="">
        <h1 class="nav-title">${blogTitleWords[blogTitleNames.indexOf(this.name)]} </h1>
          </div>`;
 
@@ -48,7 +48,7 @@ export class NavLinkMain {
        blogLink.setAttribute('href', `/David Campbell Website/Front-end/blog/dev-html-pages/${this.name}.html`);
        blogLink.innerHTML = 
        `
-       <img class="nav-image" src="/David Campbell Website/images/dev-blog/${this.name}.svg" alt="">
+       <img class="nav-image" src="/David Campbell Website/images/dev-blog/${this.name}.png" alt="">
        <h1 class="nav-title">${blogTitleWords[this.index]} </h1>
          </div>`;
 

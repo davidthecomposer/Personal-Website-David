@@ -12,7 +12,8 @@ footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video 
 
 body {
     
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(8, 8, 8);
+    
 }
 /* ---------------------------- HEADER SECTION ---------------------------- */
 header {
@@ -22,21 +23,20 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    
     width: 100%;
     z-index: 3;
-    
-    background-repeat: no-repeat;
+    height: fit-content;
     flex-wrap: wrap;
-
 }
 
 .header-title {
-    height: 6rem;
-    width: 40rem;
+    
+    height: 7rem;
+    width: 45rem;
+    background-image: url('/David Campbell Website/images/main/DavidName.svg');
+    background-size: 100%;
+    background-repeat: no-repeat; 
 }
-
-
 
 .header-thin {
     animation: shrink .25s ease-in 1 forwards;
@@ -46,33 +46,37 @@ header {
     animation: grow .15s linear 1 forwards;
 }
 
-
 @keyframes shrink {
     0% {
-        height: 6rem;
-        content:url('./images/main/DavidName.svg');
+        height: 7rem;
+        background-image: url("/David Campbell Website/images/main/DavidName.png");
+        
     }
 
     100% {
         height: 3rem;
-        content:url('./images/main/DavidNameThin.svg');
+        background-image: url("/David Campbell Website/images/main/DavidNameThin.png");
     }
 }
 
 @keyframes grow {
     0% {
+        background-image: url("/David Campbell Website/images/main/DavidNameThin.png");
         height: 3rem;
-        content:url('./images/main/DavidNameThin.svg');
+        
     }
     
     100% {
-        height: 6rem;
-        content:url('./images/main/DavidName.svg');
+        height: 7rem;
+        background-image: url("/David Campbell Website/images/main/DavidName.png");
 
     }
 }
 
-
+html {
+    scrollbar-width: thin;
+    scrollbar-color: rgb(71, 20, 71) #00a5a5;
+}
 .anchor {
     padding-top: 3rem;
 }
@@ -85,6 +89,7 @@ header {
     color: rgba(255, 255, 255, 0.959);
     font-family: 'Advent Pro', sans-serif;
     text-decoration: none; 
+
 }
 
 
@@ -109,7 +114,7 @@ header {
     width: fit-content;
     height: 1rem;
     margin-right: 2%;
-    font-size: 80%;
+    
 }
 
 .divider {
@@ -124,6 +129,7 @@ header {
     flex-direction: column;
     align-items: center;
     padding: 2rem 0 0 0;
+    
     /* background-image: url(images/background.svg);
  background-size: cover; */
 }
@@ -150,7 +156,7 @@ header {
 
 
 .about-me {
-    margin: 8rem 0 4rem 0;
+    margin: 4rem 0 4rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,7 +170,7 @@ header {
     font-family: 'Hammersmith One', sans-serif;
     color: white;
     padding: 1rem 0 1rem 0;
-    background: rgb(16, 15, 15);
+    background: rgb(12, 11, 11);
     width: 100%;
     text-align: center;
     border: none;
@@ -173,10 +179,9 @@ header {
 .about-me-text {
     
     width: 100%;
-    background-color: rgba(59, 59, 59, 0.047);
     font-family: 'Advent Pro', sans-serif;
-    font-size: 1.2rem;
-    width: 70%;
+    font-size: 1.3rem;
+    width: 60%;
  
 }
 
@@ -187,6 +192,7 @@ header {
     margin: 0.5rem 1rem 0 1rem;
     border: none;
 }
+
 .about-me-text p {
     line-height: 1.5;
     text-indent: 50px;
@@ -595,7 +601,7 @@ header {
 
 .music-container {
     position: relative;
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(8, 8, 8);
     margin: 8rem 0 0 0;
     user-select: none;
 
@@ -611,7 +617,7 @@ header {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background: rgb(16, 15, 15);
+    background: rgb(12, 11, 11);
     margin: 0 0 2rem 0;
    
     
@@ -621,7 +627,7 @@ header {
     font-size: 3rem;
     font-family: 'Hammersmith One', sans-serif;
     color: white;
-    padding: .5rem 0 0 0;
+    padding: 1rem 0;
 }
 
 .music-tabs-section {
@@ -633,7 +639,8 @@ header {
     color: #fffffff6;
     width: 100%;
     height: 2rem;
-    background: rgb(15, 15, 15);
+    background: rgb(5, 5, 5);
+    margin-bottom: 1rem;
 }
 
 .music-tab-button {
@@ -683,7 +690,7 @@ header {
 @keyframes slideout1 {
    
     100% {    
-        background-size: 50%;
+        background-size: 35%;
         
     }
 }
@@ -700,7 +707,7 @@ header {
 
 @keyframes retract1 {
     0% {
-        background-size: 50%;
+        background-size: 35%;
     }
     100% {    
         background-size: 0;
@@ -716,6 +723,7 @@ header {
 .contact-text {
     font-family: 'Advent Pro', sans-serif;
     text-align: center;
+    
 }
 
 .invisible {
@@ -738,7 +746,7 @@ header {
     position: relative;
     display: flex;
     flex-direction: row;
-    
+    background-color: rgb(8, 8, 8);
     width: 100%;
     
     margin: .5rem 0;
@@ -766,6 +774,9 @@ header {
     overflow-x: hidden;
     width: 23rem;
     height: 30rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgb(71, 20, 71) #00a5a5;
+
 
 }
 .contact-text a {
@@ -787,6 +798,7 @@ header {
     background-color: rgb(71, 20, 71);
 
 }
+
 
 ::-webkit-scrollbar-thumb {
 
@@ -825,7 +837,7 @@ header {
     align-items: center;
     width: 33%;
     margin: 1rem 0;
-    background-color: rgba(3, 3, 3, 0.342);
+    background-color: rgba(14, 14, 14, 0.342);
     border-radius: 10%;
 }
 
@@ -994,7 +1006,16 @@ header {
     border-radius: 100%;
 }
 
-.audio-volumeBar::-moz-slider-thumb {
+.audio-volumeBar::-moz-range-thumb {
+    -webkit-appearance: none;
+    height: 8px;
+    width: 8px;
+    border: none;
+    background: radial-gradient(white, purple, black);
+    border-radius: 100%;
+}
+
+.audio-volumeBar::-ms-thumb {
     -webkit-appearance: none;
     height: 8px;
     width: 8px;
@@ -1150,7 +1171,7 @@ header {
     color: white;
     font-family: 'Hammersmith One', sans-serif;
     text-align: center;
-    background-color: rgb(16, 15, 15);
+    background-color: rgb(12, 11, 11);
     margin: 0 0 2rem 0;
 
 }
@@ -1197,7 +1218,8 @@ color: #00a5a5;
 .news-slot-one {
     width: 48%;
     
-    padding: 0 .5rem
+    padding: 0 .5rem;
+    position: relative;
 }
 
 .news-slot-one a {
@@ -1248,7 +1270,8 @@ color: #00a5a5;
 }
 
 .news-image-full {
-    width: 100%;
+    width: 80%;
+    margin: 0 auto;  
     
 }
 
@@ -1264,7 +1287,7 @@ color: #00a5a5;
 }
 
 .blog-title {
-    background-color: rgb(16, 15, 15);
+    background-color: rgb(12, 11, 11);
     font-size: 3rem;
     padding: 1rem 0;
     color: white;
@@ -1386,10 +1409,15 @@ position: relative;
  text-align: center;
  color: white;
  font-size: 1.5rem;
+ width: 60%;
+ 
 }
 
 .contact-body {
     font-family: 'Advent Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 #email-content {
     
@@ -1517,7 +1545,13 @@ footer {
     }
 }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1050px) {
+    .header-title {
+            width: 30rem;
+            height: 3rem;
+        
+    }
+
 
     .form-row {
 
@@ -1554,7 +1588,7 @@ footer {
     #user-name {
         width: 90%;
     }
-    .user-name {
+    #user-email {
         width: 90%;
     }
 
@@ -1583,7 +1617,6 @@ footer {
 }
 .display-window {
     margin: 2rem auto;
-
 }
 
 
@@ -1635,12 +1668,13 @@ footer {
   @media (max-width: 700px) {
 
     header {
+        flex-direction: column;
         justify-content: center;
 
     }
 
     .header-title{ 
-        width: fit-content;
+        /* width: fit-content; */
         height: 2rem;
         text-align: center;
     }
@@ -1672,6 +1706,23 @@ footer {
     .pane-ticker {
         height: 1rem;
     }
+    .about-me-text {
+        font-size: 1.1rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    .my-image {
+        
+        float: none;
+        margin: 1rem auto;
+    }
+    .news-image-full {
+        width: 100%;
+    }
+
+    
   }
 
   @media (max-width: 600px) {
