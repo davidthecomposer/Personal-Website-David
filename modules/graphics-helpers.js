@@ -1,6 +1,6 @@
  /* jshint esversion: 6 */
 
-export const s = () => {
+export const underlineGraphics = () => {
 
     const nav = document.querySelector('nav');
     const pageNav = nav.querySelectorAll('.header-tab');

@@ -848,6 +848,7 @@ height: .125rem;
 }
 
 .music-sections {
+
     color: white;
     width: 100%;
 
@@ -857,17 +858,20 @@ height: .125rem;
     font-family: 'Advent Pro', sans-serif;
     display: inline-flex;
     flex-direction: column;
-    height: 15rem;
+    height: 24rem;
     justify-content: space-around;
     align-items: center;
     width: 33%;
     margin: 1rem 0;
     background-color: rgba(14, 14, 14, 0.342);
     border-radius: 10%;
+    line-height: 1.5rem;
 }
 
 .card-title {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    padding: 1rem 0 .5rem;
+    border-bottom: rgb(0, 121, 148) 2px solid;
 }
 
 .fa-file-pdf {
@@ -1080,11 +1084,12 @@ height: .125rem;
     font-size: .5rem;
     border-radius: 4%;
     margin: .5rem 0;
+    padding: .5rem;
 }
 
 .small-button {
-    height: 20px;
-    width: 20px;
+    height: 30px;
+    width: 30px;
 }
 
 .small-progress {
@@ -1125,17 +1130,18 @@ height: .125rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    height: fit-content;
+    width: 200px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: -8px;
 }
 
 .small-acp {
-    font-size: .5rem;
+    font-size: .7rem;
     margin: 4px 0 0 10px;
 }
 
 .small-atr {
-    font-size: .5rem;
+    font-size: .7rem;
     margin: 4px -2px 0 0;
 }
 
@@ -1153,10 +1159,10 @@ height: .125rem;
 .volumeBar-small {
     -webkit-appearance: none;
     position: absolute;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.555), rgba(255, 255, 255, 0));
-    height: 4px;
-    width: 20px;
-    margin-left: -6px;
+    background: linear-gradient(to left, rgb(0, 0, 0), rgba(255, 255, 255, 0));
+    height: 6px;
+    width: 28px;
+    margin: 0 0 0 -6px;
     margin-top: 0;
     transform: rotate(-90deg);
     visibility: hidden;
@@ -1165,8 +1171,8 @@ height: .125rem;
 
 .small-volume {
     position: relative;
-    width: 8px;
-    height: 8px;
+    width: 1rem;
+    height: 1rem;
     margin-top: 10px;
 }
 
@@ -1270,6 +1276,7 @@ color: #00a5a5;
     font-weight: bold;
     font-size: 2rem;
     color: rgb(236, 236, 236);
+    margin-bottom: 1rem;
 }
 
 .news-text {
@@ -1515,7 +1522,7 @@ position: relative;
 }
 
 .email-submit {
-    background-color: #00a5a5;
+    background-color:rgb(33, 130, 165, .8);
     padding: .5rem;
     border: none;
     color: white;

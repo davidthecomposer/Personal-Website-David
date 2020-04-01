@@ -262,7 +262,7 @@ height: .1rem;
   flex-direction: column;
   justify-content: space-between;
   font-family: 'Advent Pro', sans-serif;
-  border: rgba(70, 12, 73, 0.84) 10px solid;
+  
   cursor: grab;
  
   outline: none;
@@ -311,7 +311,7 @@ height: .1rem;
   }
   
 .panel-title {
-    position: relative;
+    
     font-family: 'Hammersmith One', sans-serif;
     font-size: 2rem;
     align-self: center;   
@@ -321,7 +321,7 @@ height: .1rem;
     align-self: center;
     width: 90%;
     height: 12.5rem;
-   background-size: 100% 100%;
+   background-size: 100%;
    background-repeat: no-repeat;
 }
 
@@ -622,6 +622,17 @@ footer {
     align-items: center;
     justify-content: flex-end;
     width: fit-content;
+}
+
+.email-submit {
+    background-color:rgb(33, 130, 165, .8);
+    padding: .5rem;
+    border: none;
+    color: white;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10%;
 }
 
 /* ---------------------------- SCROLLBAR SECTION ---------------------------- */

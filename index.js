@@ -13,7 +13,7 @@
  import {allPlayersArray} from './modules/audio-helpers.js';
  import {morphHeaderInit} from './modules/morphHeaderInit.js';
  import {underlineGraphics} from './modules/graphics-helpers.js';
- 
+
  //  ---------------- HELPER FUNCTIONS  ------------------------  //
 
 
@@ -25,6 +25,7 @@
 
 //--------------------  ACTIVE FUNCTIONS ---------------------- //
 
+morphHeaderInit();
 createSlideShow();
 composerQuoteChange();
 createMusicSections();
@@ -33,7 +34,7 @@ createSmallAudioPlayers();
 underlineGraphics();
 createNewsRows();
 createBlogs();
-morphHeaderInit();
+
  
 
 
@@ -62,7 +63,7 @@ Artist's Statement:
  Decide on which pieces to try to render or parts
  create score samples from full .pdfs
  Add all sound and pdf files and add player code
-
+improve small audio player
 
  -Contact
  
@@ -70,36 +71,13 @@ Artist's Statement:
 
  
  General Design issues - style buttons, animations etc. 
- RESPONSIVE DESIGN
- STYLE ISSUES FOR DIFFERENT BROWSERS
-
-Go through each webpage set and look for inconsistencies. then write them down and fix them one by one:
-First slide doesn't load fast enough
-
-index.html
-
-
-re-code using 
-
-left instead of margin-left
-
-
-
+ 
 
 frontend.html
 submit button is different and should be uniform for all 3
 header shrink not working in Edge.
 
-musicblog.html
 
-Edge Font of Title is nt working - change to PNG?
-All images that embed fonts are not working well in Edge.
-sidewas scroll color/custom not working in edge. (should I change to vertical scroll?
- 
- 
- devblog.html
- scrollbars not showing custom in edge and firefox
- Embedded fonts in pictures not working in Edge.
  
  
  */
