@@ -1,17 +1,20 @@
  /* jshint esversion: 6 */
 
- export class Musicsections {
+ class Musicsections {
     constructor() {
-      this.allBtns = document.querySelectorAll('.music-tab-button');
+      this.allBtns = document.querySelectorAll('.music-tab-container');
       this.musicSections = document.querySelectorAll('.music-sections');
     }
  
-    handleSwitch(event) {
+    handleSwitch(btn) {
+      
       let sectionFilter = [...this.musicSections].filter((section) => {
-        return section.classList[0] !== event.target.innerHTML;
+        // return section.classList[0] !== event.target.innerHTML;
+        return btn.innerHTML.includes(section.classList[0]) === false;
       });
       let pressedButton = [...this.musicSections].filter((section) => {
-        return section.classList[0] === event.target.innerHTML;
+        // return section.classList[0] === event.target.innerHTML;
+        return btn.innerHTML.includes(section.classList[0])
       });
       sectionFilter.forEach((section) => {
         section.classList.add('invisible');
@@ -19,22 +22,27 @@
  
       pressedButton[0].classList.remove('invisible');
       [...this.allBtns].forEach((btn) => {
-        btn.style.color = 'white';
+        btn.firstElementChild.firstElementChild.style.color = 'white';
       });
  
-      event.target.style.color = '#00a5a5';
+      btn.firstElementChild.firstElementChild.style.color = '#00a5a5';
     }
  
-    retractAnimation(event) {
-      event.target.classList.add('retract1');
+    retractAnimation(btn) {
+     btn.firstElementChild.firstElementChild.nextElementSibling.classList.add('retract1');
     }
  
     assignHandlers() {
-      this.allBtns[0].style.color = '#00a5a5';
+      this.allBtns[0].firstElementChild.firstElementChild.style.color = '#00a5a5';
       this.allBtns.forEach((btn) => {
-        btn.onclick = () => this.handleSwitch(event);
-        btn.onmouseout = () => this.retractAnimation(event);
+        btn.onclick = () => this.handleSwitch(btn);
+        btn.onmouseout = () => this.retractAnimation(btn);
       });
  
     }
   }
+
+  export const createMusicSections = () => {
+    const musicSections = new Musicsections();
+    musicSections.assignHandlers();
+  };

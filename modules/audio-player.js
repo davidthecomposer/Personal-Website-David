@@ -7,7 +7,7 @@ import {allPlayersArray} from '../index.js';
 
 
 
-export class AudioPlayer {
+class AudioPlayer {
     constructor(playerNumber) {
       this.playerColumn = document.querySelector('.player-column');
       this.infoDisplay = document.querySelector('.display-image');
@@ -44,13 +44,14 @@ export class AudioPlayer {
       this.currentPosition.innerHTML = Math.floor(this.audio.currentTime.toFixed(0) / 60) + ":" + (this.audio.currentTime.toFixed(0) < 10 ? `0${this.audio.currentTime.toFixed(0)}` : this.audio.currentTime.toFixed(0) % 60 < 10 ? `0${this.audio.currentTime.toFixed(0) % 60}` : this.audio.currentTime.toFixed(0) % 60 ? this.audio.currentTime.toFixed(0) % 60 : '00');
       this.getDuration();
       this.progressBar.value = (this.audio.currentTime / this.audio.duration) * 100;
-      this.progressButton.style.marginLeft = `${(this.progressBar.value * 2) - 110}px`;
+      this.progressButton.style.left = `${(this.progressBar.value * 2) + 66}px`;
+      
     }
  
     /* When user clicks mouse on progress bar, this skips music and object positions to event location*/
     changeLocation(event) {
       let percent = event.offsetX / event.target.offsetWidth;
-      this.progressButton.style.marginLeft = `${(percent * 200) - 110}px`;
+      this.progressButton.style.left = `${(percent * 200) + 66}px`;
       event.target.value = percent * 100;
       this.audio.currentTime = this.audio.duration * percent;
     }
@@ -134,3 +135,19 @@ export class AudioPlayer {
       this.getDuration();
     }
   }
+
+  export const createAudioPlayers = () => {
+
+    // Large Audio Players
+    
+    const audioPlayers = document.querySelectorAll('.audio-player');
+    const playerNames = [...audioPlayers].map((player) => player.classList[1]);
+ 
+    playerNames.forEach((name) => {
+      let playerSpace = {};
+      let player = `player${playerNames.indexOf(name) + 1}`;
+      playerSpace[player] = new AudioPlayer(name);
+      playerSpace[player].initEventHandlers();
+      allPlayersArray.playersArray.push(playerSpace[player]);
+    });
+  }; 

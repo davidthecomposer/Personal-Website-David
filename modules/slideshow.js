@@ -1,6 +1,6 @@
  /* jshint esversion: 6 */
 
-export class SlideShow {
+class SlideShow {
     constructor(showNumber) {
       this.slideShow = document.querySelector("." + showNumber);
       this.paneTicker = this.slideShow.querySelector('.pane-ticker');
@@ -170,4 +170,7 @@ export class SlideShow {
  
   }
  
- 
+  export const createSlideShow = () => {
+    const firstShow = new SlideShow('one');
+    firstShow.initHandlers();
+  };

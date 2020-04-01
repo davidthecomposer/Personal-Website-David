@@ -1,6 +1,6 @@
  /* jshint esversion: 6 */
  
- export class NewsRow {
+ class NewsRow {
     constructor(rowName) {
  
       this.newsRow = document.querySelector(`.news-row.${rowName}`);
@@ -26,3 +26,15 @@
  
     }
   }
+
+  export const createNewsRows = () => {
+    const newsRows = document.querySelectorAll('.news-row');
+    const newsRowNames = [...newsRows].map((row) => row.classList[1]);
+ 
+    newsRows.forEach((row) => {
+      let newsSpace = {};
+      let rowName = `${newsRowNames[newsRowNames.indexOf(row.classList[1])]}`;
+      newsSpace[rowName] = new NewsRow(rowName);
+      newsSpace[rowName].eventHandlersInit();
+    });
+  };

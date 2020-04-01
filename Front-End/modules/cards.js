@@ -5,13 +5,16 @@ export class Card {
         this.cardName = cardName;
         this.scene = document.querySelector(`.${cardName}`);
         this.card = this.scene.querySelector('.card');
+        this.panelTitle = this.card.querySelector('.panel-title');
         this.panelPicture = this.scene.querySelector('.panel-picture');
-        this.navigate = this.scene.querySelector('.navigate');;
+        this.navigate = this.scene.querySelector('.navigate');
     }
 
     flipCard(event) {
         if (event.target !== this.navigate) {
+            
             this.card.classList.toggle('is-flipped');
+
         }
     }
 

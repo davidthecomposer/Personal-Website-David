@@ -3,7 +3,7 @@
 import {stopOtherAudio} from './audio-helpers.js';
 
 
-export class SmallAudioPlayer {
+class SmallAudioPlayer {
     constructor(playerNumber) {
       this.player = document.querySelector(`.small-player.${playerNumber}`);
       this.buttons = this.player.querySelector('.small-button');
@@ -102,5 +102,25 @@ export class SmallAudioPlayer {
       this.volume.onmouseleave = () => this.volumeBarHide(event);
       this.volumeBar.onmouseleave = () => this.volumeBarHide(event);
       this.volumeBar.onmouseover = () => this.volumeBarInit(event);
+       // fixes the durations not showing on init issue. Maybe not a permenant fix.
+      this.getDuration();
     }
+     
+      
   }
+
+  export const createSmallAudioPlayers = () => {
+
+    //Small Audio players
+ 
+    const smallAudioPlayers = document.querySelectorAll('.small-player');
+    const smallPlayerNames = [...smallAudioPlayers].map((player) => player.classList[1]);
+ 
+    smallPlayerNames.forEach((name) => {
+      let playerSpace = {};
+      let player = `smallPlayer${smallPlayerNames.indexOf(name) + 1}`;
+      playerSpace[player] = new SmallAudioPlayer(name);
+      playerSpace[player].initEventHandlers();
+    });
+     
+  };

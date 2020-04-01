@@ -29,4 +29,12 @@
 
 };
 
-export {composerQuotes};
+export const composerQuoteChange = () => {
+    const composerQuote = document.querySelector('.spotlight-text');
+    const composerName = document.querySelector('.author-name');
+    const allQuotes = Object.entries(composerQuotes);
+    let randomNumber = Math.floor((Math.random() * allQuotes.length));
+ 
+    composerQuote.innerHTML = allQuotes[randomNumber][1];
+    composerName.innerHTML = `- ${allQuotes[randomNumber][0]}`;
+  };

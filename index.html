@@ -3,13 +3,16 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="Description" content="David Campbell - Composer. Media and Concert Music. News and updates.">
   <title>David Campbell Music</title>
   <link href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Hammersmith+One&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
   <script src="https://kit.fontawesome.com/01ebde5621.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  
 </head>
 
 <body>
@@ -17,17 +20,35 @@
   <header>
     <div class="header-title"> </div>
     <nav class="tabs-section">
-      <a class="header-tab" href="#home">Home</a>
+      <div class="header-group">
+        <a class="header-tab" href="#home">Home</a>
+        <div class="underline"></div>
+    </div>
       <h3 class="divider">|</h3>
-      <a class="header-tab" href="#music-container">Music </a>
+      <div class="header-group">
+        <a class="header-tab" href="#music-container">Music</a>
+        <div class="underline"></div>
+    </div>
       <h3 class="divider">|</h3>
-      <a class="header-tab" href="#news">News</a>
+      <div class="header-group">
+        <a class="header-tab" href="#news">News</a>
+        <div class="underline"></div>
+    </div>
       <h3 class="divider">|</h3>
-      <!-- <a class="header-tab" href="#blog">Blog</a>
+      <!-- <div class="header-group">
+        <a class="header-tab" href="#blog">Blog</a>
+        <div class="underline"></div>
+    </div>
       <h3 class="divider">|</h3> -->
-      <a class="header-tab" href="#about-me">About</a>
+      <div class="header-group">
+        <a class="header-tab" href="#about-me">About</a>
+        <div class="underline"></div>
+    </div>
       <h3 class="divider">|</h3>
-      <a class="header-tab" href="#contact">Contact</a>
+      <div class="header-group">
+        <a class="header-tab" href="#music-container">Contact</a>
+        <div class="underline"></div>
+    </div>
     </nav>
 </header>
   
@@ -43,23 +64,23 @@
 
     <div class="carousel one">
       <div class="manual-navigation">
-        <img class="navigate backward hidden" src="images/slideshow/backPanel.png" alt="">
+        <img class="navigate backward hidden" src="images/slideshow/backPanel.png" alt="navigate back one slide">
         <div class="pane-ticker">
         </div>
-        <img class="navigate forward hidden" src="images/slideshow/forwardPanel.png" alt="">
-        <img class="pause hidden" src="images/slideshow/pause.png" alt="">
+        <img class="navigate forward hidden" src="images/slideshow/forwardPanel.png" alt="navigate forward one slide">
+        <img class="pause hidden" src="images/slideshow/pause.png" alt="pause automatic playback">
       </div>
       <!-- Add pane images here. First one needs to have active-panel class -->
       <div class="pane-container">
         <!-- Slide #1 -->
         <a href="#news" class="main-images pane active-panel fade-in pane-1"><img src="images/slideshow/song-cycle.png"
-            alt="" class="pane-image"></a>
+            alt="song cycle anouncement" class="pane-image"></a>
         <!-- Slide #2 -->
         <a href="#news" class="main-images pane invisible-panel pane-2"> <img src="images/slideshow/OperaConTempo.png"
-            alt="" class="pane-image"></a>
+            alt="Opera Commision anouncement" class="pane-image"></a>
         <!-- Slide #3 -->
         <a href="#blog" class="main-images pane invisible-panel pane-3"> <img src="images/slideshow/new-blog.png"
-            alt="" class="pane-image"></a>
+            alt="Composer-in-Residence Anouncement" class="pane-image"></a>
       </div>
       <!-- Add slide text here. First one needs to have an animation class -->
       <div class="text-container">
@@ -78,21 +99,57 @@
       
     </section>
 
-
-
-
 <!--            MEDIA MUSIC SECTION TABS           -->
     <div class="music-tabs-section">
-      <h3 class="music-tab-button">Media</h3>
+
       <h3 class="divider">|</h3>
-      <h3 class="music-tab-button">Chamber</h3>
+      
+      <div class="music-tab-container">
+        <div class="music-tab-button">
+          <h3 class="music-button-title" >Media</h3>
+          <div class="underline"></div>
+        </div>
+      </div>
+
       <h3 class="divider">|</h3>
-      <h3 class="music-tab-button">Orchestral</h3>
+
+      <div class="music-tab-container">
+        <div class="music-tab-button">
+          <h3 class="music-button-title">Chamber</h3>
+          <div class="underline"></div>
+        </div>
+      </div>
+
       <h3 class="divider">|</h3>
-      <h3 class="music-tab-button">Vocal/Choral</h3>
+
+      <div class="music-tab-container">
+        <div class="music-tab-button">
+          <h3 class="music-button-title">Orchestral</h3>
+          <div class="underline"></div>
+        </div>
+      </div>
+
       <h3 class="divider">|</h3>
-      <h3 class="music-tab-button">Solo</h3>
+
+      <div class="music-tab-container">
+        <div class="music-tab-button">
+          <h3 class="music-button-title">Vocal/Choral</h3>
+          <div class="underline"></div>
+        </div>
+      </div>
+
+      <h3 class="divider">|</h3>
+
+      <div class="music-tab-container">
+        <div class="music-tab-button">
+          <h3 class="music-button-title">Solo</h3>
+          <div class="underline"></div>
+        </div>
+      </div>
+
+      <h3 class="divider">|</h3>
     </div>
+
 <!--            MEDIA MUSIC SECTION AUDIO ROW          -->
     <section class="Media music-sections">
       <div class="audio-row">
@@ -381,7 +438,7 @@
         </div>
 <!--            DISPLAY WINDOW              -->
         <div class="display-window">
-          <img src="images/media-music-display/turning-point.png" alt="" class="display-image">
+          <img src="images/media-music-display/turning-point.png" alt="turning-point image display" class="display-image">
         </div>
       </div>
     </section>
@@ -788,7 +845,7 @@
             Stay tuned for more info about performance dates and venues.</p>
         </div>
         <div class="news-slot-one mandi-b">
-          <img src="images/main/Mandi-Barrus.jpg" class="news-image-1"></img>
+          <img src="images/main/Mandi-Barrus.jpeg" class="news-image-1"></img>
           <div class="news-text-1"> Mezzo-soprano <a href="http://mandibarrus.com">Mandi Barrus</a> is a musician
             originally from Seattle, Washington. With her <a
               href="https://frontrowreviewersutah.com/?p=8504">"impressive technique and clear tone"</a> , Ms. Barrus'
@@ -917,7 +974,7 @@
           <label for="email-content"> Message: </label>
           <textarea name="email-content" id="email-content" rows="10" cols="80"></textarea>
         </div>
-        <input type="submit">
+        <input type="submit" class="email-submit" value="Submit">
       </form>
     </div>
   </section>
@@ -927,7 +984,7 @@
   <footer>
     <div class="by-me">
       <p>A</p>
-      <img class="signature" src="images/main/david-sig-white.svg" alt="">
+      <img class="signature" src="images/main/david-sig-white.svg" alt="David Campbell Signature">
       <p>Website</p>
   </div>
   <div class="nav-icons-footer">
