@@ -1,14 +1,14 @@
 /* jshint esversion: 6 */
 
 import {createAllCards} from './modules/cards.js';
-import {pageNavInit} from './modules/pageNavigation.js';
+import {underlineGraphics} from './modules/graphic-helpers.js';
 import {createBlogs} from './blog/modules/createDevBlogs.js';
 import {morphHeaderInit} from './modules/morphHeader.js';
 
 
 
 createAllCards();
-pageNavInit();
+underlineGraphics();
 createBlogs();
 morphHeaderInit();
 
@@ -17,10 +17,10 @@ morphHeaderInit();
 /* 
 
 Edit card info and correct spelling or other errors
-connect all links
-RESPONSIVE DESIGN
- STYLE ISSUES FOR DIFFERENT BROWSERS
-Write logic to determine header height and make css transitions depending on width of screen.
+
+Edit all Apps - clean code if needed. Make responsive if feasible. 
+ 
+
 
  
  Stretch: 
