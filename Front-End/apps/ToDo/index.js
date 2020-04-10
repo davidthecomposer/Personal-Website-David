@@ -75,7 +75,7 @@ class Task {
     }
 
     initAlarm(thisAlarm) {
-        this.unhandleCheckTime();
+        this.unHandleCheckTime();
         thisAlarm.classList.add('alarm-animation');
         this.alarmSound.loop = true;
         this.alarmSound.play();
@@ -99,7 +99,7 @@ class Task {
         }, 1000);
     }
 
-    unhandleCheckTime() {
+    unHandleCheckTime() {
         clearInterval(this.alarmTimer);
     }
 
@@ -114,7 +114,7 @@ class Task {
             event.target.style.background = alarmToggleOff;
             inputDate.disabled = true;
             inputTime.disabled = true;
-            this.unhandleCheckTime();
+            this.unHandleCheckTime();
             if (this.alarmSound.currentTime) {
                 this.alarmSound.pause();
                 thisAlarm.classList.remove('alarm-animation');
@@ -139,6 +139,7 @@ class Task {
         let toggleTheAlarm = event.target.parentElement.parentElement.nextElementSibling.querySelector('.alarm-row-toggle');
         taskExtras.classList.remove('pane-slide');
         taskExtras.classList.remove('pane-hide');
+        
 
         if (toggleTheAlarm.style.background.includes('off')) {
             if (event.target.style.background.includes('on')) {
@@ -149,7 +150,7 @@ class Task {
                     taskExtras.style.display = 'none';
                     alarmOptions.style.display = 'none';
                     taskContainer.style.marginBottom = '1rem';
-                }, 150);
+                }, 200);
 
             } else {
                 event.target.style.background = activeAlarm;
@@ -165,6 +166,7 @@ class Task {
                 taskExtras.classList.remove('alarm-hide');
                 taskExtras.classList.add('alarm-slide');
                 alarmOptions.style.display = 'flex';
+                taskExtras.style.display = 'flex';
                 taskContainer.style.marginBottom = '0';
             } else {
                 taskExtras.classList.remove('alarm-slide');
@@ -172,7 +174,7 @@ class Task {
                 setTimeout(() => {
                     alarmOptions.style.display = 'none';
                     taskContainer.style.marginBottom = '1rem';
-                }, 150);
+                }, 200);
             }
         }
     }
@@ -245,4 +247,4 @@ task.appendRow();
 
 
 // option to save data to page object and then use option thing to quickly fill in data.will need Icon. 
-// disallow pushing other buttons when slide dwown pane is open.
+// disallow pushing other buttons when slide down pane is open.

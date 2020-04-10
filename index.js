@@ -51,13 +51,8 @@ export {allPlayersArray};
 
 
  Spotlight Section - 
-    
-    Add links? 
-    Logic for making links automatically.
 
 Artist's Statement: 
- Better Head SHot
- Update About Me -
 
  Music Sections -
  Decide on which pieces to try to render or parts

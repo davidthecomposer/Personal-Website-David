@@ -1,3 +1,30 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+html {
+    font-family: 'Indie Flower', cursive;
+    background: url(images/background.jpg) no-repeat center center fixed;
+}
+
+/* Container and non-animated content */
 .todo-container {
     width: 60%;
     min-height: 600px;
@@ -13,15 +40,12 @@
 }
 
 h1 {
- margin-top: 1%;
- font-family: 'Indie Flower', cursive;
- font-size: 3rem;
+    margin-top: 1%;
+    font-family: 'Indie Flower', cursive;
+    font-size: 3rem;
 }
 
-html {
-   
-    background: url(images/background.jpg) no-repeat center center fixed; 
-}
+
 
 .task-super {
     position: relative;
@@ -94,24 +118,25 @@ html {
     background-color: rgb(251, 251, 200);
 }
 
+
+/* slide out Content*/
 .task-extras {
     display: none;
     position: relative;
     flex-direction: row;
     justify-content: space-between;
     width: 98%;
-    margin-bottom: .25rem;
-    background-color: #4d4d4d;
+
+
 }
 
 .info-pane {
     display: none;
-    height: 100%;
+    height: 4rem;
     width: 100%;
     outline: none;
-    border: none;
     background: rgb(196, 212, 253);
-    color: black;
+    color: rgb(0, 0, 0);
     font-family: 'Indie Flower', cursive;
     font-size: 1.2rem;
 }
@@ -123,9 +148,8 @@ html {
     justify-content: space-around;
     align-items: center;
     height: 4rem;
-   
     width: 100%;
-   
+    background-color: #4d4d4d;
     color: black;
 }
 
@@ -149,7 +173,7 @@ html {
 }
 
 
-.time{
+.time {
     width: 30%;
     height: 50%;
     border: none;
@@ -158,66 +182,98 @@ html {
     font-size: 1.2rem;
     font-weight: bold;
     font-family: 'Indie Flower', cursive;
-   
+
 }
 
+/* Signature */
+.by-me {
+    width: fit-content;
+    display: flex;
+    margin: 3rem auto;
+}
+
+.by-me p {
+    padding: 0 .75rem;
+    align-self: center;
+    color: rgb(5, 5, 5);
+    font-size: 1.5rem;
+
+}
+
+.signature {
+    height: 5rem;
+}
+
+
+/* -------------- Animation Classes ----------------- */
 .alarm-animation {
     animation: keyframes1 .3s infinite;
     transform-origin: 50% 10%;
 }
 
 .pane-slide {
-    animation: slideIn .15s linear 1 forwards;
-    
+    animation: slideIn .2s linear 1 forwards;
+
 }
 
 .pane-hide {
-    animation: slideOut .15s linear 1 forwards;
-    
+    animation: slideOut .2s linear 1 forwards;
+
 }
 
 .alarm-slide {
-    
-    animation: slideIn1 .15s linear 1 forwards;
-    
+
+    animation: slideIn1 .2s linear 1 forwards;
+
 }
 
 .alarm-hide {
-    animation: slideOut1 .15s linear 1 forwards;
-    
+    animation: slideOut1 .2s linear 1 forwards;
+
 }
 
+/* -------------- Animations ----------------- */
 @keyframes keyframes1 {
     0% {
         transform: rotate(-10deg);
         animation-timing-function: ease-in;
     }
+
     50% {
         transform: rotate(20deg);
         animation-timing-function: ease-out;
     }
 }
- 
+
 @keyframes slideIn {
-    from {
+    0% {
         height: 0rem;
         opacity: 0;
     }
 
-    to {
-        height: 4.5rem; 
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        height: 4.5rem;
         opacity: 1;
     }
 }
 
 @keyframes slideOut {
-    from {
+    0% {
         height: 4.5rem;
         opacity: 1;
     }
 
-    to {
-        height: 0rem; 
+    50% {
+        opacity: 0;
+
+    }
+
+    100% {
+        height: 0rem;
         opacity: 0;
     }
 }
@@ -229,51 +285,55 @@ html {
     }
 
     to {
-        height: 4rem; 
+        height: 4rem;
         opacity: 1;
     }
 }
 
 @keyframes slideOut1 {
     from {
-        height: 2rem;
+        height: 4rem;
         opacity: 1;
     }
 
     to {
-        height: 0rem; 
+        height: 0rem;
         opacity: 0;
     }
 }
 
+
+/* responsive design */
 @media (max-width: 900px) {
-    .todo-container{
+    .todo-container {
         width: 80%;
     }
+
     .info {
         width: 1.5rem;
         height: 1.5rem;
-      
+
     }
-    
+
     .alarm {
         width: 1.5rem;
         height: 1.5rem;
     }
-    
+
     .delete {
         width: 1.5rem;
         height: 1.5rem;
     }
-    
+
     .circle {
         width: 1.5rem;
         height: 1.5rem;
     }
+
+    .info-pane,
+    .time,
+    .date,
     .input {
-        font-size: 1rem;
-    }
-    .info-pane, .time, .date {
         font-size: 1rem;
     }
 }

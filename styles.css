@@ -247,9 +247,14 @@ height: .125rem;
  
 }
 
+.about-me-text a {
+    text-decoration: none;
+    color: #00a5a5; 
+}
+
 .my-image {
-    height: 200px;
-    width: 200px;
+    height: 500px;
+    width: 400px;
     float: left;
     margin: 0.5rem 1rem 0 1rem;
     border: none;
@@ -856,6 +861,7 @@ height: .125rem;
 
 .comp-info {
     font-family: 'Advent Pro', sans-serif;
+    font-size: 1.2rem;
     display: inline-flex;
     flex-direction: column;
     height: 24rem;
@@ -866,6 +872,10 @@ height: .125rem;
     background-color: rgba(14, 14, 14, 0.342);
     border-radius: 10%;
     line-height: 1.5rem;
+}
+.instrumentation {
+    display: flex;
+    flex-direction: row;
 }
 
 .card-title {
@@ -883,6 +893,7 @@ height: .125rem;
     font-weight: bold;
     color: rgb(96, 96, 96);
     margin-right: .5rem;
+    
 }
 
 
@@ -1296,15 +1307,15 @@ color: #00a5a5;
 }
 
 .news-image {
-    height: 150px;
-    width: 187px;
+    height: 200px;
+    width: 138px;
     float: left;
     margin: 0 1rem 0 0;
 }
 
 .news-image-1 {
     height: 150px;
-    width: 120px;
+    width: 150px;
     float: left;
     margin: 0 1rem 0 0;
 }
@@ -1600,6 +1611,7 @@ footer {
 
     .comp-info {
         width: 48%;
+
     }
 }
 
@@ -1796,7 +1808,8 @@ footer {
         
         float: none;
         margin: 1rem auto;
-        width: 200px;
+        width: 248px;
+        height: 310px;
     }
     .news-image-full {
         width: 100%;
