@@ -28,7 +28,7 @@ const initGame = () => {
 
     playAgain.addEventListener('click', runGame);
 
-}
+};
 
 
 initGame();

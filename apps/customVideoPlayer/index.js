@@ -169,7 +169,7 @@ class VideoPlayer {
         if ([...this.player.classList].includes(playerFullscreen)) {
             allPlayers.forEach((player) => {
                     player.style.display = 'flex';     
-            })
+            });
             this.player.classList.remove('player-fullscreen');
             figComp = window.getComputedStyle(this.player);
             fontHeight = figComp.getPropertyValue('height').split('p')[0];
@@ -180,7 +180,7 @@ class VideoPlayer {
                 if(player !== this.player) {
                     player.style.display = 'none';
                 }
-            })
+            });
             this.player.classList.add('player-fullscreen');
             figComp = window.getComputedStyle(this.player);
             fontHeight = figComp.getPropertyValue('height').split('p')[0];
