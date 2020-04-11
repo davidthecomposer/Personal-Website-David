@@ -1,0 +1,594 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,
+code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,
+form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,
+footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+body {
+  background-color: rgb(245, 245, 245);
+  font-family: 'Slabo 27px', serif;
+  min-width: 800px;
+}
+
+em {
+  font-size: 1.1rem;
+  font-weight: bolder;
+  /* text-decoration-line: underline; */
+}
+
+.big-container {
+  width: 80%;
+  min-width: 800px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  outline: 4px #303030 solid;
+
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+
+}
+
+.container {
+  margin: .5% 1% 0% 1%;
+  width: 750px;
+  height: 600px;
+  font-family: 'Slabo 27px', serif;
+  display: grid;
+  grid-template-rows: repeat(31, auto);
+  grid-template-columns: repeat(21, auto);
+  background-color: rgb(240, 240, 240);
+  padding: 1rem 1rem 0rem 1rem; 
+}
+
+/* ------------------------ Header ------------------------------- */
+.header {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background-color: #303030;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+  margin: 0% auto 0%;
+  color: white;
+}
+
+.by-me {
+  position: absolute;
+  display: flex;
+  right: 2%;
+  top: 6px;
+}
+
+.by-me p {
+  padding: 0 .75rem;
+  align-self: center;
+  color: white;
+  font-family: 'Slabo 27px', serif;
+}
+.signature {
+  height: 3rem;
+}
+
+
+.preview {
+  grid-area: 2 / 1 / 11 / 7;
+  height: 290px;
+}
+
+button {
+  background-color: rgb(42, 185, 42);
+}
+
+#canvas {
+  grid-area: 2 / 7 / 11 / 21;
+  cursor: url(images/pointer1.png) 16 16, auto;
+  width: 580px;
+  margin: 0 0 0 7px;
+  padding: 0;
+}
+
+.hueLabel {
+  grid-area: 12 / 13 / 13 / 22;
+}
+
+.redLabel {
+  grid-area: 12 / 1 / 13 / 10;
+}
+
+.blueLabel {
+  grid-area: 16 / 1 / 17 / 10;
+}
+
+.greenLabel {
+  grid-area: 14 / 1 / 15 / 10;
+}
+
+.alphaLabel {
+  grid-area: 12 / 11 / 13 / 12;
+
+}
+
+.red-slider-div {
+  grid-area: 13 / 1 / 14 / 10;
+
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 0, 0));
+  height: 20%;
+  margin: auto 0;
+}
+
+.green-slider-div {
+  grid-area: 15 / 1 / 16 / 10;
+
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 255, 0));
+  height: 20%;
+  margin: auto 0;
+}
+
+.blue-slider-div {
+  grid-area: 17 / 1 / 18 / 10;
+
+  background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 255));
+  height: 20%;
+  margin: auto 0;
+}
+
+.hue-slider-div {
+  grid-area: 13 / 13 / 14 / 22;
+  background: linear-gradient(to right, #ff0000 0%, #ffee00 20%, #1aff00 35%, #00ffee 52%, #0004ff 71%, #ff00fb 88%, #ff0095 100%);
+
+  height: 20%;
+  margin: auto 0;
+
+}
+
+.alpha-slider-div {
+  grid-area: 13 / 11 / 18 / 12;
+  display: flex;
+
+  padding: 0;
+  margin: 0 auto;
+
+
+}
+
+.hslsat-label-div {
+  grid-area: 14 / 13 / 15 / 17;
+}
+
+.lightness-label-div {
+  grid-area: 16 / 13 / 17 / 17;
+}
+
+.hsvsat-label-div {
+  grid-area: 14 / 17 / 15 / 22;
+}
+
+.value-label-div {
+  grid-area: 16 / 17 / 17 / 22;
+}
+
+.hex {
+  grid-area: 18 / 3 / 21 / 5;
+  background-color: rgba(0, 0, 0, 0.911);
+  width: 10rem;
+  display: flex;
+
+}
+
+.hexText {
+
+  margin: auto;
+  color: white;
+}
+
+.rgb {
+  grid-area: 18 / 7 / 21 / 9;
+  background-color: rgba(0, 0, 0, 0.911);
+  text-align: center;
+  width: 10rem;
+  display: flex;
+  align-content: center;
+
+}
+
+.rgbText {
+  padding: 0;
+  color: white;
+  margin: auto;
+
+
+}
+
+.hsv {
+  grid-area: 18 / 18 / 21 / 21;
+  background-color: rgba(0, 0, 0, 0.911);
+  width: 10rem;
+  text-align: auto;
+  display: flex;
+
+}
+
+.hsvText {
+  padding: 0;
+  color: white;
+  margin: auto;
+  z-index: 2;
+}
+
+.hsl {
+  grid-area: 18 / 13 / 21 / 16;
+  background-color: rgba(0, 0, 0, 0.911);
+  width: 10rem;
+  display: flex;
+}
+
+.hslText {
+  padding: .25rem;
+  color: white;
+  margin: auto;
+  z-index: 2;
+
+}
+
+.random {
+  grid-area: 24 / 11 / 27 / 12;
+  background-color: rgb(7, 0, 46);
+  
+  display: flex;
+  cursor: pointer;
+}
+
+.randomText {
+  padding: 0;
+  color: white;
+  margin: auto;
+
+
+}
+
+.labels {
+  text-align: center;
+  background-color: rgba(124, 124, 124, 0.11);
+
+
+}
+
+.rounded {
+  border-radius: 15%;
+  opacity: 0.6;
+  margin: 1rem 0.05rem;
+}
+
+.red {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+  grid-area: 13 / 1 / 14 / 10;
+  padding: 0;
+
+}
+
+.green {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+  grid-area: 15 / 1 / 16 / 10;
+  padding: 0;
+
+}
+
+.blue {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+  grid-area: 17 / 1 / 18 / 10;
+
+
+  align-self: center;
+}
+
+.alpha {
+
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  /* Specific width is required for Firefox. */
+
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.555), rgba(255, 255, 255, 0));
+  /* Otherwise white in Chrome */
+  grid-area: 13 / 11 / 18 / 11;
+
+  height: 30px;
+  width: 103px;
+
+
+  transform: rotate(-90deg);
+  margin: auto;
+
+
+
+}
+
+.hue {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+  grid-area: 13 / 13 / 14 / 22;
+
+
+
+  align-self: center;
+}
+
+.hsl-saturation {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  height: 20px;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+  grid-area: 15 / 13 / 16 / 17;
+  background-image: url(./images/range.png);
+
+
+  align-self: center;
+}
+
+.hsl-lightness {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  height: 20px;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+  grid-area: 17 / 13 / 18 / 17;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.555), rgba(255, 255, 255, 0));
+
+
+  align-self: center;
+}
+
+.hsv-saturation {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+  grid-area: 15 / 17 / 16 / 22;
+  height: 20px;
+  background-image: url(./images/range.png);
+
+  align-self: center;
+}
+
+.hsv-value {
+  -webkit-appearance: none;
+  /* Hides the slider so that custom slider can be made */
+  width: 100%;
+  height: 20px;
+  /* Specific width is required for Firefox. */
+  background: transparent;
+  /* Otherwise white in Chrome */
+  grid-area: 17 / 17 / 18 / 22;
+  background-image: url(./images/range.png);
+  align-self: center;
+}
+
+.sliders:focus {
+  outline: none;
+  /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+.sliders::-ms-track {
+
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.sliders {
+  cursor: pointer;
+}
+
+.sliders::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #6e6e6e;
+  height: 16px;
+  width: 8px;
+  border-radius: 30%;
+  background: radial-gradient(rgb(223, 223, 223), rgb(113, 92, 233));
+  cursor: pointer;
+  margin-bottom: 1px;
+  margin-left: -2px;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 1px 1px 2px #74737a, 2px 1px 1px #3f3a3a;
+  /* Add cool effects to your sliders! */
+
+}
+
+.alpha::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 1px solid #6e6e6e;
+
+  height: 16px;
+  width: 8px;
+  border-radius: 30%;
+  background: radial-gradient(rgb(223, 223, 223), rgb(113, 92, 233));
+
+  cursor: pointer;
+  margin-top: -1px;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+
+  /* Add cool effects to your sliders! */
+
+}
+
+.big-column {
+  display: flex;
+  flex-direction: column;
+  margin: .5% 0;
+  text-align: center;
+  
+}
+
+.instructions {
+  margin: 2% 0 0 0;
+}
+.swatch-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin: 5% 0;
+}
+
+.swatches {
+  width: 80px;
+  height: 100px;
+  border: 1px rgba(104, 104, 104, 0.445) solid;
+  margin: 1%;
+  border-radius: 10%;
+  box-shadow: 1px 2px 3px #605f6473, 3px 2px 1px #504f4f73;
+}
+
+.last {
+
+  border: 1px rgba(141, 141, 141, 0.301) dashed;
+  width: 80px;
+  height: 100px;
+  margin: 1%;
+  border-radius: 10%;
+}
+
+.add-swatch {
+  font-size: 2rem;
+  width: 33%;
+  height: 33%;
+  border: 1px rgba(61, 61, 61, 0.623) solid;
+  text-align: center;
+  margin-top: 82%;
+  margin-left: 0%;
+  line-height: 2rem;
+  cursor: pointer;
+  box-shadow: 1px 1px 2px #858585, 2px 1px 1px #b9b9b9;
+  border-radius: 10%;
+  background-color: rgba(138, 138, 138, 0.199);
+}
+
+.button-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.btn {
+  border: 1px rgba(1, 110, 30, 0.411) solid;
+  border-radius: 12%;
+  padding: 0 1rem;
+  background-color: rgb(42, 185, 42);
+  cursor: pointer;
+  user-select: none;
+  margin: 0 .025rem;
+  box-shadow: 1px 1px 2px #858585, 2px 1px 1px #b9b9b9;
+}
+
+th {
+  border: 1px solid black;
+  padding: 0;
+  margin: 0;
+  background-color: #74737a;
+  color: white;
+}
+
+td {
+  border: solid 1px grey;
+}
+
+tr:nth-child(odd) {
+  background-color: #303030;
+  color: white;
+}
+
+.color-column {
+  width: 2rem;
+  height: 1rem;
+}
+
+.hex-column {
+  width: 4rem;
+}
+
+.rgb-column {
+  width: 10rem;
+}
+
+.hsl-column {
+  width: 12rem;
+}
+
+.hsv-column {
+  width: 12rem;
+}
+
+.off {
+  background-color: white;
+  color: rgb(184, 182, 182);
+  border: dashed 1px rgb(197, 197, 197);
+  box-shadow: none;
+}
+
+.on {
+  background-color: rgb(42, 185, 42);
+  color: black;
+}
+
+
+
+
+@media (max-width: 1600px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header {
+    width: 100%;
+  }
+}
+
+@media (max-width: 960px) {
+  .big-container {
+    width: 96%;
+  }
+}
+
