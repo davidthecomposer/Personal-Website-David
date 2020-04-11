@@ -1,0 +1,72 @@
+body {
+  text-align: center;
+  background: linear-gradient(rgb(12, 39, 68), rgb(20, 75, 133)) ;
+  font-family: 'Press Start 2P', cursive;
+}
+
+#level-title {
+  
+  font-size: 3rem;
+  margin:  5%;
+  color: #FEF2BF;
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+  user-select: none;
+}
+
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+.game-over {
+  background: linear-gradient(rgb(245, 3, 3), rgb(133, 20, 20)) ;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: rgb(184, 11, 11);
+}
+
+.green {
+  background-color: rgb(34, 190, 34);
+}
+
+.blue {
+  background-color: rgb(36, 36, 240);
+}
+
+.yellow {
+  background-color: rgb(233, 200, 12);
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+
+
+.by-me {
+  width: fit-content;
+  display: flex;
+  margin: 4rem auto;
+}
+
+.by-me p {
+  padding: 0 .75rem;
+  align-self: center;
+  color: white;
+  
+}
+.signature {
+  height: 5rem;
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Commission Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <form class="form" novalidate>
+        
+            <h1>Commission Form</h1>
+            <div class="row-big">
+                <div class="column-big">
+<!-- Name Section -->
+                    <div class="row"> 
+                        <label class="label" for="name">Name: (req)</label>
+                        <input class="required" type="text"  name="name" id="name" required>
+                        <p id='nameCheck' class="hide green" >✔</p>
+                    </div>
+                    <p id="nameValidate"></p>
+<!-- Email Section -->
+                    <div class="row">
+                        <label class="label" for="email">Email: (req)</label>
+                        <input class="required" type="email" name="email" id="email"  required>
+                        <p id='emailCheck' class="hide green" >✔</p>
+                    </div>
+                    <p id="emailValidate"></p>
+<!-- Phone Number Section -->
+                    <div class="row">
+                        <label class='label' for="phone">Phone: (req)</label>
+                        <input class="required" type="tel" name="phone" id="phone" 
+                        pattern="([1]{1})?-?\(?([0-9]{3})\)?-?[0-9]{3}-?[0-9]{4}" required>
+                        <p id='phoneCheck' class="hide green" >✔</p>
+                    </div>
+                    <p id="phoneValidate"></p>
+<!-- Ensemble Check Box Section -->
+                    <div class="check">
+                        <h2 class="underline">Ensemble Type (req)?</h2>
+                        <div class="check-row">
+                            <label class="label" for="orchestra">Orchestra</label>
+                            <input type="radio" name="ensemble" id="orchestra" required>
+                        </div>
+                        <div class="check-row">
+                            <label class="label" for="band">Band</label>
+                            <input type="radio" name="ensemble" id="band">
+                        </div>
+                        <div class="check-row">
+                            <label class="label" for="choir">Choir</label>
+                            <input type="radio" name="ensemble" id="choir">
+                        </div>
+                        <div class="check-row">
+                            <label class="label" for="chamber">Chamber</label>
+                            <input type="radio" name="ensemble" id="chamber">
+                        </div>
+                        <div class="check-row">
+                            <label class="label" for="soloist">Soloist</label>
+                            <input type="radio" name="ensemble" id="soloist">
+                        </div>
+                        <p id='ensembleCheck' class="hide green" >✔</p>
+                        <p id="ensembleValidate"></p>
+                    </div>
+ <!-- Difficulty Section -->
+                    <div class="row">  
+                        <label class="label" for="level">Difficulty</label>
+                        
+                        <select class="required" name="level" id="level" required>
+                            <option value="Jr. High">Jr. High</option>
+                            <option value="Highschool">Highschool</option>
+                            <option value="University">University</option>
+                            <option value="Graduate">Graduate</option>
+                            <option value="Professional">Professional</option>
+                        </select>
+                        <p class="hide green" ></p>
+                        
+                    </div>
+<!-- Length Section -->
+                    <div class="row">
+                        <label class="label" for="length">Length:</label>
+                        <input type="text" name="length" id="length">
+                        <p id='lengthCheck' class="hide green" >✔</p>
+                    </div>
+                </div>
+<!-- Details Section -->
+                <div class="column-big">
+                    <div class="row">
+                        <label class="label message" for="details">Details:</label>
+                        <textarea name="details" id="details" cols="40" name="comments" rows="8" placeholder="More ensemble details"></textarea>
+                    </div>
+<!-- Target Date Section -->
+                    <div class="row">
+                            <label class="label message" for="date">Target Date:</label>
+                        <input type="date" name="date" id="date" size="11">
+                    </div>
+<!-- File Upload Section -->
+                    <div class="column file">
+                        <label class="underline" for="file">Text or Musical Fragment?</label>
+                        <input type="file" name="file" id="file" accept='.sib, .mp3, .pdf'>
+                    </div>
+<!-- Availability Section -->
+                    <div class="column file">
+                        <h2 class="content-title underline">Available to Chat:</h2>
+                        <div class="row">
+                            <div class="time">
+                                <label class="label1" for="morning">Morning</label>
+                                <input type="checkbox" name="morning" id="morning" >
+                            </div>
+                            <div class="time">
+                                <label class="label1" for="afternoon">Afternoon</label>
+                                <input type="checkbox" name="afternoon" id="afternoon">
+                            </div>
+                            <div class="time">
+                                <label class="label1" for="evening">Evening</label>
+                                <input class="margin" type="checkbox" name="evening" id="evening">
+                            </div>
+                        </div>
+                    </div>        
+                </div>
+            </div>
+<!-- Input Button Section -->
+            <input type="submit" class="submit">
+        
+    </form>
+
+    <script src="index.js"></script>
+</body>
+
+</html>

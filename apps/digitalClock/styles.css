@@ -1,0 +1,170 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: no-repeat center center fixed;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+h1 {
+    margin: 4rem auto 4rem;
+    font-size: 3rem;
+    color: rgba(157, 236, 236, 0.8);
+}
+
+h2 { 
+    font-weight: 100;
+    font-size: 4rem;
+    color: rgba(149, 158, 158, 0.7); 
+}
+
+.clock-face {
+    display: flex;
+    background-color: rgba(6, 22, 22, 0.87);
+    width: 50%;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 1%;
+    min-width: 322px;
+    margin: 0 auto;
+}
+
+.time {
+    color: rgb(250, 202, 250);
+}
+
+.top-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
+    width: 98%;
+    margin-top: 1%;  
+    z-index: 3;
+}
+
+.date {  
+    font-weight: 100;
+    font-size: 2rem;
+    color: rgba(93, 100, 100, 0.8)
+}
+
+.season {
+    height: 2rem;
+    opacity: 0.05;
+    border-radius: 100%;
+    border: 2px solid grey;
+}
+
+.active {
+    opacity: 0.8;
+}
+
+.watch-face {
+    height: 8rem;
+    width: 8rem;
+    background-image: url('images/clock.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-clip: padding-box;
+    z-index: 0;
+    border-radius: 100%;
+    margin-bottom: .5rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.second {
+    position: absolute;
+    height: 48%;
+    background-color: rgb(255, 0, 0);
+   width: 1px;
+   transform-origin: bottom;
+   z-index: 1;
+   margin-top: 2%;
+}
+
+.minute {
+    position: absolute;
+    height: 34%;
+    background-color: rgb(81, 255, 0);
+   width: 2px;
+   transform-origin: bottom;
+   z-index: 1;
+   margin-top: 16%;
+}
+
+.hour {
+    position: absolute;
+    height: 25%;
+  
+    background-color:  rgb(251, 255, 0);
+   width: 4px;
+   transform-origin: bottom;
+   z-index: 1;
+   margin-top: 25%;
+}
+
+.crown {
+   position: absolute;
+   height: 7%;
+   width: 7%;
+   z-index: 2;
+   border-radius: 100%;
+   background-image: radial-gradient(yellow, blue);
+   align-self: center;
+}
+
+
+.by-me {
+    position: absolute;
+    display: flex;
+    right: 2%;
+    top: 6px;
+  }
+  
+  .by-me p {
+    padding: 0 .75rem;
+    align-self: center;
+    color: white;
+    
+  }
+  .signature {
+    height: 3rem;
+  }
+
+
+@media only screen and (max-width: 700px) {
+    h2 {
+        font-size: 3rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+    
+}

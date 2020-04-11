@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 1304 1304" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:bx="https://boxy-svg.com">
+  <defs>
+    <linearGradient id="af" x1=".81068" x2=".47149" y1="-.002574" y2=".72142">
+      <stop stop-color="#f7f7f7" offset="0"/>
+      <stop stop-color="#e1e1e1" offset="1"/>
+    </linearGradient>
+    <linearGradient id="x" x1=".76162" x2=".47504" y1=".14716" y2="1" xlink:href="#q"/>
+    <radialGradient id="z" cx="197.86" cy="202.14" r="189.29" gradientTransform="matrix(1.1734 0 0 1.1734 -14.424 -3.5962)" gradientUnits="userSpaceOnUse">
+      <stop offset="0"/>
+      <stop offset="0.8188"/>
+      <stop stop-opacity="0" offset="1"/>
+    </radialGradient>
+    <radialGradient id="ac" cx="197.86" cy="630.49" r="189.29" gradientTransform="matrix(0.727763, 0, 0, 0.453378, 81.150238, 53.65299)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#30a9ec" offset="0"/>
+      <stop stop-color="#0a4c71" stop-opacity="0" offset="1"/>
+    </radialGradient>
+    <radialGradient id="ab" cx="295.91" cy="-341.76" r="189.29" gradientTransform="matrix(0.60392, 0.31225, -0.23201, 0.44874, 31.269308, 117.899987)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#fff" offset="0"/>
+      <stop stop-color="#fff" stop-opacity=".565" offset="0.5"/>
+      <stop stop-color="#fff" stop-opacity="0" offset="1"/>
+    </radialGradient>
+    <radialGradient id="ad" cx="197.86" cy="202.14" r="189.29" gradientTransform="matrix(.7145 0 0 .7145 83.894 66.757)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#266080" offset="0"/>
+      <stop stop-color="#112d3c" offset="1"/>
+    </radialGradient>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 2, 3)">
+    <g transform="matrix(3.25, 0, 0, 3.25, -32.5, 0)">
+      <g fill-rule="evenodd" stroke-width="2.7">
+        <path d="M 410 211 C 410 368.809 170.833 -45.44 307.5 33.465 C 370.927 70.085 410 137.761 410 211 Z" fill="url(#z)"/>
+        <path d="m410 200a200 200 0 1 1 -400 0 200 200 0 1 1 400 0z" style="fill: rgb(38, 38, 38);"/>
+        <path d="m406 200a196 196 0 1 1 -392 0 196 196 0 1 1 392 0z" style="stroke-width: 3.38462px;"/>
+        <path d="m399.32 250.73a189.32 189.32 0 1 1 -378.64 -101.46l189.32 50.728 189.32 50.729z" style=""/>
+        <path d="m20.678 149.27" fill="url(#af)"/>
+        <path d="M 377.385 199.692 C 377.385 328.351 237.897 408.765 126.31 344.436 C 74.519 314.58 42.616 259.403 42.616 199.692 C 42.616 71.031 182.103 -9.382 293.693 54.95 C 345.482 84.804 377.385 139.979 377.385 199.692 Z" fill="url(#x)" style="stroke: rgb(186, 218, 85); stroke-width: 3.07692px;"/>
+        <path d="m370 200a160 160 0 1 1 -320 0 160 160 0 1 1 320 0z" fill="url(#ad)"/>
+        <path d="M 367.077 199.693 C 367.077 320.43 236.18 395.891 131.462 335.522 C 82.862 307.505 52.923 255.726 52.923 199.693 C 52.923 78.954 183.821 3.494 288.539 63.861 C 337.138 91.879 367.077 143.657 367.077 199.693 Z" fill="url(#ac)" style="stroke-width: 2.46154px;"/>
+        <path d="M 361.196 194.996 C 361.196 310.466 236.196 382.635 136.196 324.9 C 89.786 298.105 61.196 248.586 61.196 194.996 C 61.196 79.526 186.196 7.357 286.196 65.092 C 332.606 91.887 361.196 141.406 361.196 194.996 Z" fill="url(#ab)"/>
+      </g>
+    </g>
+    <rect x="640" y="1234.699" width="20" height="50" style="fill: rgb(84, 221, 255);" bx:origin="0.466 0.541"/>
+    <rect x="640" width="20" height="50" style="fill: rgb(84, 221, 255);" y="17" bx:origin="0.466 0.541"/>
+    <rect x="-24.07" width="20" height="50" style="fill: rgb(84, 221, 255);" y="-686.459" transform="matrix(0, 1, -1, 0, -618.658997, 663.070007)" bx:origin="0.466 0.541"/>
+    <rect x="-24.07" width="20" height="50" style="fill: rgb(84, 221, 255);" y="-686.459" transform="matrix(0, 1, -1, 0, 596.189209, 663.070007)" bx:origin="0.466 0.541"/>
+  </g>
+</svg>

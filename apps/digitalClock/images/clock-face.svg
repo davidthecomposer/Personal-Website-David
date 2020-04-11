@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="6.911 -13.598 908.128 320.171" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient gradientUnits="userSpaceOnUse" x1="220.77" y1="37.352" x2="220.77" y2="432.189" id="gradient-0" gradientTransform="matrix(1.00126, -0.136282, 0.767044, 1.022241, -174.779776, 35.193656)">
+      <stop offset="0" style=""/>
+      <stop offset="1" style="stop-color: rgb(195, 195, 195);"/>
+    </linearGradient>
+  </defs>
+  <g transform="matrix(0, -0.925004, 2.170176, -0.00523, -70.863907, 358.802124)" style="filter: none;">
+    <path d="M 94.384 452.025 C 52.646 452.272 59.352 439.652 59.344 417.701 C 60.113 397.724 60.059 83.963 60.551 74.3 C 61.062 47.544 56.768 37.25 95.592 37.379 C 121.378 37.25 340.161 37.649 358.996 37.379 C 409.909 36.737 397.492 47.457 397.661 74.3 C 397.645 95.825 397.455 401.526 397.661 419.366 C 397.72 438.475 404.299 451.644 361.68 452.026 C 347.065 452.16 104.2 451.883 94.38 452.026 L 94.384 452.025 Z" fill-rule="evenodd" style="stroke-linecap: round; stroke-linejoin: bevel; vector-effect: non-scaling-stroke; fill-opacity: 0.89; fill: rgb(255, 255, 255); stroke: url(#gradient-0); stroke-width: 15px;"/>
+  </g>
+</svg>
