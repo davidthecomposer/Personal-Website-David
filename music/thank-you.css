@@ -1,0 +1,15 @@
+h3 {
+    font-family: 'Advent Pro', sans-serif;
+}
+
+.button {
+    background-color:rgb(33, 130, 165, .8);
+    padding: .5rem;
+    border: none;
+    color: white;
+    font-family: 'Advent Pro', sans-serif;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 10%;
+}
+
