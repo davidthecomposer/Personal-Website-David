@@ -11,7 +11,7 @@ footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video 
 }
 
 body {
-    background: url('./Front-End/images/black-bg.svg') no-repeat center center fixed;
+    background-color: black;
     background-size: cover;
 
     display: flex;
