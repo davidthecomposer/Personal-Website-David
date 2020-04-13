@@ -23,7 +23,7 @@ class AudioPlayer {
       this.volume = this.player.querySelector('.audio-volume');
       this.volumeBar = this.player.querySelector('.audio-volumeBar');
       this.mediaTitle = this.player.classList[1];
- 
+      this.autoPlay = document.querySelector('.pane-1');
     }
  
     /* Gets time info from audio object and translates it to timeRemaining text*/
@@ -106,10 +106,16 @@ class AudioPlayer {
       const audioPlayers = document.querySelectorAll('.audio-player');
       const playerNames = [...audioPlayers].map((player) => player.classList[1]);
       let nextIndex = playerNames.indexOf(this.playerNumber) + 1;
+      
       //need a next player variable that increments by 1
       if (this.player.classList[1] === playerNames[playerNames.length - 1]) {
         allPlayersArray.playersArray[0].play();
-      } else {
+      }else if (this.player.classList[1] === playerNames[0]) {
+        
+        allPlayersArray.playersArray[1].play();
+        //Not sure why I need this extra call to make it work? With one only the first to second movement doesn't work the first time.
+        allPlayersArray.playersArray[1].play();
+      }else {
        allPlayersArray.playersArray[nextIndex].play();
       }
       
@@ -119,7 +125,12 @@ class AudioPlayer {
       this.infoDisplay.setAttribute('src', `images/media-music-display/${this.mediaTitle}.png`);
     }
  
- 
+    
+    playFirstTrack() {
+      allPlayersArray.playersArray[0].play();
+     
+    
+    }
  
     initEventHandlers() {
       this.audio.ontimeupdate = () => this.getTime(event);
@@ -129,8 +140,8 @@ class AudioPlayer {
       this.volume.onclick = () => this.muteVolume(event);
       this.volumeBar.oninput = () => this.volumeChange(event);
       this.player.onmouseenter = () => this.handleInfoDisplay(event);
-      this.audio.onended = () => this.nextPlayer(event);
-
+      this.audio.onended = () => this.nextPlayer();
+      this.autoPlay.onclick = () => this.playFirstTrack(event);
       // fixes the durations not showing on init issue. Maybe not a permenant fix.
       this.getDuration();
     }

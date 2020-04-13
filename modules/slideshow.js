@@ -1,5 +1,6 @@
  /* jshint esversion: 6 */
 
+
 class SlideShow {
     constructor(showNumber) {
       this.slideShow = document.querySelector("." + showNumber);
@@ -13,11 +14,11 @@ class SlideShow {
       this.paneContainer = this.slideShow.querySelector('.pane-container');
       this.textContainer = this.slideShow.querySelector('.text-container');
       this.pauseActive = this.slideShow.querySelector('.pause');
-      this.slideAnimations = ['fade-in', 'fade-in', 'fade-in'];
+      this.slideAnimations = ['fade-in', 'fade-in', 'fade-in', 'fade-in'];
       this.textAnimations = ['center-long', 'top-right', 'center-short'];
       this.panes = document.querySelectorAll('.pane');
       this.timerOn;
- 
+      
     }
  
     // Creates the first (green) tick that is active.
@@ -155,10 +156,10 @@ class SlideShow {
       }
  
     }
- 
+  
  
     initHandlers() {
- 
+     
       this.paneTickInit();
       this.autoPlayControl();
       this.forward.onclick = () => this.nextPane();

@@ -23,7 +23,7 @@ export class Card {
     }
 
     initEventHandlers() {
-        this.panelPicture.setAttribute('style', `background-image: url("../images/front-end/${this.cardName}.png")`);
+        this.panelPicture.setAttribute('style', `background-image: url("images/apps/${this.cardName}.png")`);
         this.card.onclick = () => this.flipCard(event);
         this.navigate.onclick = () => this.handleNav(event);
     }

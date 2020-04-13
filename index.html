@@ -23,17 +23,17 @@
       <div class="header-group">
         <a class="header-tab" href="#home">Home</a>
         <div class="underline"></div>
-    </div>
+      </div>
       <h3 class="divider">|</h3>
       <div class="header-group">
         <a class="header-tab" href="#music-container">Music</a>
         <div class="underline"></div>
-    </div>
+      </div>
       <h3 class="divider">|</h3>
       <div class="header-group">
         <a class="header-tab" href="#news">News</a>
         <div class="underline"></div>
-    </div>
+      </div>
       <h3 class="divider">|</h3>
       <!-- <div class="header-group">
         <a class="header-tab" href="#blog">Blog</a>
@@ -43,25 +43,19 @@
       <div class="header-group">
         <a class="header-tab" href="#about-me">About</a>
         <div class="underline"></div>
-    </div>
+      </div>
       <h3 class="divider">|</h3>
       <div class="header-group">
         <a class="header-tab" href="#contact">Contact</a>
         <div class="underline"></div>
-    </div>
+      </div>
     </nav>
-</header>
+  </header>
   
-  <!--           HOME SECTION - COMPOSER QUOTE                   -->
-
-  <section class="home anchor" id="home">
-    <h2 class="spotlight-text">“The key to the mystery of a great artist is that for reasons unknown, he will give away
-      his energies and his life just to make sure that one note follows another…and leaves us with the feeling that
-      something is right in the world.”</h2>
-    <h2 class="author-name">-Leonard Bernstein</h2>
+ 
 
  <!--                  SLIDE-SHOW                      -->
-
+ <section class="home anchor" id="home">
     <div class="carousel one">
       <div class="manual-navigation">
         <img class="navigate backward hidden" src="images/slideshow/backPanel.png" alt="navigate back one slide">
@@ -72,14 +66,16 @@
       </div>
       <!-- Add pane images here. First one needs to have active-panel class -->
       <div class="pane-container">
+        <a href="#music-container" class="main-images pane active-panel fade-in pane-1"><img src="images/slideshow/flatlinenew.png"
+          alt="new piece: flatline" class="pane-image "></a>
         <!-- Slide #1 -->
-        <a href="#news" class="main-images pane active-panel fade-in pane-1"><img src="images/slideshow/song-cycle.png"
+        <a href="#news" class="main-images pane invisible-panel fade-in pane-2"><img src="images/slideshow/song-cycle.png"
             alt="song cycle announcement" class="pane-image"></a>
         <!-- Slide #2 -->
-        <a href="#news" class="main-images pane invisible-panel pane-2"> <img src="images/slideshow/OperaConTempo.png"
+        <a href="#news" class="main-images pane invisible-panel pane-3"> <img src="images/slideshow/OperaConTempo.png"
             alt="Opera Commission announcement" class="pane-image"></a>
         <!-- Slide #3 -->
-        <a href="#blog" class="main-images pane invisible-panel pane-3"> <img src="images/slideshow/composer-in-residence.png"
+        <a href="#blog" class="main-images pane invisible-panel pane-4"> <img src="images/slideshow/composer-in-residence.png"
             alt="Composer-in-Residence Announcement" class="pane-image"></a>
       </div>
       <!-- Add slide text here. First one needs to have an animation class -->
@@ -87,6 +83,7 @@
         <p class="slide-text center-long text-1" style="font-size: 3rem;"></p>
         <p class="slide-text invisible-text text-2" style="font-size: 3rem;"></p>
         <p class="slide-text invisible-text text-3" style="font-size: 3rem;"></p>
+        <p class="slide-text invisible-text text-4" style="font-size: 3rem;"></p>
       </div>
     </div>
 
@@ -154,6 +151,35 @@
     <section class="Media music-sections">
       <div class="audio-row">
         <div class="player-column ">
+           <!-- FLATLINE -->
+           <div class='audio-player flatline'>
+
+            <div class="audio-lower-row">
+              <div class="audio-area">
+                <p class="audio-player-title"> <strong class="audio-strong">Flatline </strong> </p>
+                <div class="audio-player-row">
+                  <audio class="audio-file" src="audio/media-music/FlatLine.wav"></audio>
+                  <img src="images/audio-player/playbutton.svg" class="audio-buttons"></img>
+                  <progress class="audio-progress" max="100" value="0"></progress>
+                  <div class="volume-span">
+                    <img class="audio-volume" src="images/audio-player/volumeIcon.svg"></img>
+                    <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
+                  </div>
+                  <div class="audio-progress-button"></div>
+                </div>
+                <div class="audio-timers-row">
+                  <div class="audio-current-position">
+                    <p>0:00</p>
+                  </div>
+                  <div class="audio-time-remaining">
+                    <p class="time-remaining-text"></p>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </div>
           <!-- TURNING POINT -->
           <div class='audio-player turning-point'>
             <div class="audio-lower-row">
@@ -205,35 +231,6 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <!-- FLATLINE -->
-          <div class='audio-player flatline'>
-
-            <div class="audio-lower-row">
-              <div class="audio-area">
-                <p class="audio-player-title"> <strong class="audio-strong">Flatline </strong> </p>
-                <div class="audio-player-row">
-                  <audio class="audio-file" src="audio/media-music/FlatLine.wav"></audio>
-                  <img src="images/audio-player/playbutton.svg" class="audio-buttons"></img>
-                  <progress class="audio-progress" max="100" value="0"></progress>
-                  <div class="volume-span">
-                    <img class="audio-volume" src="images/audio-player/volumeIcon.svg"></img>
-                    <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
-                  </div>
-                  <div class="audio-progress-button"></div>
-                </div>
-                <div class="audio-timers-row">
-                  <div class="audio-current-position">
-                    <p>0:00</p>
-                  </div>
-                  <div class="audio-time-remaining">
-                    <p class="time-remaining-text"></p>
-                  </div>
-                </div>
-              </div>
-
-
             </div>
           </div>
           <!-- AFTER -->
@@ -449,7 +446,7 @@
         <p><strong>Duration:</strong> 6'</p>
         <p><strong>Score Sample:</strong> <a href="scores/Chamber/Dialogues.pdf" target="_blank"><i
           class="far fa-file-pdf"></i></a> </p>
-        <p><strong>Audio Sample:</strong> </p>
+         
         <div class='small-player dialogues'>
           <div class="audio-area small-audio-area">
             <div class="audio-player-row small-player-row">
@@ -483,7 +480,7 @@
         <p><strong>Duration:</strong> 6'</p>
         <p><strong>Score Sample:</strong> <a href="scores/Chamber//Star-Crossed 2014N.pdf" target="_blank"><i
           class="far fa-file-pdf"></i></a> </p>
-        <p><strong>Audio Sample:</strong> </p>
+         
         <div class='small-player star-crossed'>
           <div class="audio-area small-audio-area">
             <div class="audio-player-row small-player-row">
@@ -517,7 +514,7 @@
         <p><strong>Duration:</strong> 9'</p>
           <p><strong>Score Sample:</strong> <a href="scores/Chamber/Neon Games - Full Score Final.pdf" target="_blank"><i
             class="far fa-file-pdf"></i></a> </p>
-          <p><strong>Audio Sample:</strong> </p>
+           
           <div class='small-player neon-games'>
             <div class="audio-area small-audio-area">
               <div class="audio-player-row small-player-row">
@@ -555,7 +552,7 @@
         <p><strong>Duration:</strong> 13'</p>
         <p><strong>Score Sample:</strong> <a href="scores/Chamber/Wood and Winds.pdf" target="_blank"><i
           class="far fa-file-pdf"></i></a> </p>
-        <p><strong>Audio Sample:</strong> </p>
+         
         <div class='small-player wood-and-winds'>
           <div class="audio-area small-audio-area">
             <div class="audio-player-row small-player-row">
@@ -593,7 +590,7 @@
           <p><strong>Duration:</strong> 8'</p>
           <p><strong>Score Sample:</strong> <a href="scores/Chamber/Pierrot Miniatures.pdf" target="_blank"><i
             class="far fa-file-pdf"></i></a> </p>
-          <p><strong>Audio Sample:</strong></p>
+            
           
         </div>
       <!-- CINQUE  SOUVENIRS -->
@@ -605,7 +602,7 @@
         <p><strong>Duration:</strong> 24'</p>
         <p><strong>Score Sample:</strong> <a href="scores/Chamber/Cinq Souvenirs.pdf" target="_blank"><i
           class="far fa-file-pdf"></i></a> </p>
-        <p><strong>Audio Sample:</strong> </p>
+         
         <div class='small-player cinque-souvenirs'>
           <div class="audio-area small-audio-area">
             <div class="audio-player-row small-player-row">
@@ -649,7 +646,7 @@
         <p><strong>Movements:</strong> 1</p>
         <p><strong>Duration:</strong> 14'</p>
         <p><strong>Score Sample:</strong> <i class="far fa-file-pdf"></i> (coming soon)</p>
-        <p><strong>Audio Sample:</strong>Coming Soon </p>
+        
       </div>
       <!--TERMINAL NIGHT -->
       <div class="comp-info terminal-night">
@@ -662,7 +659,7 @@
         <p><strong>Duration:</strong> 9'</p>
         <p><strong>Score Sample:</strong> <a href="scores/Orchestral/Terminal Night-StonyBrook.pdf" target="_blank"><i
               class="far fa-file-pdf"></i></a> </p>
-        <p><strong>Audio Sample:</strong> </p>
+         
       </div>
       <!--TERMINAL LIGHT -->
       <div class="comp-info terminal-light">
@@ -675,7 +672,7 @@
         <p><strong>Duration:</strong> 6'</p>
         <p><strong>Score Sample:</strong> <a href="scores/Orchestral/Terminal Light StonyBrook.pdf" target="_blank"><i
               class="far fa-file-pdf"></i></a> </p>
-        <p><strong>Audio Sample:</strong> </p>
+         
       </div>
 
     </section>
@@ -692,7 +689,7 @@
         <p><strong>Duration:</strong> 90'</p>
         <p><strong>Libretto:</strong> Jennifer Campbell</p>
         <p><strong>Score Sample:</strong> <i class="far fa-file-pdf"></i> Composing </p>
-        <p><strong>Audio Sample:</strong> Coming Soon </p>
+        
       </div>
       <!-- SONG CYCLE 2020 -->
       <div class="comp-info song-cycle">
@@ -703,7 +700,7 @@
         <p><strong>Duration:</strong> 14-20'</p>
         <p><strong>Text:</strong> Liz Christensen</p>
         <p><strong>Score Sample:</strong> <i class="far fa-file-pdf"></i> Composing</p>
-        <p><strong>Audio Sample:</strong> Coming Soon</p>
+        
       </div>
           <!-- HABIT -->
       <div class="comp-info habit">
@@ -715,7 +712,7 @@
         <p><strong>Text:</strong> Jennifer Campbell</p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/Habit.pdf" target="_blank"><i
           class="far fa-file-pdf"></i></a> </p>
-        <p><strong>Audio Sample:</strong> </p>
+         
         <div class='small-player habit'>
           <div class="audio-area small-audio-area">
             <div class="audio-player-row small-player-row">
@@ -749,7 +746,7 @@
         <p><strong>Text:</strong> John Jacob Niles</p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/I Wonder as I Wander 2018.pdf" target="_blank"><i
           class="far fa-file-pdf"></i></a> </p>
-        <p><strong>Audio Sample:</strong> </p>
+         
       </div>
       <!--SILENT NIGHT -->
       <div class="comp-info silent-night">
@@ -761,7 +758,7 @@
         <p><strong>Text:</strong>Joseph Mohr</p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/Silent Night.pdf" target="_blank"><i
           class="far fa-file-pdf"></i></a> </p>
-        <p><strong>Audio Sample:</strong> </p>
+         
       </div>
       <!--COME COME YE SAINTS -->
       <div class="comp-info come-come">
@@ -773,7 +770,7 @@
         <p><strong>Text:</strong> William Clayton</p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/Come Come Ye Saints.pdf" target="_blank"><i
           class="far fa-file-pdf"></i></a> </p>
-        <p><strong>Audio Sample:</strong> </p>
+         
       </div>
        <!--THERE WILL COME SOFT RAINS-->
        <div class="comp-info soft-rains">
@@ -785,7 +782,7 @@
         <p><strong>Text:</strong> Sara Teasdale</p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/There Will come soft Rains Full Score.pdf" target="_blank"><i
           class="far fa-file-pdf"></i></a> </p>
-        <p><strong>Audio Sample:</strong> </p>
+         
       </div>
       <!--A KNG'S PRAYER-->
       <div class="comp-info kings-prayer">
@@ -797,7 +794,7 @@
         <p><strong>Text:</strong> Alma 22:15-18 </p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/A King's Prayer.pdf" target="_blank"><i
           class="far fa-file-pdf"></i></a> </p>
-        <p><strong>Audio Sample:</strong> </p>
+         
       </div>
       <!--3 CHRISTMAS CAROLS -->
       <div class="comp-info 3-christmas-carols">
@@ -808,7 +805,7 @@
         <p><strong>Duration:</strong> 13'</p>
         <p><strong>Text:</strong> Traditional Texts</p>
         <p><strong>Score Sample:</strong> <i class="far fa-file-pdf"></i> </p>
-        <p><strong>Audio Sample:</strong> </p>
+         
         <div class='small-player three-christmas-carols'>
           <div class="audio-area small-audio-area">
             <div class="audio-player-row small-player-row">
@@ -843,7 +840,7 @@
         <p><strong>Text:</strong> Sara Teasdale</p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/Crystal Gazer.pdf" target="_blank"><i
           class="far fa-file-pdf"></i></a> </p>
-        <p><strong>Audio Sample:</strong> </p>
+         
       </div>
       
       <!--TRISTESSES DE LA LUNE -->
@@ -856,7 +853,7 @@
         <p><strong>Text:</strong> Charles Baudelaire</p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/JPART.pdf" target="_blank"><i
           class="far fa-file-pdf"></i></a> </p>
-        <p><strong>Audio Sample:</strong> </p>
+         
         <div class='small-player tristesses'>
           <div class="audio-area small-audio-area">
             <div class="audio-player-row small-player-row">
@@ -901,7 +898,7 @@
         <p><strong>Score Sample:</strong> <a href="scores//solo/Copernicus Etudes.pdf" target="_blank"><i
           class="far fa-file-pdf"></i></a> </p>
        
-          <p><strong>Audio Sample:</strong></p>
+            
           <div class='small-player copernicus-etudes'>
             <div class="audio-area small-audio-area">
               <div class="audio-player-row small-player-row">
@@ -935,8 +932,6 @@
         <p><strong>Score Sample:</strong> <a href="scores/Solo/Clarinet.pdf" target="_blank"><i
               class="far fa-file-pdf"></i></a> </p>
         <!-- Audio Sample Row -->
-        
-          <p><strong>Audio Sample:</strong></p>
           <div class='small-player three-pieces-clarinet'>
             <div class="audio-area small-audio-area">
               <div class="audio-player-row small-player-row">
@@ -982,7 +977,7 @@
             Stay tuned for more info about performance dates and venues, and general updates about the process of setting these texts to music.</p>
         </div>
         <div class="news-slot-one mandi-b">
-          <img src="images/main/mandi-Barrus.png" class="news-image-1"></img>
+          <img src="images/news/mandi-Barrus.png" class="news-image-1"></img>
           <div class="news-text-1"> Mezzo-soprano <a href="http://mandibarrus.com">Mandi Barrus</a> is a musician
             originally from Seattle, Washington. With her <a
               href="https://frontrowreviewersutah.com/?p=8504">"impressive technique and clear tone"</a> , Ms. Barrus'
@@ -999,7 +994,7 @@
             programs in elementary schools throughout Utah, where she lives with her three children.</div>
         </div>
         <div class="news-slot-one liz-c">
-          <img src="images/main/Liz Christensen headshot.JPG" class="news-image"></img>
+          <img src="images/news/Liz Christensen headshot.JPG" class="news-image"></img>
           <div class="news-text"> <a href="http://www.lizzylizzyliz.com">Liz Christensen</a> is the producer and host of
             both the entertainment podcast <a href="https://inthetellingpodcast.buzzsprout.com/">"In the Telling"</a>
             and the webseries <a href="https://www.youtube.com/channel/UCvHO_s9oMYjKv2crN9_tjqA">"She Made Me Do
@@ -1025,7 +1020,7 @@
 
         </div>
         <div class="news-slot-one">
-          <img src="images/main/jennyHead.JPG" class="news-image square"></img>
+          <img src="images/news/jennyHead.JPG" class="news-image square"></img>
           <div > <p class="news-text"> Jennifer Campbell is a writer with a background in history, journalism and video. Her articles have
             appeared on Faithcounts.org and in Utah Stories Magazine. She is currently working on a fantasy novel set in
             alt-world ancient Persia. When not writing she's busy getting called "noob" by her 11-year-old son, escaping
@@ -1044,7 +1039,7 @@
         </div>
 
         <div class="news-slot-one">
-          <a href="http://www.operacontempo.com/"><img src="images/main/OCheader.png" class="news-image-full"></img>
+          <a href="http://www.operacontempo.com/"><img src="images/news/OCheader.png" class="news-image-full"></img>
         </div></a>
 
       </div>
@@ -1080,7 +1075,7 @@
   <div class="about-me anchor" id="about-me">
     <h2 class="about-me-title"> About Me</h2>
     <div class="about-me-text">
-      <img src="images/main/David-Smile.png" class="my-image"></img>
+      <img src="images/headshots/David-Smile.png" class="my-image"></img>
       <p> I am a composer living in Salt Lake City Utah. When I was first introduced to writing music I was immediately fascinated with the sheer amount of possibilities that existed from the simple combination of notes and rhythms. That a composer can create art that has the potential to be breathtakingly beautiful, devastatingly hideous, heart-wrenching, horrific, silly, intricate, or even incomprehensible is such an amazing reality. </p>
       <p>Over the years I’ve had the chance to learn about music more formally at Southern Utah University, Western Washington University, and Stony Brook University where I had the privilege to study with composers whose music and knowledge I greatly admire including Hal Campbell, Keith Bradshaw, Leslie Sommer, Roger Briggs, Sheila Silver, and Perry Goldstein. Their lessons and the knowledge gained through studying great and obscure composers has helped shape my own musical voice.</p>
       <p>I find myself of two minds more recently. I love the freedom of writing concert music in my own style, but I’ve found great enjoyment and challenge in writing music for media. This site represents that musical duality. Here you can find a sample of some of my media works as well as scores and music for my concert works. I’m very excited about new projects on the horizon in both areas and hope that you will come back and listen as I compose new works and add new projects to this site. </p>
@@ -1113,14 +1108,21 @@
         <input type="submit"  name="submit" class="email-submit" value="Submit">
       </form>
     </div>
-  </section>
 
+
+    <h2 class="spotlight-text"></h2>
+    <h2 class="author-name">-Leonard Bernstein</h2>
+  </section>
+ <!--           HOME SECTION - COMPOSER QUOTE                   -->
+
+ 
+  
   <!-- FOOTER  -->
 
   <footer>
     <div class="by-me">
       <p>A</p>
-      <img class="signature" src="images/main/david-sig-white.svg" alt="David Campbell Signature">
+      <img class="signature" src="images/main/david-sig-white-shadow.svg" alt="David Campbell Signature">
       <p>Website</p>
   </div>
   <div class="nav-icons-footer">
