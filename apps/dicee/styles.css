@@ -45,7 +45,7 @@ p {
   font-family: 'Indie Flower', cursive;
 }
 
-img {
+.img {
   width: 50%;
   margin: 0 .5rem;
 }
@@ -58,6 +58,10 @@ footer {
   text-align: center;
   font-family: 'Indie Flower', cursive;
   font-size: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .play-again {
@@ -71,4 +75,9 @@ border: none;
 outline: none;
 cursor: pointer;
 border-radius: 10%;
+}
+
+.my-sig {
+  height: 5rem;
+ margin: 0 .5rem;
 }
