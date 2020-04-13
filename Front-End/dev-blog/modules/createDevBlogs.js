@@ -1,5 +1,5 @@
 /* jshint esversion: 6 */
-import {blogPreviews, blogTitleNames, blogTitleWords} from './dev-blog-titles.js';
+import {blogPreviews, blogTitleNames} from './dev-blog-titles.js';
 import {NavLinkMain} from './devblogLink.js';
 
 export const createBlogs = () => {

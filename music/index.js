@@ -4,7 +4,7 @@
 //  ----------------------- IMPORTS ------------------------- //
 
  import {composerQuoteChange} from './modules/composer-quotes.js';
- import {createBlogs} from '../music-blog/blogLink.js';
+ import {createBlogs} from './music-blog/blogLink.js';
  import {createSlideShow} from './modules/slideshow.js';
  import {createAudioPlayers} from './modules/audio-player.js';
  import {createSmallAudioPlayers} from './modules/small-audio-player.js';
