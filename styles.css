@@ -11,21 +11,23 @@ footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video 
 }
 
 body {
-    background-color: black;
-    background-size: cover;
-
+    background: url('.//Front-End/images/black-bg.png') no-repeat center center fixed;
+     background-size: cover;
     display: flex;
     flex-direction: column;
 }
 
 .title {
-    width: 90%;
-    margin: 4rem auto 4rem;
+    width: 80vw;
+    margin: 4rem auto 10vh;
     text-align: center;
+    padding: 0 0 5vh 0;
+    
 }
 
 .link-container {
     display: inline;
+    
     
 }
 
@@ -33,14 +35,16 @@ body {
     position: absolute;
     width: 35vw;
     opacity: 0.6;
+    background-color: black;
+    padding: 3vw;
 }
 
 .composer {
-    left: 8vw;
+    left: 5%;
 }
 
 .developer {
-    right: 8vw;
+    right: 5%;
 }
 
 .link-container img:hover {
@@ -50,15 +54,37 @@ body {
    animation: grow .15s forwards 1 linear;
 }
 
+.link-container img:not( :hover ){ 
+    
+    animation: shrink .15s forwards 1 linear;
+
+ }
+
 @keyframes grow {
     0% {
         transform:scale(1);
         opacity: 0.6;
+        background-color: black;
     }
 
     100% {
         transform:scale(1.2);
         opacity: 1;
+       background-color: rgba(0, 0, 0, 0.808)
+    }
+}
+
+@keyframes shrink {
+    0% {
+        transform:scale(1.2);
+        opacity: 1;
+       background-color: rgba(0, 0, 0, 0.808)
+    }
+
+    100% {
        
+       transform:scale(1);
+       opacity: 0.6;
+       background-color: black;
     }
 }

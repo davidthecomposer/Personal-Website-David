@@ -1,7 +1,7 @@
  // jshint esversion: 6 
  const composerQuotes = {
     'Claude Debussy': `"Works of art make rules; rules do not make works of art."`,
-    'Leonard Bernstein': '"To achieve great things',
+    'Leonard Bernstein': '"To achieve great things, two things are needed; a plan, and not quite enough time.',
     'Bela Bartok': '"Competitions are for horses"',
     'Franz Liszt': '"Mournful and yet grand is the destiny of the artist."',
     'Gustav Mahler': '"I am hitting my head against the walls, but the walls are giving way."',
