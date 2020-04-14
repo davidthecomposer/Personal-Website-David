@@ -24,6 +24,7 @@ class AudioPlayer {
       this.volumeBar = this.player.querySelector('.audio-volumeBar');
       this.mediaTitle = this.player.classList[1];
       this.autoPlay = document.querySelector('.pane-1');
+      this.progContainer = this.player.querySelector('.prog-button-container');
     }
  
     /* Gets time info from audio object and translates it to timeRemaining text*/
@@ -41,17 +42,19 @@ class AudioPlayer {
     /* Gets time info from audio object, calls getDuration to continuously update, 
     and updates progress bar value and progress button position*/
     getTime() {
+      let progressWidth = this.progressBar.clientWidth / 100;
       this.currentPosition.innerHTML = Math.floor(this.audio.currentTime.toFixed(0) / 60) + ":" + (this.audio.currentTime.toFixed(0) < 10 ? `0${this.audio.currentTime.toFixed(0)}` : this.audio.currentTime.toFixed(0) % 60 < 10 ? `0${this.audio.currentTime.toFixed(0) % 60}` : this.audio.currentTime.toFixed(0) % 60 ? this.audio.currentTime.toFixed(0) % 60 : '00');
       this.getDuration();
       this.progressBar.value = (this.audio.currentTime / this.audio.duration) * 100;
-      this.progressButton.style.left = `${(this.progressBar.value * 2) + 66}px`;
+      this.progressButton.style.left = `${(this.progressBar.value * progressWidth) - 4}px`;
       
     }
  
     /* When user clicks mouse on progress bar, this skips music and object positions to event location*/
     changeLocation(event) {
+      let progressWidth = this.progressBar.clientWidth;
       let percent = event.offsetX / event.target.offsetWidth;
-      this.progressButton.style.left = `${(percent * 200) + 66}px`;
+      this.progressButton.style.left = `${(percent * progressWidth) - 4}px`;
       event.target.value = percent * 100;
       this.audio.currentTime = this.audio.duration * percent;
     }
@@ -110,11 +113,12 @@ class AudioPlayer {
       //need a next player variable that increments by 1
       if (this.player.classList[1] === playerNames[playerNames.length - 1]) {
         allPlayersArray.playersArray[0].play();
-      }else if (this.player.classList[1] === playerNames[0]) {
+      }else if (this.player.classList[1].includes(playerNames[0])) {
         
-        allPlayersArray.playersArray[1].play();
-        //Not sure why I need this extra call to make it work? With one only the first to second movement doesn't work the first time.
-        allPlayersArray.playersArray[1].play();
+        setTimeout(function(){ allPlayersArray.playersArray[1].play(); }, 1000);
+        
+        //Not sure why I need this extra setTimeout. But it doesn't wor without it. Maybe it's loading too fast or something?
+        
       }else {
        allPlayersArray.playersArray[nextIndex].play();
       }
@@ -136,7 +140,7 @@ class AudioPlayer {
       this.audio.ontimeupdate = () => this.getTime(event);
       this.audio.ondurationchange = () => this.getDuration(event);
       this.buttons.onclick = () => this.buttonClickHandle(event);
-      this.progressBar.onclick = () => this.changeLocation(event);
+      this.progContainer.onclick = () => this.changeLocation(event);
       this.volume.onclick = () => this.muteVolume(event);
       this.volumeBar.oninput = () => this.volumeChange(event);
       this.player.onmouseenter = () => this.handleInfoDisplay(event);

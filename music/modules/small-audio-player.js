@@ -14,6 +14,7 @@ class SmallAudioPlayer {
       this.timeRemaining = this.player.querySelector('.audio-time-remaining p');
       this.volume = this.player.querySelector('.audio-volume');
       this.volumeBar = this.player.querySelector('.volumeBar-small');
+      this.progContainer = this.player.querySelector('.prog-button-container');
     }
  
     /* Gets time info from audio object and translates it to timeRemaining text*/
@@ -29,16 +30,18 @@ class SmallAudioPlayer {
     /* Gets time info from audio object, calls getDuration to continuously update, 
     and updates progress bar value and progress button position*/
     getTime() {
+      let progressWidth = this.progressBar.clientWidth / 100;
       this.currentPosition.innerHTML = Math.floor(this.audio.currentTime.toFixed(0) / 60) + ":" + (this.audio.currentTime.toFixed(0) < 10 ? `0${this.audio.currentTime.toFixed(0)}` : this.audio.currentTime.toFixed(0) % 60 < 10 ? `0${this.audio.currentTime.toFixed(0) % 60}` : this.audio.currentTime.toFixed(0) % 60 ? this.audio.currentTime.toFixed(0) % 60 : '00');
       this.getDuration();
       this.progressBar.value = (this.audio.currentTime / this.audio.duration) * 100;
-      this.progressButton.style.marginLeft = `${(this.progressBar.value) - 128}px`;
+      this.progressButton.style.marginLeft = `${(this.progressBar.value * progressWidth) - 4}px`;
     }
  
     /* When user clicks mouse on progress bar, this skips music and object positions to event location*/
     changeLocation(event) {
+      let progressWidth = this.progressBar.clientWidth
       let percent = event.offsetX / event.target.offsetWidth;
-      this.progressButton.style.marginLeft = `${(percent) - 128}px`;
+      this.progressButton.style.marginLeft = `${(percent * progressWidth) - 4}px`;
       event.target.value = percent * 100;
       this.audio.currentTime = this.audio.duration * percent;
     }
@@ -71,37 +74,25 @@ class SmallAudioPlayer {
       }
     }
  
-    /* makes the volume bar visible*/
-    volumeBarInit() {
-      this.volumeBar.style.visibility = 'visible';
-    }
- 
+    
     /* handles the logic to change the volume when moving slider*/
     volumeChange(event) {
       this.audio.volume = event.target.value;
     }
  
-    /* hides the volume bar when leaving the slider area or after 3 seconds */
-    volumeBarHide(event) {
-      if (event.target === this.volume) {
-        setTimeout(() => {
-          this.volumeBar.style.visibility = 'hidden';
-        }, 3000);
-      } else {
-        this.volumeBar.style.visibility = 'hidden';
-      }
-    }
+    
+   
     initEventHandlers() {
       this.buttons.onclick = () => this.buttonClickHandle(event);
       this.audio.ontimeupdate = () => this.getTime(event);
       this.audio.ondurationchange = () => this.getDuration(event);
-      this.progressBar.onclick = () => this.changeLocation(event);
+      this.progContainer.onclick = () => this.changeLocation(event);
       this.volume.onclick = () => this.muteVolume(event);
       this.volume.onmouseover = () => this.volumeBarInit(event);
       this.volumeBar.oninput = () => this.volumeChange(event);
       this.volume.onmouseleave = () => this.volumeBarHide(event);
-      this.volumeBar.onmouseleave = () => this.volumeBarHide(event);
-      this.volumeBar.onmouseover = () => this.volumeBarInit(event);
+    
+     
        // fixes the durations not showing on init issue. Maybe not a permenant fix.
       this.getDuration();
     }

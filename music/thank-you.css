@@ -1,5 +1,25 @@
+
+
+body {
+    background-color: rgb(0,0,0);
+}
+.thanks-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      margin: auto auto;
+      width: 20vw;
+      height: 10vw;
+      background-color: rgb(15, 15, 15);
+      margin: 35vh auto;
+}
+
+
 h3 {
     font-family: 'Advent Pro', sans-serif;
+    color: white;
+
 }
 
 .button {
