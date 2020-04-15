@@ -11,8 +11,8 @@ footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video 
 }
 @font-face {
     font-family: 'julius_sans_oneregular';
-    src: url('../fonts/juliussansone-regular-webfont.woff2') format('woff2'),
-         url('../fonts/juliussansone-regular-webfont.woff') format('woff');
+    src: url('fonts/juliussansone-regular-webfont.woff2') format('woff2'),
+         url('fonts/juliussansone-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
