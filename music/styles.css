@@ -1744,7 +1744,7 @@ footer {
         position: relative;
         display: flex;
         flex-direction: column;
-        width: calc(100vw - 4px)  ;
+        width: 99%;
         height: 50px;
         margin: 0 0;  
         align-items: center;
