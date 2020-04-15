@@ -156,7 +156,7 @@ height: .125rem;
 }
 
 .header-tab:hover + .underline {
-    background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+    background-image: linear-gradient(rgb(0, 121, 148),  #00a5a5);
     background-size: 0%;
     background-repeat: no-repeat;
     background-position: center;
@@ -591,12 +591,13 @@ height: .125rem;
     justify-content: space-around;
     align-items: center;
     color: #fffffff6;
-    width: 100%;
+    width: calc(100vw - 8px);
     height: 2rem;
     margin: 0 auto;
     background: rgb(8, 8, 8);
     padding: .5rem 0;
-    
+    border: #00a5a5 1px dotted;
+   
 }
 
 .music-tab-container {
@@ -607,7 +608,7 @@ height: .125rem;
 }
 
 .music-tab-container:hover  .underline {
-    background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+    background-image: linear-gradient(rgb(0, 121, 148),  #00a5a5);
     background-size: 0%;
     background-repeat: no-repeat;
     background-position: center;
@@ -631,7 +632,7 @@ height: .125rem;
 }
 
 .retract {
-    background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+    background-image: linear-gradient(rgb(0, 121, 148),  #00a5a5);
     background-size: 0%;
     background-repeat: no-repeat;
     background-position: center;
@@ -656,7 +657,7 @@ height: .125rem;
 }
 
 .retract1 {
-    background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+    background-image: linear-gradient(rgb(0, 121, 148),  #00a5a5);
     background-size: 0%;
     background-repeat: no-repeat;
     background-position: center;
@@ -685,15 +686,21 @@ height: .125rem;
 .music-sections {
     
     position: relative;
-    padding: 0 0 2rem 0;
-}
-
-.contact-text {
-    font-family: 'Advent Pro', sans-serif;
-    text-align: center;
     
 }
 
+.contact-nav-text {
+    font-family: 'Advent Pro', sans-serif;
+    text-align: center;
+    padding: 2rem 0 0;
+    font-size: 1.2rem;
+}
+
+.contact-nav-text a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #00a5a5;    
+}
 .invisible {
     display: none;
 }
@@ -704,7 +711,7 @@ height: .125rem;
     position: relative;
     display: flex;
     flex-direction: row;
-    width: calc(100vw - 8px)  ;
+    width: calc(100vw - 6px)  ;
     height: 35vw;
     margin: 0 0;
 
@@ -715,6 +722,7 @@ height: .125rem;
    
     width: 60%;
     height: 100%;
+    border-right:  #00a5a5 1px dotted;
     
 }
 
@@ -733,13 +741,18 @@ height: .125rem;
     scrollbar-color: rgb(71, 20, 71) #00a5a5;
    
 }
+.Media {
+    
+    border-bottom: #00a5a5 1px dotted;
+    
+}
 
 
 /* -------------------- SCROLLBAR RELATED --------------------- */
 
 .player-column::-webkit-scrollbar {
     width: .25rem;
-    background-color: #00a5a5;
+    background-color:  #00a5a5;
 }
 
 .player-column::-webkit-scrollbar-thumb {
@@ -805,7 +818,7 @@ height: .125rem;
 .card-title {
     font-size: 2rem;
     padding: 1rem 0 .5rem;
-    border-bottom: rgb(0, 121, 148) 2px solid;
+    border-bottom:  #00a5a5 2px solid;
 }
 
 .fa-file-pdf {
@@ -852,7 +865,7 @@ height: .125rem;
     z-index: 0;
     
     padding: .5rem 0;
-    border: #1b6d6d 1px dotted;
+    border:  #00a5a5 1px dotted;
 
 }
 
@@ -969,7 +982,7 @@ height: .125rem;
 
 .audio-volumeBar {
     -webkit-appearance: none;
-    background: linear-gradient(to left, rgb(0, 165, 165), rgba(0, 0, 0, 0));
+    background: linear-gradient(to left,  #00a5a5, rgba(0, 0, 0, 0));
     height: 6px;
     width: 80%;
     /* visibility: hidden; */
@@ -988,11 +1001,11 @@ height: .125rem;
 }
 
 .audio-progress::-webkit-progress-value {
-    background-image: linear-gradient(to right,rgb(173, 5, 173), rgb(44, 166, 197));
+    background-image: linear-gradient(to right,rgb(173, 5, 173),  #00a5a5);
 }
 
 .audio-progress::-moz-progress-value{
-    background-image: linear-gradient(to right,rgb(173, 5, 173), rgb(44, 166, 197));
+    background-image: linear-gradient(to right,rgb(173, 5, 173),  #00a5a5);
 }
 
 .audio-volumeBar::-webkit-slider-thumb {
@@ -1065,8 +1078,8 @@ height: .125rem;
     -webkit-appearance: none;
     height: 6px;
     width: 6px;
-    border: solid 1px rgb(0, 165, 165);
-    background-color: rgb(0, 165, 165);
+    border: solid 1px  #00a5a5;
+    background-color:  #00a5a5;
     border-radius: 100%;
 }
 
@@ -1137,7 +1150,7 @@ height: .125rem;
 }
 
 .small-progress-button {
-    background: radial-gradient(white, rgb(0, 165, 165), black);
+    background: radial-gradient(white,  #00a5a5, black);
     height: 10px;
     width: 10px;
     border-radius: 100%;
@@ -1150,7 +1163,7 @@ height: .125rem;
     -webkit-appearance: none;
     height: 12px;
     width: 12px;
-    background-color: rgb(0, 165, 165);
+    background-color:  #00a5a5;
     border-radius: 100%;
 }
 
@@ -1387,7 +1400,7 @@ color: #00a5a5;
 /* ------------ About Me ------------ */
 
 .about-me {
-    margin: 2rem 0 6rem 0;
+    margin: 2rem 0 3rem 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1413,7 +1426,7 @@ color: #00a5a5;
     width: 100%;
     font-family: 'Advent Pro', sans-serif;
     font-size: 1.3rem;
-    width: 60%;
+    width: 55%;
  
 }
 
@@ -1439,7 +1452,7 @@ color: #00a5a5;
 
 .contact {
     user-select: none;
-    margin-top: 4rem;
+  
 }
 
 .contact-title {
@@ -1527,7 +1540,7 @@ position: relative;
 }
 
 .form-labels{
-    
+    font-size: 1.2rem;
     margin: 0 0 .5rem 0;
 }
 
@@ -1551,11 +1564,12 @@ position: relative;
 }
 
 .message-col label {
+    font-size: 1.2rem;
     margin-bottom: 1rem;
 }
 
 .email-submit {
-    background-color:rgb(33, 130, 165, .8);
+    background-color: #00a5a5;
     padding: .5rem;
     border: none;
     color: white;
@@ -1596,7 +1610,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 6rem;
+    height: 8rem;
     width: 99%;
     z-index: 3;
     margin: 0 auto 2rem;
@@ -1635,7 +1649,7 @@ footer {
     padding-left: .8rem;
     align-self: center;
     font-size: 1.2rem;
-    color: #caffff;
+    color:  #00a5a5;
     
   }
   .nav-icons-footer {

@@ -25,7 +25,7 @@
         btn.firstElementChild.firstElementChild.style.color = 'white';
       });
  
-      btn.firstElementChild.firstElementChild.style.color = '#00a5a5';
+      btn.firstElementChild.firstElementChild.style.color = ' #00a5a5';
     }
  
     retractAnimation(btn) {
@@ -33,7 +33,7 @@
     }
  
     assignHandlers() {
-      this.allBtns[0].firstElementChild.firstElementChild.style.color = '#00a5a5';
+      this.allBtns[0].firstElementChild.firstElementChild.style.color = ' #00a5a5';
       this.allBtns.forEach((btn) => {
         btn.onclick = () => this.handleSwitch(btn);
         btn.onmouseout = () => this.retractAnimation(btn);

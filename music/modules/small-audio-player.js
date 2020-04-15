@@ -39,7 +39,7 @@ class SmallAudioPlayer {
  
     /* When user clicks mouse on progress bar, this skips music and object positions to event location*/
     changeLocation(event) {
-      let progressWidth = this.progressBar.clientWidth
+      let progressWidth = this.progressBar.clientWidth;
       let percent = event.offsetX / event.target.offsetWidth;
       this.progressButton.style.marginLeft = `${(percent * progressWidth) - 4}px`;
       event.target.value = percent * 100;
