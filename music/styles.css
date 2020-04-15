@@ -10,10 +10,12 @@ footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video 
     vertical-align: baseline;
 }
 @font-face {
-    font-family: 'Julius Sans One';
-    src: url('../fonts/JuliusSansOne-Regular.ttf');
+    font-family: 'julius_sans_oneregular';
+    src: url('../fonts/juliussansone-regular-webfont.woff2') format('woff2'),
+         url('../fonts/juliussansone-regular-webfont.woff') format('woff');
+    font-weight: normal;
     font-style: normal;
-    font-weight: 400;
+
 }
 
 
@@ -571,7 +573,7 @@ height: .125rem;
 
 
     font-size: 3rem;
-    font-family: 'Julius Sans One';
+    font-family: 'julius_sans_oneregular';
     color: white;
     padding: 1rem 0 4rem 0;
     
@@ -585,7 +587,7 @@ height: .125rem;
 
 .music-title {
     font-size: 3rem;
-    font-family: 'Julius Sans One';
+    font-family: 'julius_sans_oneregular';
     color: white;
 
    
@@ -788,7 +790,7 @@ height: .125rem;
     color: white;
     font-size: 2rem;
     text-align: center;
-    font-family: 'Julius Sans One';
+    font-family: 'julius_sans_oneregular';
 }
 
 .music-sections {
@@ -916,7 +918,7 @@ height: .125rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-family: 'Julius Sans One';
+    font-family: 'julius_sans_oneregular';
     width: 54%;
     height: 1rem;
     position: absolute;
@@ -1110,7 +1112,7 @@ height: .125rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-family: 'Julius Sans One';
+    font-family: 'julius_sans_oneregular';
     width: 54%;
     height: 1rem;
     position: absolute;
@@ -1185,7 +1187,7 @@ height: .125rem;
 .news-title {
     margin: 0  0 4rem 0;
     font-size: 3rem;
-    font-family: 'Julius Sans One';
+    font-family: 'julius_sans_oneregular';
     color: white;
     padding: 1rem 0 1rem 0;
    
@@ -1312,7 +1314,7 @@ color: #00a5a5;
     font-size: 3rem;
     padding: 1rem 0;
     color: white;
-    font-family: 'Julius Sans One';
+    font-family: 'julius_sans_oneregular';
     text-align: center;
     margin: 0 0 1rem 0;
 }
@@ -1419,7 +1421,7 @@ color: #00a5a5;
 .about-me-title {
     margin: 0  0 4rem 0;
     font-size: 3rem;
-    font-family: 'Julius Sans One';
+    font-family: 'julius_sans_oneregular';
     color: white;
     padding: 1rem 0 1rem 0;
   
@@ -1465,7 +1467,7 @@ color: #00a5a5;
 .contact-title {
     margin: 0  0 4rem 0;
     font-size: 3rem;
-    font-family: 'Julius Sans One';
+    font-family: 'julius_sans_oneregular';
     color: white;
     padding: 1rem 0 1rem 0;
     
