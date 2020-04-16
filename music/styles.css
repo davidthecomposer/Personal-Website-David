@@ -1764,7 +1764,7 @@ footer {
           width: 80%;
       }
 
-      .audio-row {
+      /* .audio-row {
           position: relative;
           display: flex;
           flex-direction: column;
@@ -1773,24 +1773,24 @@ footer {
           margin: 0 0;
           align-items: center;
 
-      }
+      } */
 
-      .player-column {
+      /* .player-column {
           height: 8.6rem;
           width: 98vw;
-      }
+      } */
 
-      .display-window {
+      /* .display-window {
           position: relative;
           width: 98vw;
           border: #00a5a5 1px dotted;
           border-top: none;
 
-      }
+      } */
 
-      .Media {
+      /* .Media {
           border: none;
-      }
+      } */
 
 
 
@@ -1979,7 +1979,7 @@ footer {
           line-height: 1.5rem;
       }
 
-      .music-sections {
+      .Chamber, .Orchestral, .Vocal\/Choral, .Solo {
           text-align: center;
 
       }
