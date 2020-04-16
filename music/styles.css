@@ -741,11 +741,11 @@ height: .125rem;
   
 }
 .player-column {
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     -webkit-overflow-scrolling: touch;
     overflow-y: scroll;
-    overflow-x: hidden;
+    
     width: 40%;
     scrollbar-width: thin;
     scrollbar-color: rgb(71, 20, 71) #00a5a5;
