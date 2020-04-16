@@ -1564,6 +1564,7 @@ position: relative;
 }
 
 .email-submit {
+    -webkit-appearance: none;
     background-color: #00a5a5;
     padding: .5rem;
     border: none;
@@ -1702,12 +1703,30 @@ footer {
           font-size: 2rem;
           padding: 0;
       }
-      .news-image-full {
-        width: 46vw;
-        height: 30vw;
+      .about-me-title {
+        margin: 0;
+        padding: 1rem 0 1rem;
+        font-size: 2rem;
         
     }
+    .news-title {
+        margin: 1rem 0 1rem;
+    }
+      .news-image-full {
+          position: relative;
+        width: 100%;
+        margin: auto auto;
+    }
+    .comp-in-res {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 
+
+    .music-tabs-section {
+        width: calc(100vw - 3px);
+    }
       .user-name {
           display: flex;
           flex-direction: column;
@@ -1765,21 +1784,23 @@ footer {
           height: inherit;
           margin: 0 0;
           align-items: center;
+          border: none;
 
       }
 
       .player-column {
           height: 11rem;
-          width: 98vw;
+          width: calc(100vw - 4px);
          
           
       }
 
       .display-window {
           position: relative;
-          width: 98vw;
-          border: #00a5a5 1px dotted;
-          border-top: none;
+          width: calc(100vw);
+          border: none;
+          border-bottom: #00a5a5 1px dotted;
+         
 
       }
 
@@ -1797,20 +1818,13 @@ footer {
           margin: 0;
       }
 
-      .news-title {
-          margin: 1rem 0 1rem;
-      }
+     
 
       .about-me {
           margin: 0;
       }
 
-      .about-me-title {
-          margin: 0;
-          padding: 1rem 0 1rem;
-          font-size: 2rem;
-          
-      }
+      
       .about-me-text {
        width: 75%;
     }
@@ -1900,6 +1914,9 @@ footer {
           font-size: 1rem;
           min-width: 80%;
       }
+     .about-me-text p {
+         font-size: 1.1rem;
+     }
    
   }
 
@@ -2004,8 +2021,8 @@ footer {
 
       }
       .news-image-full {
-        width: 78vw;
-        height: 50vw;
+        width: 100%;
+     
         margin: 0 auto;
         
     }
@@ -2021,8 +2038,6 @@ footer {
       .by-me p {
           padding-right: .5rem;
           padding-left: .5rem;
-          align-self: center;
-          color: white;
           font-size: .8rem;
       }
 
@@ -2031,7 +2046,7 @@ footer {
       }
 
       .contact-body p {
-          font-size: 1rem;
+          font-size: 1.1rem;
       }
 
       .tabs-section {
@@ -2040,7 +2055,7 @@ footer {
       }
 
       .spotlight-text {
-          font-size: 1.5rem;
+          font-size: 1.2rem;
       }
 
 
@@ -2058,17 +2073,10 @@ footer {
           height: .7rem;
       }
   }
-  @supports (-webkit-touch-callout: none) {
+  /* @supports (-webkit-touch-callout: none) {
     
 
-    .player-column {
-        display: inline-block;
-        height: 11rem;
-        width: 98vw;
-       
-        
-    }
-
     
-  }
+    
+  } */
   
