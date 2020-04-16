@@ -744,6 +744,7 @@ height: .125rem;
     display: inline-flex;
     flex-direction: column;
     -webkit-overflow-scrolling: touch;
+    -webkit-overflow-y: scroll;
     overflow-y: scroll;
     
     width: 40%;
