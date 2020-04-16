@@ -10,6 +10,14 @@ footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video 
     vertical-align: baseline;
 }
 
+@font-face {
+    font-family: 'julius_sans_oneregular';
+    src: url('fonts/juliussansone-regular-webfont.woff2') format('woff2'),
+         url('fonts/juliussansone-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
 
 body {
     position: relative;
@@ -276,13 +284,13 @@ height: .1rem;
 /*---------------------------- CARD BACK ---------------------------- */
 
 .back {
+    background-image: url('images/card-front.svg');
     transform: rotateY( -180deg );
-    /* background-image: url('../images/front-end/card-back.png');
     background-repeat: no-repeat;
-    background-size: cover; */
+    background-size: cover; 
    
     justify-content: flex-start;
-    background-image: url('images/card-front.svg');
+    
    
   }
 
@@ -297,6 +305,9 @@ height: .1rem;
 }
 
 .back .panel-description {
+    width: 80%;
+    align-self: center;
+    margin-top: 2rem;
     font-size: 1.2rem;
     font-weight: 700;
     color: rgb(4, 26, 32);
@@ -307,17 +318,20 @@ height: .1rem;
 
 /* ---------------------------- CARD FRONT ---------------------------- */
 .front {
-    
+    display: flex;
+    flex-direction: column;
    justify-content: space-evenly;
    background-image: url('images/card-front.svg');
+   background-repeat: no-repeat;
+    background-size: cover; 
   
   }
   
 .panel-title {
-    
-    font-family: 'Hammersmith One', sans-serif;
+    width: 100%;
+    font-family: 'julius_sans_oneregular';
     font-size: 2rem;
-    align-self: center;   
+    text-align: center;  
 }
 
 .panel-picture {
@@ -370,18 +384,11 @@ height: .1rem;
     background-color:rgba(84, 166, 195, 0.8);
 }
 
-.panel-description {
-    width: 80%;
-    align-self: center;
-    margin-top: 2rem;
-}
-
-
 
 /* ---------------------------- FEEDBACK SECTION ---------------------------- */
 
 .feedback-title {
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: 'julius_sans_oneregular';
     font-size: 3rem;
     text-align: center;
     height: 6rem;
@@ -410,7 +417,7 @@ height: .1rem;
     font-size: 3rem;
     padding: 1rem 0;
     color: white;
-    font-family: 'Hammersmith One', sans-serif;
+    font-family: 'julius_sans_oneregular';
     text-align: center;
     margin: 0 0 1rem 0;
 }
@@ -620,7 +627,8 @@ footer {
     padding-right: .8rem;
     padding-left: .8rem;
     align-self: center;
-    color: white;
+    font-size: 1.2rem;
+    color:  #00a5a5;
   }
 .nav-icons-footer {
     display: flex;
@@ -780,6 +788,14 @@ footer {
         padding: 0 0 .5rem 0;
         margin-top: -.5rem;
     }
+    .back .panel-description {
+        font-size: .8rem;
+        font-weight: 700;
+        color: rgb(4, 26, 32);
+        line-height: 1.2rem;
+        overflow-y: hidden;
+       
+    }
     
   }
 
@@ -796,10 +812,10 @@ footer {
     
       
     .by-me p {
-        padding-right: .7rem;
+        padding-right: .5rem;
         padding-left: .7rem;
         align-self: center;
-        color: white;
+        
       }
       .intro {
         font-size: 1rem;
