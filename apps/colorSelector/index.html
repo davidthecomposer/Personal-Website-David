@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  
+
     <div class="big-container">
         <div class="header">
             <h1 class="title">Color Selector</h1>
@@ -25,63 +25,85 @@
         <div class="content">
             <div class="container">
 
-                <div class="preview"></div>
+                <div class="canvas-row">
+                    <canvas id="canvas" width="580" height="290"> </canvas>
+                    <div class="preview"></div>
+                </div>
+                <div class="sliders-row">
+                    <div class="rgb-container">
+                        <p class="redLabel labels"><em>R</em>ed</p>
+                        <div class="red-slider-div">
+                            <input class="red sliders" type="range" min="0" max="255" step="1" value="255">
+                        </div>
+                        <p class="greenLabel labels"><em>G</em>reen</p>
+                        <div class="green-slider-div">
+                            <input class="green sliders" type="range" min="0" max="255" step="1" value="0">
+                        </div>
+                        <p class="blueLabel labels"><em>B</em>lue</p>
+                        <div class="blue-slider-div">
+                            <input class="blue sliders" type="range" min="0" max="255" step="1" value="0">
+                        </div>
+                        <div class="color-values-rgb-hex">
+                            <div class="hex rounded">
+                                <p class="hexText"> #000000</p>
+                            </div>
+                            <div class="rgb rounded">
+                                <p class="rgbText">rgb(0,0,0)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="alpha-column">
+                        <p class="alphaLabel labels"><em>A</em>lpha</p>
+                        <div class="alpha-slider-div"><input class="alpha sliders" type="range" min="0" max="1"
+                                step="0.01" value="1">
+                        </div>
+                    </div>
+                    <div class="HSLV-container">
+                        <p class="hueLabel labels"><em>H</em>ue</p>
+                        <div class="hue-slider-div">
+                            <input class="hue sliders" type="range" min="0" max="360" step="1" value="0">
+                        </div>
+                        <div class="HSLV-sliders-row">
+                            <div class="HSL-container">
+                                <div class="hslsat-label-div">
+                                    <p class="labels"><em>S</em>aturation</p>
+                                </div>
+                                <input class="hsl-saturation sliders" type="range" min="0" max="100" step="1"
+                                    value="100">
+                                <div class="lightness-label-div">
+                                    <p class="labels"><em>L</em>ightness</p>
+                                </div>
 
-                <canvas id="canvas" width="580" height="290"> </canvas>
-                <div class="red-slider-div"> </div>
-                <div class="green-slider-div"> </div>
-                <div class="blue-slider-div"></div>
-                <p class="hueLabel labels"><em>H</em>ue</p>
-                <p class="redLabel labels"><em>R</em>ed</p>
-                <p class="greenLabel labels"><em>G</em>reen</p>
-                <p class="blueLabel labels"><em>B</em>lue</p>
-                <p class="alphaLabel labels"><em>A</em>lpha</p>
-                <div class="hue-slider-div">
-                </div>
-                <div class="alpha-slider-div"><input class="alpha sliders" type="range" min="0" max="1" step="0.01"
-                        value="1">
-                </div>
-                <div class="hslsat-label-div">
-                    <p class="labels"><em>S</em>aturation</p>
-                </div>
-                <div class="lightness-label-div">
-                    <p class="labels"><em>L</em>ightness</p>
-                </div>
-                <div class="hsvsat-label-div">
-                    <p class="labels"><em>S</em>aturation</p>
-                </div>
-                <div class="value-label-div">
-                    <p class="labels"><em>V</em>alue</p>
-                </div>
-                <div class="hex rounded">
-                    <p class="hexText"> #000000</p>
-                </div>
-                <div class="rgb rounded">
-                    <p class="rgbText">rgb(0,0,0)</p>
-                </div>
-                <div class="hsv rounded">
-                    <p class="hsvText"> hsv(0,0,0)</p>
-                </div>
-                <div class="hsl rounded">
-                    <p class="hslText"> hsl(0,0,0)</p>
+                                <input class="hsl-lightness sliders" type="range" min="0" max="100" step="1" value="50">
+                                <div class="hsl rounded">
+                                    <p class="hslText"> hsl(0,0,0)</p>
+                                </div>
+                            </div>
+
+                            <div class="HSV-container">
+                                <div class="hsvsat-label-div">
+                                    <p class="labels"><em>S</em>aturation</p>
+                                </div>
+                                <input class="hsv-saturation sliders" type="range" min="0" max="100" step="1"
+                                    value="100">
+                                <div class="value-label-div">
+                                    <p class="labels"><em>V</em>alue</p>
+                                </div>
+                                <input class="hsv-value sliders" type="range" min="0" max="100" step="1" value="100">
+                                <div class="hsv rounded">
+                                    <p class="hsvText"> hsv(0,0,0)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="random rounded">
                     <p class="randomText"> Random </p>
                 </div>
-                <input class="red sliders" type="range" min="0" max="255" step="1" value="255">
-                <input class="green sliders" type="range" min="0" max="255" step="1" value="0">
-                <input class="blue sliders" type="range" min="0" max="255" step="1" value="0">
-
-                <input class="hue sliders" type="range" min="0" max="360" step="1" value="0">
-                <input class="hsl-saturation sliders" type="range" min="0" max="100" step="1" value="100">
-                <input class="hsl-lightness sliders" type="range" min="0" max="100" step="1" value="50">
-                <input class="hsv-saturation sliders" type="range" min="0" max="100" step="1" value="100">
-                <input class="hsv-value sliders" type="range" min="0" max="100" step="1" value="100">
-
-
             </div>
             <div class='big-column'>
-                <h2 class="instructions"> <em>Left Click:</em> save | <em> Right Click:</em> overwrite | <em>Double-Click:</em> delete </h2>
+                <h2 class="instructions"> <em>Left Click:</em> save | <em> Right Click:</em> overwrite |
+                    <em>Double-Click:</em> delete </h2>
 
                 <div class="swatch-container">
                     <div class="swatches"></div>

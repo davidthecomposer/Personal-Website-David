@@ -13,8 +13,11 @@ footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video 
 body {
   background-color: rgb(245, 245, 245);
   font-family: 'Slabo 27px', serif;
-  min-width: 800px;
+  width: calc(100vw - 10px);
+  
 }
+
+
 
 em {
   font-size: 1.1rem;
@@ -24,11 +27,11 @@ em {
 
 .big-container {
   width: 80%;
-  min-width: 800px;
+  
   margin: 20px auto;
   display: flex;
   flex-direction: column;
-  outline: 4px #303030 solid;
+  
 
 }
 
@@ -39,13 +42,13 @@ em {
 }
 
 .container {
-  margin: .5% 1% 0% 1%;
+  
   width: 750px;
-  height: 600px;
+  
   font-family: 'Slabo 27px', serif;
-  display: grid;
-  grid-template-rows: repeat(31, auto);
-  grid-template-columns: repeat(21, auto);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: rgb(240, 240, 240);
   padding: 1rem 1rem 0rem 1rem; 
 }
@@ -82,108 +85,133 @@ em {
   height: 3rem;
 }
 
+/* Color Selector */
 
-.preview {
-  grid-area: 2 / 1 / 11 / 7;
-  height: 290px;
+.canvas-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
+.preview {
+  
+  width: 20%;
+  background-color: red;
+  
+}
+
+.sliders-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.rgb-container {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+.color-values-rgb-hex{
+  display: flex;
+  flex-direction: row;
+}
+
+.alpha-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 10%;
+}
+
+.HSLV-container {
+  display: flex;
+  flex-direction: column;
+  width: 45%;
+}
+
+.HSLV-sliders-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.HSL-container, .HSV-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
 button {
   background-color: rgb(42, 185, 42);
 }
 
 #canvas {
-  grid-area: 2 / 7 / 11 / 21;
   cursor: url(images/pointer1.png) 16 16, auto;
-  width: 580px;
-  margin: 0 0 0 7px;
+  width: 80%;
+  margin: 0 0 0 0;
   padding: 0;
 }
 
-.hueLabel {
-  grid-area: 12 / 13 / 13 / 22;
-}
-
-.redLabel {
-  grid-area: 12 / 1 / 13 / 10;
-}
-
-.blueLabel {
-  grid-area: 16 / 1 / 17 / 10;
-}
-
-.greenLabel {
-  grid-area: 14 / 1 / 15 / 10;
-}
-
 .alphaLabel {
-  grid-area: 12 / 11 / 13 / 12;
-
+  width: 100%;
+  
 }
 
 .red-slider-div {
-  grid-area: 13 / 1 / 14 / 10;
-
+ display: flex;
   background: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 0, 0));
-  height: 20%;
+  height: 5%;
   margin: auto 0;
 }
 
 .green-slider-div {
-  grid-area: 15 / 1 / 16 / 10;
-
+  display: flex;
   background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 255, 0));
-  height: 20%;
+  height: 5%;
   margin: auto 0;
 }
 
 .blue-slider-div {
-  grid-area: 17 / 1 / 18 / 10;
-
+  display: flex;
   background: linear-gradient(to right, rgb(0, 0, 0), rgb(0, 0, 255));
-  height: 20%;
+  height: 5%;
   margin: auto 0;
 }
 
 .hue-slider-div {
-  grid-area: 13 / 13 / 14 / 22;
+  display: flex;
   background: linear-gradient(to right, #ff0000 0%, #ffee00 20%, #1aff00 35%, #00ffee 52%, #0004ff 71%, #ff00fb 88%, #ff0095 100%);
 
-  height: 20%;
+  height: 5%;
   margin: auto 0;
 
 }
 
 .alpha-slider-div {
-  grid-area: 13 / 11 / 18 / 12;
-  display: flex;
-
-  padding: 0;
-  margin: 0 auto;
-
+margin-top: 95%;
 
 }
 
 .hslsat-label-div {
-  grid-area: 14 / 13 / 15 / 17;
+  
 }
 
 .lightness-label-div {
-  grid-area: 16 / 13 / 17 / 17;
+  
 }
 
 .hsvsat-label-div {
-  grid-area: 14 / 17 / 15 / 22;
+  
 }
 
 .value-label-div {
-  grid-area: 16 / 17 / 17 / 22;
+ 
 }
 
 .hex {
-  grid-area: 18 / 3 / 21 / 5;
+
   background-color: rgba(0, 0, 0, 0.911);
-  width: 10rem;
+  width: 50%;
   display: flex;
 
 }
@@ -195,10 +223,10 @@ button {
 }
 
 .rgb {
-  grid-area: 18 / 7 / 21 / 9;
+
   background-color: rgba(0, 0, 0, 0.911);
   text-align: center;
-  width: 10rem;
+  width: 50%;
   display: flex;
   align-content: center;
 
@@ -213,9 +241,9 @@ button {
 }
 
 .hsv {
-  grid-area: 18 / 18 / 21 / 21;
+
   background-color: rgba(0, 0, 0, 0.911);
-  width: 10rem;
+  width: 100%;
   text-align: auto;
   display: flex;
 
@@ -229,14 +257,13 @@ button {
 }
 
 .hsl {
-  grid-area: 18 / 13 / 21 / 16;
+
   background-color: rgba(0, 0, 0, 0.911);
-  width: 10rem;
+  width: 100%;
   display: flex;
 }
 
 .hslText {
-  padding: .25rem;
   color: white;
   margin: auto;
   z-index: 2;
@@ -244,11 +271,10 @@ button {
 }
 
 .random {
-  grid-area: 24 / 11 / 27 / 12;
   background-color: rgb(7, 0, 46);
-  
   display: flex;
   cursor: pointer;
+  width: 20%;
 }
 
 .randomText {
@@ -279,7 +305,7 @@ button {
   /* Specific width is required for Firefox. */
   background: transparent;
   /* Otherwise white in Chrome */
-  grid-area: 13 / 1 / 14 / 10;
+ 
   padding: 0;
 
 }
@@ -291,7 +317,7 @@ button {
   /* Specific width is required for Firefox. */
   background: transparent;
   /* Otherwise white in Chrome */
-  grid-area: 15 / 1 / 16 / 10;
+
   padding: 0;
 
 }
@@ -303,7 +329,7 @@ button {
   /* Specific width is required for Firefox. */
   background: transparent;
   /* Otherwise white in Chrome */
-  grid-area: 17 / 1 / 18 / 10;
+
 
 
   align-self: center;
@@ -317,10 +343,10 @@ button {
 
   background: linear-gradient(to left, rgba(0, 0, 0, 0.555), rgba(255, 255, 255, 0));
   /* Otherwise white in Chrome */
-  grid-area: 13 / 11 / 18 / 11;
 
-  height: 30px;
-  width: 103px;
+
+  height: 20px;
+  width: 160px;
 
 
   transform: rotate(-90deg);
@@ -337,7 +363,6 @@ button {
   /* Specific width is required for Firefox. */
   background: transparent;
   /* Otherwise white in Chrome */
-  grid-area: 13 / 13 / 14 / 22;
 
 
 
@@ -352,9 +377,10 @@ button {
   /* Specific width is required for Firefox. */
   background: transparent;
   /* Otherwise white in Chrome */
-  grid-area: 15 / 13 / 16 / 17;
+ 
   background-image: url(./images/range.png);
-
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 
   align-self: center;
 }
@@ -367,7 +393,7 @@ button {
   /* Specific width is required for Firefox. */
   background: transparent;
   /* Otherwise white in Chrome */
-  grid-area: 17 / 13 / 18 / 17;
+
   background: linear-gradient(to right, rgba(0, 0, 0, 0.555), rgba(255, 255, 255, 0));
 
 
@@ -381,10 +407,10 @@ button {
   /* Specific width is required for Firefox. */
   background: transparent;
   /* Otherwise white in Chrome */
-  grid-area: 15 / 17 / 16 / 22;
+ 
   height: 20px;
   background-image: url(./images/range.png);
-
+  background-size: 100% 100%;
   align-self: center;
 }
 
@@ -396,9 +422,10 @@ button {
   /* Specific width is required for Firefox. */
   background: transparent;
   /* Otherwise white in Chrome */
-  grid-area: 17 / 17 / 18 / 22;
+ 
   background-image: url(./images/range.png);
   align-self: center;
+  background-size: 100% 100%;
 }
 
 .sliders:focus {
@@ -414,6 +441,9 @@ button {
   background: transparent;
   border-color: transparent;
   color: transparent;
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 .sliders {
@@ -422,7 +452,7 @@ button {
 
 .sliders::-webkit-slider-thumb {
   -webkit-appearance: none;
-  border: 1px solid #6e6e6e;
+  
   height: 16px;
   width: 8px;
   border-radius: 30%;
@@ -446,7 +476,7 @@ button {
   background: radial-gradient(rgb(223, 223, 223), rgb(113, 92, 233));
 
   cursor: pointer;
-  margin-top: -1px;
+ 
   /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
 
   /* Add cool effects to your sliders! */
@@ -572,23 +602,92 @@ tr:nth-child(odd) {
   color: black;
 }
 
-
-
-
 @media (max-width: 1600px) {
   .content {
     flex-direction: column;
     align-items: center;
-  }
-
-  .header {
     width: 100%;
   }
 }
 
+
 @media (max-width: 960px) {
   .big-container {
-    width: 96%;
+    width: calc(100vw);
+    align-items: center;
   }
+
+  .title {
+    font-size: 2rem;
+   margin: 0;
+  }
+ 
+  .header {
+    width: 99%;
+   justify-content: space-around;
+   align-items: center;
+   text-align: left;
+  }
+  .by-me {
+    position: relative;
+    height: 1rem;
+    font-size: .8rem;
+    margin: 0;
+    right: 0;
+  top: inherit;
+  }
+  .signature {
+    height: 1.5rem;
+    align-self: center;
+  }
+  .container {
+    
+    width: calc(100vw - 6px);
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(240, 240, 240);
+    
+    
+  }
+ .sliders-row {
+   flex-direction: column;
+   align-items: center;
+ }
+ .rgb-container, .alpha-column, .HSLV-container {
+   width: 90%;
+ }
+ .alpha {
+  transform: rotate(0deg);
+  width: 100%;
+  margin: 0;
+  height: 5%;
+ }
+ .alpha-slider-div {
+   margin: 0;
+   width: 50%;
+ }
+  .red-slider-div, .green-slider-div, .blue-slider-div, .hue-slider-div {
+   height: 10px;
+  }
+  .instructions {
+    font-size: .8rem;
+  }
+  em {
+    font-size: 1rem;
+  }
+  
+  /* #canvas{
+    margin: 0;
+    padding: 0;
+    width: calc(100vw - 4px);
+    height: 80vw;
 }
+.preview {
+  position: relative;
+  width: calc(100vw - 4px);
+  height: 20vw;
+} */
+}
+
 
