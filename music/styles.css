@@ -1762,14 +1762,14 @@ footer {
           display: flex;
           flex-direction: column;
           width: calc(100vw - 4px);
-          height: fit-content;
+          height: inherit;
           margin: 0 0;
           align-items: center;
 
       }
 
       .player-column {
-          height: 8.6rem;
+          height: 11rem;
           width: 98vw;
          
           
