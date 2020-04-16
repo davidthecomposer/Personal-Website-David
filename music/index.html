@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/01ebde5621.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css">
-  
+
 </head>
 
 <body>
@@ -51,11 +51,11 @@
       </div>
     </nav>
   </header>
-  
- 
 
- <!--                  SLIDE-SHOW                      -->
- <section class="home anchor" id="home">
+
+
+  <!--                  SLIDE-SHOW                      -->
+  <section class="home anchor" id="home">
     <div class="carousel one">
       <div class="manual-navigation">
         <img class="navigate backward hidden" src="images/slideshow/backPanel.png" alt="navigate back one slide">
@@ -66,8 +66,8 @@
       </div>
       <!-- Add pane images here. First one needs to have active-panel class -->
       <div class="pane-container">
-        <a href="#music-container" class="main-images pane active-panel fade-in pane-1"><img src="images/slideshow/flatlinenew.png"
-          alt="new piece: flatline" class="pane-image "></a>
+        <a href="#music-container" class="main-images pane active-panel fade-in pane-1"><img
+            src="images/slideshow/flatlinenew.png" alt="new piece: flatline" class="pane-image "></a>
         <!-- Slide #1 -->
         <a href="#news" class="invisible-panel main-images pane pane-2"><img src="images/slideshow/song-cycle.png"
             alt="song cycle announcement" class="pane-image"></a>
@@ -75,8 +75,9 @@
         <a href="#news" class="main-images pane invisible-panel pane-3"> <img src="images/slideshow/OperaConTempo.png"
             alt="Opera Commission announcement" class="pane-image"></a>
         <!-- Slide #3 -->
-        <a href="#blog" class="main-images pane invisible-panel pane-4"> <img src="images/slideshow/composer-in-residence.png"
-            alt="Composer-in-Residence Announcement" class="pane-image"></a>
+        <a href="#blog" class="main-images pane invisible-panel pane-4"> <img
+            src="images/slideshow/composer-in-residence.png" alt="Composer-in-Residence Announcement"
+            class="pane-image"></a>
       </div>
       <!-- Add slide text here. First one needs to have an animation class -->
       <div class="text-container">
@@ -93,17 +94,17 @@
   <section class="music-container anchor" id="music-container">
     <section class="music-header">
       <h2 class="music-title"> Music </h2>
-      
+
     </section>
 
-<!--            MEDIA MUSIC SECTION TABS           -->
+    <!--            MEDIA MUSIC SECTION TABS           -->
     <div class="music-tabs-section">
 
       <h3 class="divider">|</h3>
-      
+
       <div class="music-tab-container">
         <div class="music-tab-button">
-          <h3 class="music-button-title" >Media</h3>
+          <h3 class="music-button-title">Media</h3>
           <div class="underline"></div>
         </div>
       </div>
@@ -147,59 +148,56 @@
       <h3 class="divider">|</h3>
     </div>
 
-<!--            MEDIA MUSIC SECTION AUDIO ROW          -->
+    <!--            MEDIA MUSIC SECTION AUDIO ROW          -->
     <section class="Media music-sections">
       <div class="audio-row">
         <div class="player-column ">
-           <!-- FLATLINE -->
-           <div class='audio-player flatline'>
-
-            <div class="audio-lower-row">
-              <div class="audio-area">
-                <p class="audio-player-title"> <strong class="audio-strong">Flatline </strong> </p>
+          <!-- FLATLINE -->
+          <div class='audio-player flatline'>
                 <div class="audio-player-row">
                   <audio class="audio-file" src="audio/media-music/FlatLine.wav"></audio>
                   <img src="images/audio-player/playbutton.svg" class="audio-buttons" alt="play and pause button">
-                  
+                 
+                  <div class="audio-center">
+                    <p class="audio-player-title">Flatline</p>
+
+                    <div class="prog-button-container">
+                      <progress class="audio-progress" max="100" value="0"></progress>
+                      <div class="audio-progress-button"></div>
+                    </div>
+                    <div class="audio-timers-row">
+                      <div class="audio-current-position">
+                        <p>0:00</p>
+                      </div>
+                      <div class="audio-time-remaining">
+                        <p class="time-remaining-text"></p>
+                      </div>
+                    </div>
+                  </div>
+
                   <div class="volume-span">
                     <img class="audio-volume" src="images/audio-player/volumeIcon.svg" alt="Volume Icon">
                     <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
                   </div>
-                   <div class="prog-button-container">
-                    <progress class="audio-progress" max="100" value="0"></progress>
-                  <div class="audio-progress-button"></div>
-                </div>
-                </div>
-                <div class="audio-timers-row">
-                  <div class="audio-current-position">
-                    <p>0:00</p>
-                  </div>
-                  <div class="audio-time-remaining">
-                    <p class="time-remaining-text"></p>
-                  </div>
-                </div>
-              </div>
-
-
-            </div>
+                </div>          
           </div>
-           <!-- MISCHIEVOUS ENDEAVORS -->
-           <div class='audio-player mischievous'>
+          <!-- MISCHIEVOUS ENDEAVORS -->
+          <div class='audio-player mischievous'>
             <div class="audio-lower-row">
               <div class="audio-area">
                 <p class="audio-player-title"> <strong class="audio-strong">Mischievous Endeavors </strong> </p>
                 <div class="audio-player-row">
                   <audio class="audio-file" src="audio/media-music/mischeivous.wav"></audio>
                   <img src="images/audio-player/playbutton.svg" class="audio-buttons" alt="play and pause button">
-                  
+
                   <div class="volume-span">
                     <img class="audio-volume" src="images/audio-player/volumeIcon.svg" alt="Volume Icon">
                     <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
                   </div>
-                   <div class="prog-button-container">
+                  <div class="prog-button-container">
                     <progress class="audio-progress" max="100" value="0"></progress>
-                  <div class="audio-progress-button"></div>
-                </div>
+                    <div class="audio-progress-button"></div>
+                  </div>
                 </div>
                 <div class="audio-timers-row">
                   <div class="audio-current-position">
@@ -212,25 +210,25 @@
               </div>
             </div>
           </div>
-           <!-- RESCUE -->
-           <div class='audio-player rescue'>
+          <!-- RESCUE -->
+          <div class='audio-player rescue'>
             <div class="audio-lower-row">
               <div class="audio-area">
                 <p class="audio-player-title"> <strong class="audio-strong">Rescue </strong> </p>
                 <div class="audio-player-row">
                   <audio class="audio-file" src="audio/media-music/Rescue.wav"></audio>
                   <img src="images/audio-player/playbutton.svg" class="audio-buttons" alt="play and pause button">
-                  
+
                   <div class="volume-span">
                     <img class="audio-volume" src="images/audio-player/volumeIcon.svg" alt="volume icon">
                     <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
                   </div>
                   <div class="prog-button-container">
                     <progress class="audio-progress" max="100" value="0"></progress>
-                  <div class="audio-progress-button"></div>
+                    <div class="audio-progress-button"></div>
+                  </div>
                 </div>
-                </div>
-               
+
                 <div class="audio-timers-row">
                   <div class="audio-current-position">
                     <p>0:00</p>
@@ -242,36 +240,36 @@
               </div>
             </div>
           </div>
-            <!-- AFTER -->
-            <div class='audio-player after'>
-              <div class="audio-lower-row">
-                <div class="audio-area">
-                  <p class="audio-player-title"> <strong class="audio-strong">After </strong> </p>
-                  <div class="audio-player-row">
-                    <audio class="audio-file" src="audio/media-music/Post-Apocalyptic-Rock-Intro.wav"></audio>
-                    <img src="images/audio-player/playbutton.svg" class="audio-buttons" alt="play and pause button">
-                    
-                    <div class="volume-span">
-                      <img class="audio-volume" src="images/audio-player/volumeIcon.svg" alt="volume icon">
-                      <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
-                    </div>
-                     <div class="prog-button-container">
-                      <progress class="audio-progress" max="100" value="0"></progress>
-                  <div class="audio-progress-button"></div>
-                </div>
+          <!-- AFTER -->
+          <div class='audio-player after'>
+            <div class="audio-lower-row">
+              <div class="audio-area">
+                <p class="audio-player-title"> <strong class="audio-strong">After </strong> </p>
+                <div class="audio-player-row">
+                  <audio class="audio-file" src="audio/media-music/Post-Apocalyptic-Rock-Intro.wav"></audio>
+                  <img src="images/audio-player/playbutton.svg" class="audio-buttons" alt="play and pause button">
+
+                  <div class="volume-span">
+                    <img class="audio-volume" src="images/audio-player/volumeIcon.svg" alt="volume icon">
+                    <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
                   </div>
-                  <div class="audio-timers-row">
-                    <div class="audio-current-position">
-                      <p>0:00</p>
-                    </div>
-                    <div class="audio-time-remaining">
-                      <p class="time-remaining-text"></p>
-                    </div>
+                  <div class="prog-button-container">
+                    <progress class="audio-progress" max="100" value="0"></progress>
+                    <div class="audio-progress-button"></div>
                   </div>
                 </div>
-  
+                <div class="audio-timers-row">
+                  <div class="audio-current-position">
+                    <p>0:00</p>
+                  </div>
+                  <div class="audio-time-remaining">
+                    <p class="time-remaining-text"></p>
+                  </div>
+                </div>
               </div>
+
             </div>
+          </div>
           <!-- TURNING POINT -->
           <div class='audio-player turning-point'>
             <div class="audio-lower-row">
@@ -280,15 +278,15 @@
                 <div class="audio-player-row">
                   <audio class="audio-file" src="audio/media-music/Turning-Point.wav"></audio>
                   <img src="images/audio-player/playbutton.svg" class="audio-buttons" alt="play and pause button">
-                  
+
                   <div class="volume-span">
                     <img class="audio-volume" src="images/audio-player/volumeIcon.svg" alt="volume icon">
                     <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
                   </div>
-                   <div class="prog-button-container">
+                  <div class="prog-button-container">
                     <progress class="audio-progress" max="100" value="0"></progress>
-                  <div class="audio-progress-button"></div>
-                </div>
+                    <div class="audio-progress-button"></div>
+                  </div>
                 </div>
                 <div class="audio-timers-row">
                   <div class="audio-current-position">
@@ -310,15 +308,15 @@
                 <div class="audio-player-row">
                   <audio class="audio-file" src="audio/media-music/Redemption.wav"></audio>
                   <img src="images/audio-player/playbutton.svg" class="audio-buttons" alt="play and pause button">
-                  
+
                   <div class="volume-span">
                     <img class="audio-volume" src="images/audio-player/volumeIcon.svg" alt="volume icon">
                     <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
                   </div>
-                   <div class="prog-button-container">
+                  <div class="prog-button-container">
                     <progress class="audio-progress" max="100" value="0"></progress>
-                  <div class="audio-progress-button"></div>
-                </div>
+                    <div class="audio-progress-button"></div>
+                  </div>
                 </div>
                 <div class="audio-timers-row">
                   <div class="audio-current-position">
@@ -330,7 +328,7 @@
                 </div>
               </div>
             </div>
-          </div> 
+          </div>
           <!-- STARLIGHT STARFLIGHT -->
           <div class='audio-player starlight-starflight'>
 
@@ -340,15 +338,15 @@
                 <div class="audio-player-row">
                   <audio class="audio-file" src="audio/media-music/Starlight-Starflight.wav"></audio>
                   <img src="images/audio-player/playbutton.svg" class="audio-buttons" alt="play and pause button">
-                 
+
                   <div class="volume-span">
                     <img class="audio-volume" src="images/audio-player/volumeIcon.svg" alt="volume icon">
                     <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
                   </div>
-                   <div class="prog-button-container">
+                  <div class="prog-button-container">
                     <progress class="audio-progress" max="100" value="0"></progress>
-                  <div class="audio-progress-button"></div>
-                </div>
+                    <div class="audio-progress-button"></div>
+                  </div>
                 </div>
                 <div class="audio-timers-row">
                   <div class="audio-current-position">
@@ -372,15 +370,15 @@
                 <div class="audio-player-row">
                   <audio class="audio-file" src="audio/media-music/Starflight-Starbright.wav"></audio>
                   <img src="images/audio-player/playbutton.svg" class="audio-buttons" alt="play and pause button">
-                  
+
                   <div class="volume-span">
                     <img class="audio-volume" src="images/audio-player/volumeIcon.svg" alt="volume icon">
                     <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
                   </div>
-                   <div class="prog-button-container">
+                  <div class="prog-button-container">
                     <progress class="audio-progress" max="100" value="0"></progress>
-                  <div class="audio-progress-button"></div>
-                </div>
+                    <div class="audio-progress-button"></div>
+                  </div>
                 </div>
                 <div class="audio-timers-row">
                   <div class="audio-current-position">
@@ -396,74 +394,74 @@
             </div>
           </div>
           <!-- LOVE STORY -->
-         <div class='audio-player love-story'>
+          <div class='audio-player love-story'>
 
-                      <div class="audio-lower-row">
-                        <div class="audio-area">
-                          <p class="audio-player-title"> <strong class="audio-strong">Music For A Love Story </strong> </p>
-                          <div class="audio-player-row">
-                            <audio class="audio-file" src="audio/media-music/Music-for-a-Love-Story.wav"></audio>
-                            <img src="images/audio-player/playbutton.svg" class="audio-buttons" alt="play and pause button">
-                            
-                            <div class="volume-span">
-                              <img class="audio-volume" src="images/audio-player/volumeIcon.svg" alt="volume icon">
-                              <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
-                            </div>
-                             <div class="prog-button-container">
-                              <progress class="audio-progress" max="100" value="0"></progress>
-                  <div class="audio-progress-button"></div>
+            <div class="audio-lower-row">
+              <div class="audio-area">
+                <p class="audio-player-title"> <strong class="audio-strong">Music For A Love Story </strong> </p>
+                <div class="audio-player-row">
+                  <audio class="audio-file" src="audio/media-music/Music-for-a-Love-Story.wav"></audio>
+                  <img src="images/audio-player/playbutton.svg" class="audio-buttons" alt="play and pause button">
+
+                  <div class="volume-span">
+                    <img class="audio-volume" src="images/audio-player/volumeIcon.svg" alt="volume icon">
+                    <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
+                  </div>
+                  <div class="prog-button-container">
+                    <progress class="audio-progress" max="100" value="0"></progress>
+                    <div class="audio-progress-button"></div>
+                  </div>
                 </div>
-                          </div>
-                          <div class="audio-timers-row">
-                            <div class="audio-current-position">
-                              <p>0:00</p>
-                            </div>
-                            <div class="audio-time-remaining">
-                              <p class="time-remaining-text"></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-         </div>
+                <div class="audio-timers-row">
+                  <div class="audio-current-position">
+                    <p>0:00</p>
+                  </div>
+                  <div class="audio-time-remaining">
+                    <p class="time-remaining-text"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- FORCE OF NATURE -->
           <div class='audio-player force-of-nature'>
-                      <div class="audio-lower-row">
-                        <div class="audio-area">
-                          <p class="audio-player-title"> <strong class="audio-strong">Force Of Nature </strong> </p>
-                          <div class="audio-player-row">
-                            <audio class="audio-file" src="audio/media-music/Force-of-Nature.wav"></audio>
-                            <img src="images/audio-player/playbutton.svg" class="audio-buttons" alt="play and pause button">
-                            
-                            <div class="volume-span">
-                              <img class="audio-volume" src="images/audio-player/volumeIcon.svg" alt="volume icon">
-                              <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
-                            </div>
-                             <div class="prog-button-container">
-                              <progress class="audio-progress" max="100" value="0"></progress>
-                  <div class="audio-progress-button"></div>
+            <div class="audio-lower-row">
+              <div class="audio-area">
+                <p class="audio-player-title"> <strong class="audio-strong">Force Of Nature </strong> </p>
+                <div class="audio-player-row">
+                  <audio class="audio-file" src="audio/media-music/Force-of-Nature.wav"></audio>
+                  <img src="images/audio-player/playbutton.svg" class="audio-buttons" alt="play and pause button">
+
+                  <div class="volume-span">
+                    <img class="audio-volume" src="images/audio-player/volumeIcon.svg" alt="volume icon">
+                    <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
+                  </div>
+                  <div class="prog-button-container">
+                    <progress class="audio-progress" max="100" value="0"></progress>
+                    <div class="audio-progress-button"></div>
+                  </div>
                 </div>
-                          </div>
-                          <div class="audio-timers-row">
-                            <div class="audio-current-position">
-                              <p>0:00</p>
-                            </div>
-                            <div class="audio-time-remaining">
-                              <p class="time-remaining-text"></p>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                <div class="audio-timers-row">
+                  <div class="audio-current-position">
+                    <p>0:00</p>
+                  </div>
+                  <div class="audio-time-remaining">
+                    <p class="time-remaining-text"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- end Audio players -->
         </div>
-<!--            DISPLAY WINDOW              -->
+        <!--            DISPLAY WINDOW              -->
         <div class="display-window">
           <img src="images/media-music-display/flatline.png" alt="turning-point image display" class="display-image">
         </div>
       </div>
     </section>
 
-<!--                   CHAMBER MUSIC SECTION                            -->
+    <!--                   CHAMBER MUSIC SECTION                            -->
     <section class="Chamber music-sections invisible">
       <h3 class="contact-nav-text">If you would like to use or perform one of the following scores, please use the <a
           href="#contact">contact</a> section form below</h3>
@@ -471,28 +469,29 @@
       <!-- DIALOGUES -->
       <div class="comp-info dialogues">
         <h3 class="card-title">Dialogues</h3>
-        <p><strong>Instrumentation:</strong>Violin  <span class="divider">|</span> Clarinet  <span class="divider">|</span>  Piano</p>
+        <p><strong>Instrumentation:</strong>Violin <span class="divider">|</span> Clarinet <span
+            class="divider">|</span> Piano</p>
         <p><strong>Year:</strong> 2016</p>
         <p><strong>Movements:</strong> 5</p>
         <p><strong>Duration:</strong> 6'</p>
         <p><strong>Score Sample:</strong> <a href="scores/Chamber/Dialogues.pdf" target="_blank"><i
-          class="far fa-file-pdf"></i></a> </p>
+              class="far fa-file-pdf"></i></a> </p>
 
         <div class='small-player dialogues'>
           <div class="audio-area small-audio-area">
             <p class="audio-small-title"> Dialogues </p>
             <div class="audio-player-row small-player-row">
-              <audio class="audio-file"
-                src="audio/concert-music/Chamber/dialogues.wav"></audio>
+              <audio class="audio-file" src="audio/concert-music/Chamber/dialogues.wav"></audio>
               <img src="images/audio-player/playbutton.svg" class="audio-buttons small-button" alt="small play button">
               <div class="prog-button-container">
-              <progress class="audio-progress small-progress" max="100" value="0"></progress>
-              <div class="small-progress-button"></div>
-            </div>
+                <progress class="audio-progress small-progress" max="100" value="0"></progress>
+                <div class="small-progress-button"></div>
+              </div>
               <div class="small-volume-pair">
                 <input class="volumeBar-small" type="range" min="0" max="1" step="0.01" value="1">
-                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg" alt="small volume icon">
-                
+                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg"
+                  alt="small volume icon">
+
               </div>
             </div>
             <div class="small-atrow">
@@ -506,22 +505,22 @@
           </div>
         </div>
       </div>
-       <!-- STAR CROSSED -->
-       <div class="comp-info star-crossed">
+      <!-- STAR CROSSED -->
+      <div class="comp-info star-crossed">
         <h3 class="card-title">Star-Crossed</h3>
-        <p><strong>Instrumentation:</strong>Oboe <span class="divider">|</span> Violin <span class="divider">|</span> Cello <span class="divider">|</span> Piano</p>
+        <p><strong>Instrumentation:</strong>Oboe <span class="divider">|</span> Violin <span class="divider">|</span>
+          Cello <span class="divider">|</span> Piano</p>
         <p><strong>Year:</strong> 2014</p>
         <p><strong>Movements:</strong> 1</p>
         <p><strong>Duration:</strong> 6'</p>
         <p><strong>Score Sample:</strong> <a href="scores/Chamber//Star-Crossed.pdf" target="_blank"><i
-          class="far fa-file-pdf"></i></a> </p>
-         
+              class="far fa-file-pdf"></i></a> </p>
+
         <div class='small-player star-crossed'>
           <div class="audio-area small-audio-area">
             <p class="audio-small-title"> Star-Crossed </p>
             <div class="audio-player-row small-player-row">
-              <audio class="audio-file"
-                src="audio/concert-music/Chamber/Star-Crossed.mp3"></audio>
+              <audio class="audio-file" src="audio/concert-music/Chamber/Star-Crossed.mp3"></audio>
               <img src="images/audio-player/playbutton.svg" class="audio-buttons small-button" alt="small play button">
               <div class="prog-button-container">
                 <progress class="audio-progress small-progress" max="100" value="0"></progress>
@@ -529,8 +528,9 @@
               </div>
               <div class="small-volume-pair">
                 <input class="volumeBar-small" type="range" min="0" max="1" step="0.01" value="1">
-                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg" alt="small volume icon">
-               
+                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg"
+                  alt="small volume icon">
+
               </div>
             </div>
             <div class="small-atrow">
@@ -544,31 +544,75 @@
           </div>
         </div>
       </div>
-       <!-- NEON GAMES -->
-       <div class="comp-info neon-games">
+      <!-- NEON GAMES -->
+      <div class="comp-info neon-games">
         <h3 class="card-title">Neon Games</h3>
-        <p><strong>Instrumentation:</strong>Flute <span class="divider">|</span> Alto Sax <span class="divider">|</span> Piano </p>
+        <p><strong>Instrumentation:</strong>Flute <span class="divider">|</span> Alto Sax <span class="divider">|</span>
+          Piano </p>
         <p><strong>Year:</strong> 2012</p>
         <p><strong>Movements:</strong> 1</p>
         <p><strong>Duration:</strong> 9'</p>
-          <p><strong>Score Sample:</strong> <a href="scores/Chamber/Neon-Games.pdf" target="_blank"><i
-            class="far fa-file-pdf"></i></a> </p>
-           
-          <div class='small-player neon-games'>
-            <div class="audio-area small-audio-area">
-              <p class="audio-small-title"> Neon Games (excerpt) </p>
-              <div class="audio-player-row small-player-row">
-                <audio class="audio-file"
-                  src="audio/concert-music/Chamber/neon-games-sample.mp3"></audio>
-                <img src="images/audio-player/playbutton.svg" class="audio-buttons small-button" alt="small play button">
-                <div class="prog-button-container">
+        <p><strong>Score Sample:</strong> <a href="scores/Chamber/Neon-Games.pdf" target="_blank"><i
+              class="far fa-file-pdf"></i></a> </p>
+
+        <div class='small-player neon-games'>
+          <div class="audio-area small-audio-area">
+            <p class="audio-small-title"> Neon Games (excerpt) </p>
+            <div class="audio-player-row small-player-row">
+              <audio class="audio-file" src="audio/concert-music/Chamber/neon-games-sample.mp3"></audio>
+              <img src="images/audio-player/playbutton.svg" class="audio-buttons small-button" alt="small play button">
+              <div class="prog-button-container">
                 <progress class="audio-progress small-progress" max="100" value="0"></progress>
                 <div class="small-progress-button"></div>
               </div>
+              <div class="small-volume-pair">
+                <input class="volumeBar-small" type="range" min="0" max="1" step="0.01" value="1">
+                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg"
+                  alt="small volume icon">
+
+              </div>
+            </div>
+            <div class="small-atrow">
+              <div class="audio-current-position small-acp">
+                <p>0:00</p>
+              </div>
+              <div class="audio-time-remaining small-atr">
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- WOODWIND VARIATIONS -->
+      <div class="comp-info wood-and-winds">
+        <h3 class="card-title">Wood and Winds</h3>
+        <p><strong>Instrumentation:</strong>
+          <div class="instrumentation">
+            <p>Flute <span class="divider">|</span> Bb Cl./Bass Clar. <span class="divider">|</span> Oboe/E.H. <span
+                class="divider">|</span> Bassoon <span class="divider">|</span> 2 Perc.</p>
+          </div>
+          <p><strong>Year:</strong> 2012</p>
+          <p><strong>Movements:</strong> 7</p>
+          <p><strong>Duration:</strong> 13'</p>
+          <p><strong>Score Sample:</strong> <a href="scores/Chamber/Wood-and-Winds.pdf" target="_blank"><i
+                class="far fa-file-pdf"></i></a> </p>
+
+          <div class='small-player wood-and-winds'>
+            <div class="audio-area small-audio-area">
+              <p class="audio-small-title"> Wood and Winds </p>
+              <div class="audio-player-row small-player-row">
+                <audio class="audio-file" src="audio/concert-music/Chamber/Wood-And-Winds.mp3"></audio>
+                <img src="images/audio-player/playbutton.svg" class="audio-buttons small-button"
+                  alt="small play button">
+                <div class="prog-button-container">
+                  <progress class="audio-progress small-progress" max="100" value="0"></progress>
+                  <div class="small-progress-button"></div>
+                </div>
                 <div class="small-volume-pair">
                   <input class="volumeBar-small" type="range" min="0" max="1" step="0.01" value="1">
-                  <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg" alt="small volume icon">
-                  
+                  <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg"
+                    alt="small volume icon">
+
                 </div>
               </div>
               <div class="small-atrow">
@@ -581,63 +625,24 @@
               </div>
             </div>
           </div>
-      </div>
-       <!-- WOODWIND VARIATIONS -->
-       <div class="comp-info wood-and-winds">
-        <h3 class="card-title">Wood and Winds</h3>
-        <p><strong>Instrumentation:</strong>
-          <div class="instrumentation">
-            <p>Flute <span class="divider">|</span> Bb Cl./Bass Clar. <span class="divider">|</span> Oboe/E.H. <span class="divider">|</span> Bassoon <span class="divider">|</span> 2 Perc.</p>
-          </div>
-        <p><strong>Year:</strong> 2012</p>
-        <p><strong>Movements:</strong> 7</p>
-        <p><strong>Duration:</strong> 13'</p>
-        <p><strong>Score Sample:</strong> <a href="scores/Chamber/Wood-and-Winds.pdf" target="_blank"><i
-          class="far fa-file-pdf"></i></a> </p>
-         
-        <div class='small-player wood-and-winds'>
-          <div class="audio-area small-audio-area">
-            <p class="audio-small-title"> Wood and Winds </p>
-            <div class="audio-player-row small-player-row">
-              <audio class="audio-file" src="audio/concert-music/Chamber/Wood-And-Winds.mp3"></audio>
-              <img src="images/audio-player/playbutton.svg" class="audio-buttons small-button" alt="small play button">
-              <div class="prog-button-container">
-                <progress class="audio-progress small-progress" max="100" value="0"></progress>
-                <div class="small-progress-button"></div>
-              </div>
-              <div class="small-volume-pair">
-                <input class="volumeBar-small" type="range" min="0" max="1" step="0.01" value="1">
-                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg" alt="small volume icon">
-                
-              </div>
-            </div>
-            <div class="small-atrow">
-              <div class="audio-current-position small-acp">
-                <p>0:00</p>
-              </div>
-              <div class="audio-time-remaining small-atr">
-                <p></p>
-              </div>
-            </div>
-          </div>
-        </div>
 
       </div>
-        <!-- PIERROT MINIATURES -->
-        <div class="comp-info pierrot">
-          <h3 class="card-title">Pierrot Miniatures</h3>
-          <p><strong>Instrumentation:</strong></p>
-            <div class="instrumentation">
-              <p>Picc./fl./Afl <span class="divider">|</span> Bb Cl./B Clar. <span class="divider">|</span> Vln. <span class="divider">|</span> Cello <span class="divider">|</span> Piano</p>
-            </div>
-          <p><strong>Year:</strong> 2009</p>
-          <p><strong>Movements:</strong> 5</p>
-          <p><strong>Duration:</strong> 8'</p>
-          <p><strong>Score Sample:</strong> <a href="scores/Chamber/Pierrot-Miniatures.pdf" target="_blank"><i
-            class="far fa-file-pdf"></i></a> </p>
-            
-          
+      <!-- PIERROT MINIATURES -->
+      <div class="comp-info pierrot">
+        <h3 class="card-title">Pierrot Miniatures</h3>
+        <p><strong>Instrumentation:</strong></p>
+        <div class="instrumentation">
+          <p>Picc./fl./Afl <span class="divider">|</span> Bb Cl./B Clar. <span class="divider">|</span> Vln. <span
+              class="divider">|</span> Cello <span class="divider">|</span> Piano</p>
         </div>
+        <p><strong>Year:</strong> 2009</p>
+        <p><strong>Movements:</strong> 5</p>
+        <p><strong>Duration:</strong> 8'</p>
+        <p><strong>Score Sample:</strong> <a href="scores/Chamber/Pierrot-Miniatures.pdf" target="_blank"><i
+              class="far fa-file-pdf"></i></a> </p>
+
+
+      </div>
       <!-- CINQUE  SOUVENIRS -->
       <div class="comp-info cinq-souvenirs">
         <h3 class="card-title">Cinq Souvenirs de La France</h3>
@@ -646,8 +651,8 @@
         <p><strong>Movements:</strong> 5</p>
         <p><strong>Duration:</strong> 24'</p>
         <p><strong>Score Sample:</strong> <a href="scores/Chamber/Cinq-Souvenirs.pdf" target="_blank"><i
-          class="far fa-file-pdf"></i></a> </p>
-         
+              class="far fa-file-pdf"></i></a> </p>
+
         <div class='small-player cinque-souvenirs'>
           <div class="audio-area small-audio-area">
             <p class="audio-small-title"> IV. Enterrement Catholique </p>
@@ -660,8 +665,9 @@
               </div>
               <div class="small-volume-pair">
                 <input class="volumeBar-small" type="range" min="0" max="1" step="0.01" value="1">
-                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg" alt="small volume icon">
-                
+                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg"
+                  alt="small volume icon">
+
               </div>
             </div>
             <div class="small-atrow">
@@ -674,9 +680,9 @@
             </div>
           </div>
         </div>
-      </div>   
+      </div>
     </section>
-<!--                    ORCHESTRAL MUSIC                     -->
+    <!--                    ORCHESTRAL MUSIC                     -->
     <section class="Orchestral music-sections invisible">
       <h3 class="contact-nav-text">If you would like to use or perform one of the following scores, please use the <a
           href="#contact">contact</a> section form below</h3>
@@ -690,7 +696,7 @@
         <p><strong>Movements:</strong> 1</p>
         <p><strong>Duration:</strong> 14'</p>
         <p><strong>Score Sample:</strong> <i class="far fa-file-pdf"></i> (coming soon)</p>
-        
+
       </div>
       <!--TERMINAL NIGHT -->
       <div class="comp-info terminal-night">
@@ -703,7 +709,7 @@
         <p><strong>Duration:</strong> 9'</p>
         <p><strong>Score Sample:</strong> <a href="scores/Orchestral/Terminal-Night-StonyBrook.pdf" target="_blank"><i
               class="far fa-file-pdf"></i></a> </p>
-         
+
       </div>
       <!--TERMINAL LIGHT -->
       <div class="comp-info terminal-light">
@@ -716,15 +722,15 @@
         <p><strong>Duration:</strong> 6'</p>
         <p><strong>Score Sample:</strong> <a href="scores/Orchestral/Terminal-Light-StonyBrook.pdf" target="_blank"><i
               class="far fa-file-pdf"></i></a> </p>
-         
+
       </div>
 
     </section>
-<!--                    VOCAL/CHORAL MUSIC SECTION                    -->
+    <!--                    VOCAL/CHORAL MUSIC SECTION                    -->
     <section class="Vocal/Choral music-sections invisible">
       <h3 class="contact-nav-text">If you would like to use or perform one of the following scores, please use the <a
           href="#contact">contact</a> section form below</h3>
-          <!--CHAMBER OPERA-->
+      <!--CHAMBER OPERA-->
       <div class="comp-info opera">
         <h3 class="card-title"> Meru </h3>
         <p><strong>Instrumentation:</strong>Chamber Opera</p>
@@ -733,7 +739,7 @@
         <p><strong>Duration:</strong> 90'</p>
         <p><strong>Libretto:</strong> Jennifer Campbell</p>
         <p><strong>Score Sample:</strong> <i class="far fa-file-pdf"></i> Composing </p>
-        
+
       </div>
       <!-- SONG CYCLE 2020 -->
       <div class="comp-info song-cycle">
@@ -744,9 +750,9 @@
         <p><strong>Duration:</strong> 14-20'</p>
         <p><strong>Text:</strong> Liz Christensen</p>
         <p><strong>Score Sample:</strong> <i class="far fa-file-pdf"></i> Composing</p>
-        
+
       </div>
-          <!-- HABIT -->
+      <!-- HABIT -->
       <div class="comp-info habit">
         <h3 class="card-title">Habit</h3>
         <p><strong>Instrumentation:</strong>High Voice and Piano</p>
@@ -755,8 +761,8 @@
         <p><strong>Duration:</strong> 20'30"</p>
         <p><strong>Text:</strong> Jennifer Campbell</p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/Habit.pdf" target="_blank"><i
-          class="far fa-file-pdf"></i></a> </p>
-         
+              class="far fa-file-pdf"></i></a> </p>
+
         <div class='small-player habit'>
           <div class="audio-area small-audio-area">
             <p class="audio-small-title"> 1. Aftermath </p>
@@ -769,8 +775,9 @@
               </div>
               <div class="small-volume-pair">
                 <input class="volumeBar-small" type="range" min="0" max="1" step="0.01" value="1">
-                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg" alt="small volume icon">
-                
+                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg"
+                  alt="small volume icon">
+
               </div>
             </div>
             <div class="small-atrow">
@@ -793,8 +800,8 @@
         <p><strong>Duration:</strong> 4'</p>
         <p><strong>Text:</strong> John Jacob Niles</p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/I-Wonder-as-I-Wander-2018.pdf" target="_blank"><i
-          class="far fa-file-pdf"></i></a> </p>
-         
+              class="far fa-file-pdf"></i></a> </p>
+
       </div>
       <!--SILENT NIGHT -->
       <div class="comp-info silent-night">
@@ -805,8 +812,8 @@
         <p><strong>Duration:</strong> 4'30"</p>
         <p><strong>Text:</strong>Joseph Mohr</p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/Silent-Night.pdf" target="_blank"><i
-          class="far fa-file-pdf"></i></a> </p>
-         
+              class="far fa-file-pdf"></i></a> </p>
+
       </div>
       <!--COME COME YE SAINTS -->
       <div class="comp-info come-come">
@@ -817,11 +824,11 @@
         <p><strong>Duration:</strong> 5'</p>
         <p><strong>Text:</strong> William Clayton</p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/Come-Come-Ye-Saints.pdf" target="_blank"><i
-          class="far fa-file-pdf"></i></a> </p>
-         
+              class="far fa-file-pdf"></i></a> </p>
+
       </div>
-       <!--THERE WILL COME SOFT RAINS-->
-       <div class="comp-info soft-rains">
+      <!--THERE WILL COME SOFT RAINS-->
+      <div class="comp-info soft-rains">
         <h3 class="card-title">There Will Come Soft Rains</h3>
         <p><strong>Instrumentation:</strong>SSSSAAAATTTTBBBB Choir</p>
         <p><strong>Year:</strong> 2012</p>
@@ -829,8 +836,8 @@
         <p><strong>Duration:</strong> 4'</p>
         <p><strong>Text:</strong> Sara Teasdale</p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/There-Will-come-soft-Rains.pdf" target="_blank"><i
-          class="far fa-file-pdf"></i></a> </p>
-         
+              class="far fa-file-pdf"></i></a> </p>
+
       </div>
       <!--A KNG'S PRAYER-->
       <div class="comp-info kings-prayer">
@@ -841,8 +848,8 @@
         <p><strong>Duration:</strong> 4'</p>
         <p><strong>Text:</strong> Alma 22:15-18 </p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/A-King's-Prayer.pdf" target="_blank"><i
-          class="far fa-file-pdf"></i></a> </p>
-         
+              class="far fa-file-pdf"></i></a> </p>
+
       </div>
       <!--3 CHRISTMAS CAROLS -->
       <div class="comp-info 3-christmas-carols">
@@ -853,13 +860,12 @@
         <p><strong>Duration:</strong> 13'</p>
         <p><strong>Text:</strong> Traditional Texts</p>
         <p><strong>Score Sample:</strong> <i class="far fa-file-pdf"></i> </p>
-         
+
         <div class='small-player three-christmas-carols'>
           <div class="audio-area small-audio-area">
             <p class="audio-small-title"> 1. O Come, O Come Emanuel </p>
             <div class="audio-player-row small-player-row">
-              <audio class="audio-file"
-                src="audio/concert-music/VocalChoral/O-Come-O-Come-Emanuel.wav"></audio>
+              <audio class="audio-file" src="audio/concert-music/VocalChoral/O-Come-O-Come-Emanuel.wav"></audio>
               <img src="images/audio-player/playbutton.svg" class="audio-buttons small-button" alt="small play button">
               <div class="prog-button-container">
                 <progress class="audio-progress small-progress" max="100" value="0"></progress>
@@ -867,8 +873,9 @@
               </div>
               <div class="small-volume-pair">
                 <input class="volumeBar-small" type="range" min="0" max="1" step="0.01" value="1">
-                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg" alt="small volume icon">
-                
+                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg"
+                  alt="small volume icon">
+
               </div>
             </div>
             <div class="small-atrow">
@@ -891,10 +898,10 @@
         <p><strong>Duration:</strong> 4'</p>
         <p><strong>Text:</strong> Sara Teasdale</p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/Crystal-Gazer.pdf" target="_blank"><i
-          class="far fa-file-pdf"></i></a> </p>
-         
+              class="far fa-file-pdf"></i></a> </p>
+
       </div>
-      
+
       <!--TRISTESSES DE LA LUNE -->
       <div class="comp-info tristesse">
         <h3 class="card-title">3 Songs on a Poem by Baudelaire</h3>
@@ -904,8 +911,8 @@
         <p><strong>Duration:</strong> 4'30"</p>
         <p><strong>Text:</strong> Charles Baudelaire</p>
         <p><strong>Score Sample:</strong> <a href="scores/VocalChoral/JPART.pdf" target="_blank"><i
-          class="far fa-file-pdf"></i></a> </p>
-         
+              class="far fa-file-pdf"></i></a> </p>
+
         <div class='small-player tristesses'>
           <div class="audio-area small-audio-area">
             <p class="audio-small-title"> 3 Songs on a Poem by Baudelaire </p>
@@ -919,8 +926,9 @@
               </div>
               <div class="small-volume-pair">
                 <input class="volumeBar-small" type="range" min="0" max="1" step="0.01" value="1">
-                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg" alt="small volume icon">
-                
+                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg"
+                  alt="small volume icon">
+
               </div>
             </div>
             <div class="small-atrow">
@@ -935,12 +943,12 @@
         </div>
 
       </div>
-      
-      
-      
+
+
+
 
     </section>
-<!--                    SOLO INSTRUMENTS                    -->
+    <!--                    SOLO INSTRUMENTS                    -->
     <section class="Solo music-sections invisible">
       <h3 class="contact-nav-text">If you would like to use or perform one of the following scores, please use the <a
           href="#contact">contact</a> section form below</h3>
@@ -952,35 +960,36 @@
         <p><strong>Movements:</strong> 9</p>
         <p><strong>Duration:</strong> 30' </p>
         <p><strong>Score Sample:</strong> <a href="scores//solo/Copernicus-Etudes.pdf" target="_blank"><i
-          class="far fa-file-pdf"></i></a> </p>
-       
-            
-          <div class='small-player copernicus-etudes'>
-            <div class="audio-area small-audio-area">
+              class="far fa-file-pdf"></i></a> </p>
+
+
+        <div class='small-player copernicus-etudes'>
+          <div class="audio-area small-audio-area">
             <p class="audio-small-title"> Copernicus Etudes </p>
-              <div class="audio-player-row small-player-row">
-                <audio class="audio-file" src="audio/concert-music/Solo/copernicus-etudes.mp3"></audio>
-                <img src="images/audio-player/playbutton.svg" class="audio-buttons small-button" alt="small play button">
-                <div class="prog-button-container">
+            <div class="audio-player-row small-player-row">
+              <audio class="audio-file" src="audio/concert-music/Solo/copernicus-etudes.mp3"></audio>
+              <img src="images/audio-player/playbutton.svg" class="audio-buttons small-button" alt="small play button">
+              <div class="prog-button-container">
                 <progress class="audio-progress small-progress" max="100" value="0"></progress>
                 <div class="small-progress-button"></div>
               </div>
-                <div class="small-volume-pair">
-                  <input class="volumeBar-small" type="range" min="0" max="1" step="0.01" value="1">
-                  <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg" alt="small volume icon">
-                  
-                </div>
+              <div class="small-volume-pair">
+                <input class="volumeBar-small" type="range" min="0" max="1" step="0.01" value="1">
+                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg"
+                  alt="small volume icon">
+
               </div>
-              <div class="small-atrow">
-                <div class="audio-current-position small-acp">
-                  <p>0:00</p>
-                </div>
-                <div class="audio-time-remaining small-atr">
-                  <p></p>
-                </div>
+            </div>
+            <div class="small-atrow">
+              <div class="audio-current-position small-acp">
+                <p>0:00</p>
+              </div>
+              <div class="audio-time-remaining small-atr">
+                <p></p>
               </div>
             </div>
           </div>
+        </div>
       </div>
       <!-- THREE PIECES FOR CLARINET AND PIANO -->
       <div class="comp-info three-pieces-clarinet">
@@ -992,34 +1001,34 @@
         <p><strong>Score Sample:</strong> <a href="scores/Solo/Clarinet.pdf" target="_blank"><i
               class="far fa-file-pdf"></i></a> </p>
         <!-- Audio Sample Row -->
-          <div class='small-player three-pieces-clarinet'>
-            <div class="audio-area small-audio-area">
+        <div class='small-player three-pieces-clarinet'>
+          <div class="audio-area small-audio-area">
             <p class="audio-small-title"> Three Pieces for Clarinet and Piano </p>
-              <div class="audio-player-row small-player-row">
-                <audio class="audio-file"
-                  src="audio/concert-music/Solo/3-Pieces-for-Clarinet.wav"></audio>
-                <img src="images/audio-player/playbutton.svg" class="audio-buttons small-button" alt="small play button">
-                <div class="prog-button-container">
+            <div class="audio-player-row small-player-row">
+              <audio class="audio-file" src="audio/concert-music/Solo/3-Pieces-for-Clarinet.wav"></audio>
+              <img src="images/audio-player/playbutton.svg" class="audio-buttons small-button" alt="small play button">
+              <div class="prog-button-container">
                 <progress class="audio-progress small-progress" max="100" value="0"></progress>
                 <div class="small-progress-button"></div>
               </div>
-                <div class="small-volume-pair">
-                  <input class="volumeBar-small" type="range" min="0" max="1" step="0.01" value="1">
-                  <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg" alt="small volume icon">
-                  
-                </div>
+              <div class="small-volume-pair">
+                <input class="volumeBar-small" type="range" min="0" max="1" step="0.01" value="1">
+                <img class="audio-volume small-volume" src="images/audio-player/volumeIconWhite.svg"
+                  alt="small volume icon">
+
               </div>
-              <div class="small-atrow">
-                <div class="audio-current-position small-acp">
-                  <p>0:00</p>
-                </div>
-                <div class="audio-time-remaining small-atr">
-                  <p></p>
-                </div>
+            </div>
+            <div class="small-atrow">
+              <div class="audio-current-position small-acp">
+                <p>0:00</p>
+              </div>
+              <div class="audio-time-remaining small-atr">
+                <p></p>
               </div>
             </div>
           </div>
-       
+        </div>
+
       </div>
     </section>
   </section>
@@ -1038,7 +1047,8 @@
             the University of Utah. I will be setting some texts from lyricist <span class="news-expand">Liz
               Christensen</span>. The texts focus on themes of self-awareness, love, loss, and mental health. There is a
             recital scheduled for the fall that will feature the premiere of this and a few other works.
-            Stay tuned for more info about performance dates and venues, and general updates about the process of setting these texts to music.</p>
+            Stay tuned for more info about performance dates and venues, and general updates about the process of
+            setting these texts to music.</p>
         </div>
         <div class="news-slot-one mandi-b">
           <img src="images/news/mandi-Barrus.png" class="news-image-1" alt="Mandi Barrus Head shot">
@@ -1076,19 +1086,26 @@
       <div class="news-row opera">
         <div class="news-slot-main">
           <h2 class="news-item-title"> Chamber Opera Commission</h2>
-          <p class="news-text"> I will be composing a chamber opera to be premiered in the Fall 2021 in association with Opera Contempo.
+          <p class="news-text"> I will be composing a chamber opera to be premiered in the Fall 2021 in association with
+            Opera Contempo.
             The Libretto will be written by the extremely talented Jennifer Campbell, who I have previously worked with
             on the song cycle 'Habit'. I can't reveal too much about the plot at this point, but it centers around
-            technology and what it means to be human. Look for updates and insights about the process on my blog (to be created soon) as the
+            technology and what it means to be human. Look for updates and insights about the process on my blog (to be
+            created soon) as the
             year progresses!</p>
 
         </div>
         <div class="news-slot-one">
           <img src="images/news/jennyHead.JPG" class="news-image square" alt="Jennifer Campbell Headshot">
-          <div > <p class="news-text"> Jennifer Campbell is a writer with a background in history, journalism and video. Her articles have
-            appeared on Faithcounts.org and in Utah Stories Magazine. She is currently working on a fantasy novel set in
-            alt-world ancient Persia. When not writing she's busy getting called "noob" by her 11-year-old son, escaping
-            to the Uintas and ripping it up on the flag football field.</p> </div>
+          <div>
+            <p class="news-text"> Jennifer Campbell is a writer with a background in history, journalism and video. Her
+              articles have
+              appeared on Faithcounts.org and in Utah Stories Magazine. She is currently working on a fantasy novel set
+              in
+              alt-world ancient Persia. When not writing she's busy getting called "noob" by her 11-year-old son,
+              escaping
+              to the Uintas and ripping it up on the flag football field.</p>
+          </div>
         </div>
 
       </div>
@@ -1099,16 +1116,19 @@
           <p class="news-text"> I have accepted an invitation to be the composer-in-residence for Opera
             Contempo. I look forward to helping to grow this important new outlet for modern voices and stories. One of
             the goals of Opera Contempo is to create space for new composers to debut new works about
-            contemporary topics. Along with composing an opera I'll be serving on the board of directors and giving input and composition-related support to other projects. There are some really exciting things planned for this upcoming season! </p>
+            contemporary topics. Along with composing an opera I'll be serving on the board of directors and giving
+            input and composition-related support to other projects. There are some really exciting things planned for
+            this upcoming season! </p>
         </div>
         <div class="news-slot-one">
-          <a href="http://www.operacontempo.com/"><img src="images/news/OCheader.png" class="news-image-full" alt="opera Contempo header image"></a>
+          <a href="http://www.operacontempo.com/"><img src="images/news/OCheader.png" class="news-image-full"
+              alt="opera Contempo header image"></a>
         </div>
       </div>
     </div>
   </section>
   <!--                    BLOG SECTION                          -->
-<!-- 
+  <!-- 
   <section class="blog anchor" id="blog">
     <h2 class="blog-title"> Blog </h2>
     <div class="blog-items-container">
@@ -1136,20 +1156,35 @@
     <h2 class="about-me-title"> About Me</h2>
     <div class="about-me-bg">
       <div class="about-me-text">
-      <img src="images/headshots/David-Smile.png" class="my-image" alt="David Campbell Smiling Image">
-      <p> I am a composer living in Salt Lake City Utah. When I was first introduced to writing music I was immediately fascinated with the sheer amount of possibilities that existed from the simple combination of notes and rhythms. That a composer can create art that has the potential to be breathtakingly beautiful, devastatingly hideous, heart-wrenching, horrific, silly, intricate, or even incomprehensible is such an amazing reality. </p>
-      <p>Over the years I’ve had the chance to learn about music more formally at Southern Utah University, Western Washington University, and Stony Brook University where I had the privilege to study with composers whose music and knowledge I greatly admire including Hal Campbell, Keith Bradshaw, Leslie Sommer, Roger Briggs, Sheila Silver, and Perry Goldstein. Their lessons and the knowledge gained through studying great and obscure composers has helped shape my own musical voice.</p>
-      <p>I find myself of two minds more recently. I love the freedom of writing concert music in my own style, but I’ve found great enjoyment and challenge in writing music for media. This site represents that musical duality. Here you can find a sample of some of my media works as well as scores and music for my concert works. I’m very excited about new projects on the horizon in both areas and hope that you will come back and listen as I compose new works and add new projects to this site. </p>
-      <p>Outside of music I am learning <a href="https://www.developer.davidhalcampbell.com">web development.</a> I am an avid weightlifter, I love playing most sports, attending cultural and intellectually stimulating events, and nights out on the town dancing until 2 AM with friends. I am perpetually hoping to finish my science fiction novel. I love to create!</p>
+        <img src="images/headshots/David-Smile.png" class="my-image" alt="David Campbell Smiling Image">
+        <p> I am a composer living in Salt Lake City Utah. When I was first introduced to writing music I was
+          immediately fascinated with the sheer amount of possibilities that existed from the simple combination of
+          notes and rhythms. That a composer can create art that has the potential to be breathtakingly beautiful,
+          devastatingly hideous, heart-wrenching, horrific, silly, intricate, or even incomprehensible is such an
+          amazing reality. </p>
+        <p>Over the years I’ve had the chance to learn about music more formally at Southern Utah University, Western
+          Washington University, and Stony Brook University where I had the privilege to study with composers whose
+          music and knowledge I greatly admire including Hal Campbell, Keith Bradshaw, Leslie Sommer, Roger Briggs,
+          Sheila Silver, and Perry Goldstein. Their lessons and the knowledge gained through studying great and obscure
+          composers has helped shape my own musical voice.</p>
+        <p>I find myself of two minds more recently. I love the freedom of writing concert music in my own style, but
+          I’ve found great enjoyment and challenge in writing music for media. This site represents that musical
+          duality. Here you can find a sample of some of my media works as well as scores and music for my concert
+          works. I’m very excited about new projects on the horizon in both areas and hope that you will come back and
+          listen as I compose new works and add new projects to this site. </p>
+        <p>Outside of music I am learning <a href="https://www.developer.davidhalcampbell.com">web development.</a> I am
+          an avid weightlifter, I love playing most sports, attending cultural and intellectually stimulating events,
+          and nights out on the town dancing until 2 AM with friends. I am perpetually hoping to finish my science
+          fiction novel. I love to create!</p>
+      </div>
     </div>
-  </div>
   </div>
   <!-- CONTACT SECTION -->
 
   <section class="contact anchor" id="contact">
     <h2 class="contact-title"> Contact </h2>
     <div class="contact-body">
-     
+
       <form method="POST" action="form-to-email.php" class="contact-form" name="contact-form-music">
         <p> For inquiries about compositions, bookings, commissions, or other services please fill out and send the form
           below.</p>
@@ -1167,17 +1202,17 @@
           <label for="email-content"> Message: </label>
           <textarea name="email-content" id="email-content" rows="10" cols="80"></textarea>
         </div>
-        <input type="submit"  name="submit" class="email-submit" value="Submit">
+        <input type="submit" name="submit" class="email-submit" value="Submit">
       </form>
     </div>
 
 
-    
-  </section>
- <!--           HOME SECTION - COMPOSER QUOTE                   -->
 
- 
-  
+  </section>
+  <!--           HOME SECTION - COMPOSER QUOTE                   -->
+
+
+
   <!-- FOOTER  -->
 
   <footer>
@@ -1185,14 +1220,19 @@
       <p>A</p>
       <img class="signature" src="images/main/david-sig-white-shadow.svg" alt="David Campbell Signature">
       <p>Website</p>
-  </div>
-  <div class="nav-icons-footer">
-  
-      <a href="https://github.com/davidthecomposer?tab=repositories"><img src="images/main/github.svg" alt="github link" class="footer-icons"></a>
-      <a href="https://www.facebook.com/David-Campbell-Composer-104863241108077/"><img src="images/main/facebook.svg" alt="facebook link" class="footer-icons"></a>
-      <a href="https://www.instagram.com/david_the_composer/?hl=en"><img src="images/main/instagram.svg" alt="instagram link" class="footer-icons"></a>
-      <a href="https://twitter.com/David70298992"><img src="images/main/twitter.svg" alt="twitter link" class="footer-icons"></a>
-  </div></footer>
+    </div>
+    <div class="nav-icons-footer">
+
+      <a href="https://github.com/davidthecomposer?tab=repositories"><img src="images/main/github.svg" alt="github link"
+          class="footer-icons"></a>
+      <a href="https://www.facebook.com/David-Campbell-Composer-104863241108077/"><img src="images/main/facebook.svg"
+          alt="facebook link" class="footer-icons"></a>
+      <a href="https://www.instagram.com/david_the_composer/?hl=en"><img src="images/main/instagram.svg"
+          alt="instagram link" class="footer-icons"></a>
+      <a href="https://twitter.com/David70298992"><img src="images/main/twitter.svg" alt="twitter link"
+          class="footer-icons"></a>
+    </div>
+  </footer>
   <h2 class="spotlight-text">Filler</h2>
   <h2 class="author-name">-Leonard Bernstein</h2>
   <script type="module" src="index.js "></script>
