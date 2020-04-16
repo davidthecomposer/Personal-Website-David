@@ -80,8 +80,7 @@ class SmallAudioPlayer {
       this.audio.volume = event.target.value;
     }
  
-    
-   
+
     initEventHandlers() {
       this.buttons.onclick = () => this.buttonClickHandle(event);
       this.audio.ontimeupdate = () => this.getTime(event);
@@ -92,8 +91,6 @@ class SmallAudioPlayer {
        // fixes the durations not showing on init issue. Maybe not a permanent fix.
       this.getDuration();
     }
-     
-      
   }
 
   export const createSmallAudioPlayers = () => {

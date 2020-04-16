@@ -58,7 +58,7 @@ class AudioPlayer {
       event.target.value = percent * 100;
       this.audio.currentTime = this.audio.duration * percent;
     }
- 
+    
     /* Handles the play/pause button logic*/
     buttonClickHandle(event) {
       let play = 'images/audio-player/playbutton.svg';
