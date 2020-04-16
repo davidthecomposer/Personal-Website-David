@@ -741,8 +741,7 @@ height: .125rem;
   
 }
 .player-column {
-    display: inline-flex;
-    flex-direction: column;
+    
     -webkit-overflow-scrolling: touch;
     -webkit-overflow-y: scroll;
     overflow-y: scroll;
@@ -2060,6 +2059,16 @@ footer {
       }
   }
   @supports (-webkit-touch-callout: none) {
+    
+
+    .player-column {
+        display: inline-block;
+        height: 11rem;
+        width: 98vw;
+       
+        
+    }
+
     
   }
   
