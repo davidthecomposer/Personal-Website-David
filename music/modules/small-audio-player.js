@@ -88,12 +88,8 @@ class SmallAudioPlayer {
       this.audio.ondurationchange = () => this.getDuration(event);
       this.progContainer.onclick = () => this.changeLocation(event);
       this.volume.onclick = () => this.muteVolume(event);
-      this.volume.onmouseover = () => this.volumeBarInit(event);
       this.volumeBar.oninput = () => this.volumeChange(event);
-      this.volume.onmouseleave = () => this.volumeBarHide(event);
-    
-     
-       // fixes the durations not showing on init issue. Maybe not a permenant fix.
+       // fixes the durations not showing on init issue. Maybe not a permanent fix.
       this.getDuration();
     }
      
