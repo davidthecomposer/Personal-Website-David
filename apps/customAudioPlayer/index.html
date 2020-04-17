@@ -12,18 +12,18 @@
 
 <body>
 
-  <div class='audio-player one'>
+  <div class='audio-player turning-point'>
+    <div class="audio-player-row">
+      <audio class="audio-file" src="audio/Turning Point.wav"></audio>
+      <img src="images/playbutton.svg" class="audio-buttons" alt="play and pause button">
 
-    <div class="audio-lower-row">
-      <div class="audio-area">
+      <div class="audio-center">
         <p class="audio-player-title"> <strong class="audio-strong">Turning Point </strong> <small
-            class="audio-small">|</small> David Campbell</p>
-        <div class="audio-player-row">
-          <audio class="audio-file" src="audio/Turning Point.wav"></audio>
-          <img src="images/playbutton.svg" class="audio-buttons"></img>
+          class="audio-small">|</small> David Campbell</p>
+          <div class="audio-player-ghost"> </div>
+
+        <div class="prog-button-container">
           <progress class="audio-progress" max="100" value="0"></progress>
-          <img class="audio-volume" src="images/volumeIcon.svg"></img>
-          <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
           <div class="audio-progress-button"></div>
         </div>
         <div class="audio-timers-row">
@@ -31,12 +31,50 @@
             <p>0:00</p>
           </div>
           <div class="audio-time-remaining">
-            <p></p>
+            <p class="time-remaining-text"></p>
           </div>
         </div>
       </div>
-      <img src="images/turningpoint.jpg" class="audio-album-cover">
 
+      <div class="volume-span">
+        <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
+        <img class="audio-volume" src="images/volumeIcon.svg" alt="Volume Icon">
+        
+      </div>
+      <img src="images/turningpoint.jpg" class="audio-album-cover">
+    </div>
+  </div>
+
+  <div class='audio-player love-story'>
+    <div class="audio-player-row">
+      <audio class="audio-file" src="audio/Music for a Love Story.wav"></audio>
+      <img src="images/playbutton.svg" class="audio-buttons" alt="play and pause button">
+
+      <div class="audio-center">
+        <p class="audio-player-title"> <strong class="audio-strong">Music for a Love Story </strong> <small
+          class="audio-small">|</small> David Campbell</p>
+          <div class="audio-player-ghost"> </div>
+
+        <div class="prog-button-container">
+          <progress class="audio-progress" max="100" value="0"></progress>
+          <div class="audio-progress-button"></div>
+        </div>
+        <div class="audio-timers-row">
+          <div class="audio-current-position">
+            <p>0:00</p>
+          </div>
+          <div class="audio-time-remaining">
+            <p class="time-remaining-text"></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="volume-span">
+        <input class="audio-volumeBar" type="range" min="0" max="1" step="0.01" value="1">
+        <img class="audio-volume" src="images/volumeIcon.svg" alt="Volume Icon">
+        
+      </div>
+      <img src="images/Forgiveness.jpg" class="audio-album-cover">
     </div>
   </div>
 

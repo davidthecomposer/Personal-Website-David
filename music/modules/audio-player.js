@@ -22,8 +22,8 @@ class AudioPlayer {
       this.timeRemaining = this.player.querySelector('.time-remaining-text');
       this.volume = this.player.querySelector('.audio-volume');
       this.volumeBar = this.player.querySelector('.audio-volumeBar');
-      this.mediaTitle = this.player.classList[1];
       this.autoPlay = document.querySelector('.pane-1');
+      this.mediaTitle = this.player.classList[1];
       this.progContainer = this.player.querySelector('.prog-button-container');
     }
  
