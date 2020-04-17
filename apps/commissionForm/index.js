@@ -31,6 +31,7 @@ const blurActions = (event) => {
     }
 };
 
+
 // action taken when focusing or refocusing on an element
 const focusAction = (event) => {
 
@@ -53,11 +54,11 @@ const radioFocus = (event) => {
     validateId.innerHTML = event.target.validationMessage;
 };
 
-
 const addEventListeners = () => {
 
     const inputs = document.querySelectorAll('.required');
     const radios = document.querySelectorAll('input[type="radio"]');
+    const submitButton = document.querySelector('.submit');
 
     // Event Listeners for required text inputs
 
@@ -85,6 +86,7 @@ const addEventListeners = () => {
             }
         }
     }, true);
+
 
 };
 
