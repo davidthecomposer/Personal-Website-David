@@ -21,37 +21,44 @@ const hsvText = document.querySelector(".hsvText");
 const ctx = canvas.getContext("2d");
 const ctx1 = canvas.getContext("2d");
 let drag = false;
-let width1 = canvas.width;
-let height1 = canvas.height;
 const ctx2 = canvas.getContext('2d');
 const swatches = document.querySelectorAll('.swatches');
 const addSwatch = document.querySelector('.add-swatch');
 const swatchContainer = document.querySelector('.swatch-container');
-let buttons = document.querySelectorAll('.btn');
+const buttons = document.querySelectorAll('.btn');
 const headings = document.querySelectorAll('th');
 const tBody = document.querySelector('tbody');
 const sliderThumbs = document.querySelectorAll('#thumb');
 
 
+const getCanvasWidthHeight = () => {
+    const canvasWidth = window.getComputedStyle(canvas).getPropertyValue('width');
+    const canvasHeight = window.getComputedStyle(canvas).getPropertyValue('height');
+    const cWidth = Number(Math.floor(canvasWidth.slice(0, canvasWidth.length - 2)));
+    const cHeight = Number(Math.floor(canvasHeight.slice(0, canvasHeight.length - 2)));
+    canvas.width = cWidth;
+    canvas.height = cHeight;
+};
 
 const fillGradient = () => {
-
+    
+    getCanvasWidthHeight();
+   
     let hslaColor = `hsla(${hue.value},100%,50%,1)`;
     ctx.fillStyle = hslaColor;
-    ctx.fillRect(0, 0, width1, height1);
+    ctx.fillRect(0, 0,  canvas.width, canvas.height);
 
-
-    let grdWhite = ctx1.createLinearGradient(0, 0, width1, 0);
+    let grdWhite = ctx1.createLinearGradient(0, 0,  canvas.width, 0);
     grdWhite.addColorStop(0, 'rgba(255,255,255,1)');
     grdWhite.addColorStop(1, 'rgba(255,255,255,0)');
     ctx.fillStyle = grdWhite;
-    ctx.fillRect(0, 0, width1, height1);
+    ctx.fillRect(0, 0,  canvas.width, canvas.height);
 
-    let grdBlack = ctx1.createLinearGradient(0, 0, 0, height1);
+    let grdBlack = ctx1.createLinearGradient(0, 0, 0, canvas.height);
     grdBlack.addColorStop(0, 'rgba(0,0,0,0)');
     grdBlack.addColorStop(1, 'rgba(0,0,0,1)');
     ctx.fillStyle = grdBlack;
-    ctx.fillRect(0, 0, width1, height1);
+    ctx.fillRect(0, 0,  canvas.width, canvas.height);
 
 };
 
@@ -154,7 +161,6 @@ const rgbToHsv = (r, g, b) => {
 
 const hsvToRgb = (h, s, v) => {
     var r, g, b;
-
     var i = Math.floor(h * 6);
     var f = h * 6 - i;
     var p = v * (1 - s);
@@ -181,7 +187,6 @@ const hsvToRgb = (h, s, v) => {
             r = v, g = p, b = q;
             break;
     }
-
     return [r * 255, g * 255, b * 255];
 };
 
@@ -351,7 +356,6 @@ const changeBGColor = () => {
     blue.value = randB;
     alpha.value = 100;
     fillGradient();
-
 };
 
 const addAlpha = (event) => {
@@ -387,12 +391,15 @@ const mouseUp = (e) => {
 
 
 const changeColor = (e) => {
-    let x = 0;
-    let y = 0;
-    x = e.offsetX;
-    y = e.offsetY;
+   
+    
+    let x = e.offsetX;
+    let y = e.offsetY;
     let imageData = ctx.getImageData(x, y, 1, 1).data;
+    
+    
     rgbColor = `rgb(${imageData[0]},${imageData[1]},${imageData[2]})`;
+    
     preview.style.backgroundColor = rgbColor;
     red.value = imageData[0];
     green.value = imageData[1];
@@ -599,9 +606,13 @@ const buttonFunctions = (event) => {
 
 };
 
-
+const setupCanvas = () => {
+getCanvasWidthHeight();
 preview.style.backgroundColor = `hsla(${hue.value},100%,50%,1)`;
 fillGradient();
+};
+
+
 
 
 
@@ -634,14 +645,16 @@ buttons.forEach((button) => {
 
 
 });
-/* Color gradient
-To-Do:
-Code printout:
 
-when checked they are shown in a table?
-A button that will allow copying desired output to clipboard.
-save table as .pdf or some other format.
-sliders pop up, enlarge, and show color as sliding
-move sliders with mouse wheel?
+window.addEventListener('resize', setupCanvas);
 
-*/
+
+
+
+
+
+// Initial Canvas Draw
+setupCanvas();
+
+
+
