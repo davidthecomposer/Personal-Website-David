@@ -633,7 +633,7 @@ tr:nth-child(odd) {
   .by-me {
     position: relative;
     height: 1rem;
-    font-size: .8rem;
+    font-size: 1rem;
     margin: 0;
     right: 0;
   top: inherit;
