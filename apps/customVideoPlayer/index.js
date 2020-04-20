@@ -181,6 +181,7 @@ class VideoPlayer {
                     player.style.display = 'none';
                 }
             });
+            
             this.player.classList.add('player-fullscreen');
             figComp = window.getComputedStyle(this.player);
             fontHeight = figComp.getPropertyValue('height').split('p')[0];
