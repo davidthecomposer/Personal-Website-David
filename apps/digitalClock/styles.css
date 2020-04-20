@@ -50,7 +50,7 @@ h2 {
     flex-direction: column;
     border-radius: 1%;
     min-width: 322px;
-    margin: 0 auto;
+    margin: 10vh auto;
 }
 
 .time {
@@ -85,15 +85,15 @@ h2 {
 }
 
 .watch-face {
-    height: 8rem;
-    width: 8rem;
+    height: 20vw;
+    width: 20vw;
     background-image: url('images/clock.png');
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-clip: padding-box;
     z-index: 0;
     border-radius: 100%;
-    margin-bottom: .5rem;
+    margin:  5vh, 0 0 0;
     position: relative;
     display: flex;
     justify-content: center;
@@ -160,17 +160,25 @@ background-color:  rgb(255, 35, 35);
 
 .currently {
     margin: 5vh auto 0;
+    font-size: 2rem;
+    color: white;
+    padding: 0 0 1rem 0;
 }
 @media only screen and (max-width: 700px) {
     h2 {
-        font-size: 3rem;
-    }
-
-    h1 {
         font-size: 2rem;
     }
+
+    
     .signature {
         height: 2rem;
     }
+
+    .currently {
+        font-size: 1.2rem;
+    }
     
+    .clock-face {
+        margin: auto auto;
+    }
 }
