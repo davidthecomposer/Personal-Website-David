@@ -198,21 +198,16 @@ class VideoPlayer {
     }
 
 
-    clickHandle(event) {
-        let percent = event.offsetX / volumeBar.offsetWidth;
-        this.volumeFill.style.width = `${percent * 100}%`;
-        this.video.volume = percent;
-        this.volumeSlider.value = percent;
-
-    }
+    
 
     sliderVolume(event) {
+        console.log(event.target)
         let percent = event.target.value;
         this.volumeFill.style.width = `${percent * 100}%`;
         this.video.volume = percent;
     }
 
-    panelUp(event) {
+    panelUp() {
 
         this.bottomPanel.classList.add('panel-up');
         let figComp = window.getComputedStyle(this.player);
@@ -254,7 +249,7 @@ class VideoPlayer {
     muteVolume(event) {
         let muted = 'images/Video-Mute-Icon.svg';
         let unmuted = 'images/Video-Volume-Icon.svg';
-
+         console.log(event.target);
         if (event.target.src.includes(unmuted)) {
             event.target.src = muted;
             this.video.muted = true;
@@ -270,6 +265,7 @@ class VideoPlayer {
 
 
     initHandlers() {
+        
         this.video.controls = false;
         this.oneX.style.backgroundColor = 'green';
         
@@ -288,12 +284,11 @@ class VideoPlayer {
         });
         this.fullScreen.onclick = () => this.handleScreenChange(event);
         this.progressBar.onclick = () => this.changeLocation(event);
-        this.volumeBar.onmousedown = () => this.clickHandle();
-        this.volumeSlider.oninput = () => this.sliderVolume();
+        this.volumeSlider.oninput = () => this.sliderVolume(event);
         this.player.onmouseenter = () => this.panelUp();
         this.player.onmouseleave = () => this.panelDown();
         this.lights.onclick = () => this.lightSwitch(event);
-        this.volumeImage.onclick = () => this.muteVolume();
+        this.volumeImage.onclick = () => this.muteVolume(event);
         
     }
 
