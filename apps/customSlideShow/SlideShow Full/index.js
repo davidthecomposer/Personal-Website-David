@@ -346,17 +346,17 @@ const handleHints = (event) => {
 
     if (tooltipToggle.getAttribute('src') === 'images/toggleOn.svg') {
         if (classValue === 'move-up') {
-            errorMessage.innerHTML = 'Moves the row up one slot';
+            errorMessage.innerHTML = 'Moves the row forward one position';
         } else if (classValue === 'move-down') {
-            errorMessage.innerHTML = 'Moves the row down one slot';
+            errorMessage.innerHTML = 'Moves the row back one position';
         } else if (classValue === 'add-row') {
-            errorMessage.innerHTML = 'Adds a row beneath the current one';
+            errorMessage.innerHTML = 'Adds a row after the current one';
         } else if (classValue === 'subtract-row') {
             errorMessage.innerHTML = 'Deletes the current row';
         } else if (classValue === 'image-src') {
             errorMessage.innerHTML = 'Use local or http source';
         } else if (classValue === 'font-size' || classValue.match('height') || classValue.match('width')) {
-            errorMessage.innerHTML = '%, px, em, rem';
+            errorMessage.innerHTML = '%, px, em, rem, vw, vh';
         } else {
             errorMessage.innerHTML = 'Use Numbers only';
         }
@@ -418,8 +418,8 @@ const makeSlideRow = (image, mainImages) => {
                 <div class="move-up"> </div>
                 <div class="move-down"> </div>
                    </div>
-                <img class="add-row" src="images/addRow.svg" alt="">
-                <img class="subtract-row" src="images/subtractRow.svg" alt="">
+                <div class="add-row" ></div>
+                <div class="subtract-row"></div>
                 </div>
                    <p class="slide-num">${indexNumber + 1}</p>
                    <div class="inner-row-div source">
@@ -686,6 +686,8 @@ const createCodeDownload = () => {
     const JSDownload = document.getElementById('js-output');
     const codeContainers = document.querySelector('.code-containers');
     const apTimer = document.querySelector('.ap-timer');
+    const masterWidth = document.querySelector('.width');
+    const masterHeight = document.querySelector('.height');
 
     const imageHeights = [...document.querySelectorAll('.image-height')].map((img) => {
         return img.getAttribute('value');
@@ -788,94 +790,26 @@ const createCodeDownload = () => {
 
     // CSS Code Snippets
     const cssCode = `
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
 
 /* carousel related */
 

@@ -13,70 +13,7 @@
 
     <!-- Settings Section -->
 
-    <div class="settings">
-        <h1 class="settings-title">Settings</h1>
-        <div>
-            <button class="generate">Generate Code</button>
-            <div class="tooltips-toggle">
-                <p class="settings-text tooltip-toggle-label">Tooltips Off/On</p>
-                <img class="tooltip-toggle-button" src="images/toggleOn.svg" alt="">
-            </div>
-        </div>
-        <div class="upper-controls">
-            <div class="auto-play">
-                <img class='auto-play-btn' src="images/toggleOff.svg" alt="">
-                <p class="ap-text settings-text">Auto-Play Off/On</p>
-            </div>
-            <div class="duration">
-                <label for="ap-timer" class="settings-text aptime-text">Duration (ms):</label>
-                <input id="ap-timer" type="text" class="input ap-timer " name="ap-timer" size="10" value="3000">
-                
-            </div>
 
-
-            <div class="master-height">
-                <label for="height" class="settings-text">Master <span><img class="height-arrow" src="images/height.svg"
-                            alt=""></span> </label>
-                <input id="height" type="text" class="input height" name="height" size="10"
-                    value="70%">
-                
-                <label for="width" class="settings-text">Master <span><img class="width-arrow" src="images/width.svg"
-                            alt=""></span> </label>
-                <input id="width" type="text" class="input width " name="width" size="10" value="60%">
-                
-                <button class="resize">resize</button>
-            </div>
-
-
-
-            <div class="slide-rows-toggle">
-                <p class="slide-toggle-label settings-text"> Slide Editing Off/On</p>
-                <img class="slide-toggle-button" src="images/toggleOff.svg" alt="">
-            </div>
-        </div>
-        <p class="error-message"></p>
-        <img src="images/exit.svg" alt="" class="exit">
-
-        <!-- Slide Header Section -->
-
-        <div class="slide-header">
-            <p class="edit-tools"></p>
-            <p class="slide-column">Slide</p>
-            <p class="source-column">Source </p>
-            <p class="image-height-column">Img <span><img class="height-arrow" src="images/height.svg" alt=""></span>
-            </p>
-            <p class="image-width-column">Img <span><img class="width-arrow" src="images/width.svg" alt=""></span></p>
-            <p class="font-size-column">Font Size </p>
-            <p class="font-color-column">Font Color </p>
-            <p class="t-a-column">Text Ani</p>
-            <p class="s-a-column">Slide Ani</p>
-            <p class="text-column">Slide Text</p>
-        </div>
-        <div class="slide-options">
-
-        </div>
-        <div class="slide-edit-inactive"></div>
-    </div>
 
     <!-- Main Carousel -->
 
@@ -108,22 +45,119 @@
         </div>
     </div>
 
+    <div class="settings">
+        <div class="settings-top-section">
+            <div class="settings-title-row">
+
+                <h1 class="settings-title">Settings</h1>
+
+                <div class="exit"></div>
+            </div>
+            <div class="non-title-settings">
+                <div class="settings-top-row">
+                    <div class="generate-container">
+                        <button class="generate">Generate Code</button>
+                    </div>
+                    <div class="tooltips-toggle">
+                        <img class="tooltip-toggle-button" src="images/toggleOn.svg" alt="">
+                        <p class="settings-text tooltip-toggle-label">Tooltips Off/On</p>
+
+                    </div>
+
+                    <div class="slide-rows-toggle">
+                        <img class="slide-toggle-button" src="images/toggleOff.svg" alt="">
+                        <p class="slide-toggle-label settings-text"> Slide Editing Off/On</p>
+
+                    </div>
+                    <div class="auto-play">
+                        <img class='auto-play-btn' src="images/toggleOff.svg" alt="">
+                        <p class="ap-text settings-text">Auto-Play Off/On</p>
+                    </div>
+                </div>
+                <div class="upper-controls">
+
+
+
+
+                    <div class="master-height">
+                        <div class="settings-text">
+                            <label for="height">Master</label>
+                            <img class="height-arrow" src="images/height.svg" alt="">
+                        
+                        <input id="height" type="text" class="input height" name="height" size="10" value="70%">
+                    </div>
+                        <div class="settings-text">
+                        </div>
+                    </div>
+                    <div class="master-width">
+                        <div class="settings-text">
+                            <label for="width">Master </label>
+                            <img class="width-arrow" src="images/width.svg" alt="">
+
+                            <input id="width" type="text" class="input width " name="width" size="10" value="60%">
+                        </div>
+                        <button class="resize">resize</button>
+                    </div>
+
+                    
+                    <div class="duration">
+                        <label for="ap-timer" class="settings-text aptime-text"> Duration (ms):</label>
+                        <input id="ap-timer" type="text" class="input ap-timer " name="ap-timer" size="10" value="3000">
+
+                    </div>
+                    <p class="error-message"></p>
+
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Slide Header Section -->
+        <div class='settings-bottom-section'>
+            <div class="slide-edit-inactive"></div>
+            <div class="slide-header">
+                <p class="edit-tools">Tools</p>
+                <p class="slide-column">Slide</p>
+                <p class="source-column">Source </p>
+                <div class="image-height-column">
+                    <p>Img </p>
+                    <img class="height-arrow" src="images/height.svg" alt="">
+                </div>
+                <p class="image-width-column">Img <span><img class="width-arrow" src="images/width.svg" alt=""></span>
+                </p>
+                <p class="font-size-column">Font Size </p>
+                <p class="font-color-column">Font Color </p>
+                <p class="t-a-column">Text Ani</p>
+                <p class="s-a-column">Slide Ani</p>
+                <p class="text-column">Slide Text</p>
+            </div>
+            <div class="slide-options">
+
+            </div>
+
+        </div>
+    </div>
+
     <!-- code download output Section -->
     <div class="code-containers">
 
         <div class="HTML-output">
             <h1>HTML</h1>
-            <textarea name="HTML" id="html-output" cols="55" rows="9" wrap="off" onclick="this.focus();this.select()" readonly="readonly"></textarea>
+            <textarea name="HTML" id="html-output" cols="55" rows="9" wrap="off" onclick="this.focus();this.select()"
+                readonly="readonly"></textarea>
         </div>
 
         <div class="CSS-output">
             <h1>CSS</h1>
-            <textarea name="CSS" id="css-output" cols="55" rows="9" wrap="off" onclick="this.focus();this.select()" readonly="readonly"></textarea>
+            <textarea name="CSS" id="css-output" cols="55" rows="9" wrap="off" onclick="this.focus();this.select()"
+                readonly="readonly"></textarea>
         </div>
 
         <div class="JS-output">
             <h1>JS</h1>
-            <textarea name="JS" id="js-output" cols="55" rows="9" wrap="off" onclick="this.focus();this.select()" readonly="readonly"></textarea>
+            <textarea name="JS" id="js-output" cols="55" rows="9" wrap="off" onclick="this.focus();this.select()"
+                readonly="readonly"></textarea>
         </div>
     </div>
 
