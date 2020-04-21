@@ -92,7 +92,7 @@ const inputConstrain = (event) => {
                 }
             }
         }  else {
-            badletters = /[^0-9.$]/gi;
+            badLetters = /[^0-9.$]/gi;
             check = lastChar.match(badLetters);
             if (check) {
                 if (check.length === 1) {
