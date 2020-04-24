@@ -8,6 +8,7 @@ const success = (position) => {
  
     requestWeatherData(lat, lon);
     requestLocation(lat, lon);
+    newsAPI();
 }
 
 
@@ -59,14 +60,42 @@ const requestLocation = async (lat, lon) => {
 
 }
 
-export const options = {
+
+const newsAPI = async () => {
+  const response= await fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=b3252b8b9d0f44f9a0da191f3b2f8bc1');
+  const newsData = await response.json();
+  const articleTitle = document.querySelector('.article-title');
+  const author = document.querySelector('.article-author');
+  const image = document.querySelector('.article-content');
+  const randomNumber = Math.floor(Math.random() * newsData.articles.length);
+  const randomArticle = newsData.articles[randomNumber];
+  const articleContainer = document.querySelector('.article-container');
+  const articleLink = randomArticle.url;
+
+
+  articleTitle.innerText = randomArticle.title;
+  author.innerText = `- ${randomArticle.author}`;
+  image.style.backgroundImage = `url(${randomArticle.urlToImage})`;
+ 
+  const navigateToLink = (event) => {
+    window.location.href = articleLink;
+  }
+  
+  articleContainer.addEventListener('click', navigateToLink);
+
+  
+}
+
+
+
+const options = {
     enableHighAccuracy: true, 
     maximumAge: 30000, 
     timeout: 27000
   };
 
 
-  export const error = () => {
+const error = () => {
     status.textContent = 'Unable to retrieve your location';
   }
 
