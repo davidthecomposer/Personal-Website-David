@@ -1,5 +1,6 @@
 /*jshint esversion: 6 */
 
+import {initWeatherData} from './modules/weatherAPI.js';
 
 
 
@@ -35,23 +36,23 @@ const resetTimeOfDay = () => {
 
     switch (true) {
         case hour < 6:
-            locale.innerHTML = 'It is currently: Early Morning';
+            locale.innerHTML = 'Early Morning in';
             body.style.backgroundImage = "url('images/earlyMorning.jpg')";
             break;
         case hour >= 6 && hour < 12:
-            locale.innerHTML = 'It is currently: Morning';
+            locale.innerHTML = 'Morning in';
             body.style.backgroundImage = "url('images/morning.jpg')";
             break;
         case hour >= 12 && hour < 17:
-            locale.innerHTML = 'It is currently: Afternoon';
+            locale.innerHTML = 'Afternoon in';
             body.style.backgroundImage = "url('images/afternoon.jpg')";
             break;
         case hour >= 17 && hour < 20:
-            locale.innerHTML = 'It is currently: Evening';
+            locale.innerHTML = 'Evening in';
             body.style.backgroundImage = "url('images/evening.jpg')";
             break;
         case hour >= 20:
-            locale.innerHTML = 'It is currently: Night';
+            locale.innerHTML = 'Night in';
             body.style.backgroundImage = "url('images/night.jpg')";
             break;
 
@@ -96,6 +97,7 @@ const switchSeason = () => {
 resetClock();
 resetTimeOfDay();
 switchSeason();
+initWeatherData();
 
 /* More  ideas : 
 

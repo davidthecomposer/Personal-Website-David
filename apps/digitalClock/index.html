@@ -5,22 +5,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Daves Digital Clock</title>
+    <title>Digital Clock</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    
-   
-    
-        <div class="clock-face">
-            <div class="top-row">
-                <img class='season winter' src="images/winter.png" alt="winter">
-                <img class='season spring' src="images/Spring.png" alt="spring">
-                <h2 class='date'>Date Time etc</h2>
-                <img class='season summer' src="images/summer.png" alt="summer">
-                <img class='season fall' src="images/fall.png" alt="fall">
+
+
+
+    <div class="clock-face">
+        <div class="top-row">
+            <img class='season winter' src="images/winter.png" alt="winter">
+            <img class='season spring' src="images/Spring.png" alt="spring">
+            <h2 class='date'>Date Time etc</h2>
+            <img class='season summer' src="images/summer.png" alt="summer">
+            <img class='season fall' src="images/fall.png" alt="fall">
+        </div>
+      
+        
+        <div class="upper-row">
+            
+            
+           
+
+        </div>
+        
+        <div class="main-info-row">
+
+            <div class="weather-container">
+                <div class="location-container">
+                    <h3 class="currently">It is currently: Afternoon</h3>
+                    <h3 class="location-text">
+                    </h3>
+                </div>
+
+                <div class="weather-header">
+                    <h1 class="temp"></h1>
+                    <div class="weather-icon-container">
+                        <img class="weather-icon">
+                        <h3 class="weather-description"></h3>
+                    </div>
+                </div>
+                <div class="weather-info">
+                    <div class="weather-titles">
+                        <h3>Humidity:</h3>
+                        <h3>UV-Index:</h3>
+                        <h3>Sunrise:</h3>
+                        <h3>Sunset:</h3>
+                    </div>
+                    <div class="weather-data">
+                        <h3 class="humidity"></h3>
+                        <h3 class="uvi"></h3>
+                        <h3 class="sunrise"></h3>
+                        <h3 class="sunset"></h3>
+                    </div>
+                </div>
+               
             </div>
+            <div class="time-column">
             <h2 class='time'>Date Time etc</h2>
             <div class="watch-face">
                 <div class="second"></div>
@@ -28,16 +70,23 @@
                 <div class="hour"></div>
                 <div class='crown'></div>
             </div>
-            <h2 class="currently">It is currently: Afternoon</h2>
         </div>
-    
+        <div class="calender-container">
+        <h3 class='calendar-title'>On This Date</h3>
+        <div class="calender"> Coming Soon
+        </div>
+    </div>
+        </div>
+       
+    </div>
+
 
     <div class="by-me">
         <p>A</p>
         <img class="signature" src="../colorSelector/images/white-signature.png" alt="">
         <p>Project</p>
     </div>
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
 
 </body>
 
