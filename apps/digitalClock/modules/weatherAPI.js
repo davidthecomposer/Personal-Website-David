@@ -37,7 +37,7 @@ const currentSunset = weatherData.current.sunset;
 const currentWeatherDescription = weatherData.current.weather[0].description;
 
 
-weatherIcon.setAttribute('src', `http://openweathermap.org/img/wn/${getIcon}@2x.png`);
+weatherIcon.setAttribute('src', `https://openweathermap.org/img/wn/${getIcon}@2x.png`);
 
 temp.innerText = `${currentTemp} ℉`;
 humidity.innerText = `${currentHumidity}%`;
@@ -79,7 +79,9 @@ const newsAPI = async () => {
  
   const navigateToLink = (event) => {
     window.location.href = articleLink;
-  }
+  };
+
+  console.log(randomArticle);
   
   articleContainer.addEventListener('click', navigateToLink);
 
