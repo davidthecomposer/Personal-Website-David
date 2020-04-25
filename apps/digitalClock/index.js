@@ -7,6 +7,7 @@ import {initWeatherData} from './modules/weatherAPI.js';
 const resetClock = () => {
     const date = document.querySelector('.date');
     const time = document.querySelector('.time');
+   
     const secondHand = document.querySelector('.second');
     const minuteHand = document.querySelector('.minute');
     const hourHand = document.querySelector('.hour');
@@ -14,8 +15,8 @@ const resetClock = () => {
     let seconds = currentDate.getSeconds();
     let minutes = currentDate.getMinutes();
     let hours = currentDate.getHours();
-    date.innerHTML = currentDate.toLocaleDateString();
-    time.innerHTML = currentDate.toLocaleTimeString();
+    date.innerText = currentDate.toLocaleDateString();
+    time.innerText = currentDate.toLocaleTimeString().split(' ')[0];
     secondHand.style.transform = `rotate(${seconds * 6}deg)`;
     minuteHand.style.transform = `rotate(${minutes * 6 + seconds/10}deg)`;
     if (hours <= 12) {

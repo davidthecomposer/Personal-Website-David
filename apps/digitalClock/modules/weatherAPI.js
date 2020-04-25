@@ -39,7 +39,7 @@ const currentWeatherDescription = weatherData.current.weather[0].description;
 
 weatherIcon.setAttribute('src', `https://openweathermap.org/img/wn/${getIcon}@2x.png`);
 
-temp.innerText = `${currentTemp} ℉`;
+temp.innerText = `${currentTemp} °F`;
 humidity.innerText = `${currentHumidity}%`;
 uvi.innerText = currentUvi;
 sunrise.innerText = new Date(currentSunrise * 1000).toLocaleTimeString('en-US');
