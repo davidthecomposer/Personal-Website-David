@@ -1,483 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="Description"
+      content="A Collection of David Campbell's applications"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="Description" content="A Collection of David Campbell's applications">
-
-    <link href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Hammersmith+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="frontEnd.css">
+    <link
+      href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Cormorant+Garamond&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hammersmith+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="frontEnd.css" />
     <title>David Campbell Front-End</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <!-------------------    HEADER    --------------------->
     <header>
-        <div class="header-title"> </div>
-        <nav class="tabs-section">
-            <div class="header-group">
-                <a class="header-tab" href="#home">Home</a>
-                <div class="underline"></div>
-            </div>
-            <h3 class="divider">|</h3>
-            <div class="header-group">
-                <a class="header-tab" href="#feedback">Feedback </a>
-                <div class="underline"></div>
-            </div>
-            <h3 class="divider">|</h3>
-            <!-- <div class="header-group">
+      <div class="header-title"></div>
+      <nav class="tabs-section">
+        <div class="header-group">
+          <a class="header-tab" href="#home">Home</a>
+          <div class="underline"></div>
+        </div>
+        <h3 class="divider">|</h3>
+        <div class="header-group">
+          <a class="header-tab" href="#feedback">Feedback </a>
+          <div class="underline"></div>
+        </div>
+        <h3 class="divider">|</h3>
+        <!-- <div class="header-group">
                 <a class="header-tab" href="#blog">Blog</a>
                 <div class="underline"></div>
             </div>
             <h3 class="divider">|</h3> -->
-            <div class="header-group">
-                <a class="header-tab" href="#contact">Contact</a>
-                <div class="underline"></div>
-            </div>
-        </nav>
-    </header>
-    <div class="intro anchor" id="home"> Welcome to a collection of snapshots from my front-end development journey.
-        Below are all the apps and projects that I have built on my own (with copious amounts of googling at times).
-        Some are
-        simple, some are more complex, and some are better than others, but they are all my creations and I love them.
-        Click anywhere other than the button on each card to read the details on the back. Click on the button to
-        see a full version of the apps or websites. Feel free to leave feedback, or contact me using the appropriate
-        interfaces. You can find the code for all of these on my gitHub.
-        Keep coming back for new updates! </div>
-    <section class="apps">
-        <!-- APPS START -->
-        <div class="app-row">
-            <!-- COLOR SELECTOR -->
-            <div class="scene color-selector">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">Color Selector</h1>
-                        <div class="panel-picture"></div>
-                        <div class="panel-stats">
-                            <div class="stat">
-                                <h3>Languages:</h3>
-                                <h3>Year Created: </h3>
-                            </div>
-                            <div class="stat">
-                                <p> HTML, CSS, JavaScript</p>
-                                <p> 2019 - 2020</p>
-                            </div>
-                        </div>
-                        <button class="navigate"
-                            data-url="https://www.apps.davidhalcampbell.com/colorSelector/index.html">Go To App</button>
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">Color Selector</h1>
-
-                        <div class="panel-description">
-                            <p> This app allows the user to select a color or group of colors in various ways. All the
-                                different values are updated in real-time no matter which method is used for selection.
-                                The user can save the colors onto the color swatches on the right side.</p>
-                            <p> At the bottom right, there is a filterable list that shows several common value types
-                                for each color. Because of the nature of this app it is not available for mobile use at
-                                this time. I plan to make a mobile version at some point. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- MUSIC WEBSITE-->
-            <div class="scene music-website">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">Music Website</h1>
-                        <div class="panel-picture"></div>
-                        
-                            <div class="panel-stats">
-                                <div class="stat">
-                                    <h3>Languages:</h3>
-                                    <h3>Year Created: </h3>
-
-                                </div>
-                                <div class="stat">
-                                    <p> HTML, CSS, JavaScript, php</p>
-                                    <p> 2019 - 2020</p>
-                                </div>
-                            </div>
-                            <button class="navigate" data-url="https://www.davidhalcampbell.com">Go To Site </button>
-
-                        
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">Music Website</h1>
-
-                        <div class="panel-description">
-                            <p> This is my personal music website. The main feature here is an expanded "Music" section
-                                that includes sortable music genre lists of my works, a playlist of media music, and
-                                score downloads</p>
-                            <p>There are blog, news, and contact sections as well. At the top of the page I used a
-                                version of the slideshow app to make a marquee that links to the news section. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- SLIDE SHOW CREATOR -->
-            <div class="scene slide-show-creator">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">Slideshow Creator</h1>
-                        <div class="panel-picture"></div>
-                        
-                            <div class="panel-stats">
-                                <div class="stat">
-                                    <h3>Languages:</h3>
-                                    <h3>Year Created: </h3>
-
-                                </div>
-                                <div class="stat">
-                                    <p> HTML, CSS, JavaScript</p>
-                                    <p> 2019 - 2020</p>
-                                </div>
-                            </div>
-                            <button class="navigate"
-                                data-url="https://www.apps.davidhalcampbell.com/customSlideShow/SlideShow Full/index.html">Go
-                                To App</button>
-                       
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">Slideshow Creator</h1>
-
-                        <div class="panel-description">
-                            <p> With this App a user can load their own pictures into the interface, edit the text
-                                content, size, transition styles and many other options and then print out the HTML,
-                                CSS, and JS code to make a streamlined version of the slideshow that they have created.
-                            </p>
-                            <p> The output uses OOP principles so that in theory multiple slideshows can be used on the
-                                same page.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- AUDIO PLAYER 1 -->
-            <div class="scene audio-player-1">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">Audio Player 1</h1>
-                        <div class="panel-picture"></div>
-                        
-                            <div class="panel-stats">
-                                <div class="stat">
-                                    <h3>Languages:</h3>
-                                    <h3>Year Created: </h3>
-
-                                </div>
-                                <div class="stat">
-                                    <p> HTML, CSS, JavaScript</p>
-                                    <p> 2019 - 2020</p>
-                                </div>
-                            </div>
-                            <button class="navigate"
-                                data-url="https://www.apps.davidhalcampbell.com/customAudioPlayer/index.html">Go To
-                                App</button>
-                        
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">Audio Player</h1>
-
-                        <div class="panel-description">
-                            <p> The custom audio player has basic features. Play and pause buttons, a user-controllable
-                                progress bar, time updates, and a spot to add a cover. When the user hovers over the
-                                volume icon a volumes slider appears and remains until the user exits the element. on mobile the user would just have the option to mute the volume by pressing as volume control is generally found on the device.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- VIDEO PLAYER 1 -->
-            <div class="scene video-player-1">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">Video Player 1</h1>
-                        <div class="panel-picture"></div>
-                        
-                            <div class="panel-stats">
-                                <div class="stat">
-                                    <h3>Languages:</h3>
-                                    <h3>Year Created: </h3>
-                                </div>
-                                <div class="stat">
-                                    <p> HTML, CSS, JavaScript</p>
-                                    <p> 2019 - 2020</p>
-                                </div>
-                            </div>
-                            <button class="navigate"
-                                data-url="https://www.apps.davidhalcampbell.com/customVideoPlayer/index.html">Go To
-                                App</button>
-                        
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">Video Player</h1>
-
-                        <div class="panel-description">
-                            <p> This video player has a bunch of custom features including: 4-speed control, skip
-                                forward and back, user-controllable progress bar and button, restart, pause, play, time
-                                remaining and time elapsed, full-screen mode, attachable control panel, and "lights-off"
-                                dark mode.</p>
-                            <p> It was designed using OOP principles so it could theoretically be used in a modular
-                                fashion multiple times on the same page</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- TO DO LIST -->
-            <div class="scene to-do-list">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">To-Do List</h1>
-                        <div class="panel-picture"></div>
-                        
-                            <div class="panel-stats">
-                                <div class="stat">
-                                    <h3>Languages:</h3>
-                                    <h3>Year Created: </h3>
-
-                                </div>
-                                <div class="stat">
-                                    <p> HTML, CSS, JavaScript</p>
-                                    <p> 2019 - 2020</p>
-                                </div>
-                            </div>
-                            <button class="navigate" data-url="https://www.apps.davidhalcampbell.com/ToDo/index.html">Go
-                                To App</button>
-                        
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">To-Do List</h1>
-
-                        <div class="panel-description">
-                            <p> The To-Do List app allows a user to write a number of tasks to accomplish. It also
-                                allows the user to add an accordion style longer note for each entry that can be
-                                recalled by clicking on the notes icon. A User can also set an alarm as desired. When
-                                the user has accomplished the task they can choose to highlight it or delete as desired.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- TIP CALCULATOR -->
-            <div class="scene tip-calculator">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">Tip Calculator</h1>
-                        <div class="panel-picture"></div>
-                        
-                            <div class="panel-stats">
-                                <div class="stat">
-                                    <h3>Languages:</h3>
-                                    <h3>Year Created: </h3>
-
-                                </div>
-                                <div class="stat">
-                                    <p> HTML, CSS, JavaScript</p>
-                                    <p> 2019 - 2020</p>
-                                </div>
-                            </div>
-                            <button class="navigate"
-                                data-url="https://www.apps.davidhalcampbell.com/tipCalc/index.html"> Go To App</button>
-                        
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">Tip Calculator</h1>
-
-                        <div class="panel-description">
-                            <p>This is a fully functional tip calculator with a few extra design features. The first is
-                                that a user can input any 2 fields and the other two will be computed. This can be
-                                useful in some real-life use cases. The second feature is that I have written some
-                                custom validations to disallow user input error. attempting to write anything other than
-                                a valid input will cause the entry to be deleted.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- COMMISSION FORM -->
-            <div class="scene commission-form">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">Commission Form</h1>
-                        <div class="panel-picture"></div>
-                        
-                            <div class="panel-stats">
-                                <div class="stat">
-                                    <h3>Languages:</h3>
-                                    <h3>Year Created: </h3>
-
-                                </div>
-                                <div class="stat">
-                                    <p> HTML, CSS, JavaScript</p>
-                                    <p> 2019 - 2020</p>
-                                </div>
-                            </div>
-                            <button class="navigate"
-                                data-url="https://www.apps.davidhalcampbell.com/commissionForm/index.html">Go To
-                                App</button>
-                        
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">Commission Form</h1>
-
-                        <div class="panel-description">
-                            <p> Composers sometimes are asked to write custom music for events or performers. This is a
-                                small mockup of some information that would be useful to know when
-                                developing a price quote. I added some custom validation messages to make sure that
-                                users input the most important data. I might include some version of this on my website
-                                in the future. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- DIGITAL CLOCK -->
-            <div class="scene digital-clock">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">Digital Clock</h1>
-                        <div class="panel-picture"></div>
-                        
-                            <div class="panel-stats">
-                                <div class="stat">
-                                    <h3>Languages:</h3>
-                                    <h3>Year Created: </h3>
-
-                                </div>
-                                <div class="stat">
-                                    <p> HTML, CSS, JavaScript</p>
-                                    <p> 2019 - 2020</p>
-                                </div>
-                            </div>
-                            <button class="navigate"
-                                data-url="https://www.apps.davidhalcampbell.com/digitalClock/index.html">Go To
-                                App</button>
-                       
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">Digital Clock</h1>
-
-                        <div class="panel-description">
-                            <p> This is a simple digital clock. The interesting features are the animated analog clock
-                                face, the seasonal icons, and the time of day recognition. I have some plans to expand
-                                this by taking pictures for every hour of the day at a certain location, and adding an
-                                alarm functionality.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- DRUM KIT -->
-            <div class="scene drum-kit">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">Drum Kit</h1>
-                        <div class="panel-picture"></div>
-                        
-                            <div class="panel-stats">
-                                <div class="stat">
-                                    <h3>Languages:</h3>
-                                    <h3>Year Created: </h3>
-
-                                </div>
-                                <div class="stat">
-                                    <p> HTML, CSS, JavaScript</p>
-                                    <p> 2019 - 2020</p>
-                                </div>
-                            </div>
-                            <button class="navigate"
-                                data-url="https://www.apps.davidhalcampbell.com/drumKit/index.html">Go To App</button>
-                        
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">Drum Kit</h1>
-
-                        <div class="panel-description">
-                            <p> This drum kit is the first project that I completed without completely following the
-                                guidelines given by Angela at App Brewery. about half way through the exercise I decided
-                                that I just wanted to try to find my own solutions. So technically this is more of a
-                                hybrid project. It's pretty basic. You touch a key and a drum sound and accompanying
-                                animation play. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- SIMON GAME -->
-            <div class="scene simon-game">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">Simon Game</h1>
-                        <div class="panel-picture"></div>
-                        
-                            <div class="panel-stats">
-                                <div class="stat">
-                                    <h3>Languages:</h3>
-                                    <h3>Year Created: </h3>
-
-                                </div>
-                                <div class="stat">
-                                    <p> HTML, CSS, JavaScript</p>
-                                    <p> 2019 - 2020</p>
-                                </div>
-                            </div>
-                            <button class="navigate"
-                                data-url="https://www.apps.davidhalcampbell.com/simonGame/index.html">Go To App</button>
-                        
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">Simon Game</h1>
-
-                        <div class="panel-description">
-                            <p> This project was the first guided project that I did entirely on my own. I did go back
-                                and check the answers throughout, but didn't cheat! It's a basic memory game like the
-                                game Simon. See how far you can get! I made it to about 30 on my best attempt. I might
-                                add a leader board section at some point in the future.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- CALCULATOR -->
-            <div class="scene calculator">
-                <div class="card">
-                    <div class="panel-container front">
-                        <h1 class="panel-title">Calculator</h1>
-                        <div class="panel-picture"></div>
-                        
-                            <div class="panel-stats">
-                                <div class="stat">
-                                    <h3>Languages:</h3>
-                                    <h3>Year Created: </h3>
-
-                                </div>
-                                <div class="stat">
-                                    <p> HTML, CSS, JavaScript</p>
-                                    <p> 2019 - 2020</p>
-                                </div>
-                            </div>
-                            <button class="navigate"
-                                data-url="https://www.apps.davidhalcampbell.com/customCalculator/index.html">Go To
-                                App</button>
-                       
-                    </div>
-                    <div class="panel-container back">
-                        <h1 class="panel-title">Calculator</h1>
-
-                        <div class="panel-description">
-                            <p> This was my first completely solo project. I made a simple calculator with limited
-                                functionality. I was pretty proud of the fact that I was able to get the screen to light
-                                up when buttons were pressed. Not too much else going on here. </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="header-group">
+          <a class="header-tab" href="#contact">Contact</a>
+          <div class="underline"></div>
         </div>
+      </nav>
+    </header>
+    <div class="intro anchor" id="home">
+      Welcome to a collection of snapshots from my front-end development
+      journey. Below are all the apps and projects that I have built on my own
+      (with copious amounts of googling at times). Some are simple, some are
+      more complex, and some are better than others, but they are all my
+      creations and I love them. Click anywhere other than the button on each
+      card to read the details on the back. Click on the button to see a full
+      version of the apps or websites. Feel free to leave feedback, or contact
+      me using the appropriate interfaces. You can find the code for all of
+      these on my gitHub. Keep coming back for new updates!
+    </div>
+    <section class="apps">
+      <!-- APPS START -->
+      <div class="app-row">
+        <!-- COLOR SELECTOR -->
+        <div class="scene color-selector">
+          <div class="card">
+            <div class="panel-container front">
+              <h1 class="panel-title">Color Selector</h1>
+              <div class="panel-picture"></div>
+              <div class="panel-stats">
+                <div class="stat">
+                  <h3>Languages:</h3>
+                  <h3>Year Created:</h3>
+                </div>
+                <div class="stat">
+                  <p>HTML, CSS, JavaScript</p>
+                  <p>2019 - 2020</p>
+                </div>
+              </div>
+              <button
+                class="navigate"
+                data-url="https://www.apps.davidhalcampbell.com/colorSelector/index.html"
+              >
+                Go To App
+              </button>
+            </div>
+            <div class="panel-container back">
+              <h1 class="panel-title">Color Selector</h1>
+
+              <div class="panel-description">
+                <p>
+                  This app allows the user to select a color or group of colors
+                  in various ways. All the different values are updated in
+                  real-time no matter which method is used for selection. The
+                  user can save the colors onto the color swatches on the right
+                  side.
+                </p>
+                <p>
+                  At the bottom right, there is a filterable list that shows
+                  several common value types for each color. Because of the
+                  nature of this app it is not available for mobile use at this
+                  time. I plan to make a mobile version at some point.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- MUSIC WEBSITE-->
+        <div class="scene music-website">
+          <div class="card">
+            <div class="panel-container front">
+              <h1 class="panel-title">Music Website</h1>
+              <div class="panel-picture"></div>
+
+              <div class="panel-stats">
+                <div class="stat">
+                  <h3>Languages:</h3>
+                  <h3>Year Created:</h3>
+                </div>
+                <div class="stat">
+                  <p>HTML, CSS, JavaScript, php</p>
+                  <p>2019 - 2020</p>
+                </div>
+              </div>
+              <button
+                class="navigate"
+                data-url="https://www.davidhalcampbell.com"
+              >
+                Go To Site
+              </button>
+            </div>
+            <div class="panel-container back">
+              <h1 class="panel-title">Music Website</h1>
+
+              <div class="panel-description">
+                <p>
+                  This is my personal music website. The main feature here is an
+                  expanded "Music" section that includes sortable music genre
+                  lists of my works, a playlist of media music, and score
+                  downloads
+                </p>
+                <p>
+                  There are blog, news, and contact sections as well. At the top
+                  of the page I used a version of the slideshow app to make a
+                  marquee that links to the news section.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SLIDE SHOW CREATOR -->
+        <div class="scene slide-show-creator">
+          <div class="card">
+            <div class="panel-container front">
+              <h1 class="panel-title">Slideshow Creator</h1>
+              <div class="panel-picture"></div>
+
+              <div class="panel-stats">
+                <div class="stat">
+                  <h3>Languages:</h3>
+                  <h3>Year Created:</h3>
+                </div>
+                <div class="stat">
+                  <p>HTML, CSS, JavaScript</p>
+                  <p>2019 - 2020</p>
+                </div>
+              </div>
+              <button
+                class="navigate"
+                data-url="https://www.apps.davidhalcampbell.com/customSlideShow/SlideShow Full/index.html"
+              >
+                Go To App
+              </button>
+            </div>
+            <div class="panel-container back">
+              <h1 class="panel-title">Slideshow Creator</h1>
+
+              <div class="panel-description">
+                <p>
+                  With this App a user can load their own pictures into the
+                  interface, edit the text content, size, transition styles and
+                  many other options and then print out the HTML, CSS, and JS
+                  code to make a streamlined version of the slideshow that they
+                  have created.
+                </p>
+                <p>
+                  The output uses OOP principles so that in theory multiple
+                  slideshows can be used on the same page.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- AUDIO PLAYER 1 -->
+        <div class="scene audio-player-1">
+          <div class="card">
+            <div class="panel-container front">
+              <h1 class="panel-title">Audio Player 1</h1>
+              <div class="panel-picture"></div>
+
+              <div class="panel-stats">
+                <div class="stat">
+                  <h3>Languages:</h3>
+                  <h3>Year Created:</h3>
+                </div>
+                <div class="stat">
+                  <p>HTML, CSS, JavaScript</p>
+                  <p>2019 - 2020</p>
+                </div>
+              </div>
+              <button
+                class="navigate"
+                data-url="https://www.apps.davidhalcampbell.com/customAudioPlayer/index.html"
+              >
+                Go To App
+              </button>
+            </div>
+            <div class="panel-container back">
+              <h1 class="panel-title">Audio Player</h1>
+
+              <div class="panel-description">
+                <p>
+                  The custom audio player has basic features. Play and pause
+                  buttons, a user-controllable progress bar, time updates, and a
+                  spot to add a cover. When the user hovers over the volume icon
+                  a volumes slider appears and remains until the user exits the
+                  element. on mobile the user would just have the option to mute
+                  the volume by pressing as volume control is generally found on
+                  the device.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- VIDEO PLAYER 1 -->
+        <div class="scene video-player-1">
+          <div class="card">
+            <div class="panel-container front">
+              <h1 class="panel-title">Video Player 1</h1>
+              <div class="panel-picture"></div>
+
+              <div class="panel-stats">
+                <div class="stat">
+                  <h3>Languages:</h3>
+                  <h3>Year Created:</h3>
+                </div>
+                <div class="stat">
+                  <p>HTML, CSS, JavaScript</p>
+                  <p>2019 - 2020</p>
+                </div>
+              </div>
+              <button
+                class="navigate"
+                data-url="https://www.apps.davidhalcampbell.com/customVideoPlayer/index.html"
+              >
+                Go To App
+              </button>
+            </div>
+            <div class="panel-container back">
+              <h1 class="panel-title">Video Player</h1>
+
+              <div class="panel-description">
+                <p>
+                  This video player has a bunch of custom features including:
+                  4-speed control, skip forward and back, user-controllable
+                  progress bar and button, restart, pause, play, time remaining
+                  and time elapsed, full-screen mode, attachable control panel,
+                  and "lights-off" dark mode.
+                </p>
+                <p>
+                  It was designed using OOP principles so it could theoretically
+                  be used in a modular fashion multiple times on the same page
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TO DO LIST -->
+        <div class="scene to-do-list">
+          <div class="card">
+            <div class="panel-container front">
+              <h1 class="panel-title">To-Do List</h1>
+              <div class="panel-picture"></div>
+
+              <div class="panel-stats">
+                <div class="stat">
+                  <h3>Languages:</h3>
+                  <h3>Year Created:</h3>
+                </div>
+                <div class="stat">
+                  <p>HTML, CSS, JavaScript</p>
+                  <p>2019 - 2020</p>
+                </div>
+              </div>
+              <button
+                class="navigate"
+                data-url="https://www.apps.davidhalcampbell.com/ToDo/index.html"
+              >
+                Go To App
+              </button>
+            </div>
+            <div class="panel-container back">
+              <h1 class="panel-title">To-Do List</h1>
+
+              <div class="panel-description">
+                <p>
+                  The To-Do List app allows a user to write a number of tasks to
+                  accomplish. It also allows the user to add an accordion style
+                  longer note for each entry that can be recalled by clicking on
+                  the notes icon. A User can also set an alarm as desired. When
+                  the user has accomplished the task they can choose to
+                  highlight it or delete as desired.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- TIP CALCULATOR -->
+        <div class="scene tip-calculator">
+          <div class="card">
+            <div class="panel-container front">
+              <h1 class="panel-title">Tip Calculator</h1>
+              <div class="panel-picture"></div>
+
+              <div class="panel-stats">
+                <div class="stat">
+                  <h3>Languages:</h3>
+                  <h3>Year Created:</h3>
+                </div>
+                <div class="stat">
+                  <p>HTML, CSS, JavaScript</p>
+                  <p>2019 - 2020</p>
+                </div>
+              </div>
+              <button
+                class="navigate"
+                data-url="https://www.apps.davidhalcampbell.com/tipCalc/index.html"
+              >
+                Go To App
+              </button>
+            </div>
+            <div class="panel-container back">
+              <h1 class="panel-title">Tip Calculator</h1>
+
+              <div class="panel-description">
+                <p>
+                  This is a fully functional tip calculator with a few extra
+                  design features. The first is that a user can input any 2
+                  fields and the other two will be computed. This can be useful
+                  in some real-life use cases. The second feature is that I have
+                  written some custom validations to disallow user input error.
+                  attempting to write anything other than a valid input will
+                  cause the entry to be deleted.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- COMMISSION FORM -->
+        <div class="scene commission-form">
+          <div class="card">
+            <div class="panel-container front">
+              <h1 class="panel-title">Commission Form</h1>
+              <div class="panel-picture"></div>
+
+              <div class="panel-stats">
+                <div class="stat">
+                  <h3>Languages:</h3>
+                  <h3>Year Created:</h3>
+                </div>
+                <div class="stat">
+                  <p>HTML, CSS, JavaScript</p>
+                  <p>2019 - 2020</p>
+                </div>
+              </div>
+              <button
+                class="navigate"
+                data-url="https://www.apps.davidhalcampbell.com/commissionForm/index.html"
+              >
+                Go To App
+              </button>
+            </div>
+            <div class="panel-container back">
+              <h1 class="panel-title">Commission Form</h1>
+
+              <div class="panel-description">
+                <p>
+                  Composers sometimes are asked to write custom music for events
+                  or performers. This is a small mockup of some information that
+                  would be useful to know when developing a price quote. I added
+                  some custom validation messages to make sure that users input
+                  the most important data. I might include some version of this
+                  on my website in the future.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- DIGITAL CLOCK -->
+        <div class="scene digital-clock">
+          <div class="card">
+            <div class="panel-container front">
+              <h1 class="panel-title">Digital Clock</h1>
+              <div class="panel-picture"></div>
+
+              <div class="panel-stats">
+                <div class="stat">
+                  <h3>Languages:</h3>
+                  <h3>Year Created:</h3>
+                </div>
+                <div class="stat">
+                  <p>HTML, CSS, JavaScript</p>
+                  <p>2019 - 2020</p>
+                </div>
+              </div>
+              <button
+                class="navigate"
+                data-url="https://www.apps.davidhalcampbell.com/digitalClock/index.html"
+              >
+                Go To App
+              </button>
+            </div>
+            <div class="panel-container back">
+              <h1 class="panel-title">Digital Clock</h1>
+
+              <div class="panel-description">
+                <p>
+                  This is a simple digital clock. The interesting features are
+                  the animated analog clock face, the seasonal icons, and the
+                  time of day recognition. I have some plans to expand this by
+                  taking pictures for every hour of the day at a certain
+                  location, and adding an alarm functionality.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- DRUM KIT -->
+        <div class="scene drum-kit">
+          <div class="card">
+            <div class="panel-container front">
+              <h1 class="panel-title">Drum Kit</h1>
+              <div class="panel-picture"></div>
+
+              <div class="panel-stats">
+                <div class="stat">
+                  <h3>Languages:</h3>
+                  <h3>Year Created:</h3>
+                </div>
+                <div class="stat">
+                  <p>HTML, CSS, JavaScript</p>
+                  <p>2019 - 2020</p>
+                </div>
+              </div>
+              <button
+                class="navigate"
+                data-url="https://www.apps.davidhalcampbell.com/drumKit/index.html"
+              >
+                Go To App
+              </button>
+            </div>
+            <div class="panel-container back">
+              <h1 class="panel-title">Drum Kit</h1>
+
+              <div class="panel-description">
+                <p>
+                  This drum kit is the first project that I completed without
+                  completely following the guidelines given by Angela at App
+                  Brewery. about half way through the exercise I decided that I
+                  just wanted to try to find my own solutions. So technically
+                  this is more of a hybrid project. It's pretty basic. You touch
+                  a key and a drum sound and accompanying animation play.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- SIMON GAME -->
+        <div class="scene simon-game">
+          <div class="card">
+            <div class="panel-container front">
+              <h1 class="panel-title">Simon Game</h1>
+              <div class="panel-picture"></div>
+
+              <div class="panel-stats">
+                <div class="stat">
+                  <h3>Languages:</h3>
+                  <h3>Year Created:</h3>
+                </div>
+                <div class="stat">
+                  <p>HTML, CSS, JavaScript</p>
+                  <p>2019 - 2020</p>
+                </div>
+              </div>
+              <button
+                class="navigate"
+                data-url="https://www.apps.davidhalcampbell.com/simonGame/index.html"
+              >
+                Go To App
+              </button>
+            </div>
+            <div class="panel-container back">
+              <h1 class="panel-title">Simon Game</h1>
+
+              <div class="panel-description">
+                <p>
+                  This project was the first guided project that I did entirely
+                  on my own. I did go back and check the answers throughout, but
+                  didn't cheat! It's a basic memory game like the game Simon.
+                  See how far you can get! I made it to about 30 on my best
+                  attempt. I might add a leader board section at some point in
+                  the future.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CALCULATOR -->
+        <div class="scene calculator">
+          <div class="card">
+            <div class="panel-container front">
+              <h1 class="panel-title">Calculator</h1>
+              <div class="panel-picture"></div>
+
+              <div class="panel-stats">
+                <div class="stat">
+                  <h3>Languages:</h3>
+                  <h3>Year Created:</h3>
+                </div>
+                <div class="stat">
+                  <p>HTML, CSS, JavaScript</p>
+                  <p>2019 - 2020</p>
+                </div>
+              </div>
+              <button
+                class="navigate"
+                data-url="https://www.apps.davidhalcampbell.com/customCalculator/index.html"
+              >
+                Go To App
+              </button>
+            </div>
+            <div class="panel-container back">
+              <h1 class="panel-title">Calculator</h1>
+
+              <div class="panel-description">
+                <p>
+                  This was my first completely solo project. I made a simple
+                  calculator with limited functionality. I was pretty proud of
+                  the fact that I was able to get the screen to light up when
+                  buttons were pressed. Not too much else going on here.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="feedback anchor" id="feedback">
-        <h1 class="feedback-title"> Feedback </h1>
-        <div class="feedback-placeholder">
-            <h1> This Section is still under construction until I learn more backend JS! Stay Tuned...</h1>
-        </div>
+      <h1 class="feedback-title">Feedback</h1>
+      <div class="feedback-placeholder">
+        <h1>
+          This Section is still under construction until I learn more backend
+          JS! Stay Tuned...
+        </h1>
+      </div>
     </section>
     <!-- BLOG SECTION -->
     <!-- <section class="blog anchor" id="blog">
@@ -500,46 +593,63 @@
 
     <!-- CONTACT SECTION -->
     <section class="contact anchor" id="contact">
-        <h2 class="blog-title"> Contact </h2>
-        <div class="contact-body">
-            <p> Send me an email with any questions or requests using the form below. </p>
-            <form action="form-to-email.php" class="contact-form" method="POST">
-                <div class="form-row">
-                    <div class="user-name">
-                        <label for="user-name" class="form-labels"> Name: </label>
-                        <input type="text" name="user-name" id="user-name">
-                    </div>
-                    <div class="user-email">
-                        <label for="user-email" class="form-labels"> E-mail: </label>
-                        <input type="text" name="user-email" id="user-email">
-                    </div>
-                </div>
-                <div class="message-col">
-                    <label for="email-content" class="form-labels"> Message: </label>
-                    <textarea name="email-content" id="email-content" rows="10" cols="80"></textarea>
-                </div>
-                <input type="submit" class="email-submit" value="Submit">
-            </form>
-        </div>
+      <h2 class="blog-title">Contact</h2>
+      <div class="contact-body">
+        <p>
+          Send me an email with any questions or requests using the form below.
+        </p>
+        <form action="form-to-email.php" class="contact-form" method="POST">
+          <div class="form-row">
+            <div class="user-name">
+              <label for="user-name" class="form-labels"> Name: </label>
+              <input type="text" name="user-name" id="user-name" />
+            </div>
+            <div class="user-email">
+              <label for="user-email" class="form-labels"> E-mail: </label>
+              <input type="text" name="user-email" id="user-email" />
+            </div>
+          </div>
+          <div class="message-col">
+            <label for="email-content" class="form-labels"> Message: </label>
+            <textarea
+              name="email-content"
+              id="email-content"
+              rows="10"
+              cols="80"
+            ></textarea>
+          </div>
+          <input type="submit" class="email-submit" value="Submit" />
+        </form>
+      </div>
     </section>
     <footer>
-        <div class="by-me">
-            <p>A</p>
-            <a href="https://www.davidhalcampbell.com"><img class="signature"
-                    src="images/david-sig-white-shadow.png" alt="David Campbell Signature"></a>
-            <p>Website</p>
-        </div>
-        <div class="nav-icons-footer">
+      <div class="by-me">
+        <p>A</p>
+        <a href="https://www.davidhalcampbell.com"
+          ><img
+            class="signature"
+            src="images/david-sig-white-shadow.png"
+            alt="David Campbell Signature"
+        /></a>
 
-            <img src="images/github.svg" alt="github link" class="footer-icons">
-            <img src="images/facebook.svg" alt="facebook link" class="footer-icons">
-            <img src="images/instagram.svg" alt="instagram link" class="footer-icons">
-            <img src="images/twitter.svg" alt="twitter link" class="footer-icons">
-        </div>
+        <p>Website</p>
+      </div>
+      <div class="nav-icons-footer">
+        <img src="images/github.svg" alt="github link" class="footer-icons" />
+        <img
+          src="images/facebook.svg"
+          alt="facebook link"
+          class="footer-icons"
+        />
+        <img
+          src="images/instagram.svg"
+          alt="instagram link"
+          class="footer-icons"
+        />
+        <img src="images/twitter.svg" alt="twitter link" class="footer-icons" />
+      </div>
     </footer>
 
     <script src="frontEnd.js" type="module"></script>
-
-</body>
-
+  </body>
 </html>

@@ -1,266 +1,322 @@
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,
-code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,
-form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,
-footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 @font-face {
-    font-family: 'julius_sans_oneregular';
-    src: url('fonts/juliussansone-regular-webfont.woff2') format('woff2'),
-         url('fonts/juliussansone-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
+  font-family: "julius_sans_oneregular";
+  src: url("fonts/juliussansone-regular-webfont.woff2") format("woff2"),
+    url("fonts/juliussansone-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 
 body {
-    position: relative;
-    background-color: rgb(17, 17, 17);  
-    
+  position: relative;
+  background-color: rgb(17, 17, 17);
 }
-
 
 /* ---------------------------- HEADER SECTION ---------------------------- */
 header {
-    position: fixed;
-    background-color: rgba(0, 0, 0, 0.802);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    z-index: 3;
-
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.802);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  z-index: 3;
 }
 
 .header-title {
-    
-    height: 7rem;
-     width: 45rem;
-    background-image: url("images/DavidNameDev.png");
-    background-size: 100%;
-    background-repeat: no-repeat; 
+  height: 7rem;
+  width: 45rem;
+  background-image: url("images/DavidNameDev.png");
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .header-thin {
-    animation: shrink .25s ease-in 1 forwards;
+  animation: shrink 0.25s ease-in 1 forwards;
 }
 
 .header-full {
-    animation: grow .15s linear 1 forwards;
+  animation: grow 0.15s linear 1 forwards;
 }
 .header-thin1 {
-    animation: shrink1 .25s ease-in 1 forwards;
+  animation: shrink1 0.25s ease-in 1 forwards;
 }
 
 .header-full1 {
-    animation: grow1 .15s linear 1 forwards;
+  animation: grow1 0.15s linear 1 forwards;
 }
 .header-full2 {
-    animation: grow2 .15s linear 1 forwards;
+  animation: grow2 0.15s linear 1 forwards;
 }
 
 @keyframes shrink {
-    0% {
-        height: 7rem;
-        background-image: url("images/DavidNameDev.png");
-        
-    }
+  0% {
+    height: 7rem;
+    background-image: url("images/DavidNameDev.png");
+  }
 
-    100% {
-        height: 3rem;
-        background-image: url("images/DavidNameDevThin.png");
-    }
+  100% {
+    height: 3rem;
+    background-image: url("images/DavidNameDevThin.png");
+  }
 }
 
 @keyframes grow {
-    0% {
-        background-image: url("images/DavidNameDevThin.png");
-        height: 3rem;
-        
-    }
-    
-    100% {
-        height: 7rem;
-        background-image: url("images/DavidNameDev.png");
+  0% {
+    background-image: url("images/DavidNameDevThin.png");
+    height: 3rem;
+  }
 
-    }
+  100% {
+    height: 7rem;
+    background-image: url("images/DavidNameDev.png");
+  }
 }
 
 @keyframes shrink1 {
-    0% {
-        height: 5rem;
-        background-image: url("images/DavidNameDev.png");
-        
-    }
+  0% {
+    height: 5rem;
+    background-image: url("images/DavidNameDev.png");
+  }
 
-    100% {
-        height: 3rem;
-        background-image: url("images/DavidNameDevThin.png");
-    }
+  100% {
+    height: 3rem;
+    background-image: url("images/DavidNameDevThin.png");
+  }
 }
 
 @keyframes grow1 {
-    0% {
-        background-image: url("images/DavidNameDevThin.png");
-        height: 3rem;
-        
-    }
-    
-    100% {
-        height: 5rem;
-        background-image: url("images/DavidNameDev.png");
+  0% {
+    background-image: url("images/DavidNameDevThin.png");
+    height: 3rem;
+  }
 
-    }
+  100% {
+    height: 5rem;
+    background-image: url("images/DavidNameDev.png");
+  }
 }
 
 @keyframes grow2 {
-    0% {
-        background-image: url("images/DavidNameDevThin.png");
-        height: 3rem;
-        
-    }
-    
-    100% {
-        height: 5rem;
-        background-image: url("images/DavidNameDev.png");
+  0% {
+    background-image: url("images/DavidNameDevThin.png");
+    height: 3rem;
+  }
 
-    }
+  100% {
+    height: 5rem;
+    background-image: url("images/DavidNameDev.png");
+  }
 }
 .anchor {
-    padding-top: 3rem;
+  padding-top: 3rem;
 }
 
 .header-group {
-    display: flex;
-    flex-direction: column;
-    
+  display: flex;
+  flex-direction: column;
 }
 
 .header-tab {
-    cursor: pointer;
-    margin: 0 .5rem;
-    color: rgba(255, 255, 255, 0.959);
-    font-family: 'Advent Pro', sans-serif;
-    text-decoration: none; 
-    font-size: 1.1rem;
+  cursor: pointer;
+  margin: 0 0.5rem;
+  color: rgba(255, 255, 255, 0.959);
+  font-family: "Advent Pro", sans-serif;
+  text-decoration: none;
+  font-size: 1.1rem;
 }
 
 .underline {
-height: .1rem;
+  height: 0.1rem;
 }
 
 .header-tab:hover + .underline {
-    background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
-    background-size: 0%;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 8%;
-    animation: slideout .15s 1 forwards linear;
+  background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+  background-size: 0%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8%;
+  animation: slideout 0.15s 1 forwards linear;
 }
 
 .retract {
-    background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
-    background-size: 0%;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 8%;
-    animation: retract .15s 1 forwards linear;
+  background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+  background-size: 0%;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 8%;
+  animation: retract 0.15s 1 forwards linear;
 }
 
 @keyframes slideout {
-   
-    100% {    
-        background-size: 70%;
-    }
+  100% {
+    background-size: 70%;
+  }
 }
 
 @keyframes retract {
-    0% {
-        background-size: 70%;
-    }
-    100% {    
-        background-size: 0;
-    }
+  0% {
+    background-size: 70%;
+  }
+  100% {
+    background-size: 0;
+  }
 }
 
 .tabs-section {
-    font-family: 'Advent Pro', sans-serif;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    color: rgba(255, 255, 255, 0.959);
-    width: fit-content;
-    height: 1rem;
-    margin-right: 2%;
-    font-size: 80%;
+  font-family: "Advent Pro", sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.959);
+  width: fit-content;
+  height: 1rem;
+  margin-right: 2%;
+  font-size: 80%;
 }
 
 .divider {
-    margin: 0;
-    color: #b297ae;
+  margin: 0;
+  color: #b297ae;
 }
 
 /* ---------------------------- INTRO SECTION ---------------------------- */
 .intro {
-    font-family: 'Advent Pro', sans-serif;
-    color: white;
-    font-size: 1.5rem;
-    padding: 10rem .5rem 4rem;
-    position: relative;
-    width: 90%;
-    margin: 0 auto;
+  font-family: "Advent Pro", sans-serif;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10rem 0.5rem 4rem;
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
 }
-
 
 /* ---------------------------- APPS SECTION ---------------------------- */
 
 .apps {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
 }
 
 .app-row {
-    width: 90%;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    
+  width: 90%;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+  flex-wrap: wrap;
 }
 
 /* ---------------------------- APP INSTANCE ---------------------------- */
-.scene { 
-    width: 32rem;
-    height: 25rem;
-    perspective: 37.5rem;
-    margin: 1rem 1rem;
+.scene {
+  width: 32rem;
+  height: 25rem;
+  perspective: 37.5rem;
+  margin: 1rem 1rem;
 }
-
 
 .card {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transition: transform .75s;
-    transform-style: preserve-3d;
-    
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.75s;
+  transform-style: preserve-3d;
 }
-
-
 
 .panel-container {
   position: absolute;
@@ -270,560 +326,508 @@ height: .1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  font-family: 'Advent Pro', sans-serif;
-  
+  font-family: "Advent Pro", sans-serif;
+
   cursor: grab;
- 
+
   outline: none;
 }
 
 .is-flipped {
-    transform: rotateY(180deg);
-  }
+  transform: rotateY(180deg);
+}
 
 /*---------------------------- CARD BACK ---------------------------- */
 
 .back {
-    background-image: url('images/card-front.svg');
-    transform: rotateY( -180deg );
-    background-repeat: no-repeat;
-    background-size: cover; 
-   
-    justify-content: flex-start;
-    
-   
-  }
+  background-image: url("images/card-front.svg");
+  transform: rotateY(-180deg);
+  background-repeat: no-repeat;
+  background-size: cover;
 
+  justify-content: flex-start;
+}
 
 .back .panel-title {
-     padding: 1rem 0;
-      color: white;
-      background-color:rgb(33, 130, 165, .7);
-      width: 100%;
-      text-align: center;
-      
+  padding: 1rem 0;
+  color: white;
+  background-color: rgb(33, 130, 165, 0.7);
+  width: 100%;
+  text-align: center;
 }
 
 .back .panel-description {
-    width: 80%;
-    align-self: center;
-    margin-top: 2rem;
-    font-size: 1.2rem;
-    font-weight: 700;
-    color: rgb(4, 26, 32);
-    line-height: 1.5rem;
-    
-   
+  width: 80%;
+  align-self: center;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgb(4, 26, 32);
+  line-height: 1.5rem;
 }
 
 /* ---------------------------- CARD FRONT ---------------------------- */
 .front {
-    display: flex;
-    flex-direction: column;
-   justify-content: space-evenly;
-   background-image: url('images/card-front.svg');
-   background-repeat: no-repeat;
-    background-size: cover; 
-  
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-image: url("images/card-front.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .panel-title {
-    width: 100%;
-    font-family: 'julius_sans_oneregular';
-    font-size: 2rem;
-    text-align: center;  
+  width: 100%;
+  font-family: "julius_sans_oneregular";
+  font-size: 2rem;
+  text-align: center;
 }
 
 .panel-picture {
-    align-self: center;
-    width: 90%;
-    height: 12.5rem;
-   background-size: 100%;
-   background-repeat: no-repeat;
+  align-self: center;
+  width: 90%;
+  height: 12.5rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .lower-card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .panel-stats {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
 .stat {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 1rem 0;
-    font-weight: 400;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem 0;
+  font-weight: 400;
 }
 
 .navigate {
-    width: 40%;
-    align-self: center;
-    background-color:rgb(33, 130, 165, .8);
-    outline: none;
-    border: none;
-    color: white;
-    height: 1.5rem;
-    margin-bottom: 1rem;
-    cursor: pointer;
-    font-size: 1.2rem;
-    font-family: 'Advent Pro', sans-serif;
-
+  width: 40%;
+  align-self: center;
+  background-color: rgb(33, 130, 165, 0.8);
+  outline: none;
+  border: none;
+  color: white;
+  height: 1.5rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-family: "Advent Pro", sans-serif;
 }
 
 .navigate:hover {
-    background-color:rgba(84, 166, 195, 0.8);
+  background-color: rgba(84, 166, 195, 0.8);
 }
-
 
 /* ---------------------------- FEEDBACK SECTION ---------------------------- */
 
 .feedback-title {
-    font-family: 'julius_sans_oneregular';
-    font-size: 3rem;
-    text-align: center;
-    height: 6rem;
-    line-height: 6rem;
-    background-color: rgb(12, 12, 12);
-    color: white;
+  font-family: "julius_sans_oneregular";
+  font-size: 3rem;
+  text-align: center;
+  height: 6rem;
+  line-height: 6rem;
+  background-color: rgb(12, 12, 12);
+  color: white;
 }
 
 .feedback-placeholder {
-    color: white;
-    font-family: 'Advent Pro', sans-serif;
-    padding: 3rem;
-    text-align: center;
+  color: white;
+  font-family: "Advent Pro", sans-serif;
+  padding: 3rem;
+  text-align: center;
 }
 
 /* ---------------------------- BLOG SECTION ---------------------------- */
 
 .blog {
-    display: flex;
-    flex-direction: column;
-    user-select: none;
+  display: flex;
+  flex-direction: column;
+  user-select: none;
 }
 
 .blog-title {
-    background-color: rgb(16, 15, 15);
-    font-size: 3rem;
-    padding: 1rem 0;
-    color: white;
-    font-family: 'julius_sans_oneregular';
-    text-align: center;
-    margin: 0 0 1rem 0;
+  background-color: rgb(16, 15, 15);
+  font-size: 3rem;
+  padding: 1rem 0;
+  color: white;
+  font-family: "julius_sans_oneregular";
+  text-align: center;
+  margin: 0 0 1rem 0;
 }
 
 .blog-items-container {
-    padding: 1rem 0; 
+  padding: 1rem 0;
 }
 
-
 .other-story.main-story {
-    position: relative;
-    width: 50%;
-    height: 30rem;
-    flex: 0 0 auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 2rem;
+  position: relative;
+  width: 50%;
+  height: 30rem;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
 .blog-row-one {
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin: 0 0 1rem;
-    width: 98%;
-    height: fit-content;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 0 1rem;
+  width: 98%;
+  height: fit-content;
 }
 
 .preview-title {
-    font-size: 3rem;
-    margin-bottom: 4rem;
+  font-size: 3rem;
+  margin-bottom: 4rem;
 }
 
 .blog-preview-window {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    width: 46%;
-    height: 18.75rem;
-    color: white;
-    font-family: 'Advent Pro', sans-serif;
-    font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 46%;
+  height: 18.75rem;
+  color: white;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 1.5rem;
 }
 
-
-
 .nav-link {
-    height: 100%;
-    width: 100%;
-    text-decoration: none;
-    
-    
+  height: 100%;
+  width: 100%;
+  text-decoration: none;
 }
 
 .nav-title {
-    font-size: 1.5rem;
-    font-family: 'Advent Pro', sans-serif;
-    text-decoration: none;
-    width: 100%;
-    height: 10%;
-    line-height: 2rem;
-    text-align: center;
-    color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  font-family: "Advent Pro", sans-serif;
+  text-decoration: none;
+  width: 100%;
+  height: 10%;
+  line-height: 2rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
 }
 
-
-
 .blog-row-two {
-    margin: 0 0 0 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 98%;
-    flex-wrap: wrap;
+  margin: 0 0 0 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 98%;
+  flex-wrap: wrap;
 }
 
 .other-story {
-    width: 32%;
-    height: 16rem;
+  width: 32%;
+  height: 16rem;
 }
-
 
 /* ---------------------------- CONTACT SECTION ---------------------------- */
 
 .contact {
-    user-select: none;
-    margin-top: 4rem;
+  user-select: none;
+  margin-top: 4rem;
 }
 
 .contact-form {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    color: white;
-    padding: 2rem;
-    width: 50%;
-    margin: 0 auto;
-    background-color: rgb(25, 24, 24);
-    border: none;
-    
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  padding: 2rem;
+  width: 50%;
+  margin: 0 auto;
+  background-color: rgb(25, 24, 24);
+  border: none;
 }
 
 .contact-body p {
-position: relative;
- margin: 1rem 0 4rem 0;
- text-align: center;
- color: white;
- font-size: 1.5rem;
+  position: relative;
+  margin: 1rem 0 4rem 0;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
 }
 
 .contact-body {
-    font-family: 'Advent Pro', sans-serif;
+  font-family: "Advent Pro", sans-serif;
 }
 
 #email-content {
-    
-    width: 90%;
+  width: 90%;
 }
 
 .user-name {
-    width: 50%;
+  width: 50%;
 }
 
 .user-email {
-    width: 50%;
+  width: 50%;
 }
 
 #user-name {
-    width: 75%;
+  width: 75%;
 }
 
 #user-email {
-    width: 75%;
+  width: 75%;
 }
 
-.form-labels{
-    
-    margin: 0 0 .5rem 0;
+.form-labels {
+  margin: 0 0 0.5rem 0;
 }
 
 .form-row {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin:  0 0 2rem 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 0 2rem 0;
 }
 
 .message-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 100%;
-    margin: 0 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  margin: 0 0 2rem 0;
 }
-
 
 /* ---------------------------- FOOTER SECTION ---------------------------- */
 
 footer {
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.694);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 6rem;
-    width: 99%;
-    z-index: 3;
-    margin: 8rem auto 4rem;
-    user-select: none;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.694);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 6rem;
+  width: 99%;
+  z-index: 3;
+  margin: 8rem auto 4rem;
+  user-select: none;
 }
 
 .footer-icons {
-   height: 2rem;
-   border: none;
-   outline: none;
-   margin: 0 1rem 0;
-   cursor: pointer;
+  height: 2rem;
+  border: none;
+  outline: none;
+  margin: 0 1rem 0;
+  cursor: pointer;
 }
 
 .advent {
-    font-family: 'Advent Pro', sans-serif;
-    color: white;
+  font-family: "Advent Pro", sans-serif;
+  color: white;
 }
 
 .signature {
-    height: 3rem;
-  }
+  height: 3rem;
+}
 
 .by-me {
-    
-    display: flex;
-    
-    font-family: 'Advent Pro', sans-serif;
-    width: fit-content;
-  }
-  
+  display: flex;
+
+  font-family: "Advent Pro", sans-serif;
+  width: fit-content;
+}
+
 .by-me p {
-    padding-right: .8rem;
-    padding-left: .8rem;
-    align-self: center;
-    font-size: 1.2rem;
-    color:  #00a5a5;
-  }
+  padding-right: 0.8rem;
+  padding-left: 0.8rem;
+  align-self: center;
+  font-size: 1.2rem;
+  color: #00a5a5;
+}
 .nav-icons-footer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-    width: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: fit-content;
 }
 
 .email-submit {
-    background-color:rgb(33, 130, 165, .8);
-    padding: .5rem;
-    border: none;
-    color: white;
-    font-family: 'Advent Pro', sans-serif;
-    font-size: 1.2rem;
-    cursor: pointer;
-    border-radius: 10%;
+  background-color: rgb(33, 130, 165, 0.8);
+  padding: 0.5rem;
+  border: none;
+  color: white;
+  font-family: "Advent Pro", sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  border-radius: 10%;
 }
 
 /* ---------------------------- SCROLLBAR SECTION ---------------------------- */
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(71, 20, 71);
-    border: none;
+  background-color: rgb(71, 20, 71);
+  border: none;
 }
 
 ::-webkit-scrollbar {
-    width: .25rem;
-    background-color: #00a5a5;
+  width: 0.25rem;
+  background-color: #00a5a5;
 }
-
-
 
 /* ---------------------------- RESPONSIVE DESIGN ---------------------------- */
 
-
 @media (max-width: 950px) {
+  .form-row {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin: 0 0 2rem 0;
+    width: 100%;
+  }
 
-    .form-row {
+  .email-content {
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+  }
 
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        text-align: center;
-        margin: 0 0 2rem 0;
-        width: 100%;
-    }
+  .user-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 2rem 0;
+    width: 100%;
+  }
 
+  .user-email {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 0 1rem 0;
+    width: 100%;
+  }
+  #user-name {
+    width: 90%;
+  }
+  #user-email {
+    width: 90%;
+  }
 
-    .email-content {
-        margin: 1rem 0 1rem 0;
-        width: 100%;
-    }
-    
-    .user-name {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin: 1rem 0 2rem 0;
-        width: 100%;
-    }
-    
-    .user-email {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 0 0 1rem 0;
-        width: 100%;
-    }
-    #user-name {
-        width: 90%;
-    }
-    #user-email {
-        width: 90%;
-    }
+  .intro {
+    font-size: 1.2rem;
+  }
 
-    .intro {
-        font-size: 1.2rem;
-    }
+  .contact-body p {
+    font-size: 1.2rem;
+  }
 
-    .contact-body p {
-        font-size: 1.2rem;
-    }
-
-    .contact-form {
-        width: 80%;
-    }
-    .header-title{ 
-        width: 30rem;
-       
-
-    }
-    
+  .contact-form {
+    width: 80%;
+  }
+  .header-title {
+    width: 30rem;
+  }
 }
 
 @media (max-width: 850px) {
-
-    
-    .blog-preview-window {
-        height: 0;
-        display: none;
-       
-    }
-
-    .blog-row-two {
-        margin: 0 0 0 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 98%;
-        height: fit-content;
-        
-    }
-    .other-story {
-        width: 66%;
-        height: fit-content;
-        margin-bottom: 6rem;
-        
-    }
-
-    .other-story.main-story {
-        width: 80%;
-        height: fit-content;
-    }
-
-     
-
+  .blog-preview-window {
+    height: 0;
+    display: none;
   }
 
-
-  @media (max-width: 700px) {
-
-    header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      
-
-    }
-
-    .header-title{ 
-        width: 20rem;
-        height: 100%;
-        top: 1rem;
-        
-    }
-    .other-story {
-        width: 66%;
-        
-        margin-bottom: 1rem;
-        
-    }
-    .tabs-section{
-        padding: 0 0 .5rem 0;
-        margin-top: -.5rem;
-    }
-    .back .panel-description {
-        font-size: .8rem;
-        font-weight: 700;
-        color: rgb(4, 26, 32);
-        line-height: 1.2rem;
-        overflow-y: hidden;
-       
-    }
-    
+  .blog-row-two {
+    margin: 0 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 98%;
+    height: fit-content;
+  }
+  .other-story {
+    width: 66%;
+    height: fit-content;
+    margin-bottom: 6rem;
   }
 
-  @media (max-width: 600px) {
-
-    .footer-icons {
-        height: 1.8rem;
-        margin: 0 .5rem 0;
-    }
-
-    .signature {
-        height: 2rem;
-      }
-    
-      
-    .by-me p {
-        padding-right: .5rem;
-        padding-left: .7rem;
-        align-self: center;
-        
-      }
-      .intro {
-        font-size: 1rem;
-    }
-    
-    .contact-body p {
-        font-size: 1rem;
-    }
-    
-    
+  .other-story.main-story {
+    width: 80%;
+    height: fit-content;
   }
+}
+
+@media (max-width: 700px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .header-title {
+    width: 20rem;
+    height: 100%;
+    top: 1rem;
+  }
+  .other-story {
+    width: 66%;
+
+    margin-bottom: 1rem;
+  }
+  .tabs-section {
+    padding: 0 0 0.5rem 0;
+    margin-top: -0.5rem;
+  }
+  .back .panel-description {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: rgb(4, 26, 32);
+    line-height: 1.2rem;
+    overflow-y: hidden;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-icons {
+    height: 1.8rem;
+    margin: 0 0.5rem 0;
+  }
+
+  .signature {
+    height: 2rem;
+  }
+
+  .by-me p {
+    padding-right: 0.5rem;
+    padding-left: 0.7rem;
+    align-self: center;
+  }
+  .intro {
+    font-size: 1rem;
+  }
+
+  .contact-body p {
+    font-size: 1rem;
+  }
+}

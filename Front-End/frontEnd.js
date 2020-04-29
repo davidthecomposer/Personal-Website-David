@@ -1,18 +1,14 @@
 /* jshint esversion: 6 */
 
-import {createAllCards} from './modules/cards.js';
-import {underlineGraphics} from './modules/graphic-helpers.js';
-import {createBlogs} from './dev-blog/modules/createDevBlogs.js';
-import {morphHeaderInit} from './modules/morphHeader.js';
-
-
+import { createAllCards } from "./modules/cards.js";
+import { underlineGraphics } from "./modules/graphic-helpers.js";
+import { createBlogs } from "./dev-blog/modules/createDevBlogs.js";
+import { morphHeaderInit } from "./modules/morphHeader.js";
 
 createAllCards();
 underlineGraphics();
 createBlogs();
 morphHeaderInit();
-
-
 
 /* 
 

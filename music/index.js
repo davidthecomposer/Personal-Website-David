@@ -1,19 +1,17 @@
- /* jshint esversion: 6 */
-
+/* jshint esversion: 6 */
 
 //  ----------------------- IMPORTS ------------------------- //
 
- import {composerQuoteChange} from './modules/composer-quotes.js';
- import {createBlogs} from './music-blog/blogLink.js';
- import {createSlideShow} from './modules/slideshow.js';
- import {createAudioPlayers} from './modules/audio-player.js';
- import {createSmallAudioPlayers} from './modules/small-audio-player.js';
- import {createMusicSections} from './modules/music-section.js';
- import {createNewsRows} from './modules/news-row.js';
- import {allPlayersArray} from './modules/audio-helpers.js';
- import {morphHeaderInit} from './modules/morphHeaderInit.js';
- import {underlineGraphics} from './modules/graphics-helpers.js';
-
+import { composerQuoteChange } from "./modules/composer-quotes.js";
+import { createBlogs } from "./music-blog/blogLink.js";
+import { createSlideShow } from "./modules/slideshow.js";
+import { createAudioPlayers } from "./modules/audio-player.js";
+import { createSmallAudioPlayers } from "./modules/small-audio-player.js";
+import { createMusicSections } from "./modules/music-section.js";
+import { createNewsRows } from "./modules/news-row.js";
+import { allPlayersArray } from "./modules/audio-helpers.js";
+import { morphHeaderInit } from "./modules/morphHeaderInit.js";
+import { underlineGraphics } from "./modules/graphics-helpers.js";
 
 //--------------------  ACTIVE FUNCTIONS ---------------------- //
 
@@ -27,18 +25,10 @@ underlineGraphics();
 createNewsRows();
 createBlogs();
 
- 
-
-
-
 //  ----------------------- EXPORTS -------------------------------  //
-export {allPlayersArray};
+export { allPlayersArray };
 
-
-
-
-
- /* -------------------------- To-Do ---------------------------- //
+/* -------------------------- To-Do ---------------------------- //
         
 
 
