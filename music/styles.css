@@ -1226,7 +1226,7 @@ html {
 }
 
 .news-item-title {
-  font-family: "Advent Pro", sans-serif;
+  font-family: "julius_sans_oneregular";
   font-weight: bold;
   font-size: 2rem;
   color: rgb(236, 236, 236);
@@ -1977,6 +1977,12 @@ footer {
 
   .pane-ticker {
     height: 0.7rem;
+  }
+  .audio-volumeBar {
+    display: none;
+  }
+  .volume-span {
+    justify-content: center;
   }
 }
 /* @supports (-webkit-touch-callout: none) {
