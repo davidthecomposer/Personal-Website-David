@@ -344,7 +344,7 @@ header {
   transform: rotateY(-180deg);
   background-repeat: no-repeat;
   background-size: cover;
-
+  border-radius: 2%;
   justify-content: flex-start;
 }
 
@@ -371,9 +371,10 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  background-image: url("images/card-front.svg");
+  background-color: rgb(243, 243, 243);
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 2%;
 }
 
 .panel-title {
@@ -381,6 +382,8 @@ header {
   font-family: "julius_sans_oneregular";
   font-size: 2rem;
   text-align: center;
+  color: white;
+  background-color: rgb(46, 46, 46);
 }
 
 .panel-picture {
@@ -389,6 +392,8 @@ header {
   height: 12.5rem;
   background-size: 100%;
   background-repeat: no-repeat;
+  background-position: center center;
+  border-radius: 2%;
 }
 
 .lower-card {
@@ -401,17 +406,25 @@ header {
 .panel-stats {
   position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
+  align-items: center;
+  color: rgb(46, 46, 46);
 }
 
 .stat {
   position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
   padding: 1rem 0;
-  font-weight: 400;
+  font-size: 2rem;
+
+  border-radius: 2%;
+}
+
+.code-icon {
+  padding: 0 1rem;
 }
 
 .navigate {
@@ -422,7 +435,7 @@ header {
   border: none;
   color: white;
   height: 1.5rem;
-  margin-bottom: 1rem;
+  border-radius: 5%;
   cursor: pointer;
   font-size: 1.2rem;
   font-family: "Advent Pro", sans-serif;
