@@ -1,7 +1,6 @@
 //jshint esversion: 6
 
-const jsBasicCode = 
-`
+const jsBasicCode = `
 /* jshint esversion: 6 */
 
 //global variables to access elements. 
