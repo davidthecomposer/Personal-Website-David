@@ -1,12 +1,12 @@
 .audio-player {
 	margin: 5rem auto;
 	width: 600px;
-
+	color: white;
 	height: 140px;
 	border: none;
 	display: flex;
 	flex-direction: column;
-	background-color: rgb(248, 255, 249);
+	background-color: rgb(37, 37, 37);
 	z-index: 0;
 	user-select: none;
 }
