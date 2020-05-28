@@ -7,7 +7,7 @@ $message = $_POST['userMessage'];
 //Validate first
 if(empty($name)||empty($visitor_email)) 
 {
-    echo $_POST;
+    echo $name;
     exit;
 }
 
