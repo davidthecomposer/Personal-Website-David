@@ -55,9 +55,6 @@ const requestLocation = async (lat, lon) => {
 	);
 	const locationData = await response.json();
 
-	console.log(
-		`${locationData.locality}, ${locationData.principalSubdivision} ${locationData.postcode}`
-	);
 	const locationText = document.querySelector(".location-text");
 	locationText.innerText = `${locationData.locality}, ${locationData.principalSubdivision} ${locationData.postcode}`;
 };
@@ -82,8 +79,6 @@ const newsAPI = async () => {
 	const navigateToLink = (event) => {
 		window.location.href = articleLink;
 	};
-
-	console.log(randomArticle);
 
 	articleContainer.addEventListener("click", navigateToLink);
 };

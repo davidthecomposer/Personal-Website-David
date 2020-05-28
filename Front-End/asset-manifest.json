@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/static/css/main.079021b3.chunk.css",
+    "main.js": "/static/js/main.d4e39f2f.chunk.js",
+    "main.js.map": "/static/js/main.d4e39f2f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.df075e2d.js",
+    "runtime-main.js.map": "/static/js/runtime-main.df075e2d.js.map",
+    "static/js/2.7924cfe2.chunk.js": "/static/js/2.7924cfe2.chunk.js",
+    "static/js/2.7924cfe2.chunk.js.map": "/static/js/2.7924cfe2.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.f8eea8cf530ad7c725da7a0c8ca333e0.js": "/precache-manifest.f8eea8cf530ad7c725da7a0c8ca333e0.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.079021b3.chunk.css.map": "/static/css/main.079021b3.chunk.css.map",
+    "static/js/2.7924cfe2.chunk.js.LICENSE.txt": "/static/js/2.7924cfe2.chunk.js.LICENSE.txt",
+    "static/media/header.css": "/static/media/DavidNameDevThin.56e56716.png",
+    "static/media/audio-player-1.png": "/static/media/audio-player-1.4fb9c3e7.png",
+    "static/media/calculator.png": "/static/media/calculator.ee8a50c0.png",
+    "static/media/color-selector.png": "/static/media/color-selector.d1dc0130.png",
+    "static/media/commission-form.png": "/static/media/commission-form.b842cf51.png",
+    "static/media/david-sig-white-shadow.png": "/static/media/david-sig-white-shadow.edd02e4f.png",
+    "static/media/digital-clock.png": "/static/media/digital-clock.5197f0a8.png",
+    "static/media/drum-kit.png": "/static/media/drum-kit.276bb163.png",
+    "static/media/facebook.svg": "/static/media/facebook.7f93a05a.svg",
+    "static/media/github.svg": "/static/media/github.4ebb6be8.svg",
+    "static/media/instagram.svg": "/static/media/instagram.a88907b5.svg",
+    "static/media/music-website.png": "/static/media/music-website.7b6d116d.png",
+    "static/media/react-audio-player.png": "/static/media/react-audio-player.1a1676c5.png",
+    "static/media/simon-game.png": "/static/media/simon-game.fc80b26b.png",
+    "static/media/slide-show-creator.png": "/static/media/slide-show-creator.5bba7356.png",
+    "static/media/tip-calculator.png": "/static/media/tip-calculator.3124ed9e.png",
+    "static/media/to-do-list.png": "/static/media/to-do-list.4da49de4.png",
+    "static/media/twitter.svg": "/static/media/twitter.34ecc7a1.svg",
+    "static/media/video-player-1.png": "/static/media/video-player-1.73e5329b.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.df075e2d.js",
+    "static/js/2.7924cfe2.chunk.js",
+    "static/css/main.079021b3.chunk.css",
+    "static/js/main.d4e39f2f.chunk.js"
+  ]
+}
