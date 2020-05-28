@@ -1,7 +1,5 @@
 <?php
 
-$_POST = json_decode(file_get_contents('php://input'), true);
-
 $name = $_POST['name'];
 $visitor_email = $_POST['email'];
 $message = $_POST['userMessage'];
@@ -9,8 +7,7 @@ $message = $_POST['userMessage'];
 //Validate first
 if(empty($name)||empty($visitor_email)) 
 {
-    echo ("Name and email are mandatory!",$name, $_POST );
-    
+    echo $_POST;
     exit;
 }
 
