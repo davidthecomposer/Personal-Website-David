@@ -1,4 +1,7 @@
 <?php
+
+$_POST = json_decode(file_get_contents('php://input'), true);
+
 $name = $_POST['name'];
 $visitor_email = $_POST['email'];
 $message = $_POST['userMessage'];
