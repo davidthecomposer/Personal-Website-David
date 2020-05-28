@@ -9,9 +9,8 @@ $message = $_POST['userMessage'];
 //Validate first
 if(empty($name)||empty($visitor_email)) 
 {
-    echo "Name and email are mandatory!";
-    echo $name;
-    echo $_POST;
+    echo ("Name and email are mandatory!",$name, $_POST );
+    
     exit;
 }
 
