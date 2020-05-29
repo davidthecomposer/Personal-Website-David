@@ -1,18 +1,11 @@
 <?php
 
-$_POST = json_decode(file_get_contents('php://input'), true);
-
 $name = $_POST['name'];
 $visitor_email = $_POST['email'];
 $message = $_POST['userMessage'];
 
 //Validate first
-if(empty($name)||empty($visitor_email)) 
-{
-  echo $_POST;
-    exit;
-}
-
+echo $name;
 if(IsInjected($visitor_email))
 {
     echo "Bad email value!";
