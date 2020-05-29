@@ -1,6 +1,6 @@
 <?php
 
-var_dump($_POST);
+
 $name = $_POST['name'];
 $visitor_email = $_POST['email'];
 $message = $_POST['userMessage'];
