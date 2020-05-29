@@ -1,10 +1,4 @@
 <?php
-header('Access-Control-Allow-Origin: *');
-header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
-header("Access-Control-Allow-Headers: Content-Disposition, Content-Type, Content-Length, Accept-Encoding");
-header("Content-type:application/json");
-$_POST = json_decode(file_get_contents("php://input"));
-echo "received data";
 
 $name = $_POST['name'];
 $visitor_email = $_POST['email'];
@@ -32,7 +26,6 @@ $success=mail($to,$email_subject,$email_body,$headers);
 // header('Location: thank-you.html');
 if ($success) {
   echo "Mail Sent!";
-  echo $name;
 }
 else {
   echo "Mail not sent";
