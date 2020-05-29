@@ -1,12 +1,17 @@
 <?php
-
+header('Access-Control-Allow-Origin: *');
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
+header("Access-Control-Allow-Headers: Content-Disposition, Content-Type, Content-Length, Accept-Encoding");
+header("Content-type:application/json");
+$_POST = json_decode(file_get_contents("php://input"));
+echo "received data";
 
 $name = $_POST['name'];
 $visitor_email = $_POST['email'];
 $message = $_POST['userMessage'];
 
 //Validate first
-echo $name;
+
 if(IsInjected($visitor_email))
 {
     echo "Bad email value!";
