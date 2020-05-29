@@ -1,19 +1,31 @@
 /*jshint esversion: 8 */
+const options = {
+	enableHighAccuracy: true,
+	maximumAge: 300000,
+	timeout: 270000,
+};
+
+const error = () => {
+	status.textContent = "Unable to retrieve your location";
+};
+
+//  This is where I'll put all the variables
+export const initWeatherData = () => {
+	navigator.geolocation.getCurrentPosition(success, error, options);
+};
 
 const success = (position) => {
 	const lat = position.coords.latitude;
 	const lon = position.coords.longitude;
-
-	requestWeatherData(lat, lon);
 	requestLocation(lat, lon);
-	newsAPI();
+	requestWeatherData(lat, lon);
 };
 
 const requestWeatherData = async (lat, lon) => {
-	const response = await fetch(
+	const weatherResponse = await fetch(
 		`https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=imperial&appid=65c8a48eb73372b183f6f9e65fb0068a`
 	);
-	const weatherData = await response.json();
+	const weatherData = await weatherResponse.json();
 
 	const weatherIcon = document.querySelector(".weather-icon");
 	const temp = document.querySelector(".temp");
@@ -57,43 +69,4 @@ const requestLocation = async (lat, lon) => {
 
 	const locationText = document.querySelector(".location-text");
 	locationText.innerText = `${locationData.locality}, ${locationData.principalSubdivision} ${locationData.postcode}`;
-};
-
-const newsAPI = async () => {
-	const response = await fetch(
-		"https://newsapi.org/v2/top-headlines?country=us&apiKey=b3252b8b9d0f44f9a0da191f3b2f8bc1"
-	);
-	const newsData = await response.json();
-	const articleTitle = document.querySelector(".article-title");
-	const author = document.querySelector(".article-author");
-	const image = document.querySelector(".article-content");
-	const randomNumber = Math.floor(Math.random() * newsData.articles.length);
-	const randomArticle = newsData.articles[randomNumber];
-	const articleContainer = document.querySelector(".article-container");
-	const articleLink = randomArticle.url;
-
-	articleTitle.innerText = randomArticle.title;
-	author.innerText = `- ${randomArticle.author}`;
-	image.style.backgroundImage = `url(${randomArticle.urlToImage})`;
-
-	const navigateToLink = (event) => {
-		window.location.href = articleLink;
-	};
-
-	articleContainer.addEventListener("click", navigateToLink);
-};
-
-const options = {
-	enableHighAccuracy: true,
-	maximumAge: 30000,
-	timeout: 27000,
-};
-
-const error = () => {
-	status.textContent = "Unable to retrieve your location";
-};
-
-//  This is where I'll put all the variables
-export const initWeatherData = () => {
-	navigator.geolocation.getCurrentPosition(success, error, options);
 };

@@ -1,6 +1,7 @@
 /*jshint esversion: 6 */
 
 import { initWeatherData } from "./modules/weatherAPI.js";
+import { newsAPI } from "./modules/newsApi.js";
 
 const resetClock = () => {
 	const date = document.querySelector(".date");
@@ -92,7 +93,7 @@ resetClock();
 resetTimeOfDay();
 switchSeason();
 initWeatherData();
-
+newsAPI();
 /* More  ideas : 
 
 Different pictures for each hour of the day: Could I take them?
