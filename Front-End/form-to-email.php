@@ -13,28 +13,14 @@ if(IsInjected($visitor_email))
 }
 
 $email_from = $visitor_email;//<== update the email address
-$email_subject = "New Message from visitor at developer.davidhalcampbell.com";
+$email_subject = "New Form submission";
+$email_body = "You have received a new message from: $name.\n
+    Here is the message:\n $message \n".
 $to = "developer@davidhalcampbell.com";//<== update the email address
 $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $visitor_email \r\n";
 //Send the email!
-$email_body= `
-<html>
-        <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-            <title></title>
-        </head>
-        <body>
-            <div id="email-wrap" style='background: #151515;color: #FFF;'>
-            <p>Hi, David</p><br>
-            <p>$name has sent you a message:</p><br>
-            <p>$message</p>
-            <p>Thank you,</p>
-            <p>Developer@davidhalcampbell.com</p>
-            </div>
-        </body>
-        </html>
-        `;
+
 
 
 
