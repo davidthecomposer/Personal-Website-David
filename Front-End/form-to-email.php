@@ -26,6 +26,7 @@ $success = mail($to,$email_subject,$email_body,$headers);
 // header('Location: thank-you.html');
 if ($success) {
   echo "Mail Sent!";
+  echo $name;
 }
 else {
   echo "Mail not sent";
