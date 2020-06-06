@@ -1,14 +1,10 @@
 <?php
-$name = $_POST['user-name'];
-$visitor_email = $_POST['user-email'];
-$message = $_POST['email-content'];
+
+$name = $_POST['name'];
+$visitor_email = $_POST['email'];
+$message = $_POST['userMessage'];
 
 //Validate first
-if(empty($name)||empty($visitor_email)) 
-{
-    echo "Name and email are mandatory!";
-    exit;
-}
 
 if(IsInjected($visitor_email))
 {
@@ -18,17 +14,25 @@ if(IsInjected($visitor_email))
 
 $email_from = $visitor_email;//<== update the email address
 $email_subject = "New Form submission";
-$email_body = "You have received a new message from: $name.\n".
-    "Here is the message:\n $message".
-    
+$email_body = "You have received a new message from: $name.\n
+    Here is the message:\n $message \n".
 $to = "composer@davidhalcampbell.com";//<== update the email address
 $headers = "From: $email_from \r\n";
 $headers .= "Reply-To: $visitor_email \r\n";
 //Send the email!
-mail($to,$email_subject,$email_body,$headers);
-//done. redirect to thank-you page.
-header('Location: thank-you.html');
 
+
+
+
+$success=mail($to,$email_subject,$email_body,$headers);
+//done. redirect to thank-you page.
+// header('Location: thank-you.html');
+if ($success) {
+  echo "Mail Sent!";
+}
+else {
+  echo "Mail not sent";
+}
 
 // Function to validate against any email injection attempts
 function IsInjected($str)
