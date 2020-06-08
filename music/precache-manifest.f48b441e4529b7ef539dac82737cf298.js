@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1165fb3075b7bfe17c667c4f2ada6876",
+    "revision": "b793d788f03e0e2235a6a88b9cb14894",
     "url": "/index.html"
   },
   {
-    "revision": "98522115488d43b68640",
-    "url": "/static/css/main.de3ec108.chunk.css"
+    "revision": "a6cd41680bf7b8fdcf18",
+    "url": "/static/css/main.d2e616cc.chunk.css"
   },
   {
     "revision": "5e7be76fac7812e1e022",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.acd86b29.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "98522115488d43b68640",
-    "url": "/static/js/main.f577b26c.chunk.js"
+    "revision": "a6cd41680bf7b8fdcf18",
+    "url": "/static/js/main.2f15d43a.chunk.js"
   },
   {
     "revision": "13afce061303762cd6d7",
@@ -26,6 +26,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "648755f4f706e8b0302f778fea6e907e",
     "url": "/static/media/3-Pieces-for-Clarinet.648755f4.wav"
+  },
+  {
+    "revision": "d94009b8dc453e4cd605ed6248ceafd5",
+    "url": "/static/media/3-Songs-Baudelaire.d94009b8.pdf"
   },
   {
     "revision": "f77ab1f2f4712ccec8220b8cd2f525ba",
@@ -94,10 +98,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "061617d83d1be17bc0e3247e7a7799d2",
     "url": "/static/media/I-Wonder-as-I-Wander-2018.061617d8.pdf"
-  },
-  {
-    "revision": "d94009b8dc453e4cd605ed6248ceafd5",
-    "url": "/static/media/JPART.d94009b8.pdf"
   },
   {
     "revision": "2621719dc8dbcc98f11d5dbd53b2aedf",
