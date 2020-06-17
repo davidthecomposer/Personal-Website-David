@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.93e11aa6.chunk.css",
-    "main.js": "/static/js/main.4bf81ed5.chunk.js",
-    "main.js.map": "/static/js/main.4bf81ed5.chunk.js.map",
+    "main.js": "/static/js/main.48b9851f.chunk.js",
+    "main.js.map": "/static/js/main.48b9851f.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.df075e2d.js",
     "runtime-main.js.map": "/static/js/runtime-main.df075e2d.js.map",
-    "static/js/2.cb7cc9ac.chunk.js": "/static/js/2.cb7cc9ac.chunk.js",
-    "static/js/2.cb7cc9ac.chunk.js.map": "/static/js/2.cb7cc9ac.chunk.js.map",
+    "static/js/2.07dbf1bc.chunk.js": "/static/js/2.07dbf1bc.chunk.js",
+    "static/js/2.07dbf1bc.chunk.js.map": "/static/js/2.07dbf1bc.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.36700ef9d7e71d539e80ea9ea4322486.js": "/precache-manifest.36700ef9d7e71d539e80ea9ea4322486.js",
+    "precache-manifest.3472d767cb17588e208ebbe3fff38049.js": "/precache-manifest.3472d767cb17588e208ebbe3fff38049.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.93e11aa6.chunk.css.map": "/static/css/main.93e11aa6.chunk.css.map",
-    "static/js/2.cb7cc9ac.chunk.js.LICENSE.txt": "/static/js/2.cb7cc9ac.chunk.js.LICENSE.txt",
+    "static/js/2.07dbf1bc.chunk.js.LICENSE.txt": "/static/js/2.07dbf1bc.chunk.js.LICENSE.txt",
     "static/media/Header.css": "/static/media/DavidNameDevThin.56e56716.png",
     "static/media/audio-player-1.png": "/static/media/audio-player-1.4fb9c3e7.png",
     "static/media/calculator.png": "/static/media/calculator.ee8a50c0.png",
@@ -22,6 +22,7 @@
     "static/media/drum-kit.png": "/static/media/drum-kit.276bb163.png",
     "static/media/github.svg": "/static/media/github.4ebb6be8.svg",
     "static/media/music-website.png": "/static/media/music-website.7b6d116d.png",
+    "static/media/newsletter-signup.png": "/static/media/newsletter-signup.09bd026a.png",
     "static/media/react-audio-player.png": "/static/media/react-audio-player.1a1676c5.png",
     "static/media/simon-game.png": "/static/media/simon-game.fc80b26b.png",
     "static/media/slide-show-creator.png": "/static/media/slide-show-creator.5bba7356.png",
@@ -32,8 +33,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.df075e2d.js",
-    "static/js/2.cb7cc9ac.chunk.js",
+    "static/js/2.07dbf1bc.chunk.js",
     "static/css/main.93e11aa6.chunk.css",
-    "static/js/main.4bf81ed5.chunk.js"
+    "static/js/main.48b9851f.chunk.js"
   ]
 }

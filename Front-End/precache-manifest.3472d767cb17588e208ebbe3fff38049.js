@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "86acae48516ef2456aa2f783d272439e",
+    "revision": "d4cd4d19ff354d04f65ee70204e77247",
     "url": "/index.html"
   },
   {
-    "revision": "955521a63860c1f14e64",
+    "revision": "e6f4a360eaab5ae48ef3",
     "url": "/static/css/main.93e11aa6.chunk.css"
   },
   {
-    "revision": "580120ccf41070d148d5",
-    "url": "/static/js/2.cb7cc9ac.chunk.js"
+    "revision": "6c79a1725f2f62ac3240",
+    "url": "/static/js/2.07dbf1bc.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/static/js/2.cb7cc9ac.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.07dbf1bc.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "955521a63860c1f14e64",
-    "url": "/static/js/main.4bf81ed5.chunk.js"
+    "revision": "e6f4a360eaab5ae48ef3",
+    "url": "/static/js/main.48b9851f.chunk.js"
   },
   {
     "revision": "a26b55547fb7e86d36ab",
@@ -66,6 +66,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "7b6d116d62a2c572f6597c6b5cdd5d3f",
     "url": "/static/media/music-website.7b6d116d.png"
+  },
+  {
+    "revision": "09bd026a785d3ca4b6ba21744aad2398",
+    "url": "/static/media/newsletter-signup.09bd026a.png"
   },
   {
     "revision": "1a1676c540760af87ac8100e0e1c2cc1",
