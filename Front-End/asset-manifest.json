@@ -1,23 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.93e11aa6.chunk.css",
-    "main.js": "/static/js/main.8c7a8706.chunk.js",
-    "main.js.map": "/static/js/main.8c7a8706.chunk.js.map",
+    "main.js": "/static/js/main.7a4acbeb.chunk.js",
+    "main.js.map": "/static/js/main.7a4acbeb.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.df075e2d.js",
     "runtime-main.js.map": "/static/js/runtime-main.df075e2d.js.map",
-    "static/js/2.94b0129c.chunk.js": "/static/js/2.94b0129c.chunk.js",
-    "static/js/2.94b0129c.chunk.js.map": "/static/js/2.94b0129c.chunk.js.map",
+    "static/js/2.3ead46b4.chunk.js": "/static/js/2.3ead46b4.chunk.js",
+    "static/js/2.3ead46b4.chunk.js.map": "/static/js/2.3ead46b4.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.aa9db1356e884b025b22c7ef85859541.js": "/precache-manifest.aa9db1356e884b025b22c7ef85859541.js",
+    "precache-manifest.55dbf9c474d0d42010e28666912f48a0.js": "/precache-manifest.55dbf9c474d0d42010e28666912f48a0.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.93e11aa6.chunk.css.map": "/static/css/main.93e11aa6.chunk.css.map",
-    "static/js/2.94b0129c.chunk.js.LICENSE.txt": "/static/js/2.94b0129c.chunk.js.LICENSE.txt",
+    "static/js/2.3ead46b4.chunk.js.LICENSE.txt": "/static/js/2.3ead46b4.chunk.js.LICENSE.txt",
     "static/media/Header.css": "/static/media/DavidNameDevThin.56e56716.png",
     "static/media/audio-player-1.png": "/static/media/audio-player-1.4fb9c3e7.png",
     "static/media/calculator.png": "/static/media/calculator.ee8a50c0.png",
     "static/media/color-selector.png": "/static/media/color-selector.d1dc0130.png",
     "static/media/comment_system.png": "/static/media/comment_system.1b7a7874.png",
     "static/media/commission-form.png": "/static/media/commission-form.b842cf51.png",
+    "static/media/copernicus-app.png": "/static/media/copernicus-app.56642fda.png",
+    "static/media/copernicus_API.jpeg": "/static/media/copernicus_API.b10402ba.jpeg",
     "static/media/david-sig-white-shadow.png": "/static/media/david-sig-white-shadow.edd02e4f.png",
     "static/media/digital-clock.png": "/static/media/digital-clock.5197f0a8.png",
     "static/media/drum-kit.png": "/static/media/drum-kit.276bb163.png",
@@ -34,8 +36,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.df075e2d.js",
-    "static/js/2.94b0129c.chunk.js",
+    "static/js/2.3ead46b4.chunk.js",
     "static/css/main.93e11aa6.chunk.css",
-    "static/js/main.8c7a8706.chunk.js"
+    "static/js/main.7a4acbeb.chunk.js"
   ]
 }
