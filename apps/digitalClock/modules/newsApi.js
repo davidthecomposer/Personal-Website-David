@@ -1,6 +1,12 @@
 export const newsAPI = async () => {
 	const response = await fetch(
-		"https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=us&apiKey=b3252b8b9d0f44f9a0da191f3b2f8bc1"
+		"https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=us&apiKey=b3252b8b9d0f44f9a0da191f3b2f8bc1",
+		{
+			method: "GET",
+			headers: {
+				Origin: "https://www.apps.davidhalcampbell.com/digitalClock/index.html",
+			},
+		}
 	);
 
 	const newsData = await response.json();
