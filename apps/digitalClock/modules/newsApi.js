@@ -1,26 +1,28 @@
 export const newsAPI = async () => {
 	const response = await fetch(
-		"https://cors-anywhere.herokuapp.com/https://newsapi.org/v2/top-headlines?country=us&apiKey=b3252b8b9d0f44f9a0da191f3b2f8bc1",
+		"https://api.nytimes.com/svc/topstories/v2/arts.json?api-key=zvd2lu582qsTiUUZuLThUbaBe2SiknyB",
 		{
 			method: "GET",
-			headers: {
-				Origin: "https://www.apps.davidhalcampbell.com/digitalClock/index.html",
-			},
+			// headers: {
+			// 	Origin: "https://www.apps.davidhalcampbell.com/digitalClock/index.html",
+			// },
 		}
 	);
 
 	const newsData = await response.json();
+
+	console.log(newsData);
 	const articleTitle = document.querySelector(".article-title");
 	const author = document.querySelector(".article-author");
 	const image = document.querySelector(".article-content");
-	const randomNumber = Math.floor(Math.random() * newsData.articles.length);
-	const randomArticle = newsData.articles[randomNumber];
+	const randomNumber = Math.floor(Math.random() * newsData.num_results);
+	const randomArticle = newsData.results[randomNumber];
 	const articleContainer = document.querySelector(".article-container");
-	const articleLink = randomArticle.url;
+	const articleLink = randomArticle.short_url;
 
 	articleTitle.innerText = randomArticle.title;
-	author.innerText = `- ${randomArticle.author}`;
-	image.style.backgroundImage = `url(${randomArticle.urlToImage})`;
+	author.innerText = ` ${randomArticle.byline}`;
+	image.style.backgroundImage = `url(${randomArticle.multimedia[0].url})`;
 
 	const navigateToLink = (event) => {
 		window.location.href = articleLink;
