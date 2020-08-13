@@ -200,6 +200,7 @@ h1 {
 }
 
 .weather-header {
+	position: relative;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
@@ -211,6 +212,8 @@ h1 {
 
 .weather-description {
 	text-align: center;
+	position: absolute;
+	bottom: 5%;
 }
 
 .temp {
