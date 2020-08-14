@@ -1,0 +1,200 @@
+@mixin flex($direction, $justify, $align) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+%form-input {
+	background-color: rgba(37, 37, 37, 0.746);
+	outline: none;
+	border: none;
+	color: white;
+	padding: 0.25rem;
+	font-family: "Quicksand", sans-serif;
+	&::placeholder {
+		color: white;
+	}
+}
+
+.comment-container {
+	@include flex(column, center, center);
+	position: absolute;
+	bottom: 10px;
+	width: 350px;
+	height: 300px;
+}
+
+.comment-icon {
+	width: 62.5px;
+	height: 50px;
+	cursor: pointer;
+	background-image: url("../../images/comment_icon.svg");
+	background-repeat: no-repeat;
+	transition: 0.2s;
+	position: relative;
+	z-index: 5;
+}
+
+.comment-icon:hover {
+	transform: scale(1.2);
+}
+
+.track-comment-form {
+	@include flex(column, space-around, center);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: -3;
+	transition: 0.2s;
+
+	.first-column {
+		@include flex(row, space-around, center);
+		width: 80%;
+
+		select {
+			@extend %form-input;
+			width: 30%;
+		}
+		.track-option {
+			@extend %form-input;
+		}
+		.track-option:first-child {
+			@extend %form-input;
+		}
+		.track-time {
+			@extend %form-input;
+			width: 30%;
+		}
+		.name {
+			width: 30%;
+			@extend %form-input;
+		}
+	}
+
+	textarea {
+		height: 40%;
+		width: 80%;
+		@extend %form-input;
+	}
+
+	.submit {
+		@extend %form-input;
+		padding: 0.5rem;
+		border-radius: 10%;
+		color: rgb(83, 255, 255);
+	}
+}
+
+.visible-form {
+	opacity: 1;
+	z-index: 2;
+	transition: 0.2s;
+}
+
+.close-form-icon {
+	animation: become-close 0.2s linear forwards;
+}
+
+.switch-to-icon {
+	animation: become-icon 0.2s linear alternate;
+}
+
+@keyframes become-close {
+	0% {
+		background-image: url("../../images/comment_icon.svg");
+	}
+	100% {
+		transform: translate(-140px, -160px) scale(0.7);
+		background-image: url("../../images/nvm.svg");
+	}
+}
+
+@keyframes become-icon {
+	0% {
+		transform: translate(-140px, -160px) scale(0.7);
+		background-image: url("../../images/nvm.svg");
+	}
+	100% {
+		transform: translate(0vw, 0vh) scale(1);
+		background-image: url("../../images/comment_icon.svg");
+	}
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+	.comment-icon {
+		align-self: flex-start;
+		justify-self: bottom;
+		margin-left: 0;
+		margin-bottom: 6px;
+		background-image: url("../../images/comment_icon.svg");
+	}
+
+	.comment-container {
+		bottom: 0;
+		width: 50vw;
+		left: 25vw;
+		height: 200px;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	@keyframes become-close {
+		0% {
+			background-image: url("../../images/comment_icon.svg");
+		}
+		100% {
+			transform: translate(30px, 6px) scale(0.7);
+			background-image: url("../../images/nvm.svg");
+		}
+	}
+
+	@keyframes become-icon {
+		0% {
+			transform: translate(30px, 6px) scale(0.7);
+			background-image: url("../../images/nvm.svg");
+		}
+		100% {
+			transform: translate(0, 0) scale(1);
+			background-image: url("../../images/comment_icon.svg");
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.comment-icon {
+		align-self: flex-start;
+		margin-left: 6px;
+		background-image: url("../../images/comment_icon.svg");
+	}
+
+	.comment-container {
+		bottom: 10px;
+		width: 100vw;
+		height: 200px;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	@keyframes become-close {
+		0% {
+			background-image: url("../../images/comment_icon.svg");
+		}
+		100% {
+			transform: translate(30px, 6px) scale(0.7);
+			background-image: url("../../images/nvm.svg");
+		}
+	}
+
+	@keyframes become-icon {
+		0% {
+			transform: translate(30px, 6px) scale(0.7);
+			background-image: url("../../images/nvm.svg");
+		}
+		100% {
+			transform: translate(0, 0) scale(1);
+			background-image: url("../../images/comment_icon.svg");
+		}
+	}
+}

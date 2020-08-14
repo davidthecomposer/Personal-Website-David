@@ -1,0 +1,172 @@
+@mixin flex($direction, $justify, $align) {
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+.playlist-container {
+	position: relative;
+	@include flex(row, center, center);
+	top: 15vh;
+	justify-self: left;
+	height: fit-content;
+	max-height: 50vh;
+	width: 350px;
+	z-index: 10;
+}
+
+.playlist-interface {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(0, 0, 0, 0.582);
+	height: 100%;
+	width: 100%;
+}
+
+.playlist-tab {
+	@include flex(column, center, center);
+	height: 25vh;
+	background-image: linear-gradient(to right, #133532, #22706b, #195c58);
+	border-radius: 0 100% 100% 0;
+	font-family: "Quicksand", sans-serif;
+	font-size: 2rem;
+	cursor: pointer;
+	display: none;
+}
+
+.slide-out-playlist {
+	transform: translateX(calc(-100vw + 35px));
+	transition: 0.5s;
+}
+
+.slide-in-playlist {
+	transform: translateX(0);
+	transition: 0.5s;
+}
+
+.slideout-icon {
+	width: 100%;
+	height: 40px;
+	background-image: url("../../images/slide_out.svg");
+	transition: 0.5s;
+}
+
+.slide-in-icon {
+	width: 100%;
+	height: 40px;
+	background-image: url("../../images/slide_in.svg");
+	transition: 0.5s;
+}
+
+.bottom-display {
+	@include flex(row, space-around, center);
+	width: 100%;
+	height: 3vw;
+	min-height: 20px;
+	color: white;
+	font-family: "Quicksand", sans-serif;
+	font-size: 1.2rem;
+	background-color: rgba(0, 0, 0, 0.582);
+	overflow: hidden;
+}
+
+.player-display {
+	width: 100%;
+	min-width: 300px;
+	height: 3vw;
+	min-height: 20px;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	font-family: "Quicksand", sans-serif;
+	font-size: 1.2rem;
+	transition: 0.5s;
+	background-color: rgba(0, 0, 0, 0.582);
+	overflow: hidden;
+	.current-time {
+		position: absolute;
+		left: 1vw;
+	}
+	.title {
+		position: relative;
+
+		animation: scroll-vertical 10s linear forwards infinite;
+	}
+	.time-remaining {
+		position: absolute;
+		right: 1vw;
+	}
+}
+
+.autoplay-container {
+	height: 16px;
+	width: 50px;
+	background: url("../../images/switch-off.svg");
+	background-repeat: no-repeat;
+	position: relative;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.on {
+	transition: 0.2s;
+
+	background: url("../../images/switch_on.svg");
+}
+
+@keyframes scroll-vertical {
+	0% {
+		transform: translateY(-5vh);
+	}
+	15% {
+		transform: translateY(0);
+	}
+	85% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(5vh);
+	}
+}
+
+@media screen and (max-width: 900px) and (orientation: landscape) {
+	.playlist-tab {
+		display: flex;
+		width: 40px;
+	}
+	.playlist-container {
+		width: 50vw;
+		max-height: 100vh;
+
+		top: auto;
+		margin: auto 0;
+	}
+	.slide-out-playlist {
+		transform: translateX(calc(-50vw + 35px));
+		transition: 0.5s;
+	}
+
+	.slide-in-playlist {
+		transform: translateX(0);
+		transition: 0.5s;
+	}
+	.audio-player {
+		height: calc(100vh / 15);
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.playlist-tab {
+		display: flex;
+		width: 40px;
+	}
+	.playlist-container {
+		width: calc(100vw - 0px);
+	}
+}
