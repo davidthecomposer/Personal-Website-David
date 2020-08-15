@@ -1,0 +1,71 @@
+/* ---------------------------- FOOTER SECTION ---------------------------- */
+
+footer {
+	position: relative;
+	background-color: rgb(4, 4, 4);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 8rem;
+	width: 100%;
+	z-index: 3;
+	margin: 8rem auto 4rem;
+	user-select: none;
+}
+
+.footer-icons {
+	height: 2rem;
+	border: none;
+	outline: none;
+	margin: 0 1rem 0;
+	cursor: pointer;
+}
+
+.advent {
+	font-family: "Advent Pro", sans-serif;
+	color: white;
+}
+
+.signature {
+	height: 3rem;
+}
+
+.by-me {
+	display: flex;
+
+	font-family: "Advent Pro", sans-serif;
+	width: fit-content;
+}
+
+.by-me p {
+	padding-right: 0.8rem;
+	padding-left: 0.8rem;
+	align-self: center;
+	font-size: 1.2rem;
+	color: #00a5a5;
+}
+.nav-icons-footer {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	width: fit-content;
+}
+
+@media (max-width: 600px) {
+	.footer-icons {
+		height: 1.8rem;
+		margin: 0 0.5rem 0;
+	}
+
+	.signature {
+		height: 2rem;
+	}
+
+	.by-me p {
+		padding-right: 0.5rem;
+		padding-left: 0.7rem;
+		align-self: center;
+	}
+}

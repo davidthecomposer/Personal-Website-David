@@ -1,0 +1,125 @@
+.dropdown-container {
+	display: none;
+	flex-direction: column;
+	align-items: center;
+
+	width: 18vw;
+}
+
+.hamburger-menu {
+	height: 2rem;
+	cursor: pointer;
+	margin: 0 auto;
+}
+
+.dropdown-content {
+	visibility: hidden;
+	position: absolute;
+	background: rgb(10, 10, 10);
+}
+
+.drop-menu {
+	display: block;
+	animation: slide-down 0.25s 1 forwards;
+}
+
+.raise-menu {
+	animation-duration: 0.25s;
+	animation-name: slide-up;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+}
+
+.dropdown-link-group {
+	flex-direction: column;
+	align-items: center;
+}
+
+.underline {
+	height: 0.1rem;
+}
+
+.dropdown-tabs-section {
+	display: flex;
+	flex-direction: column;
+}
+
+.drop {
+	margin-bottom: 0.25rem;
+}
+
+@keyframes slide-down {
+	from {
+		visibility: hidden;
+		top: 0;
+		opacity: 0;
+	}
+
+	to {
+		top: 100%;
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+@keyframes slide-up {
+	from {
+		visibility: visible;
+		top: 100%;
+		opacity: 1;
+	}
+
+	to {
+		top: 0;
+		opacity: 0;
+		visibility: hidden;
+	}
+}
+
+.dropdown-text {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	color: rgba(255, 255, 255, 0.959);
+	font-family: "Advent Pro", sans-serif;
+	text-decoration: none;
+	font-size: 1.1rem;
+	align-self: center;
+}
+
+.dropdown-text:hover + .underline {
+	background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+	background-size: 0%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 8%;
+	animation: slideout 0.15s 1 forwards linear;
+}
+
+.dropdown-text:not(:hover) + .underline {
+	background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+	background-size: 0%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 8%;
+	animation: retract 0.15s 1 forwards linear;
+}
+
+@keyframes slideout {
+	100% {
+		background-size: 70%;
+	}
+}
+
+@keyframes retract {
+	0% {
+		background-size: 70%;
+	}
+	100% {
+		background-size: 0;
+	}
+}
+@media (max-width: 700px) {
+	.dropdown-container {
+		display: flex;
+	}
+}

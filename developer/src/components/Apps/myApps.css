@@ -1,0 +1,79 @@
+.intro {
+	font-family: "Advent Pro", sans-serif;
+	color: white;
+	font-size: 1.5rem;
+	padding: 10rem 0.5rem 4rem;
+	position: relative;
+	width: 90vw;
+	margin: 0 auto;
+}
+
+.apps {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: calc(100vw - 4px);
+	flex-wrap: wrap;
+}
+
+@media (max-width: 950px) {
+	.intro {
+		font-size: 1.2rem;
+	}
+}
+
+@media (max-width: 700px) {
+	.back .panel-description {
+		font-size: 1rem;
+
+		color: rgb(4, 26, 32);
+		line-height: 1.1rem;
+		overflow-y: hidden;
+	}
+}
+
+@media (max-width: 500px) {
+	.intro {
+		font-size: 1.2rem;
+	}
+	.navigate {
+		width: 30%;
+
+		bottom: 1rem;
+	}
+	.stats-left,
+	.stats-right {
+		font-size: 1.25rem;
+	}
+
+	.panel-stats {
+		justify-content: space-around;
+	}
+	.stats-right > i {
+		margin: 0;
+		padding: 0.5rem;
+	}
+	.stats-left > i {
+		margin: 0;
+		padding: 0.5rem;
+	}
+
+	.panel-title {
+		font-size: 1.5rem;
+	}
+	.scene {
+		width: 98vw;
+		height: 80vw;
+		perspective: 50rem;
+		margin: 1rem 1rem;
+	}
+	.back .panel-description {
+		width: 96%;
+		align-self: center;
+		margin-top: 0.5rem;
+		font-size: 0.9rem;
+		color: rgb(4, 26, 32);
+		line-height: 1.2rem;
+	}
+}

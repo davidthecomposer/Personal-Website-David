@@ -1,0 +1,116 @@
+/* ---------------------------- HEADER SECTION ---------------------------- */
+header {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.802);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: calc(100vw - 4px);
+	z-index: 3;
+}
+
+.header-title {
+	height: 7rem;
+	width: 45rem;
+	background-image: url("../../images/DavidNameDev.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.header-thin {
+	animation: to-thin 0.25s ease-in 1 forwards;
+}
+
+.header-full {
+	animation: to-full 0.15s linear 1 forwards;
+}
+.header-thin1 {
+	animation: to-thin-one 0.25s ease-in 1 forwards;
+}
+
+.header-full1 {
+	animation: to-full-one 0.15s linear 1 forwards;
+}
+.header-full2 {
+	animation: to-full-two 0.15s linear 1 forwards;
+}
+
+@keyframes to-thin {
+	0% {
+		height: 7rem;
+		background-image: url("../../images/DavidNameDev.png");
+	}
+
+	100% {
+		height: 3rem;
+		background-image: url("../../images/DavidNameDevThin.png");
+	}
+}
+
+@keyframes to-full {
+	0% {
+		background-image: url("../../images/DavidNameDevThin.png");
+		height: 3rem;
+	}
+
+	100% {
+		height: 7rem;
+		background-image: url("../../images/DavidNameDev.png");
+	}
+}
+
+@keyframes to-thin-one {
+	0% {
+		height: 5rem;
+		background-image: url("../../images/DavidNameDev.png");
+	}
+
+	100% {
+		height: 3rem;
+		background-image: url("../../images/DavidNameDevThin.png");
+	}
+}
+
+@keyframes to-full-one {
+	0% {
+		background-image: url("../../images/DavidNameDevThin.png");
+		height: 3rem;
+	}
+
+	100% {
+		height: 5rem;
+		background-image: url("../../images/DavidNameDev.png");
+	}
+}
+
+@keyframes to-full-two {
+	0% {
+		background-image: url("../../images/DavidNameDevThin.png");
+		height: 3rem;
+	}
+
+	100% {
+		height: 5rem;
+		background-image: url("../../images/DavidNameDev.png");
+	}
+}
+
+@media (max-width: 950px) {
+	.header-title {
+		width: 30rem;
+	}
+}
+@media (max-width: 700px) {
+	.header-title {
+		width: 80vw;
+		height: 100%;
+		top: 1rem;
+	}
+	.header-title-thin {
+		width: 80vw;
+		height: 100%;
+		top: 1rem;
+	}
+}
