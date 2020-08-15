@@ -152,12 +152,22 @@ const App = () => {
 	};
 
 	const slideInOrOut = () => {
-		playlistSlideState === "" || playlistSlideState === "slide-in-playlist"
-			? setPlaylistSlideState("slide-out-playlist")
-			: setPlaylistSlideState("slide-in-playlist");
-		slideIconState === "slideout-icon"
-			? setSlideIconState("slide-in-icon")
-			: setSlideIconState("slideout-icon");
+		if (
+			playlistSlideState === "" ||
+			playlistSlideState === "slide-in-playlist"
+		) {
+			setPlaylistSlideState("slide-out-playlist");
+			setTitlePosition("");
+		} else {
+			setPlaylistSlideState("slide-in-playlist");
+
+			setTitlePosition("title-fade");
+		}
+		if (slideIconState === "slideout-icon") {
+			setSlideIconState("slide-in-icon");
+		} else {
+			setSlideIconState("slideout-icon");
+		}
 	};
 
 	return (

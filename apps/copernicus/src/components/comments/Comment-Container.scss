@@ -18,11 +18,12 @@
 }
 
 .comment-container {
-	@include flex(column, center, center);
+	@include flex(column, flex-end, flex-start);
 	position: absolute;
 	bottom: 10px;
 	width: 350px;
 	height: 300px;
+	max-height: 25vh;
 }
 
 .comment-icon {
@@ -34,6 +35,7 @@
 	transition: 0.2s;
 	position: relative;
 	z-index: 5;
+	margin-left: 10px;
 }
 
 .comment-icon:hover {
@@ -106,14 +108,14 @@
 		background-image: url("../../images/comment_icon.svg");
 	}
 	100% {
-		transform: translate(-140px, -160px) scale(0.7);
+		transform: translate(15px, 6px) scale(0.7);
 		background-image: url("../../images/nvm.svg");
 	}
 }
 
 @keyframes become-icon {
 	0% {
-		transform: translate(-140px, -160px) scale(0.7);
+		transform: translate(15px, 6px) scale(0.7);
 		background-image: url("../../images/nvm.svg");
 	}
 	100% {
@@ -145,14 +147,14 @@
 			background-image: url("../../images/comment_icon.svg");
 		}
 		100% {
-			transform: translate(30px, 6px) scale(0.7);
+			transform: translate(20px, 6px) scale(0.7);
 			background-image: url("../../images/nvm.svg");
 		}
 	}
 
 	@keyframes become-icon {
 		0% {
-			transform: translate(30px, 6px) scale(0.7);
+			transform: translate(20px, 6px) scale(0.7);
 			background-image: url("../../images/nvm.svg");
 		}
 		100% {
