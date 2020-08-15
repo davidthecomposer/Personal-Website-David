@@ -34,7 +34,7 @@
 	background-repeat: no-repeat;
 	transition: 0.2s;
 	position: relative;
-	z-index: 5;
+	z-index: 1;
 	margin-left: 10px;
 }
 
@@ -76,7 +76,7 @@
 	}
 
 	textarea {
-		height: 40%;
+		height: 25%;
 		width: 80%;
 		@extend %form-input;
 	}
@@ -91,7 +91,7 @@
 
 .visible-form {
 	opacity: 1;
-	z-index: 2;
+	z-index: 0;
 	transition: 0.2s;
 }
 
@@ -136,8 +136,9 @@
 	.comment-container {
 		bottom: 0;
 		width: 50vw;
-		left: 25vw;
+		left: 1vw;
 		height: 200px;
+		max-height: 40vh;
 		justify-content: flex-end;
 		align-items: center;
 	}

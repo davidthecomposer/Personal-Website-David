@@ -16,10 +16,8 @@ const InfoCard = ({
 	return (
 		<div className={`info-card ${visibilityState}`}>
 			<h1 className={"card-title"}>{title}</h1>
-			<div className='planet-frame'></div>
-			<div className='main-info'>
-				<p className={"description"}>{artistDescription}</p>
-			</div>
+
+			<p className={"description"}>{artistDescription}</p>
 
 			<div className='stats'>
 				<p>
