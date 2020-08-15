@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "362c9ff53568f8368dbdbbd344406fe2",
+    "revision": "8200ebd558521fe57a46806c9fecb5f8",
     "url": "/copernicus/build/index.html"
   },
   {
