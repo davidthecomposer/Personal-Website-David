@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/copernicus/build/static/css/main.1c724604.chunk.css",
+    "main.css": "/copernicus/build/static/css/main.1bcb4814.chunk.css",
     "main.js": "/copernicus/build/static/js/main.5c7e8229.chunk.js",
     "main.js.map": "/copernicus/build/static/js/main.5c7e8229.chunk.js.map",
     "runtime-main.js": "/copernicus/build/static/js/runtime-main.d8f34b7c.js",
@@ -8,9 +8,9 @@
     "static/js/2.d23ad33a.chunk.js": "/copernicus/build/static/js/2.d23ad33a.chunk.js",
     "static/js/2.d23ad33a.chunk.js.map": "/copernicus/build/static/js/2.d23ad33a.chunk.js.map",
     "index.html": "/copernicus/build/index.html",
-    "precache-manifest.8f4c4900fb1d20fb6bbd821e63616033.js": "/copernicus/build/precache-manifest.8f4c4900fb1d20fb6bbd821e63616033.js",
+    "precache-manifest.d4b034fe2426f1139835b7a8c0c98a0b.js": "/copernicus/build/precache-manifest.d4b034fe2426f1139835b7a8c0c98a0b.js",
     "service-worker.js": "/copernicus/build/service-worker.js",
-    "static/css/main.1c724604.chunk.css.map": "/copernicus/build/static/css/main.1c724604.chunk.css.map",
+    "static/css/main.1bcb4814.chunk.css.map": "/copernicus/build/static/css/main.1bcb4814.chunk.css.map",
     "static/js/2.d23ad33a.chunk.js.LICENSE.txt": "/copernicus/build/static/js/2.d23ad33a.chunk.js.LICENSE.txt",
     "static/media/Earth.wav": "/copernicus/build/static/media/Earth.17663dc4.wav",
     "static/media/Jupiter.wav": "/copernicus/build/static/media/Jupiter.6236af16.wav",
@@ -33,7 +33,7 @@
   "entrypoints": [
     "static/js/runtime-main.d8f34b7c.js",
     "static/js/2.d23ad33a.chunk.js",
-    "static/css/main.1c724604.chunk.css",
+    "static/css/main.1bcb4814.chunk.css",
     "static/js/main.5c7e8229.chunk.js"
   ]
 }

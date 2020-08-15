@@ -59,24 +59,6 @@ body {
 	margin-left: calc(100vw - 30vw);
 }
 
-// @keyframes move-title {
-// 	0% {
-// 		left: 25vw;
-// 	}
-// 	100% {
-// 		left: 9vw;
-// 	}
-// }
-
-// @keyframes center-title {
-// 	0% {
-// 		left: 9vw;
-// 	}
-// 	100% {
-// 		left: 25vw;
-// 	}
-// }
-
 @media screen and (max-width: 1200px) {
 	.main-title {
 		width: 80vw;
@@ -154,3 +136,5 @@ body {
 		}
 	}
 }
+
+//TO-DO: larger message form, fix current time onblur (all on blur), fix viewport height issue for IOS, fix adding blur.
