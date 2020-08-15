@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/copernicus/build/static/css/main.e5a48428.chunk.css",
-    "main.js": "/copernicus/build/static/js/main.3ac50241.chunk.js",
-    "main.js.map": "/copernicus/build/static/js/main.3ac50241.chunk.js.map",
+    "main.js": "/copernicus/build/static/js/main.1d0ad377.chunk.js",
+    "main.js.map": "/copernicus/build/static/js/main.1d0ad377.chunk.js.map",
     "runtime-main.js": "/copernicus/build/static/js/runtime-main.d8f34b7c.js",
     "runtime-main.js.map": "/copernicus/build/static/js/runtime-main.d8f34b7c.js.map",
     "static/js/2.d23ad33a.chunk.js": "/copernicus/build/static/js/2.d23ad33a.chunk.js",
     "static/js/2.d23ad33a.chunk.js.map": "/copernicus/build/static/js/2.d23ad33a.chunk.js.map",
     "index.html": "/copernicus/build/index.html",
-    "precache-manifest.ff391c253bf3b1f2331589ad5972aaee.js": "/copernicus/build/precache-manifest.ff391c253bf3b1f2331589ad5972aaee.js",
+    "precache-manifest.57916e5f01b455ee5239e8ceaedba965.js": "/copernicus/build/precache-manifest.57916e5f01b455ee5239e8ceaedba965.js",
     "service-worker.js": "/copernicus/build/service-worker.js",
     "static/css/main.e5a48428.chunk.css.map": "/copernicus/build/static/css/main.e5a48428.chunk.css.map",
     "static/js/2.d23ad33a.chunk.js.LICENSE.txt": "/copernicus/build/static/js/2.d23ad33a.chunk.js.LICENSE.txt",
@@ -34,6 +34,6 @@
     "static/js/runtime-main.d8f34b7c.js",
     "static/js/2.d23ad33a.chunk.js",
     "static/css/main.e5a48428.chunk.css",
-    "static/js/main.3ac50241.chunk.js"
+    "static/js/main.1d0ad377.chunk.js"
   ]
 }

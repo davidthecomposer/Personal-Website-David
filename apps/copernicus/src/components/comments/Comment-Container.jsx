@@ -67,11 +67,12 @@ const CommentContainer = ({
 			});
 
 			const response = await fetch(
-				`https://copernicus-api.herokuapp.com/tracks/${currentTrack}/comments`,
+				`https://cors-anywhere.herokuapp.com/https://copernicus-api.herokuapp.com/tracks/${currentTrack}/comments`,
 				{
 					method: "POST",
 					headers: {
 						"Content-Type": "application/json",
+						// Origin: "https://www.apps.davidhalcampbell.com/digitalClock/index.html
 					},
 					body: body,
 				}

@@ -67,11 +67,12 @@ const App = () => {
 	useEffect(() => {
 		const getInitialData = async () => {
 			const response = await fetch(
-				"https://copernicus-api.herokuapp.com/tracks",
+				"https://cors-anywhere.herokuapp.com/https://copernicus-api.herokuapp.com/tracks",
 				{
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json",
+						// Origin: "https://www.apps.davidhalcampbell.com/digitalClock/index.html
 					},
 				}
 			);
