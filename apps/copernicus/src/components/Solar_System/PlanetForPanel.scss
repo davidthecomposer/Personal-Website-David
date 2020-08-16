@@ -64,7 +64,7 @@
 	100% {
 		width: 25vw;
 		height: 25vw;
-		transform: translate(calc(47.5vw - 25vw), -44vh);
+		transform: translate(calc(47.5vw - 25vw), calc(var(--vh, 1vh) * -44));
 	}
 }
 
@@ -72,7 +72,7 @@
 	0% {
 		width: 25vw;
 		height: 25vw;
-		transform: translate(calc(47.5vw - 25vw), -44vh);
+		transform: translate(calc(47.5vw - 25vw), calc(var(--vh, 1vh) * -44));
 	}
 	100% {
 		width: 1px;
@@ -84,17 +84,17 @@
 @media screen and (max-width: 1200px) {
 	@keyframes grow-planet {
 		100% {
-			width: 40vw;
-			height: 40vw;
-			transform: translate(5vw, -42vh);
+			width: 30vw;
+			height: 30vw;
+			transform: translate(10vw, calc(var(--vh, 1vh) * -42));
 		}
 	}
 
 	@keyframes shrink-planet {
 		0% {
-			width: 40vw;
-			height: 40vw;
-			transform: translate(5vw, -42vh);
+			width: 30vw;
+			height: 30vw;
+			transform: translate(10vw, calc(var(--vh, 1vh) * -42));
 		}
 		100% {
 			width: 1px;
@@ -103,12 +103,13 @@
 		}
 	}
 }
+
 @media screen and (max-width: 900px) and (orientation: landscape) {
 	@keyframes grow-planet {
 		100% {
 			width: 25vw;
 			height: 25vw;
-			transform: translate(-40.5vw, -22vh);
+			transform: translate(-40.5vw, calc(var(--vh, 1vh) * -22));
 		}
 	}
 
@@ -116,7 +117,7 @@
 		0% {
 			width: 25vw;
 			height: 25vw;
-			transform: translate(-40.5vw, -22vh);
+			transform: translate(-40.5vw, calc(var(--vh, 1vh) * -22));
 		}
 		100% {
 			width: 1px;
@@ -131,7 +132,7 @@
 		100% {
 			width: 45vw;
 			height: 45vw;
-			transform: translate(-12.5vw, -40vh);
+			transform: translate(-12.5vw, calc(var(--vh, 1vh) * -40));
 		}
 	}
 
@@ -139,7 +140,7 @@
 		0% {
 			width: 45vw;
 			height: 45vw;
-			transform: translate(-12.5vw, -40vh);
+			transform: translate(-12.5vw, calc(var(--vh, 1vh) * -40));
 		}
 		100% {
 			width: 1px;
