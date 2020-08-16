@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f9019ba0c82a684103eb71c3b06c5fd1",
+    "revision": "22cba73641b6744d4db67b52b7768c3c",
     "url": "/copernicus/build/index.html"
   },
   {
-    "revision": "b16d87fd89c5141a5adc",
+    "revision": "e21fadb24db63a5905e2",
     "url": "/copernicus/build/static/css/main.0bd423e1.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/copernicus/build/static/js/2.d23ad33a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b16d87fd89c5141a5adc",
-    "url": "/copernicus/build/static/js/main.758b8d36.chunk.js"
+    "revision": "e21fadb24db63a5905e2",
+    "url": "/copernicus/build/static/js/main.66dd9f92.chunk.js"
   },
   {
     "revision": "e0b3f689e7f35f7e0703",
