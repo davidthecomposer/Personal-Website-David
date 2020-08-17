@@ -49,8 +49,7 @@ const appInfo = [
 		uniqueClassName: "copernicus-API",
 		title: "Copernicus Etudes API",
 		image: copernicusAPI,
-		dataURL:
-			"https://cors-anywhere.herokuapp.com/https://copernicus-api.herokuapp.com/",
+		dataURL: "https://copernicus-api.herokuapp.com/",
 		icon1: mongoDBIcon,
 		icon2: expressIcon,
 		icon3: nodeJSIcon,
