@@ -50,12 +50,12 @@ const appInfo = [
 		title: "Copernicus Etudes API",
 		image: copernicusAPI,
 		dataURL:
-			"https://cors-anywhere.herokuapp.com/https://copernicus-api.herokuapp.com/tracks",
+			"https://cors-anywhere.herokuapp.com/https://copernicus-api.herokuapp.com/",
 		icon1: mongoDBIcon,
 		icon2: expressIcon,
 		icon3: nodeJSIcon,
 		descriptionP1:
-			"I thought it would be a good idea to understand how APIs are built using the backend tech that I have been learning. I used some information about some piano pieces I had written and built the routes to my little Copernicus API. I definitely wouldn't use an API to house this data normally, but I just wanted the experience of building a RESTful architecture. Clicking on the app link will execute a get call on the main route.",
+			"I thought it would be a good idea to understand how APIs are built using the backend tech that I have been learning. I used some information about some piano pieces I had written and built the routes to my little Copernicus API. I definitely wouldn't use an API to house this data normally, but I just wanted the experience of building a RESTful architecture.",
 		buttonText: app,
 	},
 	{
