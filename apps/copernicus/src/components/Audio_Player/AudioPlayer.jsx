@@ -136,6 +136,16 @@ class AudioPlayer extends React.Component {
 			: this.setState({ infoBtnOpacity: "" });
 	};
 
+	handleClick = (e) => {
+		this.props.displayPlanetInfo(e);
+		this.changeInfoBtnOpacity();
+	};
+	handleTouch = (e) => {
+		e.preventDefault();
+		this.props.displayPlanetInfo(e);
+		this.changeInfoBtnOpacity();
+	};
+
 	render() {
 		return (
 			<div className={`audio-player`}>
@@ -171,8 +181,8 @@ class AudioPlayer extends React.Component {
 					}`}
 					src={infoButton}
 					alt='info'
-					onClick={this.props.displayPlanetInfo}
-					onMouseUp={this.changeInfoBtnOpacity}
+					onClick={this.handleClick}
+					onTouchEnd={this.handleTouch}
 					data-title={this.props.title}
 				/>
 			</div>

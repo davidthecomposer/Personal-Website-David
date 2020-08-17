@@ -30,6 +30,14 @@ const PlayButton = ({
 			: setPlayBtnPress("press-again");
 	};
 
+	const runOnTouch = (e) => {
+		e.preventDefault();
+		playState();
+		playBtnPress === "" || playBtnPress === "press-again"
+			? setPlayBtnPress("press")
+			: setPlayBtnPress("press-again");
+	};
+
 	return (
 		<img
 			src={image}
@@ -39,6 +47,7 @@ const PlayButton = ({
 			onClick={() => {
 				runOnClick();
 			}}
+			onTouchEnd={runOnTouch}
 		/>
 	);
 };

@@ -52,13 +52,16 @@
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
 	.info-card {
 		font-size: 1rem;
 		width: 50vw;
 	}
 	.description {
 		margin-top: calc(var(--vh, 1vh) * 45);
+	}
+	.stats {
+		line-height: 1.4rem;
 	}
 }
 @media screen and (max-width: 1200px) and (orientation: portrait) {

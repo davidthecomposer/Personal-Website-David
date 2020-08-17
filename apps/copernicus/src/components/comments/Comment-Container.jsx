@@ -12,21 +12,26 @@ const CommentContainer = ({
 	const [formData, setFormData] = useReducer(
 		(state, newState) => ({ ...state, ...newState }),
 		{
-			track: "current track",
-			time: "",
 			name: "",
 			message: "",
 		}
 	);
-	const options = musicData.map((track) => {
-		return (
-			<option className='track-option' value={track.title} key={track._id}>
-				{track.title}
-			</option>
-		);
-	});
+
+	const [toolTipMessage, setToolTipMessage] = useState(" ");
+	const [toolTipVisibility, setToolTipVisibility] = useState("");
 
 	const showCommentForm = () => {
+		if (formOpenClose !== "close-form-icon") {
+			setFormOpenClose("close-form-icon");
+			setFormVisibility("visible-form");
+		} else {
+			setFormOpenClose("switch-to-icon");
+			setFormVisibility("");
+		}
+	};
+
+	const showCommentFormTouch = (e) => {
+		e.preventDefault();
 		if (formOpenClose !== "close-form-icon") {
 			setFormOpenClose("close-form-icon");
 			setFormVisibility("visible-form");
@@ -43,51 +48,64 @@ const CommentContainer = ({
 		setFormData({ [name]: newValue });
 	};
 
-	const handleCurrentTrack = async () => {
-		if (formData.track === "track") {
-			await setFormData({ track: currentTrack });
-		}
-		if (formData.time === "") {
-			await setFormData({ time: currentTime });
+	const setToolTip = async (tTMessage, tTVisibility) => {
+		await setToolTipMessage(tTMessage);
+		await setToolTipVisibility(tTVisibility);
+	};
+
+	const validateFormData = () => {
+		if (formData.name === "" || !formData.name.match(/[A-Z]/gi)) {
+			setToolTip("please input a valid name (A-Z)", "tooltip-visible");
+
+			return false;
+		} else if (currentTime === "-:--" || currentTrack === "-") {
+			setToolTip("please play a track to comment", "tooltip-visible");
+
+			return false;
+		} else {
+			return true;
 		}
 	};
 
 	const submitComment = async (e) => {
 		try {
 			await e.preventDefault();
-			await handleCurrentTrack();
-			const track_id = musicData.find((track) => track.title === currentTrack)
-				._id;
 
-			const body = JSON.stringify({
-				track_id: track_id,
-				name: formData.name,
-				timestamp: pureTime,
-				comment: formData.message,
-			});
+			const permission = await validateFormData();
 
-			const response = await fetch(
-				`https://cors-anywhere.herokuapp.com/https://copernicus-api.herokuapp.com/tracks/${currentTrack}/comments`,
-				{
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-						// Origin: "https://www.apps.davidhalcampbell.com/digitalClock/index.html
-					},
-					body: body,
-				}
-			);
+			if (permission === true) {
+				const track_id = musicData.find((track) => track.title === currentTrack)
+					._id;
 
-			const userResponse = await response.json();
-			const clearData = {
-				track: "track",
-				time: "",
-				name: "",
-				message: `${userResponse}`,
-			};
-			setFormData(clearData);
+				const body = JSON.stringify({
+					track_id: track_id,
+					name: formData.name,
+					timestamp: pureTime,
+					comment: formData.message,
+				});
+				const response = await fetch(
+					`https://cors-anywhere.herokuapp.com/https://copernicus-api.herokuapp.com/tracks/${currentTrack}/comments`,
+					{
+						method: "POST",
+						headers: {
+							"Content-Type": "application/json",
+							// Origin: "https://www.apps.davidhalcampbell.com/digitalClock/index.html
+						},
+						body: body,
+					}
+				);
 
-			setTimeout(() => setFormData({ message: "" }), 3000);
+				const userResponse = await response.json();
+				const clearData = {
+					name: " ",
+					message: "",
+				};
+				setFormData(clearData);
+				setToolTip(userResponse, "tooltip-visible");
+
+				setTimeout(() => setToolTip(" ", ""), 4000);
+			}
+			setTimeout(() => setToolTip("", ""), 4000);
 		} catch (err) {
 			console.log(err);
 		}
@@ -98,28 +116,18 @@ const CommentContainer = ({
 			<div
 				className={`comment-icon ${formOpenClose}`}
 				onClick={showCommentForm}
+				onTouchEnd={showCommentFormTouch}
 			/>
 			<form
 				className={`track-comment-form ${formVisibility}`}
 				onSubmit={submitComment}>
+				<div className={`tooltip ${toolTipVisibility}`}>{toolTipMessage}</div>
 				<div className='first-column'>
-					<select
-						onChange={updateFormState}
-						value={formData.track}
-						name='track'>
-						<option className='track-option' placeholder='current track'>
-							current
-						</option>
-						{options}
-					</select>
-					<input
-						onChange={updateFormState}
-						className='track-time'
-						type='text'
-						placeholder='0:00'
-						value={formData.time}
-						name='time'
-					/>
+					<div className='current-track-comment'>
+						{currentTrack || "current"}
+					</div>
+					<div className='track-time'>{currentTime}</div>
+
 					<input
 						onChange={updateFormState}
 						className='name'
@@ -132,10 +140,11 @@ const CommentContainer = ({
 
 				<textarea
 					type='text'
-					placeholder='make a comment about one of the tracks here'
+					placeholder='make a comment about the track here. '
 					value={formData.message}
 					onChange={updateFormState}
 					name='message'
+					maxLength='50'
 				/>
 
 				<input type='submit' className='submit' value='Submit' />
@@ -145,7 +154,3 @@ const CommentContainer = ({
 };
 
 export default CommentContainer;
-
-// media querries
-//
-// Sass refactoring

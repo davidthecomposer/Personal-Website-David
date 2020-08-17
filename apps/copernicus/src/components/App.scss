@@ -61,7 +61,7 @@ body {
 	margin-left: calc(100vw - 30vw);
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
 	.main-title {
 		width: 80vw;
 		font-size: 8vw;
@@ -78,12 +78,6 @@ body {
 		font-size: 2rem;
 		transition: 1s;
 		transition-delay: 0.8s;
-	}
-	.info-card-list {
-		.close-info-cards {
-			visibility: visible;
-			cursor: pointer;
-		}
 	}
 }
 

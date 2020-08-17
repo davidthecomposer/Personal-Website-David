@@ -15,6 +15,16 @@
 	&::placeholder {
 		color: white;
 	}
+	border-radius: 5%;
+}
+
+%no-select {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .comment-container {
@@ -43,7 +53,7 @@
 }
 
 .track-comment-form {
-	@include flex(column, space-around, center);
+	@include flex(column, space-evenly, center);
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -55,25 +65,53 @@
 		@include flex(row, space-around, center);
 		width: 80%;
 
-		select {
-			@extend %form-input;
-			width: 30%;
-			-webkit-appearance: none;
+		.current-track-comment {
+			background-color: rgba(37, 37, 37, 0.746);
+			outline: none;
+			border: none;
+			color: white;
+			padding: 0.25rem;
+			font-family: "Quicksand", sans-serif;
+			width: 25%;
 		}
 		.track-option {
-			@extend %form-input;
+			@extend %form-input, %no-select;
 		}
 		.track-option:first-child {
-			@extend %form-input;
+			@extend %form-input, %no-select;
 			-webkit-appearance: none;
 		}
 		.track-time {
-			@extend %form-input;
-			width: 30%;
+			@extend %form-input, %no-select;
+			width: 20%;
 		}
 		.name {
 			width: 30%;
 			@extend %form-input;
+		}
+	}
+	.tooltip {
+		color: rgb(83, 255, 255);
+		font-family: "Quicksand", sans-serif;
+		opacity: 0;
+		height: 1.5rem;
+	}
+	.tooltip-visible {
+		opacity: 1;
+		animation: fade-in-out 4s linear forwards;
+	}
+	@keyframes fade-in-out {
+		0% {
+			opacity: 0;
+		}
+		10% {
+			opacity: 1;
+		}
+		80% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 0;
 		}
 	}
 
@@ -128,6 +166,64 @@
 	}
 }
 
+@media screen and (max-width: 1400px) {
+	.comment-icon {
+		align-self: flex-start;
+		justify-self: bottom;
+		margin-left: 0;
+		margin-bottom: 6px;
+		background-image: url("../../images/comment_icon.svg");
+	}
+
+	.comment-container {
+		bottom: 10px;
+		left: 10px;
+		width: calc(50vw - 10px);
+		height: 200px;
+		justify-content: flex-end;
+		align-items: center;
+	}
+	.track-comment-form {
+		position: absolute;
+		width: 100%;
+		height: calc(var(--vh, 1vh) * 33);
+
+		textarea,
+		.track-option,
+		select,
+		.track-time,
+		.tooltip,
+		.name {
+			font-size: 1.2rem;
+		}
+		.submit {
+			padding: 1rem;
+			font-size: 1.2rem;
+		}
+	}
+
+	@keyframes become-close {
+		0% {
+			background-image: url("../../images/comment_icon.svg");
+		}
+		100% {
+			transform: translate(30px, 6px) scale(0.9);
+			background-image: url("../../images/nvm.svg");
+		}
+	}
+
+	@keyframes become-icon {
+		0% {
+			transform: translate(30px, -6px) scale(0.9);
+			background-image: url("../../images/nvm.svg");
+		}
+		100% {
+			transform: translate(0, 0) scale(1);
+			background-image: url("../../images/comment_icon.svg");
+		}
+	}
+}
+
 @media screen and (max-width: 900px) and (orientation: landscape) {
 	.comment-icon {
 		align-self: flex-start;
@@ -138,13 +234,30 @@
 	}
 
 	.comment-container {
-		bottom: 0;
-		width: 50vw;
-		left: 1vw;
+		bottom: 10px;
+		left: 10px;
+		width: calc(100vw - 10px);
 		height: 200px;
-		max-height: 40vh;
 		justify-content: flex-end;
 		align-items: center;
+	}
+	.track-comment-form {
+		position: absolute;
+		width: 100%;
+		height: calc(var(--vh, 1vh) * 67);
+
+		textarea,
+		.track-option,
+		select,
+		.track-time,
+		.tooltip,
+		.name {
+			font-size: 1.2rem;
+		}
+		.submit {
+			padding: 1rem;
+			font-size: 1.2rem;
+		}
 	}
 
 	@keyframes become-close {
@@ -152,14 +265,14 @@
 			background-image: url("../../images/comment_icon.svg");
 		}
 		100% {
-			transform: translate(20px, 6px) scale(0.7);
+			transform: translate(30px, 6px) scale(0.9);
 			background-image: url("../../images/nvm.svg");
 		}
 	}
 
 	@keyframes become-icon {
 		0% {
-			transform: translate(20px, 6px) scale(0.7);
+			transform: translate(30px, -6px) scale(0.9);
 			background-image: url("../../images/nvm.svg");
 		}
 		100% {
@@ -186,13 +299,14 @@
 	.track-comment-form {
 		position: absolute;
 		width: 100%;
-		height: 50vh;
+		height: calc(var(--vh, 1vh) * 40);
 
 		textarea,
 		.track-option,
-		select,
+		.current-track-comment,
 		.track-time,
-		.name {
+		.name,
+		.tooltip {
 			font-size: 1.2rem;
 		}
 		.submit {
