@@ -82,7 +82,7 @@ const App = () => {
 					method: "GET",
 					headers: {
 						"Content-Type": "application/json",
-						// Origin: "https://www.apps.davidhalcampbell.com/digitalClock/index.html
+						Origin: "http://localhost:3000/",
 					},
 				}
 			);
