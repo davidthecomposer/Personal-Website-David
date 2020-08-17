@@ -319,14 +319,14 @@
 			background-image: url("../../images/comment_icon.svg");
 		}
 		100% {
-			transform: translate(10px, -20px) scale(0.9);
+			transform: translate(10px, calc(var(--vh, 1vh) * -1)) scale(0.9);
 			background-image: url("../../images/nvm.svg");
 		}
 	}
 
 	@keyframes become-icon {
 		0% {
-			transform: translate(10px, -20px) scale(0.9);
+			transform: translate(10px, calc(var(--vh, 1vh) * -1)) scale(0.9);
 			background-image: url("../../images/nvm.svg");
 		}
 		100% {
