@@ -114,12 +114,12 @@
 		display: none;
 	}
 	.description {
-		margin-top: calc(var(--vh, 1vh) * 30);
+		margin-top: calc(var(--vh, 1vh) * 32);
 		line-height: 1.2rem;
 	}
 	.stats {
 		p {
-			line-height: 1.5rem;
+			line-height: 1.3rem;
 		}
 	}
 }

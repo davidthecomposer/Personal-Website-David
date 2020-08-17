@@ -169,11 +169,18 @@
 	}
 	.playlist-container {
 		width: calc(100vw - 4px);
-		top: 1vh;
-		max-height: 60vh;
-		height: 60vh;
+		top: calc(var(--vh, 1vh) * 10);
+		max-height: calc(var(--vh, 1vh) * 80);
+		height: calc(var(--vh, 1vh) * 80);
 	}
-	.audio-player {
-		height: calc(60vh / 11);
+	.audio-player,
+	.bottom-display,
+	.player-display {
+		height: calc(calc(var(--vh, 1vh) * 80) / 11);
+	}
+	.info-button,
+	.play-button {
+		height: calc(calc(var(--vh, 1vh) * 80) / 15);
+		width: calc(calc(var(--vh, 1vh) * 80) / 15);
 	}
 }

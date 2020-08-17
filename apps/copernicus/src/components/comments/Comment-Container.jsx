@@ -13,7 +13,7 @@ const CommentContainer = ({
 		(state, newState) => ({ ...state, ...newState }),
 		{
 			track: "current track",
-			time: "current time",
+			time: "",
 			name: "",
 			message: "",
 		}
@@ -47,7 +47,7 @@ const CommentContainer = ({
 		if (formData.track === "track") {
 			await setFormData({ track: currentTrack });
 		}
-		if (formData.time === "time") {
+		if (formData.time === "") {
 			await setFormData({ time: currentTime });
 		}
 	};
@@ -81,7 +81,7 @@ const CommentContainer = ({
 			const userResponse = await response.json();
 			const clearData = {
 				track: "track",
-				time: "time",
+				time: "",
 				name: "",
 				message: `${userResponse}`,
 			};
@@ -116,7 +116,7 @@ const CommentContainer = ({
 						onChange={updateFormState}
 						className='track-time'
 						type='text'
-						placeholder='time'
+						placeholder='0:00'
 						value={formData.time}
 						name='time'
 					/>
