@@ -1,0 +1,41 @@
+.audio-volume {
+	width: 16px;
+	height: 16px;
+	cursor: pointer;
+}
+
+.audio-volumeBar {
+	-webkit-appearance: none;
+	background: linear-gradient(to left, #00a5a5, rgba(0, 0, 0, 0));
+	height: 6px;
+	width: 80%;
+
+	cursor: pointer;
+	outline: none;
+}
+.volume-container {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: flex-end;
+	margin-right: 2%;
+	width: 15%;
+}
+
+.audio-volumeBar::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 16px;
+	width: 16px;
+	border: none;
+	background: radial-gradient(white, purple, black);
+	border-radius: 100%;
+}
+
+.audio-volumeBar::-moz-range-thumb {
+	-webkit-appearance: none;
+	height: 8px;
+	width: 8px;
+	border: none;
+	background: radial-gradient(white, purple, black);
+	border-radius: 100%;
+}

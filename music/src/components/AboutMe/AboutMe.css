@@ -1,0 +1,100 @@
+.about-me {
+	margin: 0;
+	color: white;
+	user-select: none;
+	position: relative;
+}
+
+.about-me-title {
+	margin: 2rem 0 4rem 0;
+	font-size: 3rem;
+	font-family: "julius_sans_oneregular";
+	color: white;
+
+	width: 100%;
+	text-align: center;
+	border: none;
+}
+
+.about-me-bg {
+	/* background: rgb(8, 8, 8); */
+	width: 100%;
+	padding: 1rem 0;
+}
+
+.about-me-text {
+	width: 55vw;
+	margin: 0 auto;
+}
+
+.about-me-text a {
+	text-decoration: none;
+	color: #00a5a5;
+}
+
+.my-image {
+	height: 500px;
+	width: 400px;
+	float: left;
+	margin: 0.5rem 1rem 0 1rem;
+	border: none;
+}
+
+.about-me-text p {
+	line-height: 1.5;
+	text-indent: 50px;
+
+	font-family: "Advent Pro", sans-serif;
+	font-size: 1.3rem;
+}
+
+@media (max-width: 1400px) {
+	.about-me {
+		margin: 0;
+	}
+
+	.about-me-text {
+		width: 75vw;
+	}
+	.my-image {
+		width: 32vw;
+		height: 40vw;
+	}
+}
+
+@media (max-width: 900px) {
+	.my-image {
+		width: 40vw;
+		height: 50vw;
+	}
+}
+
+@media (max-width: 700px) {
+	.about-me-text {
+		width: 90vw;
+	}
+	.my-image {
+		width: 40vw;
+		height: 50vw;
+	}
+}
+
+@media (max-width: 700px) {
+	.about-me-text {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.my-image {
+		width: 320px;
+		height: 400px;
+		margin-bottom: 2vw;
+	}
+}
+
+/* @supports (-webkit-touch-callout: none) {
+    
+
+    
+    
+  } */

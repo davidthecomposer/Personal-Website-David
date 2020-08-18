@@ -1,0 +1,160 @@
+/* --------------- SLIDESHOW SECTION --------------- */
+
+.carousel {
+	position: relative;
+	user-select: none;
+	position: relative;
+	width: calc(100vw - 6px);
+	height: calc(45vw);
+	border: none;
+	overflow: hidden;
+	background-color: #000000;
+}
+
+.carousel:hover .hidden {
+	opacity: 0.5;
+}
+
+.slide-image {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.fade {
+	animation: fade-in linear 2s forwards;
+}
+
+.pane-image {
+	width: 100%;
+	height: 100%;
+}
+
+.pause {
+	height: 100%;
+	z-index: 2;
+	bottom: 0%;
+	right: 0%;
+	opacity: 0;
+	cursor: pointer;
+}
+
+.pause-active {
+	z-index: 2;
+	opacity: 0;
+}
+
+.pane-ticker {
+	height: 1.2rem;
+	width: fit-content;
+	display: flex;
+	flex-direction: row;
+	align-content: center;
+	justify-items: center;
+	z-index: 5;
+}
+
+.pane-tick {
+	margin: 0;
+	height: 100%;
+	border: none;
+	padding-right: 0.25rem;
+}
+
+.manual-navigation {
+	position: absolute;
+	width: 20%;
+	height: 2rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 3;
+	bottom: 2%;
+	right: 2%;
+}
+
+.forward {
+	opacity: 0;
+	cursor: pointer;
+}
+
+.backward {
+	opacity: 0;
+	cursor: pointer;
+}
+
+.forward:hover {
+	animation: pulse 1s linear infinite;
+	opacity: 1;
+	background-color: rgba(255, 255, 255, 0.507);
+	border-radius: 100%;
+	transition: 0.3s;
+}
+
+.forward:not(:hover) {
+	transition: 0.3s;
+}
+
+.backward:not(:hover) {
+	transition: 0.3s;
+}
+
+.pause:not(:hover) {
+	transition: 0.3s;
+}
+
+.backward:hover {
+	animation: pulse 1s linear infinite;
+	opacity: 1;
+	background-color: rgba(255, 255, 255, 0.507);
+
+	border-radius: 100%;
+	transition: 0.3s;
+}
+
+.pause:hover {
+	animation: pulse 1s linear infinite;
+	opacity: 0.75;
+	background-color: rgba(255, 255, 255, 0.507);
+
+	border-radius: 100%;
+	transition: 0.3s;
+}
+
+.navigate {
+	height: 100%;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 700px) {
+	.manual-navigation {
+		height: 1.5rem;
+		bottom: 2%;
+		right: 2%;
+	}
+
+	.pane-ticker {
+		height: 1rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.manual-navigation {
+		height: 1rem;
+		bottom: 2%;
+		right: 2%;
+	}
+
+	.pane-ticker {
+		height: 0.7rem;
+	}
+}

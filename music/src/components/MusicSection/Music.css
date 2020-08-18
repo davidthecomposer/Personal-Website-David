@@ -1,0 +1,239 @@
+.music-container {
+	position: relative;
+
+	margin: 0 0 3rem 0;
+	user-select: none;
+}
+
+.music-sections {
+	position: relative;
+}
+
+.contact-nav-text {
+	font-family: "Advent Pro", sans-serif;
+	margin: 0 auto;
+	padding: 2rem 0 0;
+	font-size: 1.2rem;
+	width: 85vw;
+}
+
+.contact-nav-text a {
+	text-decoration: none;
+	cursor: pointer;
+	color: #00a5a5;
+}
+.invisible {
+	display: none;
+}
+
+/* --------------- MEDIA MUSIC SECTION --------------- */
+
+.audio-row {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	width: calc(100vw - 6px);
+	height: 35vw;
+	margin: 0 0;
+}
+
+.display-window {
+	position: relative;
+
+	width: 60%;
+	height: 100%;
+	border-right: #00a5a5 1px dotted;
+}
+
+.display-image {
+	width: 100%;
+	height: 100%;
+}
+.player-column {
+	-webkit-overflow-scrolling: touch;
+	-webkit-overflow-y: scroll;
+	overflow-y: scroll;
+
+	width: 40%;
+	scrollbar-width: thin;
+	scrollbar-color: rgb(71, 20, 71) #00a5a5;
+}
+.Media {
+	border-bottom: #00a5a5 1px dotted;
+}
+
+/* ---------------  MUSIC LISTS SECTIONS --------------- */
+
+.music-sections-title {
+	padding: 2rem 0 0 0;
+	color: white;
+	font-size: 2rem;
+	text-align: center;
+	font-family: "Julius Sans One", sans-serif;
+}
+
+.music-sections {
+	color: white;
+	width: 100%;
+}
+
+.comp-info {
+	font-family: "Advent Pro", sans-serif;
+	font-size: 1.2rem;
+	display: inline-flex;
+	flex-direction: column;
+	height: 24rem;
+	justify-content: space-around;
+	align-items: center;
+	width: 33%;
+	margin: 1rem 0;
+	background-color: rgba(14, 14, 14, 0.342);
+	border-radius: 10%;
+	line-height: 1.5rem;
+}
+
+.comp-info:hover {
+	background-color: rgb(14, 14, 14, 0.8);
+}
+.instrumentation {
+	display: flex;
+	flex-direction: row;
+}
+
+.card-title {
+	font-size: 2rem;
+	padding: 1rem 0 0.5rem;
+	border-bottom: #00a5a5 2px solid;
+}
+
+.fa-file-pdf {
+	color: purple;
+	cursor: pointer;
+}
+
+.comp-info strong {
+	font-weight: bold;
+	color: rgb(122, 122, 122);
+	margin-right: 0.5rem;
+}
+
+.player-column::-webkit-scrollbar {
+	width: 0.25rem;
+	background-color: #00a5a5;
+}
+
+.player-column::-webkit-scrollbar-thumb {
+	background-color: rgb(71, 20, 71);
+}
+
+@keyframes fade-out {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@media (max-width: 1400px) {
+	.pieces-container {
+		text-align: center;
+	}
+	.comp-info {
+		width: 60vw;
+	}
+}
+
+@media (max-width: 1050px) {
+	.music-tabs-section {
+		width: calc(100vw - 3px);
+	}
+
+	.audio-row {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		width: calc(100vw - 4px);
+		height: inherit;
+		margin: 0 0;
+		align-items: center;
+		border: none;
+	}
+
+	.player-column {
+		height: 11rem;
+		width: calc(100vw - 4px);
+	}
+
+	.display-window {
+		position: relative;
+		width: calc(100vw);
+		border: none;
+		border-bottom: #00a5a5 1px dotted;
+	}
+
+	.Media {
+		border: none;
+	}
+
+	.music-header {
+		padding-bottom: 1rem;
+	}
+
+	.music-container {
+		margin: 0;
+	}
+
+	.comp-info {
+		width: 75vw;
+	}
+}
+
+@media (max-width: 900px) {
+	.card-title {
+		font-size: 1.4rem;
+	}
+
+	.comp-info {
+		font-size: 1rem;
+		width: 85vw;
+	}
+}
+
+@media (max-width: 700px) {
+	.Chamber,
+	.Orchestral,
+	.Vocal\/Choral,
+	.Solo {
+		text-align: center;
+	}
+}
+
+@media (max-width: 600px) {
+	.music-button-title {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 500px) {
+	.music-button-title {
+		font-size: 0.8rem;
+	}
+}
+/* @supports (-webkit-touch-callout: none) {
+    
+
+    
+    
+  } */

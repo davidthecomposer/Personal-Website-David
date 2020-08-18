@@ -1,0 +1,130 @@
+.music-tabs-section {
+	font-family: "Advent Pro", sans-serif;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	color: #fffffff6;
+	width: calc(100vw - 8px);
+	height: 2rem;
+	margin: 0 auto;
+	background: rgb(8, 8, 8);
+	padding: 0.5rem 0;
+	border: #00a5a5 1px dotted;
+}
+
+.music-tab-container {
+	position: relative;
+	width: 19%;
+	text-align: center;
+}
+
+.music-tab-button {
+	position: relative;
+	width: fit-content;
+	width: -moz-fit-content;
+	margin: 0 auto;
+	color: white;
+	height: 2rem;
+	line-height: 2rem;
+	font-size: 1.4rem;
+	cursor: pointer;
+}
+
+.music-button-title:hover + .underline {
+	background-image: linear-gradient(rgb(0, 121, 148), #00a5a5);
+	background-size: 0%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 8%;
+	animation: slideout1 0.15s 1 forwards linear;
+}
+
+.music-button-title:not(:hover) + .underline {
+	background-image: linear-gradient(rgb(0, 121, 148), #00a5a5);
+	background-size: 0%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 8%;
+	animation: retract1 0.15s 1 forwards linear;
+}
+
+.music-button-title {
+	width: auto;
+}
+
+.retract {
+	background-image: linear-gradient(rgb(0, 121, 148), #00a5a5);
+	background-size: 0%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 8%;
+	animation: retract 0.15s 1 forwards linear;
+}
+
+@keyframes slideout {
+	100% {
+		background-size: 70%;
+	}
+}
+
+@keyframes retract {
+	0% {
+		background-size: 70%;
+	}
+	100% {
+		background-size: 0;
+	}
+}
+
+.retract1 {
+	background-image: linear-gradient(rgb(0, 121, 148), #00a5a5);
+	background-size: 0%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 20%;
+	animation: retract1 0.15s 1 forwards linear;
+}
+
+@keyframes slideout1 {
+	100% {
+		background-size: 100%;
+	}
+}
+
+@keyframes retract1 {
+	0% {
+		background-size: 100%;
+	}
+	100% {
+		background-size: 0;
+	}
+}
+
+.divider {
+	margin: 0;
+	color: #b297ae;
+	font-size: 1.5rem;
+}
+
+.underline {
+	height: 0.1rem;
+}
+
+@media (max-width: 1050px) {
+	.music-tabs-section {
+		width: calc(100vw - 3px);
+	}
+}
+
+@media (max-width: 600px) {
+	.music-button-title {
+		font-size: 1rem;
+	}
+}
+
+@media (max-width: 500px) {
+	.music-button-title {
+		font-size: 0.8rem;
+	}
+}

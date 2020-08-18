@@ -1,0 +1,222 @@
+.contact {
+	user-select: none;
+	margin-top: 4rem;
+}
+
+.contact-form {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+	color: #ffcef8;
+	padding: 2rem;
+	width: 50%;
+	margin: 0 auto;
+	background-color: rgb(25, 24, 24);
+	border: none;
+}
+
+.contact-body p {
+	position: relative;
+	margin: 1rem 0 4rem 0;
+	text-align: center;
+	color: white;
+	font-size: 1.5rem;
+}
+
+.contact-body {
+	font-family: "Advent Pro", sans-serif;
+}
+
+#email-content {
+	width: 90%;
+	background-color: rgb(44, 44, 44);
+	border: none;
+	color: white;
+	letter-spacing: 0.1rem;
+	font-family: "Advent Pro", sans-serif;
+	font-size: 1.2rem;
+}
+
+.user-name {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+
+.user-email {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+}
+
+#user-name {
+	width: 75%;
+	background-color: rgb(44, 44, 44);
+	padding: 4px;
+	border: none;
+	color: white;
+	letter-spacing: 0.1rem;
+	font-family: "Advent Pro", sans-serif;
+}
+
+#user-name:focus,
+#user-email:focus,
+#email-content:focus {
+	outline: rgba(52, 183, 231, 0.8) 1px solid;
+}
+
+.email-submit:focus {
+	outline: none;
+}
+
+.email-submit:hover {
+	opacity: 0.8;
+}
+#user-email {
+	width: 75%;
+	background-color: rgb(44, 44, 44);
+	padding: 4px;
+	border: none;
+	color: white;
+	letter-spacing: 0.1rem;
+	font-family: "Advent Pro", sans-serif;
+}
+
+.form-labels {
+	font-size: 1.2rem;
+	margin: 0 0.5rem 0 0;
+}
+.form-labels-message {
+	margin: 0 0 0.5rem 0;
+	font-size: 1.2rem;
+}
+
+.form-row {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	margin: 0 0 2rem 0;
+}
+
+.user-message {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	width: 100%;
+	margin: 0 0 2rem 0;
+}
+
+.error-message {
+	width: 70%;
+	text-align: center;
+	line-height: 2rem;
+	font-size: 1.2rem;
+	margin: 0 0 1rem 0;
+	height: 2rem;
+}
+
+.fail {
+	color: red;
+}
+
+.success {
+	color: rgb(33, 130, 165, 0.8);
+}
+
+.email-submit {
+	background-color: rgb(33, 130, 165, 0.8);
+	padding: 0.5rem;
+	border: none;
+	color: white;
+	font-family: "Advent Pro", sans-serif;
+	font-size: 1.2rem;
+	cursor: pointer;
+	border-radius: 10%;
+}
+
+@media (max-width: 1400px) {
+	.contact-form {
+		width: 80%;
+	}
+	.contact-body p {
+		font-size: 1.3rem;
+		margin: 1.5rem;
+		width: 98%;
+	}
+	.form-row {
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		text-align: center;
+		margin: 0 0 2rem 0;
+		width: 100%;
+	}
+
+	.email-content {
+		margin: 1rem 0 1rem 0;
+		width: 100%;
+	}
+
+	.user-name {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		margin: 1rem 0 2rem 0;
+		width: 65vw;
+	}
+
+	.user-email {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 0 1rem 0;
+		width: 65vw;
+	}
+
+	#user-name {
+		width: 100%;
+	}
+
+	#user-email {
+		width: 100%;
+	}
+
+	.contact-body {
+		padding-bottom: 4rem;
+	}
+
+	.form-labels {
+		margin: 0 0 0.5rem;
+	}
+}
+
+@media (max-width: 950px) {
+	.contact-body p {
+		font-size: 1.5rem;
+		width: 90vw;
+	}
+
+	.contact-form {
+		width: 80%;
+	}
+}
+
+@media (max-width: 600px) {
+	.contact-body p {
+		font-size: 1.1rem;
+	}
+}
+
+/* @supports (-webkit-touch-callout: none) {
+    
+
+    
+    
+  } */

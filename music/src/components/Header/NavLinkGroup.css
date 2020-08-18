@@ -1,0 +1,72 @@
+.anchor {
+	padding-top: 3rem;
+}
+
+.nav-link-underline {
+	display: flex;
+	flex-direction: column;
+}
+
+.nav-link-text {
+	cursor: pointer;
+	margin: 0 0.5rem;
+	color: rgba(255, 255, 255, 0.959);
+	font-family: "Advent Pro", sans-serif;
+	text-decoration: none;
+	font-size: 1.1rem;
+}
+
+.underline {
+	height: 0.1rem;
+}
+
+.nav-link-text:hover + .underline {
+	background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+	background-size: 0%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 8%;
+	animation: slideout 0.15s 1 forwards linear;
+}
+
+.nav-link-text:not(:hover) + .underline {
+	background-image: linear-gradient(rgb(0, 121, 148), rgb(33, 130, 165));
+	background-size: 0%;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 8%;
+	animation: retract 0.15s 1 forwards linear;
+}
+
+@keyframes slideout {
+	100% {
+		background-size: 70%;
+	}
+}
+
+@keyframes retract {
+	0% {
+		background-size: 70%;
+	}
+	100% {
+		background-size: 0;
+	}
+}
+
+.nav-link-group {
+	font-family: "Advent Pro", sans-serif;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	color: rgba(255, 255, 255, 0.959);
+	width: fit-content;
+	height: 1rem;
+	margin-right: 2%;
+	font-size: 80%;
+}
+@media (max-width: 1100px) {
+	.nav-link-group {
+		display: none;
+	}
+}

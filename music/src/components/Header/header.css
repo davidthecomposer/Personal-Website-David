@@ -1,0 +1,100 @@
+/* ---------------------------- HEADER SECTION ---------------------------- */
+header {
+	position: fixed;
+	background-color: rgba(0, 0, 0, 0.802);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: calc(100vw - 6px);
+	z-index: 3;
+}
+
+.header-title {
+	height: 7rem;
+	width: 45rem;
+	background-image: url("../../images/main/DavidName1.png");
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.header-thin {
+	animation: to-thin 0.25s ease-in 1 forwards;
+}
+
+.header-full {
+	animation: to-full 0.15s linear 1 forwards;
+}
+.header-thin1 {
+	animation: to-thin-one 0.25s ease-in 1 forwards;
+}
+
+.header-full1 {
+	animation: to-full-one 0.15s linear 1 forwards;
+}
+
+@keyframes to-thin {
+	0% {
+		height: 7rem;
+		background-image: url("../../images/main/DavidName1.png");
+	}
+
+	100% {
+		height: 3rem;
+		background-image: url("../../images/main/DavidNameThin1.png");
+	}
+}
+
+@keyframes to-full {
+	0% {
+		background-image: url("../../images/main/DavidNameThin1.png");
+		height: 3rem;
+	}
+
+	100% {
+		height: 7rem;
+		background-image: url("../../images/main/DavidName1.png");
+	}
+}
+
+@keyframes to-thin-one {
+	0% {
+		height: 5rem;
+		background-image: url("../../images/main/DavidName1.png");
+	}
+
+	100% {
+		height: 3rem;
+		background-image: url("../../images/main/DavidNameThin1.png");
+	}
+}
+
+@keyframes to-full-one {
+	0% {
+		background-image: url("../../images/main/DavidNameThin1.png");
+		height: 3rem;
+	}
+
+	100% {
+		height: 7rem;
+		background-image: url("../../images/main/DavidName1.png");
+	}
+}
+
+@media (max-width: 1100px) {
+	.header-title {
+		height: 100%;
+		top: 1rem;
+	}
+	.header-title-thin {
+		height: 100%;
+		top: 1rem;
+	}
+}
+
+@media (max-width: 600px) {
+	.header-title {
+		width: 20rem;
+	}
+}

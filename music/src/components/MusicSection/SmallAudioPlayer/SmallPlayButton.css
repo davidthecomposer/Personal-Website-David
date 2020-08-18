@@ -1,0 +1,28 @@
+.small-button {
+	width: 10%;
+	height: 40px;
+	cursor: pointer;
+	padding: 0 4%;
+}
+
+.small-button:hover {
+	transition: 0.2s;
+	opacity: 0.8;
+}
+
+.small-button:not(:hover) {
+	transition: 0.2s;
+}
+
+.audio-file {
+	display: none;
+}
+
+@keyframes fade-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
