@@ -1,9 +1,4 @@
-@mixin flex($direction, $justify, $align) {
-	display: flex;
-	flex-direction: $direction;
-	justify-content: $justify;
-	align-items: $align;
-}
+@import "../SCSS/mixins";
 
 .playlist-container {
 	position: relative;
@@ -17,9 +12,8 @@
 }
 
 .playlist-interface {
+	@include flex(column, flex-start, flex-start);
 	position: relative;
-	display: flex;
-	flex-direction: column;
 	background-color: rgba(0, 0, 0, 0.739);
 	height: 100%;
 	width: 100%;
@@ -30,7 +24,7 @@
 	height: 25vh;
 	background-image: linear-gradient(to right, #133532, #22706b, #195c58);
 	border-radius: 0 100% 100% 0;
-	font-family: "Quicksand", sans-serif;
+	font-family: $primary_font;
 	font-size: 2rem;
 	cursor: pointer;
 	display: none;
@@ -66,23 +60,20 @@
 	height: 3vw;
 	min-height: 20px;
 	color: white;
-	font-family: "Quicksand", sans-serif;
+	font-family: $primary_font;
 	font-size: 1.2rem;
 	background-color: rgba(0, 0, 0, 0.582);
 	overflow: hidden;
 }
 
 .player-display {
+	@include flex(row, center, center);
 	width: 100%;
 	min-width: 300px;
 	height: 3vw;
 	min-height: 20px;
 	color: white;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	font-family: "Quicksand", sans-serif;
+	font-family: $primary_font;
 	font-size: 1.2rem;
 	transition: 0.5s;
 	background-color: rgba(0, 0, 0, 0.582);
@@ -93,7 +84,6 @@
 	}
 	.title {
 		position: relative;
-
 		animation: scroll-vertical 10s linear forwards infinite;
 	}
 	.time-remaining {
@@ -106,18 +96,15 @@
 	height: 16px;
 	width: 50px;
 	background: url("../../images/switch-off.svg");
-
 	background-repeat: no-repeat;
 	position: relative;
-	display: flex;
-	align-items: center;
+
 	cursor: pointer;
 	transition: 0.2s;
 }
 
 .on {
 	transition: 0.2s;
-
 	background: url("../../images/switch_on.svg");
 }
 

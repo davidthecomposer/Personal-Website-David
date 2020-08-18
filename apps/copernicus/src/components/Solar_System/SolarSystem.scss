@@ -1,17 +1,4 @@
-$orbit: circle infinite linear;
-
-%planet {
-	position: absolute;
-	border-radius: 50%;
-}
-
-%gravity {
-	width: 1px;
-	height: 1px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-}
+@import "../SCSS/mixins";
 
 .solar-system {
 	margin: auto auto;
@@ -34,136 +21,25 @@ $orbit: circle infinite linear;
 		margin-top: -25px;
 		margin-left: -25px;
 	}
-	.gravity-mercury {
-		@extend %gravity;
 
-		.mercury {
-			@extend %planet;
-			width: 2px;
-			height: 2px;
-			background: url("../../images/mercury_orbit.svg");
-			animation: $orbit 5s;
-			margin-left: -30px;
-			transform-origin: 30px center;
-		}
-	}
+	@include planet(mercury, 2px, 30px, 5s, -1s);
 
-	.gravity-venus {
-		@extend %gravity;
-		.venus {
-			@extend %planet;
-			width: 4px;
-			height: 4px;
-			background: url("../../images/venus_orbit.svg");
-			animation: $orbit 20s;
-			margin-left: -50px;
-			transform-origin: 50px center;
-		}
-	}
+	@include planet(venus, 4px, 50px, 20s, -10s);
 
-	.gravity-earth {
-		@extend %gravity;
-		.earth {
-			@extend %planet;
-			width: 5px;
-			height: 5px;
-			background: url("../../images/earth_orbit.svg");
-			animation: $orbit 25s;
-			animation-delay: -6s;
-			margin-left: -70px;
-			transform-origin: 70px center;
-		}
-	}
+	@include planet(earth, 5px, 70px, 25s, -6s);
 
-	.gravity-mars {
-		@extend %gravity;
-		.mars {
-			@extend %planet;
-			width: 2.5px;
-			height: 2.5px;
-			background: url("../../images/mars_orbit.svg");
-			animation: $orbit 50s;
-			animation-delay: -25s;
-			margin-left: -120px;
-			transform-origin: 120px center;
-		}
-	}
+	@include planet(mars, 2.5px, 120px, 50s, -25s);
 
-	.gravity-jupiter {
-		@extend %gravity;
-		.jupiter {
-			@extend %planet;
-			width: 33px;
-			height: 33px;
-			background-image: url("../../images/jupiter_orbit.svg");
+	@include planet(jupiter, 33px, 200px, 250s, -200s);
 
-			animation: $orbit 250s;
-			animation-play-state: running;
-			animation-delay: -200s;
-			margin-left: -200px;
-			transform-origin: 200px center;
-			transition: 1s;
-		}
-	}
+	@include planet(saturn, 40px, 300px, 450s, -50s);
 
-	.gravity-saturn {
-		@extend %gravity;
-		.saturn {
-			@extend %planet;
-			width: 40px;
-			height: 40px;
-			background-image: url("../../images/saturn_orbit.svg");
-			animation: $orbit 450s;
-			animation-delay: -50s;
-			margin-left: -300px;
-			transform-origin: 300px center;
-		}
-	}
+	@include planet(uranus, 12px, 350px, 600s, -220s);
 
-	.gravity-uranus {
-		@extend %gravity;
+	@include planet(Neptune, 11px, 400px, 700s, -698s);
 
-		.uranus {
-			@extend %planet;
-			width: 12px;
-			height: 12px;
-			background-image: url("../../images/uranus_orbit.svg");
-			animation: $orbit 600s;
-			animation-delay: -220s;
-			margin-left: -350px;
-			transform-origin: 350px center;
-		}
-	}
-
-	.gravity-neptune {
-		@extend %gravity;
-		.neptune {
-			@extend %planet;
-			width: 11px;
-			height: 11px;
-			background-image: url("../../images/Neptune_orbit.svg");
-			animation: $orbit 700s;
-			animation-delay: -698s;
-			margin-left: -400px;
-			transform-origin: 400px center;
-		}
-	}
-
-	.gravity-pluto {
-		@extend %gravity;
-		.pluto {
-			@extend %planet;
-			width: 1px;
-			height: 1px;
-			background-image: url("../../images/pluto_orbit.svg");
-			animation: $orbit 1000s;
-			animation-delay: -500s;
-			margin-left: -500px;
-			transform-origin: 500px center;
-		}
-	}
+	@include planet(pluto, 1px, 500px, 1000s, -500s);
 }
-
 @keyframes circle {
 	to {
 		transform: rotate(1turn);

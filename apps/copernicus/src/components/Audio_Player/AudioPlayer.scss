@@ -1,9 +1,4 @@
-@mixin flex($direction, $justify, $align) {
-	display: flex;
-	flex-direction: $direction;
-	justify-content: $justify;
-	align-items: $align;
-}
+@import "../SCSS/mixins";
 
 .audio-player {
 	@include flex(row, space-between, center);
@@ -86,7 +81,7 @@
 }
 
 .audio-player-title {
-	font-family: "Quicksand", sans-serif;
+	font-family: $primary_font;
 	font-size: 1.3rem;
 	width: 100%;
 	position: absolute;

@@ -1,5 +1,6 @@
 import React from "react";
 import InfoCard from "./InfoCard";
+import "./InfoCard.scss";
 
 const InfoCardList = ({
 	exitPlanetInfo,

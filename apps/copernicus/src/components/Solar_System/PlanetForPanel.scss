@@ -1,63 +1,14 @@
-%gravity {
-	width: 1px;
-	height: 1px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	z-index: 3;
-	border-radius: 50%;
-}
+@import "../SCSS/mixins";
 
-.mercury-info {
-	@extend %gravity;
-	background: url("../../images/mercury.svg");
-}
-
-.venus-info {
-	@extend %gravity;
-	background: url("../../images/venus.svg");
-}
-
-.earth-info {
-	@extend %gravity;
-	background: url("../../images/earth.svg");
-}
-
-.mars-info {
-	@extend %gravity;
-	background: url("../../images/mars.svg");
-}
-
-.jupiter-info {
-	@extend %gravity;
-	background-image: url("../../images/jupiter.svg");
-}
-
-.saturn-info {
-	@extend %gravity;
-	background-image: url("../../images/saturn.svg");
-}
-
-.neptune-info {
-	@extend %gravity;
-	background-image: url("../../images/Neptune.svg");
-	transition: 1s;
-}
-
-.uranus-info {
-	@extend %gravity;
-	background-image: url("../../images/uranus.svg");
-}
-.pluto-info {
-	@extend %gravity;
-	background-image: url("../../images/pluto.svg");
+@each $planet_name in $planet_names {
+	@include planet-info(#{$planet_name});
 }
 
 .planet-grow {
-	animation: grow-planet 1s forwards;
+	animation: grow-planet 1s linear forwards;
 }
 .planet-shrink {
-	animation: shrink-planet 1s forwards;
+	animation: shrink-planet 1s linear forwards;
 }
 
 @keyframes grow-planet {

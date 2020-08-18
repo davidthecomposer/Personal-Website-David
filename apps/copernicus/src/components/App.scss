@@ -1,4 +1,5 @@
 // --vh variable set in App.js. workaround for apple screen measurement issues.
+@import "./SCSS/mixins";
 
 body {
 	z-index: -10;
@@ -11,12 +12,11 @@ body {
 	background-size: contain;
 	display: flex;
 	z-index: -2;
-	overflow-x: hidden;
-	overflow-y: hidden;
+	overflow: hidden;
 }
 
 .main-title {
-	font-family: "Quicksand", sans-serif;
+	font-family: $primary_font;
 	margin: 0 auto;
 	position: absolute;
 	width: 50vw;
@@ -25,7 +25,7 @@ body {
 	text-align: center;
 	height: fit-content;
 	font-size: 5vw;
-	z-index: 0;
+	z-index: 1;
 	transform: translateX(0vw);
 	transition: 1s;
 }
@@ -34,43 +34,12 @@ body {
 	transition: 1s;
 	transition-delay: 0.8s;
 }
-.info-card-list {
-	position: absolute;
-	width: 30vw;
-
-	margin-left: 100vw;
-	transition: all 1s;
-	transition-delay: 0.5s;
-}
-
-.close-info-cards {
-	background-image: url("../images/nvm.svg");
-	position: absolute;
-	left: 1vw;
-	top: 1vw;
-	height: 33px;
-	width: 48px;
-	z-index: 3;
-	visibility: hidden;
-	cursor: pointer;
-}
-
-.slide-out {
-	transition: 1s;
-	transition-delay: 0.5s;
-	margin-left: calc(100vw - 30vw);
-}
 
 @media screen and (max-width: 1400px) {
 	.main-title {
 		width: 80vw;
 		font-size: 8vw;
 		left: 10vw;
-	}
-	.slide-out {
-		transition: 1s;
-		transition-delay: 0.5s;
-		margin-left: calc(100vw - 50vw);
 	}
 
 	.left {
@@ -87,11 +56,6 @@ body {
 		width: 100vw;
 		left: 25vw;
 	}
-	.slide-out {
-		transition: 1s;
-		transition-delay: 0.5s;
-		margin-left: calc(0vw + 40px);
-	}
 
 	.left {
 		transform: translate(-100vw, calc(var(--vh, 1vh) * 0.5));
@@ -99,22 +63,11 @@ body {
 		transition: 1s;
 		transition-delay: 0.8s;
 	}
-
-	.info-card-list {
-		width: calc(100vw - 40px);
-		.close-info-cards {
-			visibility: visible;
-			cursor: pointer;
-		}
-	}
 }
 
 @media screen and (max-width: 500px) {
 	.main-title {
 		font-size: 10vw;
-	}
-	.slide-out {
-		margin-left: calc(100vw - 90vw);
 	}
 
 	.left {
@@ -124,12 +77,6 @@ body {
 	.title-fade {
 		opacity: 0;
 		transition: 0.5s;
-	}
-	.info-card-list {
-		.close-info-cards {
-			visibility: visible;
-			cursor: pointer;
-		}
 	}
 }
 

@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "97175b5ebb82cf7f55286d10a4693f5d",
+    "revision": "db1fdd0e6466eaa3fe90edddea02c30c",
     "url": "/copernicus/build/index.html"
   },
   {
-    "revision": "7cf0aeda1b806aedd769",
-    "url": "/copernicus/build/static/css/main.0efc58c5.chunk.css"
+    "revision": "b60b245b9a4ff2396f5b",
+    "url": "/copernicus/build/static/css/main.49b5fa35.chunk.css"
   },
   {
-    "revision": "f256d5330d975ecf1e7b",
-    "url": "/copernicus/build/static/js/2.d23ad33a.chunk.js"
+    "revision": "64c05fb9bc5672352860",
+    "url": "/copernicus/build/static/js/2.bf4cb591.chunk.js"
   },
   {
     "revision": "e88a3e95b5364d46e95b35ae8c0dc27d",
-    "url": "/copernicus/build/static/js/2.d23ad33a.chunk.js.LICENSE.txt"
+    "url": "/copernicus/build/static/js/2.bf4cb591.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7cf0aeda1b806aedd769",
-    "url": "/copernicus/build/static/js/main.6152b6c8.chunk.js"
+    "revision": "b60b245b9a4ff2396f5b",
+    "url": "/copernicus/build/static/js/main.6310d9c2.chunk.js"
   },
   {
     "revision": "e0b3f689e7f35f7e0703",

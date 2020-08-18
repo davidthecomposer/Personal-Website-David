@@ -4,3 +4,71 @@
 	justify-content: $justify;
 	align-items: $align;
 }
+
+$primary_font: "Quicksand", sans-serif;
+
+%form-input {
+	background-color: rgba(37, 37, 37, 0.746);
+	outline: none;
+	border: none;
+	color: white;
+	padding: 0.25rem;
+	font-family: $primary_font;
+	&::placeholder {
+		color: white;
+	}
+	border-radius: 5%;
+}
+
+%gravity {
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 3;
+	border-radius: 50%;
+}
+
+$orbit: circle infinite linear;
+
+%planet {
+	position: absolute;
+	border-radius: 50%;
+}
+
+%orbit {
+	width: 1px;
+	height: 1px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+}
+
+@mixin planet($name, $size, $orbit_radius, $orbit_time, $orbit_start_delay) {
+	.gravity-#{$name} {
+		@extend %orbit;
+
+		.#{$name} {
+			position: absolute;
+			border-radius: 50%;
+			width: $size;
+			height: $size;
+			margin-left: -#{$orbit_radius};
+			transform-origin: #{$orbit_radius} center;
+			background: url("../../images/#{$name}_orbit.svg");
+			animation: $orbit $orbit_time;
+			animation-delay: $orbit_start_delay;
+		}
+	}
+}
+
+$planet_names: mercury, venus, earth, mars, jupiter, saturn, uranus, Neptune,
+	pluto;
+
+@mixin planet-info($name) {
+	.#{$name}-info {
+		@extend %gravity;
+		background: url("../../images/#{$name}.svg");
+	}
+}

@@ -1,19 +1,45 @@
+@import "../SCSS/mixins";
+
+.info-card-list {
+	position: absolute;
+	width: 30vw;
+	margin-left: 100vw;
+	transition: all 1s;
+	transition-delay: 0.5s;
+}
+
+.close-info-cards {
+	background-image: url("../../images/nvm.svg");
+	position: absolute;
+	left: 1vw;
+	top: 1vw;
+	height: 33px;
+	width: 48px;
+	z-index: 3;
+	visibility: hidden;
+	cursor: pointer;
+}
+
+.slide-out {
+	transition: 1s;
+	transition-delay: 0.5s;
+	margin-left: calc(100vw - 30vw);
+}
+
 .info-card {
 	color: white;
 	height: 100vh;
 	width: 30vw;
 	background-color: rgba(0, 0, 0, 0.781);
 	position: absolute;
-	animation: invisible 1.3s forwards;
+	animation: invisible 1.3s linear forwards;
 	z-index: 2;
-	font-family: "Quicksand", sans-serif;
+	font-family: $primary_font;
 	font-size: 1rem;
 }
 
 .visible {
 	visibility: visible;
-	flex-direction: column;
-	justify-content: space-around;
 	animation: none;
 }
 
@@ -23,13 +49,13 @@
 	border-bottom: 1px rgba(255, 255, 255, 0.438) solid;
 	text-align: center;
 	margin-bottom: 1rem;
-	padding-bottom: 0.5rem;
+	padding: calc(var(--vh, 1vh) * 0.5);
 }
 
 .description {
 	padding: 0 1rem 1rem;
 	line-height: 1.5rem;
-	margin-top: 55vh;
+	margin-top: calc(var(--vh, 1vh) * 55);
 }
 
 .stats {
@@ -63,6 +89,11 @@
 	.stats {
 		line-height: 1.4rem;
 	}
+	.slide-out {
+		transition: 1s;
+		transition-delay: 0.5s;
+		margin-left: calc(100vw - 50vw);
+	}
 }
 @media screen and (max-width: 1200px) and (orientation: portrait) {
 	.description {
@@ -70,11 +101,22 @@
 	}
 }
 @media screen and (max-width: 900px) and (orientation: landscape) {
+	.slide-out {
+		transition: 1s;
+		transition-delay: 0.5s;
+		margin-left: calc(0vw + 40px);
+	}
+
+	.info-card-list {
+		width: calc(100vw - 40px);
+		.close-info-cards {
+			visibility: visible;
+			cursor: pointer;
+		}
+	}
 	.info-card {
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		align-items: center;
+		@include flex(row, flex-start, center);
+
 		font-size: 0.8rem;
 		width: 100%;
 		height: calc(var(--vh, 1vh) * 100);
@@ -90,9 +132,7 @@
 		}
 		.description {
 			width: 45vw;
-
 			margin-left: 30vw;
-
 			margin-top: calc(var(--vh, 1vh) * 15);
 			padding: 0 0.5rem;
 			line-height: 1.5rem;
@@ -109,6 +149,15 @@
 }
 
 @media screen and (max-width: 500px) {
+	.info-card-list {
+		.close-info-cards {
+			visibility: visible;
+			cursor: pointer;
+		}
+	}
+	.slide-out {
+		margin-left: calc(100vw - 90vw);
+	}
 	.info-card {
 		font-size: 0.8rem;
 		width: 90vw;
