@@ -2,49 +2,28 @@ import React from "react";
 import lizCImage from "../../../images/news/Liz_Christensen_headShot.JPG";
 import mandiBarrus2Image from "../../../images/news/mandi-Barrus.png";
 
-class SongCycleCommission extends React.Component {
-	state = {
-		visibilityClass1: "visible-news",
-		visibilityClass2: "invisible-news",
-	};
-
-	highlightBio = (e) => {
-		return e.target.innerText === "Liz Christensen"
-			? this.setState({
-					visibilityClass1: "invisible-news",
-					visibilityClass2: "visible-news",
-			  })
-			: this.setState({
-					visibilityClass1: "visible-news",
-					visibilityClass2: "invisible-news",
-			  });
-	};
-	render() {
-		return (
-			<div className='news-row'>
+const SongCycleCommission = ({ slideDown, slideDownClass }) => {
+	return (
+		<div className={`news-row `} onClick={slideDown}>
+			<h2 className='news-item-title'>Song Cycle Commission</h2>
+			<div className={`news-wrapper ${slideDownClass}`}>
 				<div className='news-slot-main'>
-					<h2 className='news-item-title'>Song Cycle Commission</h2>
 					<p className='news-text'>
 						During the early part of this year I will be composing a song cycle
 						and collaborating with two talented artists in the process.{" "}
-						<span className='news-expand' onMouseEnter={this.highlightBio}>
-							Mandi Barrus
-						</span>{" "}
-						is a Mezzo Soprano that most recently earned her MM in vocal
-						performance at the University of Utah. I will be setting some texts
-						from lyricist{" "}
-						<span className='news-expand' onMouseEnter={this.highlightBio}>
-							Liz Christensen
-						</span>
-						. The texts focus on themes of self-awareness, love, loss, and
-						mental health. There is a recital scheduled for the fall that will
-						feature the premiere of this and a few other works. Stay tuned for
-						more info about performance dates and venues, and general updates
-						about the process of setting these texts to music.
+						<span className='news-expand'>Mandi Barrus</span> is a Mezzo Soprano
+						that most recently earned her MM in vocal performance at the
+						University of Utah. I will be setting some texts from lyricist{" "}
+						<span className='news-expand'>Liz Christensen</span>. The texts
+						focus on themes of self-awareness, love, loss, and mental health.
+						There is a recital scheduled for the fall that will feature the
+						premiere of this and a few other works. Stay tuned for more info
+						about performance dates and venues, and general updates about the
+						process of setting these texts to music.
 					</p>
 				</div>
 				<div className='news-slot-one'>
-					<div className={`news-info-one ${this.state.visibilityClass1}`}>
+					<div className={`news-info-one`}>
 						<img
 							src={mandiBarrus2Image}
 							className='news-image-1'
@@ -82,7 +61,7 @@ class SongCycleCommission extends React.Component {
 							throughout Utah, where she lives with her three children.
 						</p>
 					</div>
-					<div className={`news-info-two ${this.state.visibilityClass2}`}>
+					<div className={`news-info-two`}>
 						<img src={lizCImage} className='news-image' alt='Liz Christensen' />
 						<p className='news-text'>
 							<a href='http://www.lizzylizzyliz.com'>Liz Christensen</a> is the
@@ -113,8 +92,8 @@ class SongCycleCommission extends React.Component {
 					</div>
 				</div>
 			</div>
-		);
-	}
-}
+		</div>
+	);
+};
 
 export default SongCycleCommission;

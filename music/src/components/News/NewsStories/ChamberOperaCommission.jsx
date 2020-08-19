@@ -7,8 +7,8 @@ const ChamberOperaCommission = (props) => {
 
 	return (
 		<div className='news-row'>
+			<h2 className='news-item-title'>Chamber Opera Commission</h2>
 			<div className='news-slot-main'>
-				<h2 className='news-item-title'>Chamber Opera Commission</h2>
 				<p className='news-text'>
 					I will be composing a chamber opera to be premiered in the Fall 2021
 					in association with Opera Contempo. The Libretto will be written by

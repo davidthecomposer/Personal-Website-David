@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/copernicus/build/static/css/main.49b5fa35.chunk.css",
+    "main.css": "/copernicus/build/static/css/main.265e24ce.chunk.css",
     "main.js": "/copernicus/build/static/js/main.6310d9c2.chunk.js",
     "main.js.map": "/copernicus/build/static/js/main.6310d9c2.chunk.js.map",
     "runtime-main.js": "/copernicus/build/static/js/runtime-main.d8f34b7c.js",
@@ -8,23 +8,23 @@
     "static/js/2.bf4cb591.chunk.js": "/copernicus/build/static/js/2.bf4cb591.chunk.js",
     "static/js/2.bf4cb591.chunk.js.map": "/copernicus/build/static/js/2.bf4cb591.chunk.js.map",
     "index.html": "/copernicus/build/index.html",
-    "precache-manifest.cdaf0b3ca665c93d2a09c9f86dd04038.js": "/copernicus/build/precache-manifest.cdaf0b3ca665c93d2a09c9f86dd04038.js",
+    "precache-manifest.d692cad3cd003ff2cf645fa83aa3ebcf.js": "/copernicus/build/precache-manifest.d692cad3cd003ff2cf645fa83aa3ebcf.js",
     "service-worker.js": "/copernicus/build/service-worker.js",
-    "static/css/main.49b5fa35.chunk.css.map": "/copernicus/build/static/css/main.49b5fa35.chunk.css.map",
+    "static/css/main.265e24ce.chunk.css.map": "/copernicus/build/static/css/main.265e24ce.chunk.css.map",
     "static/js/2.bf4cb591.chunk.js.LICENSE.txt": "/copernicus/build/static/js/2.bf4cb591.chunk.js.LICENSE.txt",
     "static/media/Earth.wav": "/copernicus/build/static/media/Earth.17663dc4.wav",
     "static/media/Jupiter.wav": "/copernicus/build/static/media/Jupiter.6236af16.wav",
     "static/media/Mars.wav": "/copernicus/build/static/media/Mars.186d4556.wav",
     "static/media/Mercury.wav": "/copernicus/build/static/media/Mercury.366fc173.wav",
     "static/media/Neptune.wav": "/copernicus/build/static/media/Neptune.574f62cc.wav",
-    "static/media/PlanetForPanel.scss": "/copernicus/build/static/media/venus.b17cbc33.svg",
-    "static/media/SolarSystem.scss": "/copernicus/build/static/media/venus_orbit.0792aba4.svg",
     "static/media/Pluto.wav": "/copernicus/build/static/media/Pluto.e1c3dd2b.wav",
     "static/media/Saturn.wav": "/copernicus/build/static/media/Saturn.ff475143.wav",
     "static/media/Uranus.wav": "/copernicus/build/static/media/Uranus.d29359be.wav",
     "static/media/Venus.mp3": "/copernicus/build/static/media/Venus.4e69ea88.mp3",
     "static/media/App.scss": "/copernicus/build/static/media/background_4X.08d67a3a.jpeg",
     "static/media/Comment-Container.scss": "/copernicus/build/static/media/nvm.daf5fc43.svg",
+    "static/media/PlanetForPanel.scss": "/copernicus/build/static/media/venus.b17cbc33.svg",
+    "static/media/SolarSystem.scss": "/copernicus/build/static/media/venus_orbit.0792aba4.svg",
     "static/media/info_button.svg": "/copernicus/build/static/media/info_button.34246b8f.svg",
     "static/media/pause_button.svg": "/copernicus/build/static/media/pause_button.7bf4f11c.svg",
     "static/media/play_button.svg": "/copernicus/build/static/media/play_button.8de15c15.svg",
@@ -33,7 +33,7 @@
   "entrypoints": [
     "static/js/runtime-main.d8f34b7c.js",
     "static/js/2.bf4cb591.chunk.js",
-    "static/css/main.49b5fa35.chunk.css",
+    "static/css/main.265e24ce.chunk.css",
     "static/js/main.6310d9c2.chunk.js"
   ]
 }

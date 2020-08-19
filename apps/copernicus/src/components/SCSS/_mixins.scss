@@ -63,7 +63,7 @@ $orbit: circle infinite linear;
 	}
 }
 
-$planet_names: mercury, venus, earth, mars, jupiter, saturn, uranus, Neptune,
+$planet_names: mercury, venus, earth, mars, jupiter, saturn, uranus, neptune,
 	pluto;
 
 @mixin planet-info($name) {

@@ -7,8 +7,8 @@ const OCTComposerInRes = (props) => {
 
 	return (
 		<div className='news-row'>
+			<h2 className='news-item-title'>Composer-In-Residence</h2>
 			<div className='news-slot-main'>
-				<h2 className='news-item-title'>Composer-In-Residence</h2>
 				<p className='news-text'>
 					I have accepted an invitation to be the composer-in-residence for
 					Opera Contempo. I look forward to helping to grow this important new

@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "db1fdd0e6466eaa3fe90edddea02c30c",
+    "revision": "77c9b9f02b3974d8777e5a6c15267c26",
     "url": "/copernicus/build/index.html"
   },
   {
-    "revision": "b60b245b9a4ff2396f5b",
-    "url": "/copernicus/build/static/css/main.49b5fa35.chunk.css"
+    "revision": "714724ac4f0b9c2029c6",
+    "url": "/copernicus/build/static/css/main.265e24ce.chunk.css"
   },
   {
     "revision": "64c05fb9bc5672352860",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/copernicus/build/static/js/2.bf4cb591.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b60b245b9a4ff2396f5b",
+    "revision": "714724ac4f0b9c2029c6",
     "url": "/copernicus/build/static/js/main.6310d9c2.chunk.js"
   },
   {
@@ -42,14 +42,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "574f62ccc7ac3dbe8408c9cc00c737ef",
     "url": "/copernicus/build/static/media/Neptune.574f62cc.wav"
-  },
-  {
-    "revision": "c51a0b3dea4a700e90203969cb3c32bc",
-    "url": "/copernicus/build/static/media/Neptune.c51a0b3d.svg"
-  },
-  {
-    "revision": "59d8da51ee49d0106e043bb1d21ec77a",
-    "url": "/copernicus/build/static/media/Neptune_orbit.59d8da51.svg"
   },
   {
     "revision": "e1c3dd2b33f5f32053dda9f0e29c2d11",
@@ -110,6 +102,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "961ef8669f18c348af2bcc2993e58f19",
     "url": "/copernicus/build/static/media/mercury_orbit.961ef866.svg"
+  },
+  {
+    "revision": "c51a0b3dea4a700e90203969cb3c32bc",
+    "url": "/copernicus/build/static/media/neptune.c51a0b3d.svg"
+  },
+  {
+    "revision": "59d8da51ee49d0106e043bb1d21ec77a",
+    "url": "/copernicus/build/static/media/neptune_orbit.59d8da51.svg"
   },
   {
     "revision": "daf5fc43ef1a545aed59c65f3f909b54",
