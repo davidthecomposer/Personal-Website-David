@@ -1,8 +1,10 @@
 @import "../SCSS/mixins";
 
 @each $planet_name in $planet_names {
-	@include planet-info(#{$planet_name});
+	@include planet-info($planet_name);
 }
+
+@include planet-info(neptune);
 
 .planet-grow {
 	animation: grow-planet 1s linear forwards;

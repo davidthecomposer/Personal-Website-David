@@ -46,7 +46,7 @@ $orbit: circle infinite linear;
 }
 
 @mixin planet($name, $size, $orbit_radius, $orbit_time, $orbit_start_delay) {
-	.gravity-#{$name} {
+	.orbit-#{$name} {
 		@extend %orbit;
 
 		.#{$name} {
