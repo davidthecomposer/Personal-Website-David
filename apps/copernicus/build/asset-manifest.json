@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/copernicus/build/static/css/main.31239978.chunk.css",
-    "main.js": "/copernicus/build/static/js/main.97bc3363.chunk.js",
-    "main.js.map": "/copernicus/build/static/js/main.97bc3363.chunk.js.map",
+    "main.css": "/copernicus/build/static/css/main.746c9a59.chunk.css",
+    "main.js": "/copernicus/build/static/js/main.cc0a240c.chunk.js",
+    "main.js.map": "/copernicus/build/static/js/main.cc0a240c.chunk.js.map",
     "runtime-main.js": "/copernicus/build/static/js/runtime-main.d8f34b7c.js",
     "runtime-main.js.map": "/copernicus/build/static/js/runtime-main.d8f34b7c.js.map",
     "static/js/2.bf4cb591.chunk.js": "/copernicus/build/static/js/2.bf4cb591.chunk.js",
     "static/js/2.bf4cb591.chunk.js.map": "/copernicus/build/static/js/2.bf4cb591.chunk.js.map",
     "index.html": "/copernicus/build/index.html",
-    "precache-manifest.c20e5bde572449a79e954241d39f6a1d.js": "/copernicus/build/precache-manifest.c20e5bde572449a79e954241d39f6a1d.js",
+    "precache-manifest.a16a454c45ba58ae71fcbbd652d350ee.js": "/copernicus/build/precache-manifest.a16a454c45ba58ae71fcbbd652d350ee.js",
     "service-worker.js": "/copernicus/build/service-worker.js",
-    "static/css/main.31239978.chunk.css.map": "/copernicus/build/static/css/main.31239978.chunk.css.map",
+    "static/css/main.746c9a59.chunk.css.map": "/copernicus/build/static/css/main.746c9a59.chunk.css.map",
     "static/js/2.bf4cb591.chunk.js.LICENSE.txt": "/copernicus/build/static/js/2.bf4cb591.chunk.js.LICENSE.txt",
     "static/media/Earth.wav": "/copernicus/build/static/media/Earth.17663dc4.wav",
     "static/media/Jupiter.wav": "/copernicus/build/static/media/Jupiter.6236af16.wav",
@@ -33,7 +33,7 @@
   "entrypoints": [
     "static/js/runtime-main.d8f34b7c.js",
     "static/js/2.bf4cb591.chunk.js",
-    "static/css/main.31239978.chunk.css",
-    "static/js/main.97bc3363.chunk.js"
+    "static/css/main.746c9a59.chunk.css",
+    "static/js/main.cc0a240c.chunk.js"
   ]
 }

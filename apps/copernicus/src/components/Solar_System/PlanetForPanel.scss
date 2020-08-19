@@ -7,10 +7,10 @@
 @include planet-info(neptune);
 
 .planet-grow {
-	animation: grow-planet 1s linear forwards;
+	animation: grow-planet 0.8s forwards;
 }
 .planet-shrink {
-	animation: shrink-planet 1s linear forwards;
+	animation: shrink-planet 0.8s forwards;
 }
 
 @keyframes grow-planet {

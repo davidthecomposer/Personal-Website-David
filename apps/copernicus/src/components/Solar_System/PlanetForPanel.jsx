@@ -2,6 +2,7 @@ import React from "react";
 import "./PlanetForPanel.scss";
 
 const PlanetForPanel = ({ planetState }) => {
+	console.log(planetState);
 	return (
 		<div className='planet-collection'>
 			<div className={`mercury-info ${planetState.mercury}`}></div>
