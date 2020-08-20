@@ -35,12 +35,27 @@ $news-index: 0, 1, 2;
 	justify-content: flex-start;
 	background: rgb(15, 0, 12);
 	border: none;
+	margin-bottom: 0.2rem;
 	width: calc(100vw - 6px);
 	max-width: calc(100vw - 6px);
 	overflow: hidden;
 	height: 3rem;
 	transition: 0.5s;
 	z-index: 1;
+}
+.news-item-title {
+	font-family: "Julius Sans One", sans-serif;
+
+	font-size: 2.5rem;
+	height: 3rem;
+	color: rgb(236, 236, 236);
+
+	width: 100%;
+	z-index: 3;
+	line-height: 3rem;
+
+	cursor: pointer;
+	background: rgb(37, 9, 33);
 }
 
 @each $index in $news-index {
@@ -81,20 +96,6 @@ $news-index: 0, 1, 2;
 	width: 45%;
 
 	position: relative;
-}
-
-.news-item-title {
-	font-family: "Julius Sans One", sans-serif;
-	font-weight: bold;
-	font-size: 2.5rem;
-	height: 3rem;
-	color: rgb(236, 236, 236);
-	margin-bottom: 1rem;
-	width: 100%;
-	z-index: 3;
-	line-height: 2.9rem;
-	cursor: pointer;
-	background: rgb(37, 9, 33);
 }
 
 .news-text {
