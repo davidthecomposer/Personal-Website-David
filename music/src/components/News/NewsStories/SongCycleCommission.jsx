@@ -58,7 +58,7 @@ const SongCycleCommission = ({ articleNum }) => {
 					</p>
 				</div>
 				<div className='news-slot-one'>
-					<div className={`news-info-one`}>
+					<div className={`news-info`}>
 						<img
 							src={mandiBarrus2Image}
 							className='news-image'
@@ -96,7 +96,7 @@ const SongCycleCommission = ({ articleNum }) => {
 							throughout Utah, where she lives with her three children.
 						</p>
 					</div>
-					<div className={`news-info-two`}>
+					<div className={`news-info`}>
 						<img src={lizCImage} className='news-image' alt='Liz Christensen' />
 						<p className='news-text'>
 							<a href='http://www.lizzylizzyliz.com'>Liz Christensen</a> is the

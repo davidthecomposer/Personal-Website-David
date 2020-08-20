@@ -138,6 +138,8 @@
 }
 
 .email-submit {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
 	background-color: rgb(33, 130, 165, 0.8);
 	padding: 0.5rem;
 	border: none;

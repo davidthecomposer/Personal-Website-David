@@ -66,7 +66,15 @@
 #user-name:focus,
 #user-email:focus,
 #email-content:focus {
+	-webkit-appearance: none;
 	outline: rgba(52, 183, 231, 0.8) 1px solid;
+	transition: 0.3s;
+}
+
+#user-name:not(:focus),
+#user-email:not(:focus),
+#email-content:not(:focus) {
+	transition: 0.3s;
 }
 
 .email-submit:focus {
@@ -130,6 +138,8 @@
 }
 
 .email-submit {
+	-webkit-appearance: none;
+	-webkit-border-radius: 0;
 	background-color: rgb(33, 130, 165, 0.8);
 	padding: 0.5rem;
 	border: none;
@@ -154,7 +164,7 @@
 		justify-content: space-around;
 		align-items: center;
 		text-align: center;
-		margin: 0 0 2rem 0;
+		margin: 0;
 		width: 100%;
 	}
 
@@ -168,7 +178,7 @@
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
-		margin: 1rem 0 2rem 0;
+		margin: 1rem 0 1rem 0;
 		width: 65vw;
 	}
 
@@ -211,6 +221,18 @@
 @media (max-width: 600px) {
 	.contact-body p {
 		font-size: 1.1rem;
+	}
+	.contact-body {
+		padding-bottom: 1rem;
+	}
+	.error-message {
+		width: 100%;
+		line-height: 1rem;
+		font-size: 1rem;
+	}
+	#email-content {
+		font-size: 1rem;
+		height: 100px;
 	}
 }
 
