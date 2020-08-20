@@ -54,7 +54,7 @@ const ChamberOperaCommission = ({ articleNum }) => {
 					</p>
 				</div>
 				<div className='news-slot-one'>
-					<div className='news-info-one'>
+					<div className='news-info'>
 						<img
 							src={jennyImage}
 							className='news-image'
