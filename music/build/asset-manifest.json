@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.d30b0d7b.chunk.css",
+    "main.css": "/static/css/main.60f71713.chunk.css",
     "main.js": "/static/js/main.d36a0b90.chunk.js",
     "main.js.map": "/static/js/main.d36a0b90.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bde96460.js",
@@ -8,9 +8,9 @@
     "static/js/2.e3f66df2.chunk.js": "/static/js/2.e3f66df2.chunk.js",
     "static/js/2.e3f66df2.chunk.js.map": "/static/js/2.e3f66df2.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.4b50a965dae6ac54f40086f249927940.js": "/precache-manifest.4b50a965dae6ac54f40086f249927940.js",
+    "precache-manifest.a577bcfb3ae58434a75435cb529f1f93.js": "/precache-manifest.a577bcfb3ae58434a75435cb529f1f93.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.d30b0d7b.chunk.css.map": "/static/css/main.d30b0d7b.chunk.css.map",
+    "static/css/main.60f71713.chunk.css.map": "/static/css/main.60f71713.chunk.css.map",
     "static/js/2.e3f66df2.chunk.js.LICENSE.txt": "/static/js/2.e3f66df2.chunk.js.LICENSE.txt",
     "static/media/3-Pieces-for-Clarinet.wav": "/static/media/3-Pieces-for-Clarinet.648755f4.wav",
     "static/media/3-Songs-Baudelaire.pdf": "/static/media/3-Songs-Baudelaire.d94009b8.pdf",
@@ -89,7 +89,7 @@
   "entrypoints": [
     "static/js/runtime-main.bde96460.js",
     "static/js/2.e3f66df2.chunk.js",
-    "static/css/main.d30b0d7b.chunk.css",
+    "static/css/main.60f71713.chunk.css",
     "static/js/main.d36a0b90.chunk.js"
   ]
 }
