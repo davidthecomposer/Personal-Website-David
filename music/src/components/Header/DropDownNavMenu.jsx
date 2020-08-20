@@ -34,7 +34,7 @@ class DropDownNavMenu extends React.Component {
 						</div>
 						<div className='dropdown-tabs-section drop'>
 							<a className='dropdown-text' href='#about-me'>
-								About Me
+								About
 							</a>
 							<div className='underline'></div>
 						</div>

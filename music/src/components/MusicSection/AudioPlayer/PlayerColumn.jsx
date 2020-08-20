@@ -1,15 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import AudioPlayer from "./AudioPlayer";
 
 const PlayerColumn = (props) => {
 	const [allAudio, setAllAudio] = useState([]);
 
-	useEffect(() => {
+	const makePlaylist = useCallback(() => {
 		const newPlaylist = [];
 		props.musicData.forEach((item) => newPlaylist.push(item.secondClass));
 
 		setAllAudio(newPlaylist);
-	}, []);
+	}, [props.musicData]);
+
+	useEffect(() => {
+		makePlaylist();
+	}, [makePlaylist]);
 
 	const nextAudioTrack = (lastTrack) => {
 		const previousTrackIndex = Number(lastTrack.current.dataset.index);

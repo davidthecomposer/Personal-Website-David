@@ -90,6 +90,12 @@
 		height: 400px;
 		margin-bottom: 2vw;
 	}
+
+	.about-me-text p {
+		line-height: 1.3;
+
+		font-size: 1.1rem;
+	}
 }
 
 /* @supports (-webkit-touch-callout: none) {

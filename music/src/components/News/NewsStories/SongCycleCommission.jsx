@@ -1,20 +1,55 @@
-import React from "react";
-import lizCImage from "../../../images/news/Liz_Christensen_headShot.JPG";
+import React, { useState, useEffect, useCallback } from "react";
+import lizCImage from "../../../images/news/Liz_Christensen_headShot.png";
 import mandiBarrus2Image from "../../../images/news/mandi-Barrus.png";
 
-const SongCycleCommission = ({ slideDown, slideDownClass }) => {
+const SongCycleCommission = ({ articleNum }) => {
+	const [slideDownRow, setSlideDownRow] = useState("");
+	const [slideDownContent, setSlideDownContent] = useState("");
+	const [height, setHeight] = useState(0);
+
+	const articleHeight = useCallback((article) => {
+		if (article !== null) {
+			const articleHeightObj = new ResizeObserver((entries) => {
+				setHeight(entries[0].contentRect.height.toFixed(1));
+			});
+
+			articleHeightObj.observe(article);
+		}
+	}, []);
+
+	useEffect(() => {
+		document.documentElement.style.setProperty(
+			`--news-height-${articleNum}`,
+			`${height}px`
+		);
+	}, [height, articleNum]);
+
+	const slideDown = (e) => {
+		if (slideDownContent === "") {
+			setSlideDownContent("slide-down");
+			setSlideDownRow(`slide-down-row-${articleNum}`);
+		} else {
+			setSlideDownContent("");
+			setSlideDownRow("");
+		}
+	};
+
 	return (
-		<div className={`news-row `} onClick={slideDown}>
-			<h2 className='news-item-title'>Song Cycle Commission</h2>
-			<div className={`news-wrapper ${slideDownClass}`}>
+		<div className={`news-row ${slideDownRow}`}>
+			<h2 className='news-item-title' onClick={slideDown} data-index='0'>
+				Song Cycle Commission
+			</h2>
+			<div
+				className={`news-wrapper-${articleNum} ${slideDownContent}`}
+				ref={articleHeight}>
 				<div className='news-slot-main'>
 					<p className='news-text'>
 						During the early part of this year I will be composing a song cycle
 						and collaborating with two talented artists in the process.{" "}
-						<span className='news-expand'>Mandi Barrus</span> is a Mezzo Soprano
-						that most recently earned her MM in vocal performance at the
+						<span className='news-highlight'>Mandi Barrus</span> is a Mezzo
+						Soprano that most recently earned her MM in vocal performance at the
 						University of Utah. I will be setting some texts from lyricist{" "}
-						<span className='news-expand'>Liz Christensen</span>. The texts
+						<span className='news-highlight'>Liz Christensen</span>. The texts
 						focus on themes of self-awareness, love, loss, and mental health.
 						There is a recital scheduled for the fall that will feature the
 						premiere of this and a few other works. Stay tuned for more info
@@ -26,7 +61,7 @@ const SongCycleCommission = ({ slideDown, slideDownClass }) => {
 					<div className={`news-info-one`}>
 						<img
 							src={mandiBarrus2Image}
-							className='news-image-1'
+							className='news-image'
 							alt='Mandi Barrus'
 						/>
 						<p className='news-text'>

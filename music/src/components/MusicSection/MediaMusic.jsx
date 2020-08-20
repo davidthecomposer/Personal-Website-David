@@ -14,13 +14,18 @@ class MediaMusic extends React.Component {
 		});
 	};
 
+	onMouseMove = (event) => {
+		event.persist();
+		this.changeImage(event);
+	};
+
 	render() {
 		return (
 			<section className={`media music-sections ${this.props.visibilityClass}`}>
 				<div className='audio-row'>
 					<PlayerColumn
 						musicData={this.state.mediaMusicData}
-						changeImage={this.changeImage}
+						changeImage={this.onMouseMove}
 					/>
 					<div className='display-window'>
 						<img

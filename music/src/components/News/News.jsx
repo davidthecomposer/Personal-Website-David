@@ -1,5 +1,5 @@
 import React from "react";
-import "./News.css";
+import "./News.scss";
 import NewsItemsContainer from "./NewsItemsContainer";
 
 class News extends React.Component {

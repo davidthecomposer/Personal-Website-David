@@ -129,7 +129,8 @@ class AudioPlayer extends React.Component {
 		return (
 			<div
 				className={`audio-player ${this.props.secondClass}`}
-				onMouseEnter={this.props.changeImage}>
+				onMouseEnter={this.props.changeImage}
+				data-index={this.props.index}>
 				<div className='audio-player-row'>
 					<audio
 						className={`audio-file ${this.props.secondClass}`}
@@ -139,7 +140,6 @@ class AudioPlayer extends React.Component {
 						onDurationChange={this.getDuration}
 						onEnded={this.playState}
 						onLoad={this.playState}
-						data-index={this.props.index}
 					/>
 					<PlayButton
 						playState={this.playState}

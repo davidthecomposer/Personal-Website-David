@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.55fbec71.chunk.css",
-    "main.js": "/static/js/main.1c2c7d5a.chunk.js",
-    "main.js.map": "/static/js/main.1c2c7d5a.chunk.js.map",
+    "main.css": "/static/css/main.b8f32752.chunk.css",
+    "main.js": "/static/js/main.f3b59e8a.chunk.js",
+    "main.js.map": "/static/js/main.f3b59e8a.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.bde96460.js",
     "runtime-main.js.map": "/static/js/runtime-main.bde96460.js.map",
-    "static/js/2.291bec57.chunk.js": "/static/js/2.291bec57.chunk.js",
-    "static/js/2.291bec57.chunk.js.map": "/static/js/2.291bec57.chunk.js.map",
+    "static/js/2.e3f66df2.chunk.js": "/static/js/2.e3f66df2.chunk.js",
+    "static/js/2.e3f66df2.chunk.js.map": "/static/js/2.e3f66df2.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.a477baa5cbb5df07ce51840028a26626.js": "/precache-manifest.a477baa5cbb5df07ce51840028a26626.js",
+    "precache-manifest.33e1844baceca5452a560b90665fbcc5.js": "/precache-manifest.33e1844baceca5452a560b90665fbcc5.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.55fbec71.chunk.css.map": "/static/css/main.55fbec71.chunk.css.map",
-    "static/js/2.291bec57.chunk.js.LICENSE.txt": "/static/js/2.291bec57.chunk.js.LICENSE.txt",
+    "static/css/main.b8f32752.chunk.css.map": "/static/css/main.b8f32752.chunk.css.map",
+    "static/js/2.e3f66df2.chunk.js.LICENSE.txt": "/static/js/2.e3f66df2.chunk.js.LICENSE.txt",
     "static/media/3-Pieces-for-Clarinet.wav": "/static/media/3-Pieces-for-Clarinet.648755f4.wav",
     "static/media/3-Songs-Baudelaire.pdf": "/static/media/3-Songs-Baudelaire.d94009b8.pdf",
     "static/media/3-Songs-on-a-Poem-by-Baudelaire.wav": "/static/media/3-Songs-on-a-Poem-by-Baudelaire.f77ab1f2.wav",
@@ -30,7 +30,7 @@
     "static/media/Force-of-Nature.wav": "/static/media/Force-of-Nature.8d7a1789.wav",
     "static/media/Habit.pdf": "/static/media/Habit.4c1a228c.pdf",
     "static/media/I-Wonder-as-I-Wander-2018.pdf": "/static/media/I-Wonder-as-I-Wander-2018.061617d8.pdf",
-    "static/media/Liz_Christensen_headShot.JPG": "/static/media/Liz_Christensen_headShot.2621719d.JPG",
+    "static/media/Liz_Christensen_headShot.png": "/static/media/Liz_Christensen_headShot.2d3b0637.png",
     "static/media/Music-for-a-Love-Story.wav": "/static/media/Music-for-a-Love-Story.cfb005d1.wav",
     "static/media/Neon-Games.pdf": "/static/media/Neon-Games.db769331.pdf",
     "static/media/O-Come-O-Come-Emanuel.pdf": "/static/media/O-Come-O-Come-Emanuel.05d74bec.pdf",
@@ -88,8 +88,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.bde96460.js",
-    "static/js/2.291bec57.chunk.js",
-    "static/css/main.55fbec71.chunk.css",
-    "static/js/main.1c2c7d5a.chunk.js"
+    "static/js/2.e3f66df2.chunk.js",
+    "static/css/main.b8f32752.chunk.css",
+    "static/js/main.f3b59e8a.chunk.js"
   ]
 }

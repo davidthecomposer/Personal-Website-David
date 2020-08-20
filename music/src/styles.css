@@ -119,4 +119,9 @@ html {
 	.anchor {
 		padding-top: 71px;
 	}
+
+	.section-title {
+		font-size: 2rem;
+		padding: 0.5rem;
+	}
 }

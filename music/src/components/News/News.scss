@@ -1,3 +1,21 @@
+$news-index: 0, 1, 2;
+
+@mixin slide-down-element($index) {
+	.slide-down-row-#{$index} {
+		height: calc(var(--news-height-#{$index}) + 3rem);
+		transition: 0.5s;
+	}
+	.news-wrapper-#{$index} {
+		transform: translateY(calc((var(--news-height-#{$index}) * -1) - 3rem));
+		display: flex;
+		flex-direction: column;
+		transition: 0.5s;
+		opacity: 0;
+		position: absolute;
+		z-index: 0;
+	}
+}
+
 .news {
 	user-select: none;
 }
@@ -13,35 +31,34 @@
 .news-row {
 	position: relative;
 	display: flex;
-	margin: 0.5rem 0;
-	padding: 0.5vw 0;
 	flex-direction: column;
 	justify-content: flex-start;
-	cursor: pointer;
 	background: rgb(15, 0, 12);
 	border: none;
 	width: calc(100vw - 6px);
 	max-width: calc(100vw - 6px);
 	overflow: hidden;
-}
-.news-wrapper {
-	transform: translateY(0);
-
+	height: 3rem;
 	transition: 0.5s;
-	position: relative;
+	z-index: 1;
+}
+
+@each $index in $news-index {
+	@include slide-down-element($index);
 }
 
 .slide-down {
-	transform: translateY(calc(-100% - 3rem));
-
+	transform: translateY(calc(0% + 3rem));
+	opacity: 1;
 	transition: 0.5s;
+	z-index: 2;
 }
 
 .news-slot-main {
 	background: rgba(112, 89, 121, 0.796);
 	top: 0;
 	bottom: 0;
-	width: 80%;
+	width: 98%;
 	padding: 2rem 0.5rem;
 	display: flex;
 	align-self: center;
@@ -55,12 +72,6 @@
 	justify-content: space-around;
 }
 
-.news-slot-one-safari {
-	width: 100vw;
-	width: 48%;
-	position: relative;
-}
-
 .news-slot-one a {
 	text-decoration: none;
 	color: #00a5a5;
@@ -68,7 +79,7 @@
 
 .news-info-one {
 	width: 45%;
-	height: 100%;
+
 	position: relative;
 }
 
@@ -82,18 +93,22 @@
 
 .news-info-two {
 	width: 45%;
-	height: 100%;
+
 	position: relative;
-	display: flex;
-	align-items: center;
 }
 
 .news-item-title {
 	font-family: "Julius Sans One", sans-serif;
 	font-weight: bold;
 	font-size: 2.5rem;
+	height: 3rem;
 	color: rgb(236, 236, 236);
 	margin-bottom: 1rem;
+	width: 100%;
+	z-index: 3;
+	line-height: 2.9rem;
+	cursor: pointer;
+	background: rgb(37, 9, 33);
 }
 
 .news-text {
@@ -107,13 +122,6 @@
 
 .news-image {
 	height: 200px;
-	width: 138px;
-	float: left;
-	margin: 0 1rem 0 0;
-}
-
-.news-image-1 {
-	height: 200px;
 	width: 200px;
 	float: left;
 	margin: 0 1rem 0 0;
@@ -121,42 +129,11 @@
 
 .news-image-full {
 	max-width: 100%;
-	height: auto;
+	height: 20vw;
 }
 
-.news-image-square {
-	height: 200px;
-	width: 200px;
-	float: left;
-	margin: 0 1rem 0 0;
-}
-.news-expand {
-	cursor: pointer;
+.news-highlight {
 	color: #00a5a5;
-}
-
-.visible-news {
-	animation: fadeSwitch1 0.4s linear forwards 1;
-}
-
-@keyframes fadeSwitch {
-	0% {
-		opacity: 1;
-	}
-
-	100% {
-		opacity: 0;
-	}
-}
-
-@keyframes fadeSwitch1 {
-	0% {
-		opacity: 0;
-	}
-
-	100% {
-		opacity: 1;
-	}
 }
 
 @media (max-width: 1400px) {
@@ -166,68 +143,56 @@
 		margin: 1rem 0 1rem;
 	}
 
-	.news-image-full {
-		position: relative;
-		width: 100%;
-		margin: auto auto;
-	}
-
-	.news-row {
-		flex-direction: column;
-		width: calc(100vw - 6px);
-		align-items: center;
-	}
-
 	.news-slot-one {
 		width: 96%;
-		height: 49%;
-		padding: 2vh;
 	}
 	.news-slot-main {
 		width: 96%;
-		height: 49%;
-		padding: 2vh;
 	}
-	.news-slot-one-safari {
-		width: 98vw;
+	.news-text {
+		font-size: 1.1rem;
+		line-height: 1.3rem;
+	}
+	.news-image {
+		height: 150px;
+		width: 150px;
+		float: left;
+		margin: 0 1rem 0 0;
+	}
+	.news-image-full {
+		max-width: 100%;
+		height: 30vw;
 	}
 }
 
 @media (max-width: 700px) {
 	.news-row {
-		flex-direction: column;
-		width: calc(100vw - 6px);
 	}
 
 	.news-slot-main,
 	.news-slot-one {
-		width: 98%;
-		padding: 0.5vw;
+		width: 96%;
+		display: inline;
+		padding: 0.5rem;
 	}
 
 	.news-item-title {
-		text-align: center;
-		padding: 1rem 0;
+		font-size: 1.5rem;
 	}
 
 	.news-text {
-		font-size: 1.1rem;
-		line-height: 1.5rem;
+		font-size: 1rem;
 	}
-
-	.news-text-1 {
-		font-size: 1.1rem;
-		line-height: 1.5rem;
+	.news-info-one,
+	.news-info-two {
+		width: 100%;
+		margin: 0.5rem 0;
+	}
+	.news-image-full {
+		max-width: 100%;
+		height: 50vw;
 	}
 }
 
-@media (max-width: 600px) {
-	.news-image-full {
-		margin-left: 0;
-		height: 300px;
-		margin: 0 auto;
-	}
-	.news-slot-one-safari {
-		width: 98vw;
-	}
+@media (max-width: 500px) {
 }
