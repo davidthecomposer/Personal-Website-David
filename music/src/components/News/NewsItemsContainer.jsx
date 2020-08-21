@@ -1,16 +1,40 @@
 import React from "react";
-import SongCycleCommission from "./NewsStories/SongCycleCommission";
-import ChamberOperaCommission from "./NewsStories/ChamberOperaCommission";
-import OCTComposerInRes from "./NewsStories/OCTComposerInRes";
-
+import StoryTemplate from "./NewsStories/StoryTemplate";
+import storyContent from "./NewsStories/storyContent";
 const NewsItemsContainer = (props) => {
-	return (
-		<div className='news-items-container'>
-			<SongCycleCommission articleNum='0' />
-			<ChamberOperaCommission articleNum='1' />
-			<OCTComposerInRes articleNum='2' />
-		</div>
-	);
+	const newsItems = storyContent.map((story, index) => {
+		const {
+			title,
+			mainText,
+			image1,
+			image1Class,
+			altText1,
+			supportingText1,
+			image2,
+			image2Class,
+			altText2,
+			supportingText2,
+		} = story;
+
+		return (
+			<StoryTemplate
+				title={title}
+				mainText={mainText}
+				image1={image1}
+				image1Class={image1Class}
+				image2={image2}
+				image2Class={image2Class}
+				altText1={altText1}
+				altText2={altText2}
+				supportingText1={supportingText1}
+				supportingText2={supportingText2}
+				key={index}
+				articleNum={index}
+			/>
+		);
+	});
+
+	return <div className='news-items-container'>{newsItems}</div>;
 };
 
 export default NewsItemsContainer;
