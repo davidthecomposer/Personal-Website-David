@@ -1,0 +1,32 @@
+.article-links-top {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+.nav-icon {
+	width: 30px;
+	padding: 0.5rem;
+	border: 1px rgb(197, 197, 197) solid;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.nav-icon:hover {
+	transform: scale(0.9);
+	transition: 0.3s;
+	background-color: rgba(230, 230, 243, 0.623);
+}
+
+.icons-container {
+}
+
+.article-date {
+	font-size: 1.2rem;
+
+	margin: 0 0 1rem;
+}
+
+.nav-icon-twitter {
+	outline: none;
+}

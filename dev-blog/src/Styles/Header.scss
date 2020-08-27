@@ -1,0 +1,28 @@
+.blog-header {
+	position: relative;
+	height: 20vh;
+	width: 100%;
+	background-color: rgb(254, 254, 254);
+	border-bottom: solid 1px rgb(226, 226, 226);
+	font-family: "Gruppo", cursive;
+	margin: 0 auto;
+}
+
+.title-group {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: fit-content;
+	margin-left: 1vw;
+}
+
+.blog-title {
+	font-size: 5rem;
+	margin-bottom: 0;
+}
+
+.blog-subtitle {
+	margin-top: 0;
+	align-self: flex-end;
+}

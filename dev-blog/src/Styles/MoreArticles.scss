@@ -1,0 +1,33 @@
+.more-articles {
+	width: 30vw;
+	background-color: rgb(254, 254, 254);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.article-nav-link {
+	text-decoration: none;
+	width: 80%;
+	transition: 0.3s;
+}
+
+.article-nav-link:hover {
+	transform: scale(1.05);
+
+	transition: 0.3s;
+}
+
+.more-articles-figure {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.more-articles-image {
+	width: 100%;
+}
+
+.more-articles-title {
+	font-size: 2rem;
+}
