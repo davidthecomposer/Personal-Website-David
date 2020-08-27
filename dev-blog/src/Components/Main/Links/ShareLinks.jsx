@@ -11,20 +11,22 @@ const ShareLinks = ({ date, version, title, mainImage }) => {
 	const url = `https://www.blog.davidhalcampbell.com/${version}`;
 	const appID = "314644933107837";
 	console.log(mainImage);
-	const shareToFaceBook = (FB) => {
-		window.FB.ui(
-			{
-				display: "popup",
-				app_id: appID,
-				method: "feed",
-				picture: `https://www.blog.davidhalcampbell.com/${mainImage}`,
-				description: title,
-				link: url,
-			},
-			function (response) {
-				console.log(response);
-			}
-		);
+	const shareToFaceBook = async () => {
+		try {
+			await window.FB.ui(
+				{
+					display: "popup",
+					app_id: appID,
+					method: "feed",
+					picture: mainImage,
+					description: title,
+					link: url,
+				},
+				await function (response) {
+					console.log(response);
+				}
+			);
+		} catch {}
 	};
 
 	const copyToClipboard = async () => {
