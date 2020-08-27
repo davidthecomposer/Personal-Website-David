@@ -10,7 +10,7 @@ import linkLink from "../../../Images/ShareLinks/link.png";
 const ShareLinks = ({ date, version, title, mainImage }) => {
 	const url = `https://www.blog.davidhalcampbell.com/${version}`;
 	const appID = "314644933107837";
-	console.log(mainImage);
+
 	const shareToFaceBook = async () => {
 		try {
 			await window.FB.ui(
@@ -18,7 +18,7 @@ const ShareLinks = ({ date, version, title, mainImage }) => {
 					display: "popup",
 					app_id: appID,
 					method: "feed",
-					picture: mainImage,
+					picture: `https://www.blog.davidhalcampbell.com${mainImage}`,
 					description: title,
 					link: url,
 				},
@@ -26,7 +26,9 @@ const ShareLinks = ({ date, version, title, mainImage }) => {
 					console.log(response);
 				}
 			);
-		} catch {}
+		} catch (err) {
+			console.log(err);
+		}
 	};
 
 	const copyToClipboard = async () => {
