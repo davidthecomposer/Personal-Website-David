@@ -10,7 +10,7 @@ import linkLink from "../../../Images/ShareLinks/link.png";
 const ShareLinks = ({ date, version, title, mainImage }) => {
 	const url = `https://www.blog.davidhalcampbell.com/${version}`;
 	const appID = "314644933107837";
-
+	console.log(mainImage);
 	const shareToFaceBook = async () => {
 		try {
 			await window.FB.ui(
