@@ -16,16 +16,7 @@ const Meta = ({ version, title, mainImage }) => {
 
 	return (
 		<Helmet>
-			<meta
-				property='og:url'
-				content={`'https://www.blog.davidhalcampbell.com/${versionNum}`}
-			/>
-			<meta property='og:title' content={title} />
-			<meta
-				property='og:image'
-				content={`https://www.blog.davidhalcampbell.com${mainImageURL}`}
-			/>
-			<meta property='og:description' content={title} />
+			<title>{title}</title>
 		</Helmet>
 	);
 };
