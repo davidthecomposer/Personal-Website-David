@@ -5,12 +5,13 @@ import facebookLink from "../../../Images/ShareLinks/facebook.png";
 import twitterLink from "../../../Images/ShareLinks/twitter.png";
 import mailLink from "../../../Images/ShareLinks/mail.png";
 import linkLink from "../../../Images/ShareLinks/link.png";
+import Meta from "./Meta";
 // import { FacebookShareButton, TwitterShareButton } from "react-share";
 
 const ShareLinks = ({ date, version, title, mainImage }) => {
 	const url = `https://www.blog.davidhalcampbell.com/${version}`;
 	const appID = "314644933107837";
-	console.log(mainImage);
+
 	const shareToFaceBook = async () => {
 		try {
 			await window.FB.ui(
@@ -46,6 +47,7 @@ const ShareLinks = ({ date, version, title, mainImage }) => {
 
 	return (
 		<nav className='article-links-top'>
+			<Meta version={version} title={title} mainImage={mainImage} />
 			<h4 className='article-date'>{date}</h4>
 			<div className='icons-container'>
 				<img className='nav-icon' src={commentLink} alt='comment' />
