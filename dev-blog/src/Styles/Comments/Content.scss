@@ -1,0 +1,64 @@
+.replies,
+.all-replies {
+	cursor: pointer;
+	margin: 0;
+}
+.interactions {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 1rem;
+}
+
+.replies:hover {
+	opacity: 0.8;
+}
+
+.all-replies:hover {
+	opacity: 0.8;
+}
+
+.up {
+	cursor: pointer;
+}
+.up:hover {
+	color: rgb(44, 131, 51);
+}
+
+.down {
+	cursor: pointer;
+}
+.down:hover {
+	color: rgb(158, 64, 64);
+}
+
+.red-vote {
+	color: rgb(158, 64, 64);
+}
+
+.green-vote {
+	color: rgb(44, 131, 51);
+}
+
+.reply-btn {
+	background-color: rgb(174, 223, 223);
+	border-radius: 10%;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	width: 5rem;
+}
+
+.comment-date {
+	color: grey;
+}
+
+@media screen and (max-width: 1100px) {
+	.content {
+		font-size: 0.8rem;
+	}
+	.reply-btn {
+		width: 4rem;
+		height: 2rem;
+	}
+}

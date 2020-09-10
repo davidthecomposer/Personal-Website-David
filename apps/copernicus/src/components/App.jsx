@@ -104,7 +104,6 @@ const App = () => {
 
 	const displayPlanetInfo = (e) => {
 		const targetPlanet = e.target.dataset.title.toLowerCase();
-
 		if (planetState[targetPlanet] !== "planet-grow") {
 			setPlanetState((planetState) => ({
 				...planetState,

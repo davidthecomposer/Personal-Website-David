@@ -4,12 +4,22 @@ import Main from "./Main/Main";
 import Footer from "./Footer/Footer";
 import "../Styles/App.scss";
 
-const Home = () => {
+const Home = ({ modeSwitch, themeMode, lightOrDarkMode }) => {
+	const navigateToTop = (e) => {
+		if (e.type === "touchend") {
+			e.preventDefault();
+		}
+		window.scrollTo({
+			top: 0,
+			left: 0,
+			behavior: "smooth",
+		});
+	};
 	return (
-		<div className='App'>
-			<Header />
-			<Main />
-			<Footer />
+		<div className={themeMode}>
+			<Header lightOrDarkMode={lightOrDarkMode} modeSwitch={modeSwitch} />
+			<Main navigateToTop={navigateToTop} modeSwitch={modeSwitch} />
+			<Footer navigateToTop={navigateToTop} />
 		</div>
 	);
 };

@@ -1463,7 +1463,7 @@ slideToggleControl();
 autoPlayInit();
 eventListenersInit();
 /*
-To-Do
+To-Do List
 
 for future expansion:
 update animation styles maybe try to have 8 each?

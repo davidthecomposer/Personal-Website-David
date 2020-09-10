@@ -1,41 +1,66 @@
-import React from "react";
-import { articles } from "./ArticlesData";
+import React, { useState, useRef } from "react";
+import articles from "./ArticlesData/ArticlesData";
 import "../../../Styles/SingleArticle.scss";
-import Author from "./Author";
-import ShareLinks from "../Links/ShareLinks";
+import ArticleEnding from "./ArticleEnding";
+import ArticleHeader from "./ArticleHeader";
+import AllMessagesContainer from "../../Comments/AllMessagesContainer";
 
-const LatestArticle = () => {
+const LatestArticle = ({ modeSwitch }) => {
+	const [commentNumber, setCommentNumber] = useState("");
 	const latest = Object.keys(articles)[0];
 	const article = articles[latest];
+	const {
+		date,
+		title,
+		mainImage,
+		content,
+		synopsis,
+		version,
+		dbToQuery,
+	} = article;
+	const authorDate = date.toDateString();
 
-	const { date, title, mainImage, content } = article;
-	const versionNum = `${latest.slice(0, 1)}.${latest.slice(1)}`;
+	const commentsRef = useRef(null);
+
+	const getCommentNumber = (number) => {
+		setCommentNumber(number);
+	};
+
+	const navigateToComments = () => {
+		commentsRef.current.focus();
+	};
 
 	return (
 		<article className='single-article'>
-			<header className='article-header'>
-				<div className='title-content'>
-					<h4 className='article-date'>{`Version: ${versionNum}`}</h4>
-					<div className={"title-row"}>
-						<h2 className='article-title'>{title}</h2>
-					</div>
-				</div>
-				<div className='header-bottom-row'>
-					<Author />
-					<ShareLinks
-						date={date}
-						version={latest}
-						title={title}
-						mainImage={mainImage}
-					/>
-				</div>
-			</header>
+			<ArticleHeader
+				version={version}
+				title={title}
+				synopsis={synopsis}
+				authorDate={authorDate}
+				articleName={latest}
+				commentNumber={commentNumber}
+				navigateToComments={navigateToComments}
+				mainImage={mainImage}
+			/>
 
-			<figure className='article-main-figure'>
-				<img className='article-main-image' src={mainImage} alt='' />
-				<figcaption>Caption to this image</figcaption>
-			</figure>
 			<div className={"article-content"}> {content}</div>
+			<ArticleEnding
+				articleName={latest}
+				title={title}
+				mainImage={mainImage}
+				synopsis={synopsis}
+				commentNumber={commentNumber}
+				topOrBottom={"bottom"}
+				navigateToComments={navigateToComments}
+				modeSwitch={modeSwitch}
+			/>
+			<button className='load-comments-button' ref={commentsRef}>
+				Comments ( {commentNumber} )
+			</button>
+			<AllMessagesContainer
+				getCommentNumber={getCommentNumber}
+				dbToQuery={dbToQuery}
+			/>
 		</article>
 	);
 };

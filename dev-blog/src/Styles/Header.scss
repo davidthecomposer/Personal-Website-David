@@ -1,28 +1,85 @@
 .blog-header {
 	position: relative;
-	height: 20vh;
 	width: 100%;
-	background-color: rgb(254, 254, 254);
-	border-bottom: solid 1px rgb(226, 226, 226);
+	border-bottom: solid 1px;
+	border-color: inherit;
 	font-family: "Gruppo", cursive;
 	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	padding: 0;
 }
 
 .title-group {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	width: fit-content;
-	margin-left: 1vw;
+
+	padding: 0 0 2rem;
+	justify-content: space-between;
 }
 
 .blog-title {
 	font-size: 5rem;
-	margin-bottom: 0;
+	margin: 0;
+	padding: 0;
+
+	padding-top: 2rem;
 }
 
 .blog-subtitle {
-	margin-top: 0;
+	text-align: left;
 	align-self: flex-end;
+	margin: 0 0 0 300px;
+}
+.theme-mode {
+	margin-right: 0.5rem;
+	right: 0.5rem;
+	top: 0.5rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	p {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.theme-container {
+	height: 33.3px;
+	width: 100px;
+	background: url("../Images/LightDark/switch-light.svg");
+	background-repeat: no-repeat;
+	position: relative;
+
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.dark {
+	transition: 0.2s;
+	background: url("../Images/LightDark/switch-dark.svg");
+	background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 900px) {
+	.title-group {
+		margin-left: 0;
+	}
+
+	.blog-title {
+		font-size: 3rem;
+		margin: 0;
+		left: 0;
+	}
+
+	.blog-subtitle {
+		font-size: 1.2rem;
+		margin-left: 0.5rem;
+	}
+	.theme-mode {
+		margin-right: 0;
+	}
 }

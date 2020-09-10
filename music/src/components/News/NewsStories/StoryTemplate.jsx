@@ -32,11 +32,9 @@ const StoryTemplate = ({
 			`--news-height-${articleNum}`,
 			`${height}px`
 		);
-		console.log(document.documentElement.style);
 	}, [height, articleNum]);
 
 	const slideDown = (e) => {
-		console.log("here");
 		if (slideDownContent === "") {
 			setSlideDownContent("slide-down");
 			setSlideDownRow(`slide-down-row-${articleNum}`);

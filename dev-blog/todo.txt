@@ -1,0 +1,11 @@
+
+Overall: 
+Styling
+
+
+SCSS refactor
+
+
+
+Article: 
+Actually Write content. 2 articles: 1 intro , and one technical about something you were able to learn building the blog page.

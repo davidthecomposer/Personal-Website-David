@@ -1,20 +1,23 @@
 import React from "react";
 import "../../Styles/Main.scss";
 import { Outlet } from "react-router-dom";
-import { articles } from "./Articles/ArticlesData";
-import ShareLinks from "./Links/ShareLinks";
+import articles from "./Articles/ArticlesData/ArticlesData";
 
 import MoreArticles from "./MoreArticles/MoreArticles";
 
-const Main = () => {
+const Main = ({ navigateToTop }) => {
 	const moreArticles = Object.entries(articles).map(
-		([version, { title, mainImage }]) => {
+		([articleName, { title, mainImage, date }]) => {
+			date = date.toDateString();
+
 			return (
 				<MoreArticles
-					key={version}
+					key={articleName}
 					title={title}
-					version={version}
+					articleName={articleName}
 					mainImage={mainImage}
+					date={date}
+					navigateToTop={navigateToTop}
 				/>
 			);
 		}
@@ -24,11 +27,6 @@ const Main = () => {
 		<section className='main'>
 			<section className='main-content'>
 				<Outlet />
-				<section className='newsletter'>
-					<ShareLinks />
-					NewsLetter sign-up
-				</section>
-				<section>comments</section>
 			</section>
 
 			<aside className='more-articles'>

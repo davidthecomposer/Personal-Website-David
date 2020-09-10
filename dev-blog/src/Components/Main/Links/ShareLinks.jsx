@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "../../../Styles/Links.scss";
-import commentLink from "../../../Images/ShareLinks/comment.png";
+
 import facebookLink from "../../../Images/ShareLinks/facebook.png";
 import twitterLink from "../../../Images/ShareLinks/twitter.png";
 import mailLink from "../../../Images/ShareLinks/mail.png";
@@ -13,10 +13,20 @@ import {
 	RedditShareButton,
 } from "react-share";
 
-const ShareLinks = ({ date, version, title, mainImage }) => {
-	const appID = "314644933107837";
+const ShareLinks = ({
+	articleName,
+	title,
+	synopsis,
+	commentNumber,
+	navigateToComments,
+	topOrBottom,
+}) => {
+	const [shareClass, setShareClass] = useState("");
 
-	const copyToClipboard = async () => {
+	const copyToClipboard = async (e) => {
+		if (e.type === "touchend") {
+			e.preventDefault();
+		}
 		if (!navigator.clipboard) {
 			// Clipboard API not available
 			return;
@@ -24,52 +34,78 @@ const ShareLinks = ({ date, version, title, mainImage }) => {
 
 		try {
 			await navigator.clipboard.writeText(
-				`https://www.blog.davidhalcampbell.com/${version}`
+				`https://www.blog.davidhalcampbell.com/${articleName}`
 			);
+			checkShareAndUpdate();
 		} catch (err) {
 			console.error("Failed to copy!", err);
 		}
 	};
 
+	const checkShareAndUpdate = () => {
+		setShareClass("slide-confirm");
+
+		setTimeout(() => {
+			setShareClass("");
+		}, 3000);
+	};
+
+	const mailToManual = (e) => {
+		if (e.type === "touchend") {
+			e.preventDefault();
+		}
+
+		window.location.href = `mailto:?subject=${title}&body=Check out this blog post: https://www.blog.davidhalcampbell.com/${articleName}`;
+	};
+
 	return (
-		<nav className='article-links-top'>
-			<Meta version={version} title={title} mainImage={mainImage} />
-			<h4 className='article-date'>{date}</h4>
+		<nav className={`article-links-${topOrBottom}`}>
+			<Meta title={title} synopsis={synopsis} />
+			<p className='share-label'>Share This Story</p>
 			<div className='icons-container'>
-				<img className='nav-icon' src={commentLink} alt='comment' />
+				<div
+					className='nav-icon comment-count'
+					onClick={navigateToComments}
+					onTouchEnd={navigateToComments}>
+					<p className='comment-num'>{commentNumber}</p>{" "}
+				</div>
 				<RedditShareButton
-					className='nav-icon-twitter'
-					url={`https://www.blog.davidhalcampbell.com/${version}`}
+					url={`https://www.blog.davidhalcampbell.com/${articleName}`}
 					title={title}>
-					<img className='nav-icon' src={redditIcon} alt='reddit' />
+					<img src={redditIcon} alt='reddit' className='nav-icon' />
 				</RedditShareButton>
 				<FacebookShareButton
-					className='nav-icon-twitter'
-					url={`https://www.blog.davidhalcampbell.com/${version}`}
+					url={`https://www.blog.davidhalcampbell.com/${articleName}`}
 					quote={title}>
 					<img
-						className='nav-icon'
 						src={facebookLink}
 						alt='share to facebook'
+						className='nav-icon'
 					/>
 				</FacebookShareButton>
 				<TwitterShareButton
-					className='nav-icon-twitter'
-					url={`https://www.blog.davidhalcampbell.com/${version}`}
+					url={`https://www.blog.davidhalcampbell.com/${articleName}`}
 					title={title}>
-					<img className='nav-icon' src={twitterLink} alt='twitter' />
+					<img src={twitterLink} alt='twitter' className='nav-icon' />
 				</TwitterShareButton>
-				<a
-					href={`mailto:?body=Check out this blog post: https://www.blog.davidhalcampbell.com/${version}&subject=${title}`}
-					target='_top'>
-					<img className='nav-icon' src={mailLink} alt='mail' />
-				</a>
+				<img
+					className='nav-icon'
+					href={`mailto:?subject=${title}&body=Check out this blog post: https://www.blog.davidhalcampbell.com/${articleName}`}
+					onClick={mailToManual}
+					onTouchEnd={mailToManual}
+					src={mailLink}
+					alt='mail'></img>
 				<img
 					className='nav-icon'
 					src={linkLink}
 					alt='link'
 					onClick={copyToClipboard}
+					onTouchEnd={copyToClipboard}
 				/>
+			</div>
+			<div className={`confirm-copy ${shareClass}`}>
+				{" "}
+				link copied to clipboard
 			</div>
 		</nav>
 	);

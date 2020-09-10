@@ -3,30 +3,99 @@
 	flex-direction: column;
 	justify-content: space-around;
 	align-items: center;
+	border-color: inherit;
+	align-self: flex-end;
+}
+
+.article-links-bottom {
+	display: flex;
+	width: fit-content;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+	justify-self: left;
+	margin-bottom: 0.5rem;
+}
+.react-share__ShareButton {
+	outline: none;
+	padding: 0;
+	margin: 0;
+	height: 0;
 }
 .nav-icon {
+	position: relative;
 	width: 30px;
+	height: 30px;
 	padding: 0.5rem;
-	border: 1px rgb(197, 197, 197) solid;
 	cursor: pointer;
 	transition: 0.3s;
+	border-right: solid 1px;
+	border-color: inherit;
 }
 
 .nav-icon:hover {
 	transform: scale(0.9);
 	transition: 0.3s;
-	background-color: rgba(230, 230, 243, 0.623);
+	background-color: rgba(230, 230, 243, 0.459);
 }
 
 .icons-container {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	border: solid 1px;
+	border-color: currentColor;
+	border-right: none;
 }
 
-.article-date {
-	font-size: 1.2rem;
+.confirm-copy {
+	opacity: 0;
 
-	margin: 0 0 1rem;
+	transition: 0.5s;
+
+	font-size: 1.5rem;
+	width: 100%;
+	text-align: center;
 }
 
-.nav-icon-twitter {
-	outline: none;
+.slide-confirm {
+	opacity: 1;
+
+	transition: 0.5s;
+}
+.share-label {
+	margin: 0 0 0.5rem;
+	font-size: 18px;
+}
+
+.comment-count {
+	background: url("../Images/ShareLinks/comment.png") center center;
+	background-size: 30px;
+	background-repeat: no-repeat;
+	.comment-num {
+		margin: 2px auto;
+		font-size: 16px;
+		color: black;
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.article-links-top {
+		align-self: center;
+	}
+	.article-links-bottom {
+		align-self: center;
+		margin: 0 auto;
+	}
+	.confirm-copy {
+		height: 2rem;
+	}
+
+	.nav-icon:hover {
+		transform: none;
+
+		background-color: none;
+	}
 }

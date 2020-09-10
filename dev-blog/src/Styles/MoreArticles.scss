@@ -1,14 +1,26 @@
 .more-articles {
 	width: 30vw;
-	background-color: rgb(254, 254, 254);
+	font-family: "Gruppo", cursive;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+}
+.more-articles h2 {
+	font-size: 2rem;
+
+	width: 100%;
+	text-align: center;
+	font-weight: 500;
 }
 .article-nav-link {
 	text-decoration: none;
 	width: 80%;
 	transition: 0.3s;
+	color: inherit;
+	margin: 0.5rem 0;
+	.article-date {
+		text-decoration: none;
+	}
 }
 
 .article-nav-link:hover {
@@ -20,8 +32,10 @@
 .more-articles-figure {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+	justify-content: space-around;
+
+	text-decoration: none;
+	margin-bottom: 0;
 }
 
 .more-articles-image {
@@ -29,5 +43,25 @@
 }
 
 .more-articles-title {
-	font-size: 2rem;
+	font-size: 1.4rem;
+	text-decoration: none;
+
+	margin: 0.5rem 0 0;
+	font-weight: 700;
+}
+
+@media screen and (max-width: 1100px) {
+	.more-articles {
+		width: 75%;
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.more-articles {
+		width: 100%;
+	}
+	.article-nav-link {
+		width: 90%;
+	}
 }

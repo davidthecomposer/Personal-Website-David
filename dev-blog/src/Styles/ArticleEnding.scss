@@ -1,0 +1,67 @@
+.article-ending {
+	position: relative;
+	margin: 4rem 0 0;
+	display: flex;
+	flex-direction: column;
+	border-color: inherit;
+	.subscribe-column {
+		margin: 6rem 0 12rem;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		padding: 0.25rem 0;
+	}
+	.goodbye-message {
+		margin: 0 0 5rem;
+		text-align: center;
+	}
+	.david-sig {
+		width: 230px;
+		border-top: 1px rgb(230, 230, 230) solid;
+		padding-top: 1rem;
+	}
+	.my-sites {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		margin: 0.5rem 0;
+	}
+	.site-links {
+		text-decoration-line: none;
+
+		font-size: 1.2rem;
+		margin: 0 1rem;
+	}
+
+	.site-links:hover {
+		color: rgb(206, 103, 216);
+		transform: scale(1.2);
+		transition: 0.2s;
+	}
+	.site-links:not(:hover) {
+		color: inherit;
+		transform: scale(1);
+		transition: 0.2s;
+	}
+	.icons-underline {
+		border-bottom: 1px rgb(230, 230, 230) solid;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.subscribe-label {
+		margin: 0 0 0.5rem 0.5em;
+
+		font-size: 1rem;
+	}
+	.article-ending {
+		position: relative;
+		margin: 4rem 0 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+}

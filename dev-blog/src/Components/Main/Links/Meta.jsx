@@ -1,22 +1,13 @@
-import React, { useState, useEffect } from "react";
-import { Helmet } from "react-helmet";
+import React from "react";
+import { Helmet } from "react-helmet-async";
 
-const Meta = ({ version, title, mainImage }) => {
-	const [versionNum, setVersionNum] = useState("");
-	const [mainImageURL, setMainImageURL] = useState("");
-
-	useEffect(() => {
-		if (version) {
-			setVersionNum(version);
-		}
-		if (mainImage) {
-			setMainImageURL(mainImage);
-		}
-	}, [mainImage, version]);
-
+const Meta = ({ title, synopsis }) => {
 	return (
 		<Helmet>
 			<title>{title}</title>
+			<meta name='title' content={title} />
+			<meta name='description' content={synopsis} />
+			<meta name='keywords' content='composer, music, development' />
 		</Helmet>
 	);
 };
