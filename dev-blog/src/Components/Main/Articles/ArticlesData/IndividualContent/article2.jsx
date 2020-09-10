@@ -2,8 +2,6 @@ import React, { Fragment } from "react";
 import MultiLineCodeBlock from "./MultiLineCodeBlock";
 import mainImage from "../../../../../Images/ArticleImages/002/main_image.png";
 import demoGif from "../../../../../Images/ArticleImages/002/newsSlide.gif";
-import "prismjs/plugins/line-numbers/prism-line-numbers.js";
-import "prismjs/plugins/line-numbers/prism-line-numbers.css";
 
 const codeExample0 = `return (
 	<div className={\`news-row \${slideDownRow}\`}>
@@ -335,7 +333,7 @@ export const article = {
 					</li>
 				</ul>
 
-				<MultiLineCodeBlock lang='js' code={codeExample3} />
+				<MultiLineCodeBlock lang='jsx' code={codeExample3} />
 
 				<p>
 					Setting up the state is simple enough, but dealing with the ref was a

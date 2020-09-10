@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import "./Styles/index.scss";
 import App from "./Components/App.jsx";
 import { HelmetProvider } from "react-helmet-async";
-import "./Styles/prism.css";
 
 const app = (
 	<HelmetProvider>

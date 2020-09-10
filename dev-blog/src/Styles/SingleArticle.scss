@@ -73,12 +73,8 @@
 .smaller-text {
 	font-size: 18px;
 }
-
-pre[class*="language-"] {
-}
-
-pre[class*="language-"] > * {
-	font-size: 18px;
+pre {
+	width: 70%;
 }
 
 @media screen and (max-width: 900px) {
@@ -90,5 +86,8 @@ pre[class*="language-"] > * {
 		width: 100%;
 
 		margin: 4rem 0;
+	}
+	pre {
+		width: initial;
 	}
 }
