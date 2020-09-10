@@ -15,6 +15,7 @@ import newsLetterSignupImage from "../images/apps/newsletter-signup.png";
 import comment_system from "../images/apps/comment_system.png";
 import copernicusApp from "../images/apps/copernicus-app.png";
 import copernicusAPI from "../images/apps/copernicus_API.jpeg";
+import devBlog from "../images/apps/dev_blog.png";
 
 const jsIcon = "devicon-javascript-plain code-icon";
 const html5Icon = "devicon-html5-plain code-icon";
@@ -30,6 +31,20 @@ const app = "Go To App";
 const site = "Go To Site";
 
 const appInfo = [
+	{
+		uniqueClassName: "dev-blog",
+		title: "Development Blog",
+		image: devBlog,
+		dataURL: "https://www.blog.davidhalcampbell.com",
+		icon1: mongoDBIcon,
+		icon2: expressIcon,
+		icon3: reactIcon,
+		icon4: nodeJSIcon,
+		icon5: sassIcon,
+		descriptionP1:
+			"This was my first project using React Router. I went ahead and used v6 even though it's not officially released yet. A blog seems like a perfect use case and the router handles page changes very well. I implemented quite a few past projects into this page including comments, email subscription API etc. I had to build a couple new APIs to get it to work. I'm extremely proud of my more professional footer design, and will likely implement it on my other websites.",
+		buttonText: app,
+	},
 	{
 		uniqueClassName: "copernicus-media",
 		title: "Copernicus Album Player",

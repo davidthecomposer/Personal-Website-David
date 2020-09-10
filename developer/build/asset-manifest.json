@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/static/css/main.0b666957.chunk.css",
-    "main.js": "/static/js/main.6ab39282.chunk.js",
-    "main.js.map": "/static/js/main.6ab39282.chunk.js.map",
+    "main.js": "/static/js/main.003db6dd.chunk.js",
+    "main.js.map": "/static/js/main.003db6dd.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.df075e2d.js",
     "runtime-main.js.map": "/static/js/runtime-main.df075e2d.js.map",
-    "static/js/2.3ead46b4.chunk.js": "/static/js/2.3ead46b4.chunk.js",
-    "static/js/2.3ead46b4.chunk.js.map": "/static/js/2.3ead46b4.chunk.js.map",
+    "static/js/2.e81309a8.chunk.js": "/static/js/2.e81309a8.chunk.js",
+    "static/js/2.e81309a8.chunk.js.map": "/static/js/2.e81309a8.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.360d85bb7bf4782c37333ed908ba31b0.js": "/precache-manifest.360d85bb7bf4782c37333ed908ba31b0.js",
+    "precache-manifest.ed9fd84cf73790aa4d305d33d0d747c4.js": "/precache-manifest.ed9fd84cf73790aa4d305d33d0d747c4.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.0b666957.chunk.css.map": "/static/css/main.0b666957.chunk.css.map",
-    "static/js/2.3ead46b4.chunk.js.LICENSE.txt": "/static/js/2.3ead46b4.chunk.js.LICENSE.txt",
+    "static/js/2.e81309a8.chunk.js.LICENSE.txt": "/static/js/2.e81309a8.chunk.js.LICENSE.txt",
     "static/media/Header.css": "/static/media/DavidNameDevThin.56e56716.png",
     "static/media/audio-player-1.png": "/static/media/audio-player-1.4fb9c3e7.png",
     "static/media/calculator.png": "/static/media/calculator.ee8a50c0.png",
@@ -21,6 +21,7 @@
     "static/media/copernicus-app.png": "/static/media/copernicus-app.56642fda.png",
     "static/media/copernicus_API.jpeg": "/static/media/copernicus_API.b10402ba.jpeg",
     "static/media/david-sig-white-shadow.png": "/static/media/david-sig-white-shadow.edd02e4f.png",
+    "static/media/dev_blog.png": "/static/media/dev_blog.4cdf436d.png",
     "static/media/digital-clock.png": "/static/media/digital-clock.5197f0a8.png",
     "static/media/drum-kit.png": "/static/media/drum-kit.276bb163.png",
     "static/media/github.svg": "/static/media/github.4ebb6be8.svg",
@@ -36,8 +37,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.df075e2d.js",
-    "static/js/2.3ead46b4.chunk.js",
+    "static/js/2.e81309a8.chunk.js",
     "static/css/main.0b666957.chunk.css",
-    "static/js/main.6ab39282.chunk.js"
+    "static/js/main.003db6dd.chunk.js"
   ]
 }

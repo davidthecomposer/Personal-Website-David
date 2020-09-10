@@ -17,6 +17,7 @@ const LatestArticle = ({ modeSwitch }) => {
 		synopsis,
 		version,
 		dbToQuery,
+		mainImageCaption,
 	} = article;
 	const authorDate = date.toDateString();
 
@@ -41,13 +42,13 @@ const LatestArticle = ({ modeSwitch }) => {
 				commentNumber={commentNumber}
 				navigateToComments={navigateToComments}
 				mainImage={mainImage}
+				mainImageCaption={mainImageCaption}
 			/>
 
 			<div className={"article-content"}> {content}</div>
 			<ArticleEnding
 				articleName={latest}
 				title={title}
-				mainImage={mainImage}
 				synopsis={synopsis}
 				commentNumber={commentNumber}
 				topOrBottom={"bottom"}

@@ -28,7 +28,6 @@ const ShareLinks = ({
 			e.preventDefault();
 		}
 		if (!navigator.clipboard) {
-			// Clipboard API not available
 			return;
 		}
 

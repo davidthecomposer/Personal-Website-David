@@ -54,7 +54,6 @@ const SingleArticle = ({ modeSwitch }) => {
 			<ArticleEnding
 				articleName={articleName}
 				title={title}
-				mainImage={mainImage}
 				synopsis={synopsis}
 				commentNumber={commentNumber}
 				navigateToComments={navigateToComments}

@@ -236,7 +236,7 @@ export const article = {
 		title:
 			"Using Custom Variables to Smooth Out Container Transitions: A Love Story",
 		mainImage: mainImage,
-		mainImageCaption: "slideout demo example",
+		mainImageCaption: "There's Nothing Sweeter Than A Little Smooth Accordion",
 		date: new Date("September 9, 2020"),
 		version: "0.02",
 		dbToQuery: "article 2",
