@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/css/main.e766eeb6.chunk.css",
-    "main.js": "/static/js/main.58c2133b.chunk.js",
-    "main.js.map": "/static/js/main.58c2133b.chunk.js.map",
+    "main.js": "/static/js/main.29416a45.chunk.js",
+    "main.js.map": "/static/js/main.29416a45.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.7d674d0f.js",
     "runtime-main.js.map": "/static/js/runtime-main.7d674d0f.js.map",
     "static/js/2.987c96a8.chunk.js": "/static/js/2.987c96a8.chunk.js",
@@ -10,11 +10,11 @@
     "static/js/3.3b603789.chunk.js": "/static/js/3.3b603789.chunk.js",
     "static/js/3.3b603789.chunk.js.map": "/static/js/3.3b603789.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.828aaf2c3c130c82db3894b7e79cf3c7.js": "/precache-manifest.828aaf2c3c130c82db3894b7e79cf3c7.js",
+    "precache-manifest.ab80b54ae53e82d3f9c5edbceedb38aa.js": "/precache-manifest.ab80b54ae53e82d3f9c5edbceedb38aa.js",
     "service-worker.js": "/service-worker.js",
     "static/css/main.e766eeb6.chunk.css.map": "/static/css/main.e766eeb6.chunk.css.map",
     "static/js/2.987c96a8.chunk.js.LICENSE.txt": "/static/js/2.987c96a8.chunk.js.LICENSE.txt",
-    "static/media/David_Smile.png": "/static/media/David_Smile.28a22899.png",
+    "static/media/David_Smile.webp": "/static/media/David_Smile.e6da61d7.webp",
     "static/media/blue_headshot.svg": "/static/media/blue_headshot.d037e85f.svg",
     "static/media/david-sig-black-shadow.svg": "/static/media/david-sig-black-shadow.bf275ad8.svg",
     "static/media/david-sig-white-shadow.svg": "/static/media/david-sig-white-shadow.7f432133.svg",
@@ -25,8 +25,8 @@
     "static/media/fourth_image_001.webp": "/static/media/fourth_image_001.87866374.webp",
     "static/media/github.webp": "/static/media/github.b6ef9710.webp",
     "static/media/green_headshot.svg": "/static/media/green_headshot.3c794623.svg",
-    "static/media/instagram.webp": "/static/media/instagram.e41942ea.webp",
-    "static/media/main_image.jpeg": "/static/media/main_image.4d6945dc.jpeg",
+    "static/media/instagram.webp": "/static/media/instagram.73a9b109.webp",
+    "static/media/main_image.webp": "/static/media/main_image.fb4ac7d5.webp",
     "static/media/main_image_001.webp": "/static/media/main_image_001.5e000636.webp",
     "static/media/newsSlide.webm": "/static/media/newsSlide.d3a1d17a.webm",
     "static/media/purple_headshot.svg": "/static/media/purple_headshot.dbf5a908.svg",
@@ -41,6 +41,6 @@
     "static/js/runtime-main.7d674d0f.js",
     "static/js/2.987c96a8.chunk.js",
     "static/css/main.e766eeb6.chunk.css",
-    "static/js/main.58c2133b.chunk.js"
+    "static/js/main.29416a45.chunk.js"
   ]
 }

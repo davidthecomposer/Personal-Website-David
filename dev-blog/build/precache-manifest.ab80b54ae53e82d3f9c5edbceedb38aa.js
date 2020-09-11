@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "28d81a0d8b3cafd2268d87959f2be0cf",
+    "revision": "8a93a37e252799f4b60c31f8df0395f5",
     "url": "/index.html"
   },
   {
-    "revision": "c25024c55c06e27ab1aa",
+    "revision": "5353e669b1252cf37c38",
     "url": "/static/css/main.e766eeb6.chunk.css"
   },
   {
@@ -20,16 +20,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/3.3b603789.chunk.js"
   },
   {
-    "revision": "c25024c55c06e27ab1aa",
-    "url": "/static/js/main.58c2133b.chunk.js"
+    "revision": "5353e669b1252cf37c38",
+    "url": "/static/js/main.29416a45.chunk.js"
   },
   {
     "revision": "35fa528fc4e5c2cc9d48",
     "url": "/static/js/runtime-main.7d674d0f.js"
   },
   {
-    "revision": "28a2289967d4454ae74bf7de61c1e736",
-    "url": "/static/media/David_Smile.28a22899.png"
+    "revision": "e6da61d73b54ad7a2a0e9ad8dc767a5c",
+    "url": "/static/media/David_Smile.e6da61d7.webp"
   },
   {
     "revision": "d037e85fb001dc45285326cfe38e8342",
@@ -72,12 +72,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/green_headshot.3c794623.svg"
   },
   {
-    "revision": "e41942ea67132b958b69b6c264848ded",
-    "url": "/static/media/instagram.e41942ea.webp"
+    "revision": "73a9b109ba763d8949e3689a44ce8126",
+    "url": "/static/media/instagram.73a9b109.webp"
   },
   {
-    "revision": "4d6945dc2a9771ce7eb023bf31f69241",
-    "url": "/static/media/main_image.4d6945dc.jpeg"
+    "revision": "fb4ac7d5edc4bd429b22c75dd943f7a5",
+    "url": "/static/media/main_image.fb4ac7d5.webp"
   },
   {
     "revision": "5e00063635bc396f6d786f21776489d1",

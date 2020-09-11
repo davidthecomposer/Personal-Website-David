@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import MultiLineCodeBlock from "./MultiLineCodeBlock";
-import mainImage from "../../../../../Images/ArticleImages/002/main_image.jpeg";
+import mainImage from "../../../../../Images/ArticleImages/002/main_image.webp";
 import demoVid from "../../../../../Images/ArticleImages/002/newsSlide.webm";
 
 const codeExample0 = `return (

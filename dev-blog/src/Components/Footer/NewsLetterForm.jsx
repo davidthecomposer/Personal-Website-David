@@ -26,6 +26,7 @@ const NewsLetterForm = () => {
 				},
 				body: JSON.stringify({
 					email: email,
+					list: "developer",
 				}),
 			}
 		);
