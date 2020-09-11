@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import MultiLineCodeBlock from "./MultiLineCodeBlock";
-import mainImage from "../../../../../Images/ArticleImages/002/main_image.png";
-import demoGif from "../../../../../Images/ArticleImages/002/newsSlide.gif";
+import mainImage from "../../../../../Images/ArticleImages/002/main_image.jpeg";
+import demoVid from "../../../../../Images/ArticleImages/002/newsSlide.webm";
 
 const codeExample0 = `return (
 	<div className={\`news-row \${slideDownRow}\`}>
@@ -234,7 +234,7 @@ export const article = {
 		title:
 			"Using Custom Variables to Smooth Out Container Transitions: A Love Story",
 		mainImage: mainImage,
-		mainImageCaption: "There's Nothing Sweeter Than A Little Smooth Accordion",
+		mainImageCaption: "Always time for a little smooth accordion.",
 		date: new Date("September 9, 2020"),
 		version: "0.02",
 		dbToQuery: "article 2",
@@ -526,14 +526,14 @@ export const article = {
 				</h3>
 
 				<figure className='article-image-figure full-figure'>
-					<img
-						className='article-image'
-						src={demoGif}
-						alt='slider element in action. '
+					<video
+						className='article-vid'
+						src={demoVid}
+						type='video/webm'
+						width='100%'
+						controls
 					/>
-					<figcaption>
-						Slider Element In The Wild At A Stunning 8FPS.
-					</figcaption>
+					<figcaption>Slider element in the wild.</figcaption>
 				</figure>
 				<h2 className='section-subtitle'>::After</h2>
 				<h3>

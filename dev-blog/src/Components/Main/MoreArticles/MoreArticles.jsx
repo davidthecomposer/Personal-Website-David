@@ -11,10 +11,7 @@ const MoreArticles = ({
 }) => {
 	return (
 		<Link className='article-nav-link' to={`/${articleName}`}>
-			<figure
-				className='more-articles-figure'
-				onClick={navigateToTop}
-				onTouchEnd={navigateToTop}>
+			<figure className='more-articles-figure' onClick={navigateToTop}>
 				<img className='more-articles-image' src={mainImage} alt={title} />
 				<figcaption className='more-articles-title'>{title}</figcaption>
 				<p className='article-date'>{date}</p>

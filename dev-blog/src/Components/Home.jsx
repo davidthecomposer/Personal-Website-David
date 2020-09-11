@@ -6,9 +6,6 @@ import "../Styles/App.scss";
 
 const Home = ({ modeSwitch, themeMode, lightOrDarkMode }) => {
 	const navigateToTop = (e) => {
-		if (e.type === "touchend") {
-			e.preventDefault();
-		}
 		window.scrollTo({
 			top: 0,
 			left: 0,

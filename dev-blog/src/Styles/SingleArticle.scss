@@ -27,8 +27,8 @@
 	}
 
 	.full-figure {
-		width: 90%;
-		margin: 4rem 5%;
+		width: 100%;
+		margin: 4rem 0;
 	}
 
 	.article-image {
@@ -77,6 +77,10 @@ pre {
 	width: 70%;
 }
 
+figcaption {
+	font-style: italic;
+	font-weight: 400;
+}
 @media screen and (max-width: 900px) {
 	.single-article {
 		font-size: 16px;

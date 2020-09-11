@@ -1,10 +1,10 @@
 import React, { Fragment } from "react";
-import mainImage001 from "../../../../../Images/ArticleImages/001/main_image_001.png";
-import firstImage001 from "../../../../../Images/ArticleImages/001/first_image_001.png";
-import secondImage001 from "../../../../../Images/ArticleImages/001/second_image_001.png";
-import thirdImage001 from "../../../../../Images/ArticleImages/001/third_image_001.png";
-import fourthImage001 from "../../../../../Images/ArticleImages/001/fourth_image_001.png";
-import fifthImage001 from "../../../../../Images/ArticleImages/001/fifth_image_001.png";
+import mainImage001 from "../../../../../Images/ArticleImages/001/main_image_001.webp";
+import firstImage001 from "../../../../../Images/ArticleImages/001/first_image_001.webp";
+import secondImage001 from "../../../../../Images/ArticleImages/001/second_image_001.webp";
+import thirdImage001 from "../../../../../Images/ArticleImages/001/third_image_001.webp";
+import fourthImage001 from "../../../../../Images/ArticleImages/001/fourth_image_001.webp";
+import fifthImage001 from "../../../../../Images/ArticleImages/001/fifth_image_001.webp";
 
 const title = "Introduction And 5 Things That I Hate and Love About Coding";
 const date = "September 3, 2020";

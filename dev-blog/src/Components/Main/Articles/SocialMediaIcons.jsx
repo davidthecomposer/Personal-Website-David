@@ -1,7 +1,7 @@
 import React from "react";
-import gitHubIcon from "../../../Images/Icons/github.svg";
+import gitHubIcon from "../../../Images/Icons/github.webp";
 import facebookIcon from "../../../Images/Icons/facebook.svg";
-import instagramIcon from "../../../Images/Icons/instagram.svg";
+import instagramIcon from "../../../Images/Icons/instagram.webp";
 import twitterIcon from "../../../Images/Icons/twitter.svg";
 import linkedInIcon from "../../../Images/Icons/LI-In-Bug.png";
 import "../../../Styles/SocialMediaIcons.scss";

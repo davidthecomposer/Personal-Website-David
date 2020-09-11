@@ -50,7 +50,8 @@
 .theme-container {
 	height: 33.3px;
 	width: 100px;
-	background: url("../Images/LightDark/switch-light.svg");
+	background: url("../Images/LightDark/switch-light.png") center center;
+	background-size: cover;
 	background-repeat: no-repeat;
 	position: relative;
 
@@ -60,7 +61,8 @@
 
 .dark {
 	transition: 0.2s;
-	background: url("../Images/LightDark/switch-dark.svg");
+	background: url("../Images/LightDark/switch-dark.png") center center;
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 
@@ -81,5 +83,11 @@
 	}
 	.theme-mode {
 		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.blog-subtitle {
+		align-self: flex-start;
 	}
 }

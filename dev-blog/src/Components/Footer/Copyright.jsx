@@ -1,5 +1,5 @@
 import React from "react";
-import davidIcon from "../../Images/Icons/david_logo_alt.svg";
+import davidIcon from "../../Images/Icons/david_logo_alt.webp";
 
 const CopyRight = () => {
 	return (
