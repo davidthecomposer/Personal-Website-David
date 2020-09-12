@@ -10,7 +10,11 @@ const Author = ({ date }) => {
 			<picture>
 				<source srcSet={davidImageBU} />
 				<source srcSet={davidImage} />
-				<img className='author-image' src={davidImage} alt='' />
+				<img
+					className='author-image'
+					src={davidImage}
+					alt='David Campbell Head Shot Smiling'
+				/>
 			</picture>
 
 			<p className='author-name'>David Campbell</p>
