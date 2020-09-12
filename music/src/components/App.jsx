@@ -6,7 +6,6 @@ import News from "./News/News";
 import AboutMe from "./AboutMe/AboutMe";
 import ContactSection from "./ContactSection/ContactMe";
 import Footer from "./Footer/Footer";
-import ComposerQuotes from "./Footer/ComposerQuotes";
 
 class App extends React.Component {
 	render() {
@@ -19,7 +18,6 @@ class App extends React.Component {
 				<AboutMe />
 				<ContactSection />
 				<Footer />
-				<ComposerQuotes />
 			</div>
 		);
 	}

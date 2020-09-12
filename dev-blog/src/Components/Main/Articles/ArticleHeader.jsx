@@ -38,10 +38,7 @@ const ArticleHeader = ({
 				/>
 			</div>
 
-			<figure className='article-main-figure'>
-				<img className='article-main-image' src={mainImage} alt='' />
-				<figcaption>{mainImageCaption}</figcaption>
-			</figure>
+			<figure className='article-main-figure'>{mainImage}</figure>
 		</header>
 	);
 };

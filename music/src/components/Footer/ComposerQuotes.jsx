@@ -20,8 +20,9 @@ class ComposerQuotes extends React.Component {
 	render() {
 		return (
 			<div>
-				<h2 className='spotlight-text'>{this.state.spotlightText}</h2>
-				<h2 className='author-name'>- {this.state.authorName}</h2>
+				<p className='footer-section-header'> Quote of the Day</p>
+				<p className='spotlight-text'>{this.state.spotlightText}</p>
+				<p className='author-name'>- {this.state.authorName}</p>
 			</div>
 		);
 	}

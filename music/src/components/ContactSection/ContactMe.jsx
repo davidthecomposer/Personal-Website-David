@@ -10,7 +10,7 @@ class contactSection extends React.Component {
 			<section className='contact anchor' id='contact'>
 				<h2 className='section-title'>Contact</h2>
 				<div className='contact-body'>
-					<p>
+					<p className='contact-invitation'>
 						Send me an email with any questions or requests using the form
 						below.
 					</p>

@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import "./AudioPlayer.css";
+import "./PlayButton.css";
 
-import PlayButton from "./PlayButton";
 import AudioCenter from "./AudioCenter";
 import AudioVolume from "./AudioVolume";
 
@@ -10,44 +10,47 @@ import pauseButtonImage from "../../../images/audio-player/pause_button.svg";
 import volumeIcon from "../../../images/audio-player/volumeIcon.svg";
 import volumeIconMute from "../../../images/audio-player/volumeMute.svg";
 
-class AudioPlayer extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			currentTime: "0:00",
-			pureTime: 0,
-			pureDuration: 0,
-			buttonImage: playButtonImage,
-			volumeImage: volumeIcon,
-			volumeBarVisibility: "hide",
-			volume: 1,
-		};
-		this.audio = React.createRef();
-		this.playButton = React.createRef();
-	}
+const AudioPlayer = ({
+	secondClass,
+	changeImage,
+	index,
+	audioFile,
+	title,
+	composer,
+	nextAudioTrack,
+}) => {
+	const [currentTime, setCurrentTime] = useState("0:00");
+	const [pureTime, setPureTime] = useState(0);
+	const [timeRemaining, setTimeRemaining] = useState(null);
+	const [pureDuration, setPureDuration] = useState(0);
+	const [buttonImage, setButtonImage] = useState(playButtonImage);
+	const [volumeImage, setVolumeImage] = useState(volumeIcon);
+	const [volumeBarVisibility, setVolumeBarVisibility] = useState("hide");
+	const [volume, setVolume] = useState(1);
 
-	playState = (e) => {
-		this.stopAllAudio();
-		if (this.audio.current.ended) {
-			this.audio.current.load();
-			this.setState({
-				buttonImage: playButtonImage,
-			});
-			this.props.nextAudioTrack(this.audio);
-		} else if (this.audio.current.currentTime === 0) {
-			this.setState({ buttonImage: pauseButtonImage });
-			this.audio.current.play();
-		} else if (this.state.buttonImage === pauseButtonImage) {
-			this.setState({ buttonImage: playButtonImage });
+	const audio = useRef();
+	const playButton = useRef();
 
-			this.audio.current.pause();
-		} else if (this.state.buttonImage === playButtonImage) {
-			this.setState({ buttonImage: pauseButtonImage });
-			this.audio.current.play();
+	const playState = (e) => {
+		stopAllAudio();
+		if (audio.current.ended) {
+			audio.current.load();
+			setButtonImage(playButtonImage);
+			nextAudioTrack(audio);
+		} else if (audio.current.currentTime === 0) {
+			setButtonImage(pauseButtonImage);
+			audio.current.play();
+		} else if (buttonImage === pauseButtonImage) {
+			setButtonImage(playButtonImage);
+
+			audio.current.pause();
+		} else if (buttonImage === playButtonImage) {
+			setButtonImage(pauseButtonImage);
+			audio.current.play();
 		}
 	};
 
-	stopAllAudio = () => {
+	const stopAllAudio = () => {
 		const allAudio = [...document.querySelectorAll(".audio-file")];
 		allAudio.forEach((audio) => {
 			if (audio.paused === false) {
@@ -56,26 +59,26 @@ class AudioPlayer extends React.Component {
 		});
 	};
 
-	getTimeCalc = (event) => {
-		const audio = this.audio.current;
+	const getTimeCalc = (event) => {
+		const audioElement = audio.current;
 		const currentTime =
-			Math.floor(audio.currentTime.toFixed(0) / 60) +
+			Math.floor(audioElement.currentTime.toFixed(0) / 60) +
 			":" +
-			(audio.currentTime.toFixed(0) < 10
-				? `0${audio.currentTime.toFixed(0)}`
-				: audio.currentTime.toFixed(0) % 60 < 10
-				? `0${audio.currentTime.toFixed(0) % 60}`
-				: audio.currentTime.toFixed(0) % 60
-				? audio.currentTime.toFixed(0) % 60
+			(audioElement.currentTime.toFixed(0) < 10
+				? `0${audioElement.currentTime.toFixed(0)}`
+				: audioElement.currentTime.toFixed(0) % 60 < 10
+				? `0${audioElement.currentTime.toFixed(0) % 60}`
+				: audioElement.currentTime.toFixed(0) % 60
+				? audioElement.currentTime.toFixed(0) % 60
 				: "00");
-		this.setState({ currentTime: currentTime });
-		this.getDuration();
+		setCurrentTime(currentTime);
+		getDuration();
 	};
 
-	getDuration = (event) => {
+	const getDuration = (event) => {
 		const time =
-			Math.floor(this.audio.current.duration.toFixed(0)) -
-			Math.floor(this.audio.current.currentTime.toFixed(0));
+			Math.floor(audio.current.duration.toFixed(0)) -
+			Math.floor(audio.current.currentTime.toFixed(0));
 
 		const timeRemaining =
 			Math.floor(time / 60) +
@@ -88,87 +91,86 @@ class AudioPlayer extends React.Component {
 				? time % 60
 				: "00");
 
-		this.setState({ timeRemaining: timeRemaining });
-		this.pureTimeAndDuration();
+		setTimeRemaining(timeRemaining);
+		pureTimeAndDuration();
 	};
 
-	pureTimeAndDuration = () => {
-		this.setState({
-			pureTime: this.audio.current.currentTime,
-			pureDuration: this.audio.current.duration,
-		});
+	const pureTimeAndDuration = () => {
+		setPureTime(audio.current.currentTime);
+		setPureDuration(audio.current.duration);
 	};
 
-	updateCurrentTime = (newTime) => {
-		this.audio.current.currentTime = newTime;
+	const updateCurrentTime = (newTime) => {
+		audio.current.currentTime = newTime;
 	};
 
-	changeVolume = (event) => {
-		this.setState({ volume: event.target.value });
+	const changeVolume = (event) => {
+		setVolume(event.target.value);
 	};
 
-	muteVolume = () => {
-		if (this.state.volumeImage === volumeIcon) {
-			this.setState({ volumeImage: volumeIconMute });
-			this.audio.current.muted = true;
+	const muteVolume = () => {
+		if (volumeImage === volumeIcon) {
+			setVolumeImage(volumeIconMute);
+			audio.current.muted = true;
 		} else {
-			this.setState({ volumeImage: volumeIcon });
-			this.audio.current.muted = false;
+			setVolumeImage(volumeIcon);
+			audio.current.muted = false;
 		}
 	};
 
-	volumeBarVisibility = (event) => {
+	const volumeBarVisibilityEvent = (event) => {
 		if (event.type === "mouseover") {
-			this.setState({ volumeBarVisibility: "show" });
+			setVolumeBarVisibility("show");
 		} else {
-			this.setState({ volumeBarVisibility: "hide" });
+			setVolumeBarVisibility("hide");
 		}
 	};
 
-	render() {
-		return (
-			<div
-				className={`audio-player ${this.props.secondClass}`}
-				onMouseEnter={this.props.changeImage}
-				data-index={this.props.index}>
-				<div className='audio-player-row'>
-					<audio
-						className={`audio-file ${this.props.secondClass}`}
-						src={this.props.audioFile}
-						ref={this.audio}
-						onTimeUpdate={this.getTimeCalc}
-						onDurationChange={this.getDuration}
-						onEnded={this.playState}
-						onLoad={this.playState}
-					/>
-					<PlayButton
-						playState={this.playState}
-						image={this.state.buttonImage}
-						secondClass={this.props.secondClass}
-						ref={this.playButton}
-					/>
-					<AudioCenter
-						title={this.props.title}
-						composer={this.props.composer}
-						currentTime={this.state.currentTime}
-						timeRemaining={this.state.timeRemaining}
-						pureTime={this.state.pureTime}
-						pureDuration={this.state.pureDuration}
-						updateCurrentTime={this.updateCurrentTime}
-					/>
-					<AudioVolume
-						changeVolume={this.changeVolume}
-						volumeIcon={this.state.volumeImage}
-						muteVolume={this.muteVolume}
-						volumeBarVisibility={this.volumeBarVisibility}
-						volumeBarVisibilityState={this.state.volumeBarVisibility}
-						volume={this.state.volume}
-					/>
-				</div>
+	return (
+		<div
+			className={`audio-player ${secondClass}`}
+			onMouseEnter={changeImage}
+			data-index={index}>
+			<div className='audio-player-row'>
+				<audio
+					className={`audio-file ${secondClass}`}
+					src={audioFile}
+					ref={audio}
+					onTimeUpdate={getTimeCalc}
+					onDurationChange={getDuration}
+					onEnded={playState}
+					onLoad={playState}
+					data-index={index}
+				/>
+
+				<img
+					ref={playButton}
+					src={buttonImage}
+					alt='play and pause button'
+					className={`play-button ${secondClass}`}
+					onClick={playState}
+				/>
+				<AudioCenter
+					title={title}
+					composer={composer}
+					currentTime={currentTime}
+					timeRemaining={timeRemaining}
+					pureTime={pureTime}
+					pureDuration={pureDuration}
+					updateCurrentTime={updateCurrentTime}
+				/>
+				<AudioVolume
+					changeVolume={changeVolume}
+					volumeIcon={volumeImage}
+					muteVolume={muteVolume}
+					volumeBarVisibility={volumeBarVisibilityEvent}
+					volumeBarVisibilityState={volumeBarVisibility}
+					volume={volume}
+				/>
 			</div>
-		);
-	}
-}
+		</div>
+	);
+};
 
 export default AudioPlayer;
 

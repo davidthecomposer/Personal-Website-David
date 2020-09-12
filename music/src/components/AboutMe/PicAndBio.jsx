@@ -1,15 +1,21 @@
 import React from "react";
-import davidSmile from "../../images/headshots/David-Smile.png";
+import davidSmileBU from "../../images/headshots/David-Smile.jpeg";
+import davidSmile from "../../images/headshots/David-Smile.webp";
 
 class PicAndBio extends React.Component {
 	render() {
 		return (
 			<div className='about-me-text'>
-				<img
-					src={davidSmile}
-					className='my-image'
-					alt='David Campbell Smiling'
-				/>
+				<picture>
+					<source srcSet={davidSmileBU} />
+					<source srcSet={davidSmile} />
+					<img
+						src={davidSmile}
+						className='my-image'
+						alt='David Campbell Smiling'
+					/>
+				</picture>
+
 				<p>
 					I am a composer living in Salt Lake City Utah. When I was first
 					introduced to writing music I was immediately fascinated with the

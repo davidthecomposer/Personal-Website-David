@@ -5,6 +5,14 @@ import secondImage001 from "../../../../../Images/ArticleImages/001/second_image
 import thirdImage001 from "../../../../../Images/ArticleImages/001/third_image_001.webp";
 import fourthImage001 from "../../../../../Images/ArticleImages/001/fourth_image_001.webp";
 import fifthImage001 from "../../../../../Images/ArticleImages/001/fifth_image_001.webp";
+import mainImage001BU from "../../../../../Images/ArticleImages/001/main_image_001.jpeg";
+import firstImage001BU from "../../../../../Images/ArticleImages/001/first_image_001.jpeg";
+import secondImage001BU from "../../../../../Images/ArticleImages/001/second_image_001.jpeg";
+import thirdImage001BU from "../../../../../Images/ArticleImages/001/third_image_001.jpeg";
+import fourthImage001BU from "../../../../../Images/ArticleImages/001/fourth_image_001.jpeg";
+import fifthImage001BU from "../../../../../Images/ArticleImages/001/fifth_image_001.jpeg";
+import previewImage001 from "../../../../../Images/ArticleImages/001/preview_image_001.webp";
+import previewImage001BU from "../../../../../Images/ArticleImages/001/preview_image_001.jpeg";
 
 const title = "Introduction And 5 Things That I Hate and Love About Coding";
 const date = "September 3, 2020";
@@ -12,8 +20,26 @@ const date = "September 3, 2020";
 const article = {
 	"Introduction-and-5-Things-That-I-Hate-And-Love-About-Coding_09-03-20": {
 		title: title,
-		mainImage: mainImage001,
-		mainImageCaption: `It's all just symbols`,
+		mainImage: (
+			<Fragment>
+				<picture>
+					<source srcSet={mainImage001BU} />
+					<source srcSet={mainImage001} />
+					<img src={mainImage001} alt='' />
+				</picture>
+				<figcaption>It's all just symbols</figcaption>
+			</Fragment>
+		),
+		previewImage: (
+			<Fragment>
+				<picture>
+					<source srcSet={previewImage001BU} />
+					<source srcSet={previewImage001} />
+					<img className='more-articles-image' src={previewImage001} alt='' />
+				</picture>
+			</Fragment>
+		),
+
 		date: new Date(date),
 		synopsis:
 			"This story contains a short introduction and history of my ongoing journey to become a better software developer. I will also touch on what content you can expect in this blog, and some coding likes/dislikes from my perspective as a fairly new developer.",
@@ -66,7 +92,12 @@ const article = {
 				</h2>
 
 				<figure className='article-image-figure'>
-					<img className='article-image' src={firstImage001} alt='' />
+					<picture>
+						<source srcSet={firstImage001BU} />
+						<source srcSet={firstImage001} />
+						<img className='article-image' src={firstImage001} alt='' />
+					</picture>
+
 					<figcaption>
 						Me - ( <span>c. every day</span>)
 					</figcaption>
@@ -88,11 +119,16 @@ const article = {
 					<strong>Love: NPM</strong>
 				</h3>
 				<figure className='article-image-figure'>
-					<img
-						className='article-image'
-						src={fourthImage001}
-						alt='Keanu musing about legacy code'
-					/>
+					<picture>
+						<source srcSet={fourthImage001BU} />
+						<source srcSet={fourthImage001} />
+						<img
+							className='article-image'
+							src={fourthImage001}
+							alt='Keanu musing about legacy code'
+						/>
+					</picture>
+
 					<figcaption>Limitless possibilities and dependencies</figcaption>
 				</figure>
 				<p>
@@ -124,11 +160,16 @@ const article = {
 					<strong>Hate: Legacy Code</strong>
 				</h3>
 				<figure className='article-image-figure'>
-					<img
-						className='article-image'
-						src={secondImage001}
-						alt='Keanu musing about legacy code'
-					/>
+					<picture>
+						<source srcSet={secondImage001BU} />
+						<source srcSet={secondImage001} />
+						<img
+							className='article-image'
+							src={secondImage001}
+							alt='Keanu musing about legacy code'
+						/>
+					</picture>
+
 					<figcaption>It's true when you think about it.</figcaption>
 				</figure>
 
@@ -162,11 +203,16 @@ const article = {
 					<strong>Love: Prettier</strong>
 				</h3>
 				<figure className='article-image-figure full-figure'>
-					<img
-						className='article-image'
-						src={fifthImage001}
-						alt='Code with and without Prettier applied'
-					/>
+					<picture>
+						<source srcSet={fifthImage001BU} />
+						<source srcSet={fifthImage001} />
+						<img
+							className='article-image'
+							src={fifthImage001}
+							alt='Code with and without Prettier applied'
+						/>
+					</picture>
+
 					<figcaption>Bringing Order to Chaos</figcaption>
 				</figure>
 				<p>
@@ -211,11 +257,16 @@ const article = {
 					</strong>
 				</h3>
 				<figure className='article-image-figure'>
-					<img
-						className='article-image'
-						src={thirdImage001}
-						alt='Example of Foo Bar Baz code'
-					/>
+					<picture>
+						<source srcSet={thirdImage001BU} />
+						<source srcSet={thirdImage001} />
+						<img
+							className='article-image'
+							src={thirdImage001}
+							alt='Example of Foo Bar Baz code'
+						/>
+					</picture>
+
 					<figcaption>
 						{" "}
 						<span> "I don't see how I can make this any clearer" </span> -

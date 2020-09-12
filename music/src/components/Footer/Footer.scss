@@ -1,0 +1,248 @@
+@import "./mixins";
+
+%footer-font {
+	font-family: "Barlow", sans-serif;
+	font-size: 1rem;
+	font-weight: 300;
+	color: rgb(230, 230, 230);
+}
+
+%footer-col-flex {
+	@include flex(column, flex-start, none);
+}
+
+.footer-section-header {
+	margin: 0 0 1rem;
+	font-size: 1rem;
+	color: white;
+	text-decoration: none;
+	border-bottom: 2px rgb(40, 40, 40) solid;
+	padding-bottom: 0.25rem;
+}
+
+.blog-footer {
+	padding: 1rem 0 0;
+	background-color: rgb(15, 15, 15);
+	display: flex;
+	flex-direction: column;
+	@extend %footer-font;
+	margin: 6rem 0 0;
+}
+.footer-row {
+	@include flex(row, space-around, flex-start);
+}
+
+.footer-column {
+	@include flex(column, space-between, center);
+}
+
+.footer-article-link {
+	text-decoration: none;
+}
+
+.full {
+	width: 100%;
+	padding-bottom: 2rem;
+}
+
+.half {
+	width: 50%;
+}
+
+.third {
+	width: 33.3%;
+}
+
+.news-letter {
+	width: 45%;
+	@extend %footer-col-flex;
+
+	.news-letter-input {
+		height: 2rem;
+		background-color: rgb(70, 70, 70);
+		outline: none;
+		border: none;
+		width: 65%;
+		@extend %footer-font;
+		transition: 0.25s;
+		padding: 0;
+	}
+	::-webkit-input-placeholder {
+		color: white;
+		padding: 0 0 0 0.3rem;
+	}
+	.news-letter-input:focus {
+		border: 2px rgb(55, 152, 165) solid;
+		transition: 0.25s;
+	}
+
+	.news-letter-button {
+		height: 2rem;
+		background-color: rgb(55, 152, 165);
+		border: none;
+		outline: none;
+		cursor: pointer;
+		width: 30%;
+		transition: 0.25s;
+		@extend %footer-font;
+	}
+	.news-letter-button:hover {
+		opacity: 0.8;
+		transition: 0.25s;
+	}
+
+	.news-letter-input-row {
+		@include flex(row, space-between, flex-start);
+
+		height: 2.2rem;
+	}
+	.news-letter-response {
+		height: 2rem;
+		width: 100%;
+		margin: 0.25rem 0 0;
+		text-align: center;
+	}
+	.newsletter-invitation {
+		margin: 1rem 0;
+	}
+}
+
+.contact-page-links {
+	width: 45%;
+	@extend %footer-col-flex;
+
+	a {
+		text-decoration: none;
+		color: rgb(86, 226, 245);
+		margin: 0.25rem 0;
+		transition: 0.2s;
+	}
+	a:hover {
+		color: rgb(255, 132, 255);
+
+		transition: 0.2s;
+	}
+}
+.latest-stories {
+	width: 45%;
+	@extend %footer-col-flex;
+
+	.latest-stories-header {
+		margin: 0 0 1rem;
+		font-size: 1rem;
+		color: white;
+		text-decoration: none;
+		border-bottom: 2px grey solid;
+	}
+
+	.latest-stories-info {
+		text-decoration: none;
+		margin: 0 0 0.5rem;
+		transition: 0.25s;
+	}
+
+	.latest-stories-title {
+		margin: 0;
+		padding: 0;
+		text-decoration: none;
+		color: rgb(86, 226, 245);
+		transition: 0.25s;
+	}
+	.latest-stories-title:hover {
+		color: rgb(255, 132, 255);
+
+		transition: 0.25s;
+	}
+
+	.latest-stories-date {
+		margin: 0;
+		padding: 0;
+		text-decoration: none;
+		font-size: 0.8rem;
+		color: rgb(230, 230, 230);
+		transition: 0.25s;
+	}
+	a {
+		text-decoration: none;
+	}
+}
+
+.footer-icons {
+	width: 45%;
+	@extend %footer-col-flex;
+
+	.footer-icons-header {
+		margin: 0 0 1rem;
+		font-size: 1rem;
+		color: white;
+		text-decoration: none;
+		border-bottom: 2px grey solid;
+	}
+
+	.website-links {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		a {
+			text-decoration: none;
+			color: rgb(86, 226, 245);
+			margin: 0.25rem 0;
+			transition: 0.2s;
+		}
+		a:hover {
+			color: rgb(255, 132, 255);
+
+			transition: 0.2s;
+		}
+	}
+}
+
+.copyright-column {
+	@include flex(column, space-between, center);
+
+	padding: 2rem 0;
+	width: 60%;
+	margin: 0 auto;
+	border-top: 2px rgb(40, 40, 40) solid;
+	.david-icon {
+		border-radius: 100%;
+		width: 35px;
+		height: 35px;
+		margin: 0 0 1rem;
+	}
+
+	.copyright {
+		line-height: 1.4rem;
+		margin: 0;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.full {
+		flex-direction: column;
+		padding-bottom: 0;
+	}
+	.half {
+		flex-direction: column;
+		width: 100%;
+	}
+	.footer-icons,
+	.news-letter,
+	.contact-page-links,
+	.latest-stories {
+		padding-bottom: 4rem;
+		width: 80%;
+		max-width: 500px;
+		margin: 0 auto;
+	}
+	.news-letter {
+		padding-bottom: 2rem;
+	}
+	.copyright-column {
+		width: 80%;
+	}
+	.footer-section-header {
+		text-align: center;
+	}
+}

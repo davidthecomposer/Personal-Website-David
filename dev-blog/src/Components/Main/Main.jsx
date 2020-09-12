@@ -7,7 +7,7 @@ import MoreArticles from "./MoreArticles/MoreArticles";
 
 const Main = ({ navigateToTop }) => {
 	const moreArticles = Object.entries(articles).map(
-		([articleName, { title, mainImage, date }]) => {
+		([articleName, { title, previewImage, date }]) => {
 			date = date.toDateString();
 
 			return (
@@ -15,7 +15,7 @@ const Main = ({ navigateToTop }) => {
 					key={articleName}
 					title={title}
 					articleName={articleName}
-					mainImage={mainImage}
+					previewImage={previewImage}
 					date={date}
 					navigateToTop={navigateToTop}
 				/>

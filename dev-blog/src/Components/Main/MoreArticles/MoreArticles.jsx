@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const MoreArticles = ({
 	articleName,
-	mainImage,
+	previewImage,
 	title,
 	date,
 	navigateToTop,
@@ -12,7 +12,8 @@ const MoreArticles = ({
 	return (
 		<Link className='article-nav-link' to={`/${articleName}`}>
 			<figure className='more-articles-figure' onClick={navigateToTop}>
-				<img className='more-articles-image' src={mainImage} alt={title} />
+				<div className='more-articles-image'></div>
+				{previewImage}
 				<figcaption className='more-articles-title'>{title}</figcaption>
 				<p className='article-date'>{date}</p>
 			</figure>

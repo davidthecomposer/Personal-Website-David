@@ -1,7 +1,7 @@
 import React from "react";
 import ShareLinks from "../Links/ShareLinks";
-import davidSigBlack from "../../../Images/ArticleImages/david-sig-black-shadow.svg";
-import davidSigWhite from "../../../Images/ArticleImages/david-sig-white-shadow.svg";
+import davidSigBlack from "../../../Images/ArticleImages/david-sig-black-shadow.png";
+import davidSigWhite from "../../../Images/ArticleImages/david-sig-white-shadow.png";
 import SocialMediaIcons from "./SocialMediaIcons";
 import "../../../Styles/ArticleEnding.scss";
 
@@ -25,6 +25,7 @@ const ArticleEnding = ({
 						are always welcome from relatively sentient humans or AI.
 					</p>
 				</div>
+
 				<img
 					src={modeSwitch === "dark" ? davidSigWhite : davidSigBlack}
 					alt='david campbell signature'

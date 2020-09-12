@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import lizCImage from "../../../images/news/Liz_Christensen_headShot.png";
 import mandiBarrus2Image from "../../../images/news/mandi-Barrus.png";
 import jennyImage from "../../../images/news/jennyHead.JPG";
-import operaContempoHeader from "../../../images/news/OCHeader.png";
+import operaContempoHeader from "../../../images/news/OCHeader.jpeg";
 
 const storyContent = [
 	{

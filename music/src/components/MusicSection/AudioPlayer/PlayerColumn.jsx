@@ -16,16 +16,17 @@ const PlayerColumn = (props) => {
 	}, [makePlaylist]);
 
 	const nextAudioTrack = (lastTrack) => {
-		const previousTrackIndex = Number(lastTrack.current.dataset.index);
+		const previousTrackIndex = parseInt(lastTrack.current.dataset.index);
 		const playlist = [...allAudio];
-
+		console.log(playlist);
+		console.log(previousTrackIndex);
 		const nextTrackName =
 			previousTrackIndex === playlist.length - 1
 				? playlist[0]
 				: playlist[previousTrackIndex + 1];
 
 		const query = `.play-button.${nextTrackName}`;
-
+		console.log(query);
 		document.querySelector(query).click();
 	};
 

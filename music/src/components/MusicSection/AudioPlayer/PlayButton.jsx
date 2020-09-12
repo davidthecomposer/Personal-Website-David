@@ -9,6 +9,7 @@ class PlayButton extends React.Component {
 				alt='play and pause button'
 				className={`play-button ${this.props.secondClass}`}
 				onClick={this.props.playState}
+				ref={this.ref}
 			/>
 		);
 	}

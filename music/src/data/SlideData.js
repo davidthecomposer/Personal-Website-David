@@ -1,7 +1,7 @@
-import flatLineNew from "../images/slideshow/slides/flatline-new.png";
-import composerInResidence from "../images/slideshow/slides/composer-in-residence.png";
-import operaConTempo from "../images/slideshow/slides/OperaConTempo.png";
-import songCycle from "../images/slideshow/slides/song-cycle.png";
+import flatLineNew from "../images/slideshow/slides/flatline-new.jpeg";
+import composerInResidence from "../images/slideshow/slides/composer-in-residence.jpeg";
+import operaConTempo from "../images/slideshow/slides/OperaConTempo.jpeg";
+import songCycle from "../images/slideshow/slides/song-cycle.jpeg";
 
 const slideData = [
 	{

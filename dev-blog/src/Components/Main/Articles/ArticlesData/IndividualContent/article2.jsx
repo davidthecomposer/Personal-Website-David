@@ -1,7 +1,11 @@
 import React, { Fragment } from "react";
 import MultiLineCodeBlock from "./MultiLineCodeBlock";
 import mainImage from "../../../../../Images/ArticleImages/002/main_image.webp";
+import mainImageBU from "../../../../../Images/ArticleImages/002/main_image.jpeg";
+import previewImage from "../../../../../Images/ArticleImages/002/main_image.webp";
+import previewImageBU from "../../../../../Images/ArticleImages/002/main_image.jpeg";
 import demoVid from "../../../../../Images/ArticleImages/002/newsSlide.webm";
+import demoVidBU from "../../../../../Images/ArticleImages/002/newsSlide.mp4";
 
 const codeExample0 = `return (
 	<div className={\`news-row \${slideDownRow}\`}>
@@ -233,8 +237,25 @@ export const article = {
 	"Using-Custom-Variables-to-Smooth-Out-Container-Transitions_08-25-20": {
 		title:
 			"Using Custom Variables to Smooth Out Container Transitions: A Love Story",
-		mainImage: mainImage,
-		mainImageCaption: "Always time for a little smooth accordion.",
+		mainImage: (
+			<Fragment>
+				<picture>
+					<source srcSet={mainImageBU} />
+					<source srcSet={mainImage} />
+					<img src={mainImage} alt='' />
+					<figcaption>Always time for a little smooth accordion.</figcaption>
+				</picture>
+			</Fragment>
+		),
+		previewImage: (
+			<Fragment>
+				<picture>
+					<source srcSet={previewImageBU} />
+					<source srcSet={previewImage} />
+					<img className='more-articles-image' src={previewImage} alt='' />
+				</picture>
+			</Fragment>
+		),
 		date: new Date("September 9, 2020"),
 		version: "0.02",
 		dbToQuery: "article 2",
@@ -526,13 +547,10 @@ export const article = {
 				</h3>
 
 				<figure className='article-image-figure full-figure'>
-					<video
-						className='article-vid'
-						src={demoVid}
-						type='video/webm'
-						width='100%'
-						controls
-					/>
+					<video className='article-vid' width='100%' controls>
+						<source src={demoVid} type='video/webm' />
+						<source src={demoVidBU} type='video/mp4' />
+					</video>
 					<figcaption>Slider element in the wild.</figcaption>
 				</figure>
 				<h2 className='section-subtitle'>::After</h2>
