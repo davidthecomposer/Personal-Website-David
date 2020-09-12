@@ -22,7 +22,6 @@
 
 .blog-footer {
 	padding: 1rem 0 0;
-
 	display: flex;
 	flex-direction: column;
 	@extend %footer-font;
@@ -95,7 +94,6 @@
 
 	.news-letter-input-row {
 		@include flex(row, space-around, flex-start);
-
 		height: 2.2rem;
 	}
 	.news-letter-response {
@@ -118,7 +116,6 @@
 	}
 	a:hover {
 		color: rgb(255, 132, 255);
-
 		transition: 0.2s;
 	}
 }
@@ -149,7 +146,6 @@
 	}
 	.latest-stories-title:hover {
 		color: rgb(255, 132, 255);
-
 		transition: 0.25s;
 	}
 
