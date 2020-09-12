@@ -25,7 +25,11 @@ const article = {
 				<picture>
 					<source srcSet={mainImage001BU} />
 					<source srcSet={mainImage001} />
-					<img src={mainImage001} alt='' />
+					<img
+						src={mainImage001}
+						alt='keyboard with music and screen of computer code'
+						className='article-main-image'
+					/>
 				</picture>
 				<figcaption>It's all just symbols</figcaption>
 			</Fragment>

@@ -242,7 +242,11 @@ export const article = {
 				<picture>
 					<source srcSet={mainImageBU} />
 					<source srcSet={mainImage} />
-					<img src={mainImage} alt='' />
+					<img
+						src={mainImage}
+						alt='Man playing accordion along with react, Sass, and JavaScript Logos. Tutorial.'
+						className='article-main-image'
+					/>
 					<figcaption>Always time for a little smooth accordion.</figcaption>
 				</picture>
 			</Fragment>

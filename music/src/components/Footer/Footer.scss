@@ -77,6 +77,9 @@
 	}
 
 	.news-letter-button {
+		-webkit-appearance: none;
+		-webkit-border-radius: 0;
+		border-radius: 0;
 		height: 2rem;
 		background-color: rgb(55, 152, 165);
 		border: none;
