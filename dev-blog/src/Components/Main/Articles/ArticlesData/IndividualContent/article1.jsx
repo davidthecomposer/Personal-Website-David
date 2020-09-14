@@ -119,7 +119,7 @@ const article = {
 					this blog so I can say whatever I want!{" "}
 				</p>
 
-				<h3>
+				<h3 className='emphasis-header'>
 					<strong>Love: NPM</strong>
 				</h3>
 				<figure className='article-image-figure'>
@@ -160,7 +160,7 @@ const article = {
 					through any source code (or documentation) can be frustrating at
 					times, and that leads me to my first dislike:
 				</p>
-				<h3>
+				<h3 className='emphasis-header'>
 					<strong>Hate: Legacy Code</strong>
 				</h3>
 				<figure className='article-image-figure'>
@@ -203,7 +203,7 @@ const article = {
 					</span>{" "}
 					and then move on with my day like a civilized modern human being.
 				</p>
-				<h3>
+				<h3 className='emphasis-header'>
 					<strong>Love: Prettier</strong>
 				</h3>
 				<figure className='article-image-figure full-figure'>
@@ -255,7 +255,7 @@ const article = {
 					about the beauty and time saved.{" "}
 				</p>
 
-				<h3>
+				<h3 className='emphasis-header'>
 					<strong>
 						Hate: Foo/Bar/Baz/Bae/Bears/Beats/BattlestarGallactica
 					</strong>
@@ -302,7 +302,7 @@ const article = {
 					explain some pro and con arguments for these horrible, horrible
 					placeholders. I’ll let you decide which side argued more effectively.
 				</p>
-				<h3>
+				<h3 className='emphasis-header'>
 					<strong>Love: Developers helping Developers</strong>
 				</h3>
 				<p>

@@ -268,7 +268,7 @@ export const article = {
 		content: (
 			<Fragment>
 				<h2 className='section-subtitle'>::Before</h2>
-				<h3>
+				<h3 className='emphasis-header'>
 					<strong>The Challenge:</strong>
 				</h3>
 				<p className='first-paragraph'>
@@ -309,7 +309,7 @@ export const article = {
 					So now I present a step-by-step guide to how I did it using React,
 					Sass, and the IntersectionObserver API.
 				</p>
-				<h3>
+				<h3 className='emphasis-header'>
 					<strong>Step 1: Design The React Component Structure</strong>
 				</h3>
 				<MultiLineCodeBlock lang='jsx' code={codeExample0} />
@@ -331,7 +331,7 @@ export const article = {
 					actual content that you want the element to contain.
 				</p>
 
-				<h3>
+				<h3 className='emphasis-header'>
 					<strong>
 						Step 2: Set Up State, Our Ref, And The ResizeObserver To Keep Track
 						Of Element Height.
@@ -409,7 +409,7 @@ export const article = {
 					update the custom variable in our useEffect function below.
 				</p>
 
-				<h3>
+				<h3 className='emphasis-header'>
 					<strong>
 						Step 3: Create A Custom Variable And Inject It Into CSS
 					</strong>
@@ -437,7 +437,7 @@ export const article = {
 					we will re-inject that new value as a custom CSS variable!
 				</p>
 
-				<h3>
+				<h3 className='emphasis-header'>
 					<strong>Step 4: Handle Logic For Dynamic Class Changes.</strong>
 				</h3>
 				<p>
@@ -454,7 +454,7 @@ export const article = {
 					our stylesheet and use our variable(s) to set up some simple CSS
 					transitions{" "}
 				</p>
-				<h3>
+				<h3 className='emphasis-header'>
 					<strong>
 						Step 5: Use Sass Lists And Mixins To Dynamically Create Element
 						Class Names
@@ -519,7 +519,7 @@ export const article = {
 					</li>
 				</ul>
 				<MultiLineCodeBlock lang='css' code={cssCode2} />
-				<h3>
+				<h3 className='emphasis-header'>
 					<strong>
 						Step 6: Enjoy The Smooth Sliding As Much As Grandpa Loves His
 						Accordion
@@ -546,7 +546,7 @@ export const article = {
 					StoryTemplate.jsx or parent component)
 				</p>
 				<MultiLineCodeBlock lang='css' code={allCSSCode} />
-				<h3>
+				<h3 className='emphasis-header'>
 					<strong>Final Result:</strong>
 				</h3>
 
@@ -558,7 +558,7 @@ export const article = {
 					<figcaption>Slider element in the wild.</figcaption>
 				</figure>
 				<h2 className='section-subtitle'>::After</h2>
-				<h3>
+				<h3 className='emphasis-header'>
 					<strong>Going Deeper</strong>
 				</h3>
 				<p>
