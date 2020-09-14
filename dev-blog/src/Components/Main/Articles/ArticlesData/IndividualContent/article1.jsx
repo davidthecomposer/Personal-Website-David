@@ -257,7 +257,7 @@ const article = {
 
 				<h3 className='emphasis-header'>
 					<strong>
-						Hate: Foo/Bar/Baz/Bae/Bears/Beats/BattlestarGallactica
+						Hate: Foo, Bar, Baz, Bae, Bears, Beets, BattlestarGallactica.
 					</strong>
 				</h3>
 				<figure className='article-image-figure'>
