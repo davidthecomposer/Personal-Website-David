@@ -1,42 +1,29 @@
 import React from "react";
-import "./footer.css";
+import "./Footer.scss";
 
-import davidSigWhiteShadow from "../../images/david-sig-white-shadow.png";
-import gitHubIcon from "../../images/github.svg";
-import linkedInIcon from "../../images/LI-In-Bug.png";
+import NewsLetterForm from "./NewsLetterForm";
+import Copyright from "./Copyright";
 
-class Footer extends React.Component {
-	render() {
-		return (
-			<footer>
-				<div className='by-me'>
-					<p>A</p>
-					<a href='https://www.davidhalcampbell.com'>
-						<img
-							className='signature'
-							src={davidSigWhiteShadow}
-							alt='David Campbell Signature'
-						/>
-					</a>
-
-					<p>Website</p>
+import FooterIcons from "./FooterIcons";
+import ContactPageLinks from "./ContactPageLinks";
+import FooterLatestStories from "./FooterLatestStories";
+const Footer = ({ navigateToTop }) => {
+	return (
+		<footer className='blog-footer'>
+			<div className='footer-row full'>
+				<div className=' footer-row half'>
+					<NewsLetterForm />
+					<ContactPageLinks />
 				</div>
-				<div className='nav-icons-footer'>
-					<a href='https://github.com/davidthecomposer'>
-						<img src={gitHubIcon} alt='github link' className='footer-icons' />
-					</a>
-					<a href='https://www.linkedin.com/in/dhcampbell/'>
-						{" "}
-						<img
-							src={linkedInIcon}
-							alt='linkdn link'
-							className='footer-icons'
-						/>
-					</a>
+
+				<div className='footer-row half'>
+					<FooterLatestStories navigateToTop={navigateToTop} />
+					<FooterIcons />
 				</div>
-			</footer>
-		);
-	}
-}
+			</div>
+			<Copyright />
+		</footer>
+	);
+};
 
 export default Footer;
