@@ -214,6 +214,11 @@ const App = () => {
 				currentTrack={currentTrack}
 				pureTime={pureTime}
 			/>
+			<a
+				className='home-button'
+				href='https://www.developer.davidhalcampbell.com'>
+				Back to Apps
+			</a>
 		</div>
 	);
 };

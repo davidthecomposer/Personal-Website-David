@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/audio-player-react/build/static/css/main.94e54951.chunk.css",
-    "main.js": "/audio-player-react/build/static/js/main.cb619711.chunk.js",
-    "main.js.map": "/audio-player-react/build/static/js/main.cb619711.chunk.js.map",
+    "main.css": "/audio-player-react/build/static/css/main.375f92ab.chunk.css",
+    "main.js": "/audio-player-react/build/static/js/main.db6268a8.chunk.js",
+    "main.js.map": "/audio-player-react/build/static/js/main.db6268a8.chunk.js.map",
     "runtime-main.js": "/audio-player-react/build/static/js/runtime-main.76b764a8.js",
     "runtime-main.js.map": "/audio-player-react/build/static/js/runtime-main.76b764a8.js.map",
     "static/js/2.d243cb20.chunk.js": "/audio-player-react/build/static/js/2.d243cb20.chunk.js",
     "static/js/2.d243cb20.chunk.js.map": "/audio-player-react/build/static/js/2.d243cb20.chunk.js.map",
     "index.html": "/audio-player-react/build/index.html",
-    "precache-manifest.b68ce996b154a1307db04b59edf6c2e1.js": "/audio-player-react/build/precache-manifest.b68ce996b154a1307db04b59edf6c2e1.js",
+    "precache-manifest.e7d5b617c311d55526e783bd83c610aa.js": "/audio-player-react/build/precache-manifest.e7d5b617c311d55526e783bd83c610aa.js",
     "service-worker.js": "/audio-player-react/build/service-worker.js",
-    "static/css/main.94e54951.chunk.css.map": "/audio-player-react/build/static/css/main.94e54951.chunk.css.map",
+    "static/css/main.375f92ab.chunk.css.map": "/audio-player-react/build/static/css/main.375f92ab.chunk.css.map",
     "static/js/2.d243cb20.chunk.js.LICENSE.txt": "/audio-player-react/build/static/js/2.d243cb20.chunk.js.LICENSE.txt",
     "static/media/Forgiveness.jpg": "/audio-player-react/build/static/media/Forgiveness.30b56028.jpg",
     "static/media/Music for a Love Story.wav": "/audio-player-react/build/static/media/Music for a Love Story.6b993eb2.wav",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.76b764a8.js",
     "static/js/2.d243cb20.chunk.js",
-    "static/css/main.94e54951.chunk.css",
-    "static/js/main.cb619711.chunk.js"
+    "static/css/main.375f92ab.chunk.css",
+    "static/js/main.db6268a8.chunk.js"
   ]
 }

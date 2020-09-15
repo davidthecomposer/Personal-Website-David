@@ -389,6 +389,23 @@ input:focus {
 	border-left: none;
 	cursor: default;
 }
+.home-button {
+	padding: 1rem;
+	outline: none;
+	background-color: #4d4d4d;
+	border: none;
+	color: white;
+	border-radius: 10%;
+	margin: 0 auto 2rem;
+	width: 6rem;
+	text-emphasis: none;
+	text-decoration: none;
+	display: flex;
+	font-family: "Shadows Into Light", cursive;
+}
+.home-button:hover {
+	background-color: black;
+}
 
 @media only screen and (max-device-width: 900px) {
 	form {
@@ -421,12 +438,6 @@ input:focus {
 	.fourth {
 		margin-right: 3%;
 	}
-
-	.tip-buttons {
-	}
-	.signature-container {
-		position: absolute;
-	}
 }
 @media only screen and (max-device-width: 750px) and (orientation: portrait) {
 	.calc-title {
@@ -437,9 +448,5 @@ input:focus {
 		height: 100vh;
 		width: 100vw;
 		margin: 0;
-	}
-
-	.signature-container {
-		position: absolute;
 	}
 }

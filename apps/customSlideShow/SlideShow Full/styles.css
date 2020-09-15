@@ -116,7 +116,7 @@ body {
 	height: 50vw;
 	z-index: 4;
 	/* border: solid 2px rgba(0, 0, 0, 0.178); */
-
+	overflow: hidden;
 	background-color: black;
 }
 
@@ -545,6 +545,7 @@ body {
 	justify-content: space-around;
 	align-items: center;
 	height: 2rem;
+	padding: 0.5rem 0;
 }
 
 .slide-column,
@@ -740,6 +741,10 @@ body {
 	animation: crazy 1.5s linear 1 forwards;
 }
 
+.code-containers {
+	display: none;
+}
+
 /* Slide Animations */
 @keyframes slideIn {
 	from {
@@ -932,6 +937,27 @@ body {
 		left: 25%;
 		text-align: center;
 	}
+}
+
+.home-button {
+	padding: 1rem;
+	outline: none;
+	background-color: #4d4d4d;
+	border: none;
+	color: white;
+	border-radius: 10%;
+	width: 6rem;
+	text-emphasis: none;
+	text-decoration: none;
+	display: flex;
+	margin: 4rem auto;
+}
+.home-text {
+	width: 100%;
+	text-align: center;
+}
+.home-button:hover {
+	background-color: black;
 }
 
 @media screen and (max-width: 1024px) {

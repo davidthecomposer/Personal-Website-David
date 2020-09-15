@@ -87,7 +87,7 @@ video {
 	vertical-align: baseline;
 }
 
-html {
+body {
 	font-family: "Indie Flower", cursive;
 	background: url(images/background.jpg) no-repeat center center fixed;
 }
@@ -250,7 +250,7 @@ h1 {
 .by-me {
 	width: fit-content;
 	display: flex;
-	margin: 3rem auto;
+	margin: 3rem auto 2rem;
 }
 
 .by-me p {
@@ -284,6 +284,24 @@ h1 {
 
 .alarm-hide {
 	animation: slideOut1 0.2s linear 1 forwards;
+}
+
+.home-button {
+	padding: 1rem;
+	outline: none;
+	background-color: #4d4d4d;
+	border: none;
+	color: white;
+	border-radius: 10%;
+	margin: 0 auto 2rem;
+	width: 6rem;
+	text-emphasis: none;
+	text-decoration: none;
+	display: flex;
+}
+
+.home-button:hover {
+	background-color: black;
 }
 
 /* -------------- Animations ----------------- */

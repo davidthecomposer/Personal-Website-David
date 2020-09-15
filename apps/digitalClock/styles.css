@@ -389,6 +389,23 @@ h1 {
 	height: 3rem;
 }
 
+.home-button {
+	padding: 1rem;
+	outline: none;
+	background-color: #4d4d4d;
+	border: none;
+	color: white;
+	border-radius: 10%;
+	margin: 2rem auto 2rem;
+	width: 6rem;
+	text-emphasis: none;
+	text-decoration: none;
+}
+
+.home-button:hover {
+	background-color: black;
+}
+
 @media screen and (max-width: 1800px) {
 	.time {
 		font-size: 3rem;

@@ -378,6 +378,29 @@ video::-webkit-media-controls {
 	animation-fill-mode: forwards;
 }
 
+.home-button {
+	padding: 1rem;
+	outline: none;
+	background-color: #4d4d4d;
+	border: none;
+	color: white;
+	border-radius: 10%;
+
+	width: 6rem;
+	text-emphasis: none;
+	text-decoration: none;
+	display: flex;
+	margin: 4rem auto;
+}
+.home-text {
+	width: 100%;
+	text-align: center;
+}
+
+.home-button:hover {
+	background-color: black;
+}
+
 @keyframes slidein {
 	from {
 		bottom: -11.5%;

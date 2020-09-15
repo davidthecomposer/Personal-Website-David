@@ -90,3 +90,25 @@ video {
 body {
 	background: rgb(27, 27, 27);
 }
+.home-button {
+	padding: 1rem;
+	outline: none;
+	background-color: #4d4d4d;
+	border: none;
+	color: white;
+	border-radius: 10%;
+	margin: 0 auto;
+	width: 6rem;
+	text-emphasis: none;
+	text-decoration: none;
+	display: flex;
+}
+
+.home-button:hover {
+	background-color: black;
+}
+
+.back-to-app {
+	width: 100%;
+	text-align: center;
+}

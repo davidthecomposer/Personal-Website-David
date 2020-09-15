@@ -6,6 +6,11 @@ class App extends React.Component {
 		return (
 			<div>
 				<AudioPlayerList />
+				<a
+					class='home-button'
+					href='https://www.developer.davidhalcampbell.com'>
+					<p className='back-to-app'>Back to Apps</p>
+				</a>
 			</div>
 		);
 	}

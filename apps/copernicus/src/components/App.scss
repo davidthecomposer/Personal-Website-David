@@ -35,6 +35,27 @@ body {
 	transition-delay: 0.8s;
 }
 
+.home-button {
+	padding: 1rem;
+	outline: none;
+	background-color: #4d4d4d7e;
+	border: none;
+	color: white;
+	border-radius: 10%;
+
+	text-emphasis: none;
+	text-decoration: none;
+	position: absolute;
+
+	bottom: 0.25rem;
+	right: 0.25rem;
+	text-align: center;
+}
+
+.home-button:hover {
+	background-color: black;
+}
+
 @media screen and (max-width: 1400px) {
 	.main-title {
 		width: 80vw;

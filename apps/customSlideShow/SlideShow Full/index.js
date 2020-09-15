@@ -1419,6 +1419,7 @@ ${paneCSSFiller()}
     firstShow.initHandlers();    
   `;
 	codeContainers.style.opacity = "1";
+	codeContainers.style.display = "flex";
 	HTMLDownload.value = htmlCode;
 	CSSDownload.value = cssCode;
 	JSDownload.value = jsCode;

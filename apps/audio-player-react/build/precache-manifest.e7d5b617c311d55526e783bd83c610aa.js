@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8ada20f668ec0c3a61f95ed680dbb77f",
+    "revision": "1c884b76d3cb8e24a7daf0cff328a1d6",
     "url": "/audio-player-react/build/index.html"
   },
   {
-    "revision": "1676ca441a854124eede",
-    "url": "/audio-player-react/build/static/css/main.94e54951.chunk.css"
+    "revision": "02465a863c477f0baa60",
+    "url": "/audio-player-react/build/static/css/main.375f92ab.chunk.css"
   },
   {
     "revision": "57908cb16ed9423f2386",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/audio-player-react/build/static/js/2.d243cb20.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1676ca441a854124eede",
-    "url": "/audio-player-react/build/static/js/main.cb619711.chunk.js"
+    "revision": "02465a863c477f0baa60",
+    "url": "/audio-player-react/build/static/js/main.db6268a8.chunk.js"
   },
   {
     "revision": "aae193ab0196c0efa571",
