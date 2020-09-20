@@ -1,31 +1,31 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "43f98f3a9ce8b8a9d3673b63c0cad70d",
+    "revision": "fd078b83ff3bc41b3d01972fa094800a",
     "url": "/index.html"
   },
   {
-    "revision": "ed1b430e2fb49df67f0a",
+    "revision": "ee6766005d1501080d10",
     "url": "/static/css/main.ffcaf4e1.chunk.css"
   },
   {
-    "revision": "917424124f97439abaa0",
-    "url": "/static/js/2.4496ad39.chunk.js"
+    "revision": "d4e53f042155f9a7f463",
+    "url": "/static/js/2.cda9c69f.chunk.js"
   },
   {
     "revision": "07c61b0178d42bae60ce67aab1b574a0",
-    "url": "/static/js/2.4496ad39.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.cda9c69f.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "eb1170becab55f05ce58",
-    "url": "/static/js/3.357cecd3.chunk.js"
+    "revision": "1c1b49df68e234bda3a9",
+    "url": "/static/js/3.36498474.chunk.js"
   },
   {
-    "revision": "ed1b430e2fb49df67f0a",
-    "url": "/static/js/main.82ac0a36.chunk.js"
+    "revision": "ee6766005d1501080d10",
+    "url": "/static/js/main.bfe5fdf8.chunk.js"
   },
   {
-    "revision": "618c0baa34298b8451a6",
-    "url": "/static/js/runtime-main.6419b15c.js"
+    "revision": "f399b0928b6e308ef2aa",
+    "url": "/static/js/runtime-main.4fa6576d.js"
   },
   {
     "revision": "9566169a2fed8916b1626b6f45a1cc94",
@@ -92,6 +92,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/instagram.73a9b109.webp"
   },
   {
+    "revision": "1cecd09ac00c92dea25eaa949cf349b2",
+    "url": "/static/media/main_image.1cecd09a.jpeg"
+  },
+  {
+    "revision": "767abc4d2554b8593a5574e048f36960",
+    "url": "/static/media/main_image.767abc4d.webp"
+  },
+  {
     "revision": "d85041bec41de3b940531674e4ea4a68",
     "url": "/static/media/main_image.d85041be.jpeg"
   },
@@ -106,6 +114,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5e00063635bc396f6d786f21776489d1",
     "url": "/static/media/main_image_001.5e000636.webp"
+  },
+  {
+    "revision": "0367a405ae8ef777022bdaefcb32650e",
+    "url": "/static/media/math_operation.0367a405.webp"
+  },
+  {
+    "revision": "c3a367c77a11c0bdc2da0017f4aac660",
+    "url": "/static/media/math_operation.c3a367c7.jpeg"
   },
   {
     "revision": "8580b7cc330e1e22c813717b65d8e349",
