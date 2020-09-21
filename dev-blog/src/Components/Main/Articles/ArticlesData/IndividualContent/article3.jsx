@@ -6,6 +6,16 @@ import previewImage from "../../../../../Images/ArticleImages/003/main_image.web
 import previewImageBU from "../../../../../Images/ArticleImages/003/main_image.jpeg";
 import diagram1 from "../../../../../Images/ArticleImages/003/math_operation.webp";
 import diagram1BU from "../../../../../Images/ArticleImages/003/math_operation.jpeg";
+import zeroInputs from "../../../../../Images/ArticleImages/003/0_Inputs.webp";
+import zeroInputsBU from "../../../../../Images/ArticleImages/003/0_Inputs.jpeg";
+import oneInputs from "../../../../../Images/ArticleImages/003/1_Inputs.webp";
+import oneInputsBU from "../../../../../Images/ArticleImages/003/1_Inputs.jpeg";
+import twoInputs from "../../../../../Images/ArticleImages/003/2_Inputs.webp";
+import twoInputsBU from "../../../../../Images/ArticleImages/003/2_Inputs.jpeg";
+import threeInputs from "../../../../../Images/ArticleImages/003/3_Inputs.webp";
+import threeInputsBU from "../../../../../Images/ArticleImages/003/3_Inputs.jpeg";
+import afterCalc from "../../../../../Images/ArticleImages/003/afterCalc.webp";
+import afterCalcBU from "../../../../../Images/ArticleImages/003/afterCalc.jpeg";
 
 const oldCalculatorCode = `const handleClick = (event) => {
     //handleClick Variables
@@ -398,6 +408,18 @@ export const article = {
 				<h3 className='emphasis-header'>
 					<strong>Zero Inputs</strong>
 				</h3>
+				<figure className='full-figure'>
+					<picture>
+						<source srcSet={zeroInputs} />
+						<source srcSet={zeroInputsBU} />
+						<img
+							className='article-image-figure-alt'
+							src={zeroInputs}
+							alt='The calculator display with nothing showing'
+						/>
+						<figcaption>Zero inputs.</figcaption>
+					</picture>
+				</figure>
 				<MultiLineCodeBlock lang='js' code={inputDisplayCode} />
 				<MultiLineCodeBlock lang='js' code={handleZeroInputsCode} />
 				<p>
@@ -418,6 +440,18 @@ export const article = {
 				<h3 className='emphasis-header'>
 					<strong>One Input</strong>
 				</h3>
+				<figure className='full-figure'>
+					<picture>
+						<source srcSet={oneInputs} />
+						<source srcSet={oneInputsBU} />
+						<img
+							className='article-image-figure-alt'
+							src={oneInputs}
+							alt='The calculator display with -1 showing'
+						/>
+					</picture>
+					<figcaption>One input.</figcaption>
+				</figure>
 				<MultiLineCodeBlock lang='js' code={handleOneInputsCode} />
 				<p>
 					When there is something present in the first input (a “-“ or a number)
@@ -439,6 +473,18 @@ export const article = {
 				<h3 className='emphasis-header'>
 					<strong>Two Inputs</strong>
 				</h3>
+				<figure className='full-figure'>
+					<picture>
+						<source srcSet={twoInputs} />
+						<source srcSet={twoInputsBU} />
+						<img
+							className='article-image-figure-alt'
+							src={oneInputs}
+							alt='calculator display with -1 + showing'
+						/>
+						<figcaption>Two inputs.</figcaption>
+					</picture>
+				</figure>
 				<MultiLineCodeBlock lang='js' code={handleTwoInputsCode} />
 
 				<p>
@@ -452,6 +498,18 @@ export const article = {
 				<h3 className='emphasis-header'>
 					<strong>Three Inputs</strong>
 				</h3>
+				<figure className='full-figure'>
+					<picture>
+						<source srcSet={threeInputs} />
+						<source srcSet={threeInputsBU} />
+						<img
+							className='article-image-figure-alt'
+							src={threeInputs}
+							alt='calculator display with -1 + 5 showing'
+						/>
+						<figcaption>Three inputs.</figcaption>
+					</picture>
+				</figure>
 				<MultiLineCodeBlock lang='js' code={handleThreeInputsCode} />
 
 				<p>
@@ -489,6 +547,20 @@ export const article = {
 					handle the third case above. (e.g. 7 - ). In this case we are
 					immediately back to the handleTwoInputs part of our internal logic.
 				</p>
+				<figure className='full-figure'>
+					<picture>
+						<source srcSet={afterCalc} />
+						<source srcSet={afterCalcBU} />
+						<img
+							className='article-image-figure-alt'
+							src={afterCalc}
+							alt='calculator display with -1 + 5 showing'
+						/>
+					</picture>
+					<figcaption>
+						The calculation result if '×' was the second operator.
+					</figcaption>
+				</figure>
 
 				<MultiLineCodeBlock lang='js' code={exponentialCode} />
 

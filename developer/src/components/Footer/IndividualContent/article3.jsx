@@ -1,4 +1,3 @@
-import React, { Fragment } from "react";
 const title = "Refactoring My First App: 1 Year Later";
 const date = "September 20, 2020";
 
