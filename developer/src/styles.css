@@ -107,3 +107,21 @@ body {
 }
 
 /* ---------------------------- RESPONSIVE DESIGN ---------------------------- */
+
+.intro-text {
+	margin-bottom: 3rem;
+}
+.intro-instructions {
+	width: 90%;
+	margin: 0 auto;
+}
+.links {
+	text-decoration: none;
+	color: rgb(86, 226, 245);
+	margin: 0.25rem 0;
+	transition: 0.2s;
+}
+.links:hover {
+	color: rgb(255, 132, 255);
+	transition: 0.2s;
+}

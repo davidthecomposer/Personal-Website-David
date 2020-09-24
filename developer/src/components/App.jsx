@@ -10,15 +10,35 @@ class App extends React.Component {
 			<div>
 				<Header />
 				<div className='intro anchor' id='home'>
-					Welcome to a collection of snapshots from my front-end development
-					journey. Below are all the apps and projects that I have built on my
-					own (with copious amounts of googling at times). Some are simple, some
-					are more complex, and some are better than others, but they are all my
-					creations and I love them. Click anywhere other than the button on
-					each card to read the details on the back. Click on the button to see
-					a full version of the apps or websites. Feel free to leave feedback,
-					or contact me using the appropriate interfaces. You can find the code
-					for all of these on my gitHub. Keep coming back for new updates!
+					<p className='intro-text'>
+						{" "}
+						Welcome to a collection of snapshots from my development journey.
+						Below are all the apps and projects that I have built on my own
+						(with copious amounts of googling at times). Some are simple, some
+						are more complex, and some are better than others, but they are all
+						my creations and I love them.
+					</p>
+					<ul className='intro-instructions'>
+						<li>
+							{" "}
+							Click anywhere other than the button on each card to read the
+							details on the back.
+						</li>
+						<li>
+							Click on the button to see a full version of the apps or websites.
+						</li>
+						<li>
+							Feel free to leave feedback, or contact me using the appropriate
+							interfaces.
+						</li>
+						<li>
+							You can find the code for all of these Apps on{" "}
+							<a className='links' href='https://github.com/davidthecomposer'>
+								gitHub
+							</a>
+							. Come back for new updates!
+						</li>
+					</ul>
 				</div>
 				<MyApps />
 				<ContactSection />
