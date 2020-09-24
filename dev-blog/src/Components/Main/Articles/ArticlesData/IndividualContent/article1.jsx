@@ -31,7 +31,9 @@ const article = {
 						className='article-main-image'
 					/>
 				</picture>
-				<figcaption>It's all just symbols</figcaption>
+				<figcaption className='main-figcaption'>
+					It's all just symbols
+				</figcaption>
 			</Fragment>
 		),
 		previewImage: (

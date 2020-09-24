@@ -247,7 +247,9 @@ export const article = {
 						alt='Man playing accordion along with react, Sass, and JavaScript Logos. Tutorial.'
 						className='article-main-image'
 					/>
-					<figcaption>Always time for a little smooth accordion.</figcaption>
+					<figcaption className='main-figcaption'>
+						Always time for a little smooth accordion.
+					</figcaption>
 				</picture>
 			</Fragment>
 		),

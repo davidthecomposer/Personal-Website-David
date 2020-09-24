@@ -237,7 +237,7 @@ export const article = {
 						alt='The Calculator app UI'
 						className='article-main-image'
 					/>
-					<figcaption>A Modern Classic</figcaption>
+					<figcaption className='main-figcaption'>A Modern Classic</figcaption>
 				</picture>
 			</Fragment>
 		),
@@ -376,8 +376,9 @@ export const article = {
 				</p>
 				<figure className='article-image-figure'>
 					<picture>
-						<source srcSet={diagram1} />
 						<source srcSet={diagram1BU} />
+						<source srcSet={diagram1} />
+
 						<img
 							className='article-image'
 							src={diagram1}
@@ -410,8 +411,9 @@ export const article = {
 				</h3>
 				<figure className='full-figure'>
 					<picture>
-						<source srcSet={zeroInputs} />
 						<source srcSet={zeroInputsBU} />
+						<source srcSet={zeroInputs} />
+
 						<img
 							className='article-image-figure-alt'
 							src={zeroInputs}
@@ -442,8 +444,9 @@ export const article = {
 				</h3>
 				<figure className='full-figure'>
 					<picture>
-						<source srcSet={oneInputs} />
 						<source srcSet={oneInputsBU} />
+						<source srcSet={oneInputs} />
+
 						<img
 							className='article-image-figure-alt'
 							src={oneInputs}
@@ -475,8 +478,9 @@ export const article = {
 				</h3>
 				<figure className='full-figure'>
 					<picture>
-						<source srcSet={twoInputs} />
 						<source srcSet={twoInputsBU} />
+						<source srcSet={twoInputs} />
+
 						<img
 							className='article-image-figure-alt'
 							src={oneInputs}
@@ -500,8 +504,9 @@ export const article = {
 				</h3>
 				<figure className='full-figure'>
 					<picture>
-						<source srcSet={threeInputs} />
 						<source srcSet={threeInputsBU} />
+						<source srcSet={threeInputs} />
+
 						<img
 							className='article-image-figure-alt'
 							src={threeInputs}
@@ -549,8 +554,9 @@ export const article = {
 				</p>
 				<figure className='full-figure'>
 					<picture>
-						<source srcSet={afterCalc} />
 						<source srcSet={afterCalcBU} />
+						<source srcSet={afterCalc} />
+
 						<img
 							className='article-image-figure-alt'
 							src={afterCalc}

@@ -39,12 +39,16 @@
 }
 .article-main-image {
 	width: 100%;
-	margin-bottom: 0.4rem;
+	margin-bottom: 0;
 }
 .header-bottom-row {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+}
+
+.main-figcaption {
+	margin: 0;
 }
 
 @media screen and (max-width: 900px) {

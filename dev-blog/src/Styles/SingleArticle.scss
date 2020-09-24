@@ -93,19 +93,29 @@ figcaption {
 	font-size: 16px;
 	width: 100%;
 	text-align: center;
-	margin-top: -10px;
+	margin-top: -5px;
 }
 @media screen and (max-width: 900px) {
 	.single-article {
 		font-size: 16px;
 	}
+	.article-content {
+		.article-image-figure {
+			width: 100%;
 
-	.article-image-figure {
-		width: 100%;
-
-		margin: 4rem 0;
+			margin: 4rem 0;
+		}
+		.article-image-figure-alt {
+			width: 100%;
+			margin: 0;
+		}
 	}
 	pre {
 		width: initial;
+	}
+
+	figcaption {
+		margin: 0;
+		line-height: 16px;
 	}
 }
